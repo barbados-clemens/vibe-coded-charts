@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { format, startOfMonth, endOfMonth, addMonths, isSameMonth } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { mockData } from '../data/mockData';
 import { UTCDate, utc } from "@date-fns/utc";
 
@@ -14,34 +14,20 @@ export function ExecutionCreditsChart() {
 
   const filteredData = mockData.filter(item => {
     const itemDate = new UTCDate(item.date);
-    return isSameMonth(itemDate, currentDate, {in: utc})
+    return isSameMonth(itemDate, currentDate)
   });
 
   const formattedData = filteredData.map(item => ({
-    date: format(new UTCDate(item.date), 'MMM dd', { timeZone: 'UTC' }),
+    date: format(new UTCDate(item.date), 'MMM dd'),
     credits: item.executionCredits,
   }));
 
   const handlePrevMonth = () => {
-    setCurrentDate(prev => {
-      const newDate = new UTCDate(
-        prev.getUTCFullYear(),
-        prev.getUTCMonth() === 0 ? 12 : prev.getUTCMonth() - 1,
-        1
-      );
-      return newDate;
-    });
+    setCurrentDate(prev => addMonths(prev, -1));
   };
 
   const handleNextMonth = () => {
-    setCurrentDate(prev => {
-      const newDate = new UTCDate(
-        prev.getUTCFullYear(),
-        prev.getUTCMonth() === 11 ? 0 : prev.getUTCMonth() + 1,
-        1
-      );
-      return newDate;
-    });
+    setCurrentDate(prev => addMonths(prev, 1));
   };
 
   return (
@@ -53,16 +39,16 @@ export function ExecutionCreditsChart() {
             onClick={handlePrevMonth}
             className="p-2 rounded-full hover:bg-gray-100 transition-colors"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-600" />
+            <ChevronLeftIcon className="w-5 h-5 text-gray-600" />
           </button>
           <span className="text-lg font-medium text-gray-700">
-            {format(currentDate, 'MMMM yyyy', { timeZone: 'UTC' })}
+            {format(currentDate, 'MMMM yyyy')}
           </span>
           <button
             onClick={handleNextMonth}
             className="p-2 rounded-full hover:bg-gray-100 transition-colors"
           >
-            <ChevronRight className="w-5 h-5 text-gray-600" />
+            <ChevronRightIcon className="w-5 h-5 text-gray-600" />
           </button>
         </div>
       </div>
