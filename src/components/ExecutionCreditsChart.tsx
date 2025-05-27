@@ -1,95 +1,46 @@
 import React, { useState } from 'react';
-import { format, addMonths, isSameMonth, startOfYear, endOfYear, eachDayOfInterval, getDay, addYears } from 'date-fns';
+import { format, addMonths, isSameMonth } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { mockData } from '../data/mockData';
 import { UTCDate } from "@date-fns/utc";
+import { ChartNavigation } from './ChartNavigation';
+import {
+  DataItem,
+  calculateDailyIncrements,
+  createHeatmapData,
+  createLineChartData,
+  getColorIntensity,
+  getUniqueWorkspaceIds,
+  WORKSPACE_COLORS,
+  HEATMAP_COLORS,
+  WeeksArray
+} from '../utils/chartUtils';
 
 
-export function ExecutionCreditsChart() {
+interface ExecutionCreditsChartProps {
+  data: DataItem[];
+}
+
+export function ExecutionCreditsChart({ data }: ExecutionCreditsChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     // Initialize with UTC date from first data point
-    return new UTCDate(mockData[0].date)
+    return new UTCDate(data[0].date)
   });
   
   const [currentYear, setCurrentYear] = useState(() => {
-    return new UTCDate(mockData[0].date).getUTCFullYear()
+    return new UTCDate(data[0].date).getUTCFullYear()
   });
 
-  // Function to calculate daily incremental credits from cumulative data
-  const calculateDailyIncrements = (data: typeof mockData) => {
-    // Group by workspace and month, then sort by date
-    const grouped = data.reduce((acc, item) => {
-      const date = new UTCDate(item.date);
-      const monthKey = `${item.workspaceId}-${date.getUTCFullYear()}-${date.getUTCMonth()}`;
-      
-      if (!acc[monthKey]) {
-        acc[monthKey] = [];
-      }
-      acc[monthKey].push(item);
-      return acc;
-    }, {} as Record<string, typeof mockData>);
-
-    // Calculate increments for each workspace-month group
-    const incrementalData: typeof mockData = [];
-    
-    Object.values(grouped).forEach(monthData => {
-      // Sort by date within each month
-      const sortedData = [...monthData].sort((a, b) => 
-        new Date(a.date).getTime() - new Date(b.date).getTime()
-      );
-      
-      sortedData.forEach((item, index) => {
-        let dailyIncrement = item.executionCredits;
-        
-        // If not the first day of the month, subtract previous day's cumulative total
-        if (index > 0) {
-          dailyIncrement = item.executionCredits - sortedData[index - 1].executionCredits;
-        }
-        
-        incrementalData.push({
-          ...item,
-          executionCredits: Math.max(0, dailyIncrement) // Ensure no negative values
-        });
-      });
-    });
-    
-    return incrementalData;
-  };
-
   // Get incremental data
-  const incrementalData = calculateDailyIncrements(mockData);
+  const incrementalData = calculateDailyIncrements(data, 'executionCredits');
 
   const filteredData = incrementalData.filter(item => {
     const itemDate = new UTCDate(item.date);
     return isSameMonth(itemDate, currentDate)
   });
 
-  // Get unique workspace IDs
-  const workspaceIds = [...new Set(filteredData.map(item => item.workspaceId))];
-  
-  // Get unique dates and sort them
-  const uniqueDates = [...new Set(filteredData.map(item => item.date))].sort();
-  
-  // Create formatted data with each workspace as a separate property
-  const formattedData = uniqueDates.map(date => {
-    const dataPoint: any = {
-      date: format(new UTCDate(date), 'MMM dd'),
-    };
-    
-    // Add each workspace's incremental credits for this date
-    workspaceIds.forEach(workspaceId => {
-      const workspaceEntry = filteredData.find(item => 
-        item.date === date && item.workspaceId === workspaceId
-      );
-      dataPoint[workspaceId] = workspaceEntry?.executionCredits || 0;
-    });
-    
-    return dataPoint;
-  });
-
-  // Define colors for different workspaces
-  const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
+  // Get unique workspace IDs and formatted data
+  const workspaceIds = getUniqueWorkspaceIds(filteredData);
+  const formattedData = createLineChartData(filteredData, 'executionCredits');
 
   const handlePrevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));
@@ -100,86 +51,10 @@ export function ExecutionCreditsChart() {
   };
 
   // Heatmap data processing
-  const yearStart = startOfYear(new UTCDate(currentYear, 0, 1));
-  const yearEnd = endOfYear(new UTCDate(currentYear, 11, 31));
-  const allDaysInYear = eachDayOfInterval({ start: yearStart, end: yearEnd });
+  const weeksArray = createHeatmapData(incrementalData, currentYear, 'executionCredits');
   
-  // Group incremental data by date and sum all workspaces for each day
-  const dailyTotals = incrementalData
-    .filter(item => new UTCDate(item.date).getUTCFullYear() === currentYear)
-    .reduce((acc, item) => {
-      const dateKey = item.date.split('T')[0]; // Get date part only
-      acc[dateKey] = (acc[dateKey] || 0) + item.executionCredits;
-      return acc;
-    }, {} as Record<string, number>);
-
-  // Create detailed daily data for tooltips
-  const dailyDetailsByDate = incrementalData
-    .filter(item => new UTCDate(item.date).getUTCFullYear() === currentYear)
-    .reduce((acc, item) => {
-      const dateKey = item.date.split('T')[0];
-      if (!acc[dateKey]) {
-        acc[dateKey] = [];
-      }
-      if (item.executionCredits > 0) { // Only include days with actual usage
-        acc[dateKey].push({
-          workspaceId: item.workspaceId,
-          credits: item.executionCredits
-        });
-      }
-      return acc;
-    }, {} as Record<string, Array<{ workspaceId: string; credits: number }>>);
-
-  // Create heatmap grid with proper week alignment
-  const firstDayOfYear = getDay(yearStart); // 0 = Sunday, 1 = Monday, etc.
-  const weeksArray: Array<Array<{ date: Date; credits: number; dateStr: string; workspaceDetails: Array<{ workspaceId: string; credits: number }> } | null>> = [];
-  
-  // Add padding days for the first week
-  let currentWeek: Array<{ date: Date; credits: number; dateStr: string; workspaceDetails: Array<{ workspaceId: string; credits: number }> } | null> = [];
-  for (let i = 0; i < firstDayOfYear; i++) {
-    currentWeek.push(null);
-  }
-  
-  // Add all days of the year
-  allDaysInYear.forEach(date => {
-    const dateKey = format(date, 'yyyy-MM-dd');
-    const credits = dailyTotals[dateKey] || 0;
-    const workspaceDetails = dailyDetailsByDate[dateKey] || [];
-    
-    currentWeek.push({
-      date,
-      credits,
-      dateStr: dateKey,
-      workspaceDetails
-    });
-    
-    // If week is complete (7 days), start a new week
-    if (currentWeek.length === 7) {
-      weeksArray.push([...currentWeek]);
-      currentWeek = [];
-    }
-  });
-  
-  // Add the last partial week if it exists
-  if (currentWeek.length > 0) {
-    while (currentWeek.length < 7) {
-      currentWeek.push(null);
-    }
-    weeksArray.push(currentWeek);
-  }
-
   // Calculate max credits for color intensity
-  const maxCredits = Math.max(...Object.values(dailyTotals), 1);
-
-  // Get color intensity (0-4 levels like GitHub)
-  const getColorIntensity = (credits: number) => {
-    if (credits === 0) return 0;
-    const ratio = credits / maxCredits;
-    if (ratio <= 0.25) return 1;
-    if (ratio <= 0.5) return 2;
-    if (ratio <= 0.75) return 3;
-    return 4;
-  };
+  const maxCredits = Math.max(...weeksArray.flat().filter(Boolean).map(day => day!.value), 1);
 
   const handlePrevYear = () => {
     setCurrentYear(prev => prev - 1);
@@ -193,26 +68,12 @@ export function ExecutionCreditsChart() {
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-800">Execution Credits</h2>
-        <div className="flex items-center gap-4">
-          <button
-            onClick={handlePrevMonth}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <ChevronLeftIcon className="w-5 h-5 text-gray-600" />
-          </button>
-          <span className="text-lg font-medium text-gray-700">
-            {format(currentDate, 'MMMM yyyy')}
-          </span>
-          <button
-            onClick={handleNextMonth}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <ChevronRightIcon className="w-5 h-5 text-gray-600" />
-          </button>
-        </div>
-      </div>
+      <ChartNavigation
+        title="Execution Credits"
+        displayValue={format(currentDate, 'MMMM yyyy')}
+        onPrevious={handlePrevMonth}
+        onNext={handleNextMonth}
+      />
       
       {/* Legend */}
       <div className="mb-4 flex flex-wrap gap-4">
@@ -220,7 +81,7 @@ export function ExecutionCreditsChart() {
           <div key={workspaceId} className="flex items-center gap-2">
             <div 
               className="w-3 h-3 rounded-full" 
-              style={{ backgroundColor: colors[index % colors.length] }}
+              style={{ backgroundColor: WORKSPACE_COLORS[index % WORKSPACE_COLORS.length] }}
             />
             <span className="text-sm text-gray-600">
               Workspace {workspaceId.slice(-4)}
@@ -254,9 +115,9 @@ export function ExecutionCreditsChart() {
                 key={workspaceId}
                 type="monotone" 
                 dataKey={workspaceId} 
-                stroke={colors[index % colors.length]} 
+                stroke={WORKSPACE_COLORS[index % WORKSPACE_COLORS.length]} 
                 strokeWidth={2}
-                dot={{ fill: colors[index % colors.length], strokeWidth: 2 }}
+                dot={{ fill: WORKSPACE_COLORS[index % WORKSPACE_COLORS.length], strokeWidth: 2 }}
               />
             ))}
           </LineChart>
@@ -265,26 +126,12 @@ export function ExecutionCreditsChart() {
 
       {/* GitHub-style Heatmap Chart */}
       <div className="mt-8 bg-gray-50 p-6 rounded-lg">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-gray-800">Annual Credits Usage</h3>
-          <div className="flex items-center gap-4">
-            <button
-              onClick={handlePrevYear}
-              className="p-2 rounded-full hover:bg-gray-200 transition-colors"
-            >
-              <ChevronLeftIcon className="w-4 h-4 text-gray-600" />
-            </button>
-            <span className="text-md font-medium text-gray-700">
-              {currentYear}
-            </span>
-            <button
-              onClick={handleNextYear}
-              className="p-2 rounded-full hover:bg-gray-200 transition-colors"
-            >
-              <ChevronRightIcon className="w-4 h-4 text-gray-600" />
-            </button>
-          </div>
-        </div>
+        <ChartNavigation
+          title="Annual Credits Usage"
+          displayValue={currentYear.toString()}
+          onPrevious={handlePrevYear}
+          onNext={handleNextYear}
+        />
 
         {/* Heatmap Grid */}
         <div className="overflow-x-auto">
@@ -320,14 +167,7 @@ export function ExecutionCreditsChart() {
                         return <div key={dayIndex} className="w-3 h-3" />;
                       }
                       
-                      const intensity = getColorIntensity(dayData.credits);
-                      const colors = [
-                        'bg-gray-100', // 0 - no activity
-                        'bg-green-200', // 1 - low
-                        'bg-green-300', // 2 - medium-low  
-                        'bg-green-500', // 3 - medium-high
-                        'bg-green-700'  // 4 - high
-                      ];
+                      const intensity = getColorIntensity(dayData.value, maxCredits);
 
                       // Create detailed tooltip text
                       const createTooltip = () => {
@@ -337,16 +177,16 @@ export function ExecutionCreditsChart() {
                         }
                         
                         const workspaceLines = dayData.workspaceDetails
-                          .map(detail => `  Workspace ${detail.workspaceId.slice(-4)}: ${detail.credits} credits`)
+                          .map(detail => `  Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} credits`)
                           .join('\n');
                         
-                        return `${dateStr}:\nTotal: ${dayData.credits} credits\n${workspaceLines}`;
+                        return `${dateStr}:\nTotal: ${dayData.value} credits\n${workspaceLines}`;
                       };
                       
                       return (
                         <div
                           key={dayIndex}
-                          className={`w-3 h-3 rounded-sm ${colors[intensity]} hover:ring-2 hover:ring-gray-400 cursor-pointer`}
+                          className={`w-3 h-3 rounded-sm ${HEATMAP_COLORS.green[intensity]} hover:ring-2 hover:ring-gray-400 cursor-pointer`}
                           title={createTooltip()}
                         />
                       );
@@ -364,11 +204,9 @@ export function ExecutionCreditsChart() {
             Less
           </div>
           <div className="flex items-center gap-1">
-            <div className="w-3 h-3 rounded-sm bg-gray-100" />
-            <div className="w-3 h-3 rounded-sm bg-green-200" />
-            <div className="w-3 h-3 rounded-sm bg-green-300" />
-            <div className="w-3 h-3 rounded-sm bg-green-500" />
-            <div className="w-3 h-3 rounded-sm bg-green-700" />
+            {HEATMAP_COLORS.green.map((colorClass, index) => (
+              <div key={index} className={`w-3 h-3 rounded-sm ${colorClass}`} />
+            ))}
           </div>
           <div className="text-xs text-gray-500">
             More

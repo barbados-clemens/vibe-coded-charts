@@ -1,75 +1,27 @@
 import React, { useState } from 'react';
 import { format, addMonths, isSameMonth } from 'date-fns';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { mockData } from '../data/mockData';
 import { UTCDate } from "@date-fns/utc";
+import { ChartNavigation } from './ChartNavigation';
+import {
+  DataItem,
+  calculateComputeIncrements,
+  getUniqueWorkspaceIds,
+  getUniqueResourceClasses
+} from '../utils/chartUtils';
 
-export function ComputeResourceChart() {
+interface ComputeResourceChartProps {
+  data: DataItem[];
+}
+
+export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     // Initialize with UTC date from first data point
-    return new UTCDate(mockData[0].date)
+    return new UTCDate(data[0].date)
   });
 
-  // Function to calculate daily incremental compute usage from cumulative data
-  const calculateDailyIncrements = (data: typeof mockData) => {
-    // Group by workspace and month, then sort by date
-    const grouped = data.reduce((acc, item) => {
-      const date = new UTCDate(item.date);
-      const monthKey = `${item.workspaceId}-${date.getUTCFullYear()}-${date.getUTCMonth()}`;
-      
-      if (!acc[monthKey]) {
-        acc[monthKey] = [];
-      }
-      acc[monthKey].push(item);
-      return acc;
-    }, {} as Record<string, typeof mockData>);
-
-    // Calculate increments for each workspace-month group
-    const incrementalData: typeof mockData = [];
-    
-    Object.values(grouped).forEach(monthData => {
-      // Sort by date within each month
-      const sortedData = [...monthData].sort((a, b) => 
-        new Date(a.date).getTime() - new Date(b.date).getTime()
-      );
-      
-      sortedData.forEach((item, index) => {
-        // For compute resources, calculate incremental usage
-        let incrementalCompute = [...item.compute];
-        
-        if (index > 0) {
-          const prevCompute = sortedData[index - 1].compute;
-          
-          // Calculate incremental compute usage for each resource class
-          incrementalCompute = item.compute.map(currentResource => {
-            const prevResource = prevCompute.find(p => p.resourceClass === currentResource.resourceClass);
-            const prevCredits = prevResource?.credits || 0;
-            return {
-              ...currentResource,
-              credits: Math.max(0, currentResource.credits - prevCredits)
-            };
-          });
-          
-          // Add any new resource classes that weren't in previous day
-          const newResourceClasses = item.compute.filter(current => 
-            !prevCompute.some(prev => prev.resourceClass === current.resourceClass)
-          );
-          incrementalCompute.push(...newResourceClasses);
-        }
-        
-        incrementalData.push({
-          ...item,
-          compute: incrementalCompute.filter(resource => resource.credits > 0) // Only include resources with usage
-        });
-      });
-    });
-    
-    return incrementalData;
-  };
-
   // Get incremental data
-  const incrementalData = calculateDailyIncrements(mockData);
+  const incrementalData = calculateComputeIncrements(data);
 
   const filteredData = incrementalData.filter(item => {
     const itemDate = new UTCDate(item.date);
@@ -77,10 +29,8 @@ export function ComputeResourceChart() {
   });
 
   // Get unique workspace IDs and resource classes
-  const workspaceIds = [...new Set(filteredData.map(item => item.workspaceId))];
-  const resourceClasses = [...new Set(filteredData.flatMap(item => 
-    item.compute.map(compute => compute.resourceClass)
-  ))];
+  const workspaceIds = getUniqueWorkspaceIds(filteredData);
+  const resourceClasses = getUniqueResourceClasses(filteredData);
   
   // Get unique dates and sort them
   const uniqueDates = [...new Set(filteredData.map(item => item.date))].sort();
@@ -176,26 +126,12 @@ export function ComputeResourceChart() {
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-800">Compute Resource Usage</h2>
-        <div className="flex items-center gap-4">
-          <button
-            onClick={handlePrevMonth}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <ChevronLeftIcon className="w-5 h-5 text-gray-600" />
-          </button>
-          <span className="text-lg font-medium text-gray-700">
-            {format(currentDate, 'MMMM yyyy')}
-          </span>
-          <button
-            onClick={handleNextMonth}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <ChevronRightIcon className="w-5 h-5 text-gray-600" />
-          </button>
-        </div>
-      </div>
+      <ChartNavigation
+        title="Compute Resource Usage"
+        displayValue={format(currentDate, 'MMMM yyyy')}
+        onPrevious={handlePrevMonth}
+        onNext={handleNextMonth}
+      />
       
       {/* Resource Class Legend */}
       <div className="mb-4">
