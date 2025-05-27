@@ -113,12 +113,29 @@ export function ExecutionCreditsChart() {
       return acc;
     }, {} as Record<string, number>);
 
+  // Create detailed daily data for tooltips
+  const dailyDetailsByDate = incrementalData
+    .filter(item => new UTCDate(item.date).getUTCFullYear() === currentYear)
+    .reduce((acc, item) => {
+      const dateKey = item.date.split('T')[0];
+      if (!acc[dateKey]) {
+        acc[dateKey] = [];
+      }
+      if (item.executionCredits > 0) { // Only include days with actual usage
+        acc[dateKey].push({
+          workspaceId: item.workspaceId,
+          credits: item.executionCredits
+        });
+      }
+      return acc;
+    }, {} as Record<string, Array<{ workspaceId: string; credits: number }>>);
+
   // Create heatmap grid with proper week alignment
   const firstDayOfYear = getDay(yearStart); // 0 = Sunday, 1 = Monday, etc.
-  const weeksArray: Array<Array<{ date: Date; credits: number; dateStr: string } | null>> = [];
+  const weeksArray: Array<Array<{ date: Date; credits: number; dateStr: string; workspaceDetails: Array<{ workspaceId: string; credits: number }> } | null>> = [];
   
   // Add padding days for the first week
-  let currentWeek: Array<{ date: Date; credits: number; dateStr: string } | null> = [];
+  let currentWeek: Array<{ date: Date; credits: number; dateStr: string; workspaceDetails: Array<{ workspaceId: string; credits: number }> } | null> = [];
   for (let i = 0; i < firstDayOfYear; i++) {
     currentWeek.push(null);
   }
@@ -127,11 +144,13 @@ export function ExecutionCreditsChart() {
   allDaysInYear.forEach(date => {
     const dateKey = format(date, 'yyyy-MM-dd');
     const credits = dailyTotals[dateKey] || 0;
+    const workspaceDetails = dailyDetailsByDate[dateKey] || [];
     
     currentWeek.push({
       date,
       credits,
-      dateStr: dateKey
+      dateStr: dateKey,
+      workspaceDetails
     });
     
     // If week is complete (7 days), start a new week
@@ -309,12 +328,26 @@ export function ExecutionCreditsChart() {
                         'bg-green-500', // 3 - medium-high
                         'bg-green-700'  // 4 - high
                       ];
+
+                      // Create detailed tooltip text
+                      const createTooltip = () => {
+                        const dateStr = format(dayData.date, 'MMM dd, yyyy');
+                        if (dayData.workspaceDetails.length === 0) {
+                          return `${dateStr}: No activity`;
+                        }
+                        
+                        const workspaceLines = dayData.workspaceDetails
+                          .map(detail => `  Workspace ${detail.workspaceId.slice(-4)}: ${detail.credits} credits`)
+                          .join('\n');
+                        
+                        return `${dateStr}:\nTotal: ${dayData.credits} credits\n${workspaceLines}`;
+                      };
                       
                       return (
                         <div
                           key={dayIndex}
                           className={`w-3 h-3 rounded-sm ${colors[intensity]} hover:ring-2 hover:ring-gray-400 cursor-pointer`}
-                          title={`${format(dayData.date, 'MMM dd, yyyy')}: ${dayData.credits} credits`}
+                          title={createTooltip()}
                         />
                       );
                     })}
