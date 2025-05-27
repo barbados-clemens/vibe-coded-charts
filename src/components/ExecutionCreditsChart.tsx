@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { format, startOfMonth, endOfMonth, addMonths, isSameMonth } from 'date-fns';
+import { format, addMonths, isSameMonth } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { mockData } from '../data/mockData';
-import { UTCDate, utc } from "@date-fns/utc";
+import { UTCDate } from "@date-fns/utc";
 
 
 export function ExecutionCreditsChart() {
@@ -17,10 +17,31 @@ export function ExecutionCreditsChart() {
     return isSameMonth(itemDate, currentDate)
   });
 
-  const formattedData = filteredData.map(item => ({
-    date: format(new UTCDate(item.date), 'MMM dd'),
-    credits: item.executionCredits,
-  }));
+  // Get unique workspace IDs
+  const workspaceIds = [...new Set(filteredData.map(item => item.workspaceId))];
+  
+  // Get unique dates and sort them
+  const uniqueDates = [...new Set(filteredData.map(item => item.date))].sort();
+  
+  // Create formatted data with each workspace as a separate property
+  const formattedData = uniqueDates.map(date => {
+    const dataPoint: any = {
+      date: format(new UTCDate(date), 'MMM dd'),
+    };
+    
+    // Add each workspace's credits for this date
+    workspaceIds.forEach(workspaceId => {
+      const workspaceEntry = filteredData.find(item => 
+        item.date === date && item.workspaceId === workspaceId
+      );
+      dataPoint[workspaceId] = workspaceEntry?.executionCredits || 0;
+    });
+    
+    return dataPoint;
+  });
+
+  // Define colors for different workspaces
+  const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
 
   const handlePrevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));
@@ -29,6 +50,8 @@ export function ExecutionCreditsChart() {
   const handleNextMonth = () => {
     setCurrentDate(prev => addMonths(prev, 1));
   };
+
+  console.log(filteredData)
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
@@ -53,6 +76,21 @@ export function ExecutionCreditsChart() {
         </div>
       </div>
       
+      {/* Legend */}
+      <div className="mb-4 flex flex-wrap gap-4">
+        {workspaceIds.map((workspaceId, index) => (
+          <div key={workspaceId} className="flex items-center gap-2">
+            <div 
+              className="w-3 h-3 rounded-full" 
+              style={{ backgroundColor: colors[index % colors.length] }}
+            />
+            <span className="text-sm text-gray-600">
+              Workspace {workspaceId.slice(-4)}
+            </span>
+          </div>
+        ))}
+      </div>
+      
       <div className="h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={formattedData}>
@@ -73,13 +111,16 @@ export function ExecutionCreditsChart() {
                 borderRadius: '0.375rem'
               }}
             />
-            <Line 
-              type="monotone" 
-              dataKey="credits" 
-              stroke="#3b82f6" 
-              strokeWidth={2}
-              dot={{ fill: '#3b82f6', strokeWidth: 2 }}
-            />
+            {workspaceIds.map((workspaceId, index) => (
+              <Line 
+                key={workspaceId}
+                type="monotone" 
+                dataKey={workspaceId} 
+                stroke={colors[index % colors.length]} 
+                strokeWidth={2}
+                dot={{ fill: colors[index % colors.length], strokeWidth: 2 }}
+              />
+            ))}
           </LineChart>
         </ResponsiveContainer>
       </div>
