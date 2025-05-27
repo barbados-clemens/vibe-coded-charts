@@ -1,6 +1,7 @@
 import React from 'react';
 import {ExecutionCreditsChart} from './components/ExecutionCreditsChart';
 import {RunCountChart} from "./components/RunCountChart.tsx";
+import {ComputeResourceChart} from "./components/ComputeResourceChart.tsx";
 
 function App() {
     return (
@@ -13,6 +14,11 @@ function App() {
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Run Count Analysis</h1>
                 <RunCountChart/>
+            </div>
+
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Compute Resource Analysis</h1>
+                <ComputeResourceChart/>
             </div>
         </div>
     );
