@@ -16,7 +16,51 @@ export function ExecutionCreditsChart() {
     return new UTCDate(mockData[0].date).getUTCFullYear()
   });
 
-  const filteredData = mockData.filter(item => {
+  // Function to calculate daily incremental credits from cumulative data
+  const calculateDailyIncrements = (data: typeof mockData) => {
+    // Group by workspace and month, then sort by date
+    const grouped = data.reduce((acc, item) => {
+      const date = new UTCDate(item.date);
+      const monthKey = `${item.workspaceId}-${date.getUTCFullYear()}-${date.getUTCMonth()}`;
+      
+      if (!acc[monthKey]) {
+        acc[monthKey] = [];
+      }
+      acc[monthKey].push(item);
+      return acc;
+    }, {} as Record<string, typeof mockData>);
+
+    // Calculate increments for each workspace-month group
+    const incrementalData: typeof mockData = [];
+    
+    Object.values(grouped).forEach(monthData => {
+      // Sort by date within each month
+      const sortedData = [...monthData].sort((a, b) => 
+        new Date(a.date).getTime() - new Date(b.date).getTime()
+      );
+      
+      sortedData.forEach((item, index) => {
+        let dailyIncrement = item.executionCredits;
+        
+        // If not the first day of the month, subtract previous day's cumulative total
+        if (index > 0) {
+          dailyIncrement = item.executionCredits - sortedData[index - 1].executionCredits;
+        }
+        
+        incrementalData.push({
+          ...item,
+          executionCredits: Math.max(0, dailyIncrement) // Ensure no negative values
+        });
+      });
+    });
+    
+    return incrementalData;
+  };
+
+  // Get incremental data
+  const incrementalData = calculateDailyIncrements(mockData);
+
+  const filteredData = incrementalData.filter(item => {
     const itemDate = new UTCDate(item.date);
     return isSameMonth(itemDate, currentDate)
   });
@@ -33,7 +77,7 @@ export function ExecutionCreditsChart() {
       date: format(new UTCDate(date), 'MMM dd'),
     };
     
-    // Add each workspace's credits for this date
+    // Add each workspace's incremental credits for this date
     workspaceIds.forEach(workspaceId => {
       const workspaceEntry = filteredData.find(item => 
         item.date === date && item.workspaceId === workspaceId
@@ -60,8 +104,8 @@ export function ExecutionCreditsChart() {
   const yearEnd = endOfYear(new UTCDate(currentYear, 11, 31));
   const allDaysInYear = eachDayOfInterval({ start: yearStart, end: yearEnd });
   
-  // Group mockData by date and sum all workspaces for each day
-  const dailyTotals = mockData
+  // Group incremental data by date and sum all workspaces for each day
+  const dailyTotals = incrementalData
     .filter(item => new UTCDate(item.date).getUTCFullYear() === currentYear)
     .reduce((acc, item) => {
       const dateKey = item.date.split('T')[0]; // Get date part only
