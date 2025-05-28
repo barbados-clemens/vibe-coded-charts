@@ -3,6 +3,7 @@ import {ExecutionCreditsChart} from './components/ExecutionCreditsChart';
 import {RunCountChart} from "./components/RunCountChart.tsx";
 import {ComputeResourceChart} from "./components/ComputeResourceChart.tsx";
 import {ContributorChart} from "./components/ContributorChart.tsx";
+import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
 import { mockWorkspaceUsageData, mockOrgContribData } from './data/mockData';
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Contributor Analysis</h1>
                 <ContributorChart data={mockOrgContribData} />
+            </div>
+
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Monthly Summary</h1>
+                <MonthlySummaryChart data={mockWorkspaceUsageData} />
             </div>
         </div>
     );
