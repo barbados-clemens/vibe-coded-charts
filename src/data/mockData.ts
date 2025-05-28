@@ -14373,3 +14373,210 @@ export const mockDailyTaskStats = [
         }
     }
 ]
+
+
+export const mockWorkspaceTimeSaved = [
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 0,
+        "weekStart": "2024-12-30T00:00:00.000Z",
+        "timeSaved": 130662691.78031689
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 1,
+        "weekStart": "2025-01-06T00:00:00.000Z",
+        "timeSaved": 304085643.1410544
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 2,
+        "weekStart": "2025-01-13T00:00:00.000Z",
+        "timeSaved": 80148319.28809524
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 3,
+        "weekStart": "2025-01-20T00:00:00.000Z",
+        "timeSaved": 122454936.38723777
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 4,
+        "weekStart": "2025-01-27T00:00:00.000Z",
+        "timeSaved": 95231868.99123012
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 5,
+        "weekStart": "2025-02-03T00:00:00.000Z",
+        "timeSaved": 56034438.63311864
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 5,
+        "weekStart": "2025-01-27T00:00:00.000Z",
+        "timeSaved": 0
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 6,
+        "weekStart": "2025-02-10T00:00:00.000Z",
+        "timeSaved": 188429959.34184673
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 7,
+        "weekStart": "2025-02-17T00:00:00.000Z",
+        "timeSaved": 89350820.32933621
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 7,
+        "weekStart": "2025-02-10T00:00:00.000Z",
+        "timeSaved": 0
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 8,
+        "weekStart": "2025-02-24T00:00:00.000Z",
+        "timeSaved": 76440795.48533835
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 9,
+        "weekStart": "2025-02-24T00:00:00.000Z",
+        "timeSaved": 36627.75
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 9,
+        "weekStart": "2025-03-03T00:00:00.000Z",
+        "timeSaved": 232385971.03831252
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 10,
+        "weekStart": "2025-03-10T00:00:00.000Z",
+        "timeSaved": 83828590.2968933
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 11,
+        "weekStart": "2025-03-17T00:00:00.000Z",
+        "timeSaved": 24464900.77777778
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 11,
+        "weekStart": "2025-03-10T00:00:00.000Z",
+        "timeSaved": 0
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 12,
+        "weekStart": "2025-03-24T00:00:00.000Z",
+        "timeSaved": 161775064.82961264
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 13,
+        "weekStart": "2025-03-24T00:00:00.000Z",
+        "timeSaved": 0
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 13,
+        "weekStart": "2025-03-31T00:00:00.000Z",
+        "timeSaved": 234051729.2241664
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 14,
+        "weekStart": "2025-03-31T00:00:00.000Z",
+        "timeSaved": 4666936.596774193
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 14,
+        "weekStart": "2025-04-07T00:00:00.000Z",
+        "timeSaved": 179172488.8418822
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 15,
+        "weekStart": "2025-04-14T00:00:00.000Z",
+        "timeSaved": 39947284.08452381
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 16,
+        "weekStart": "2025-04-21T00:00:00.000Z",
+        "timeSaved": 79559724.77777778
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 17,
+        "weekStart": "2025-04-28T00:00:00.000Z",
+        "timeSaved": 3729997.5
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 18,
+        "weekStart": "2025-05-05T00:00:00.000Z",
+        "timeSaved": 97138386.475
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 19,
+        "weekStart": "2025-05-12T00:00:00.000Z",
+        "timeSaved": 10391226.314285714
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 20,
+        "weekStart": "2025-05-19T00:00:00.000Z",
+        "timeSaved": 105217253.37333578
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 21,
+        "weekStart": "2025-05-26T00:00:00.000Z",
+        "timeSaved": 95175403.9898102
+    },
+    {
+        "workspaceId": "6c709086e412",
+        "year": 2025,
+        "week": 21,
+        "weekStart": "2025-05-19T00:00:00.000Z",
+        "timeSaved": 0
+    }
+]
