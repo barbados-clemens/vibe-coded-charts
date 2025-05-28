@@ -26,7 +26,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   });
 
   // Process data to create chart-friendly format with proper date formatting
-  const chartData = filteredData
+  const sortedData = filteredData
     .map((item, index) => ({
       date: item.date,
       dateDisplay: format(new UTCDate(item.date), 'MMM dd'),
@@ -39,6 +39,22 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       dataIndex: index
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  // Calculate rolling average (7-day window)
+  const rollingWindow = 7;
+  const chartData = sortedData.map((item, index) => {
+    // Calculate rolling average for current position
+    const windowStart = Math.max(0, index - Math.floor(rollingWindow / 2));
+    const windowEnd = Math.min(sortedData.length - 1, index + Math.floor(rollingWindow / 2));
+    
+    const windowData = sortedData.slice(windowStart, windowEnd + 1);
+    const rollingAverage = windowData.reduce((sum, d) => sum + d.timeSavedHours, 0) / windowData.length;
+    
+    return {
+      ...item,
+      rollingAverage: rollingAverage
+    };
+  });
 
   // Create weekend highlight areas
   const weekendAreas = [];
@@ -81,8 +97,11 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-900 mb-2">{label}</p>
+          <p className="text-sm text-green-600">
+            Daily: {data.timeSavedHours.toFixed(1)} hours
+          </p>
           <p className="text-sm text-blue-600">
-            Time Saved: {data.timeSavedHours.toFixed(1)} hours
+            7-Day Avg: {data.rollingAverage.toFixed(1)} hours
           </p>
           <p className="text-xs text-gray-500">
             ({data.timeSavedMs.toLocaleString()} ms)
@@ -145,7 +164,11 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-0.5 bg-green-600"></div>
-            <span>Time Saved Trend</span>
+            <span>Daily Time Saved</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-0.5 bg-blue-600 border-dashed border-t"></div>
+            <span>7-Day Rolling Average</span>
           </div>
         </div>
       </div>
@@ -207,6 +230,18 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
                 dot={false}
                 activeDot={{ r: 5, stroke: '#10b981', strokeWidth: 2, fill: '#10b981' }}
                 connectNulls={true}
+                name="Daily Time Saved"
+              />
+              <Line 
+                type="monotone" 
+                dataKey="rollingAverage" 
+                stroke="#3b82f6" 
+                strokeWidth={2}
+                strokeDasharray="5 5"
+                dot={false}
+                activeDot={{ r: 4, stroke: '#3b82f6', strokeWidth: 2, fill: '#3b82f6' }}
+                connectNulls={true}
+                name="7-Day Rolling Average"
               />
             </LineChart>
           </ResponsiveContainer>
@@ -234,6 +269,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
             {avgTimeSavedHours > 5 && (
               <p className="text-blue-600">📈 Consistently strong performance with {avgTimeSavedHours.toFixed(1)} hours saved per day on average.</p>
             )}
+            <p className="text-gray-600">💡 The blue dashed line shows the 7-day rolling average to help identify trends and smooth out daily fluctuations.</p>
           </div>
         </div>
       )}
