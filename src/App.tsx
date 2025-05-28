@@ -5,7 +5,8 @@ import {ComputeResourceChart} from "./components/ComputeResourceChart.tsx";
 import {ContributorChart} from "./components/ContributorChart.tsx";
 import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
 import {TaskDurationChart} from "./components/TaskDurationChart.tsx";
-import { mockWorkspaceUsageData, mockOrgContribData, mockDailyTaskStats } from './data/mockData';
+import {WeeklyTimeSavedChart} from "./components/WeeklyTimeSavedChart.tsx";
+import { mockWorkspaceUsageData, mockOrgContribData, mockDailyTaskStats, mockWorkspaceTimeSaved } from './data/mockData';
 
 function App() {
     return (
@@ -38,6 +39,11 @@ function App() {
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Task Duration Analysis</h1>
                 <TaskDurationChart data={mockDailyTaskStats} />
+            </div>
+
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Workspace Time Saved</h1>
+                <WeeklyTimeSavedChart data={mockWorkspaceTimeSaved} />
             </div>
         </div>
     );
