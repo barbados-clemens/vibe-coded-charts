@@ -4,7 +4,8 @@ import {RunCountChart} from "./components/RunCountChart.tsx";
 import {ComputeResourceChart} from "./components/ComputeResourceChart.tsx";
 import {ContributorChart} from "./components/ContributorChart.tsx";
 import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
-import { mockWorkspaceUsageData, mockOrgContribData } from './data/mockData';
+import {TaskDurationChart} from "./components/TaskDurationChart.tsx";
+import { mockWorkspaceUsageData, mockOrgContribData, mockDailyTaskStats } from './data/mockData';
 
 function App() {
     return (
@@ -32,6 +33,11 @@ function App() {
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Monthly Summary</h1>
                 <MonthlySummaryChart data={mockWorkspaceUsageData} />
+            </div>
+
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Task Duration Analysis</h1>
+                <TaskDurationChart data={mockDailyTaskStats} />
             </div>
         </div>
     );
