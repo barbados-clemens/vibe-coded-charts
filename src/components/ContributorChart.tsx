@@ -84,7 +84,7 @@ export function ContributorChart({ data }: ContributorChartProps) {
           <p className="text-sm text-gray-600 mb-2">
             CI Pipeline Executions: {payload[0].value}
           </p>
-          {contributorInfo && contributorInfo.executions.length <= 5 && (
+          {contributorInfo && contributorInfo.executions.length > 0 && (
             <div className="text-xs text-gray-500">
               <p className="font-medium mb-1">Recent executions:</p>
               {contributorInfo.executions.slice(0, 3).map((execution, index) => (
