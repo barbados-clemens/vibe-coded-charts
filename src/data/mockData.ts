@@ -14375,208 +14375,1006 @@ export const mockDailyTaskStats = [
 ]
 
 
-export const mockWorkspaceTimeSaved = [
+export const mockWorkspaceDailyTimeSavings = [
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 0,
-        "weekStart": "2024-12-30T00:00:00.000Z",
-        "timeSaved": 130662691.78031689
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 204061967.65707698,
+        "date": "2025-01-05T00:00:00.000Z",
+        "timeSavedLocal": 5480489.513419913,
+        "timeSavedRemote": 198581478.14365706
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 1,
-        "weekStart": "2025-01-06T00:00:00.000Z",
-        "timeSaved": 304085643.1410544
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 50890365.089760244,
+        "date": "2025-01-06T00:00:00.000Z",
+        "timeSavedLocal": 9718643.20357143,
+        "timeSavedRemote": 41171721.88618881
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 2,
-        "weekStart": "2025-01-13T00:00:00.000Z",
-        "timeSaved": 80148319.28809524
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 489758945.15827405,
+        "date": "2025-01-07T00:00:00.000Z",
+        "timeSavedLocal": 45112729.19573511,
+        "timeSavedRemote": 444646215.96253896
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 3,
-        "weekStart": "2025-01-20T00:00:00.000Z",
-        "timeSaved": 122454936.38723777
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 788312279.1653181,
+        "date": "2025-01-08T00:00:00.000Z",
+        "timeSavedLocal": 46156550.63515545,
+        "timeSavedRemote": 742155728.5301627
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 4,
-        "weekStart": "2025-01-27T00:00:00.000Z",
-        "timeSaved": 95231868.99123012
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 751293419.4206645,
+        "date": "2025-01-09T00:00:00.000Z",
+        "timeSavedLocal": 56619049.4593247,
+        "timeSavedRemote": 694674369.9613398
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 5,
-        "weekStart": "2025-02-03T00:00:00.000Z",
-        "timeSaved": 56034438.63311864
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 653828385.9814045,
+        "date": "2025-01-10T00:00:00.000Z",
+        "timeSavedLocal": 57464501.466844276,
+        "timeSavedRemote": 596363884.5145602
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 5,
-        "weekStart": "2025-01-27T00:00:00.000Z",
-        "timeSaved": 0
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 246735707.6250693,
+        "date": "2025-01-11T00:00:00.000Z",
+        "timeSavedLocal": 4146786.2004700853,
+        "timeSavedRemote": 242588921.4245992
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 6,
-        "weekStart": "2025-02-10T00:00:00.000Z",
-        "timeSaved": 188429959.34184673
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 233918103.26533878,
+        "date": "2025-01-12T00:00:00.000Z",
+        "timeSavedLocal": 1681495.4564548496,
+        "timeSavedRemote": 232236607.80888394
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 7,
-        "weekStart": "2025-02-17T00:00:00.000Z",
-        "timeSaved": 89350820.32933621
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 593728074.5252901,
+        "date": "2025-01-13T00:00:00.000Z",
+        "timeSavedLocal": 28134088.70149294,
+        "timeSavedRemote": 565593985.8237972
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 7,
-        "weekStart": "2025-02-10T00:00:00.000Z",
-        "timeSaved": 0
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 600070762.1322433,
+        "date": "2025-01-14T00:00:00.000Z",
+        "timeSavedLocal": 43857599.64587376,
+        "timeSavedRemote": 556213162.4863695
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 8,
-        "weekStart": "2025-02-24T00:00:00.000Z",
-        "timeSaved": 76440795.48533835
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 563156567.3825669,
+        "date": "2025-01-15T00:00:00.000Z",
+        "timeSavedLocal": 54047491.234841764,
+        "timeSavedRemote": 509109076.1477251
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 9,
-        "weekStart": "2025-02-24T00:00:00.000Z",
-        "timeSaved": 36627.75
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 715363673.9764011,
+        "date": "2025-01-16T00:00:00.000Z",
+        "timeSavedLocal": 54406555.408791356,
+        "timeSavedRemote": 660957118.5676098
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 9,
-        "weekStart": "2025-03-03T00:00:00.000Z",
-        "timeSaved": 232385971.03831252
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 421094341.23743147,
+        "date": "2025-01-17T00:00:00.000Z",
+        "timeSavedLocal": 21556766.238192603,
+        "timeSavedRemote": 399537574.99923885
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 10,
-        "weekStart": "2025-03-10T00:00:00.000Z",
-        "timeSaved": 83828590.2968933
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 228399184.73563218,
+        "date": "2025-01-18T00:00:00.000Z",
+        "timeSavedLocal": 591402.0833333333,
+        "timeSavedRemote": 227807782.65229884
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 11,
-        "weekStart": "2025-03-17T00:00:00.000Z",
-        "timeSaved": 24464900.77777778
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 223182406.56765717,
+        "date": "2025-01-19T00:00:00.000Z",
+        "timeSavedLocal": 6011821.257939261,
+        "timeSavedRemote": 217170585.30971792
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 11,
-        "weekStart": "2025-03-10T00:00:00.000Z",
-        "timeSaved": 0
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 233803474.37647736,
+        "date": "2025-01-20T00:00:00.000Z",
+        "timeSavedLocal": 11404272.70938937,
+        "timeSavedRemote": 222399201.667088
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 12,
-        "weekStart": "2025-03-24T00:00:00.000Z",
-        "timeSaved": 161775064.82961264
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 292316973.920782,
+        "date": "2025-01-21T00:00:00.000Z",
+        "timeSavedLocal": 30620036.020026963,
+        "timeSavedRemote": 261696937.90075505
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 13,
-        "weekStart": "2025-03-24T00:00:00.000Z",
-        "timeSaved": 0
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 532541132.03288764,
+        "date": "2025-01-22T00:00:00.000Z",
+        "timeSavedLocal": 113061322.29040056,
+        "timeSavedRemote": 419479809.7424871
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 13,
-        "weekStart": "2025-03-31T00:00:00.000Z",
-        "timeSaved": 234051729.2241664
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 677857241.1119292,
+        "date": "2025-01-23T00:00:00.000Z",
+        "timeSavedLocal": 75605975.99879418,
+        "timeSavedRemote": 602251265.113135
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 14,
-        "weekStart": "2025-03-31T00:00:00.000Z",
-        "timeSaved": 4666936.596774193
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 556395453.1166232,
+        "date": "2025-01-24T00:00:00.000Z",
+        "timeSavedLocal": 61910443.51769425,
+        "timeSavedRemote": 494485009.59892887
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 14,
-        "weekStart": "2025-04-07T00:00:00.000Z",
-        "timeSaved": 179172488.8418822
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 280542819.66502464,
+        "date": "2025-01-25T00:00:00.000Z",
+        "timeSavedLocal": 433718.5,
+        "timeSavedRemote": 280109101.16502464
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 15,
-        "weekStart": "2025-04-14T00:00:00.000Z",
-        "timeSaved": 39947284.08452381
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 233153320.46513742,
+        "date": "2025-01-26T00:00:00.000Z",
+        "timeSavedLocal": 1617178.0903361344,
+        "timeSavedRemote": 231536142.37480128
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 16,
-        "weekStart": "2025-04-21T00:00:00.000Z",
-        "timeSaved": 79559724.77777778
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 392442535.5929167,
+        "date": "2025-01-27T00:00:00.000Z",
+        "timeSavedLocal": 53147381.874490954,
+        "timeSavedRemote": 339295153.71842575
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 17,
-        "weekStart": "2025-04-28T00:00:00.000Z",
-        "timeSaved": 3729997.5
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 437803677.48980427,
+        "date": "2025-01-28T00:00:00.000Z",
+        "timeSavedLocal": 46790179.93848502,
+        "timeSavedRemote": 391013497.55131924
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 18,
-        "weekStart": "2025-05-05T00:00:00.000Z",
-        "timeSaved": 97138386.475
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 482403456.79759675,
+        "date": "2025-01-29T00:00:00.000Z",
+        "timeSavedLocal": 39665960.24519762,
+        "timeSavedRemote": 442737496.55239916
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 19,
-        "weekStart": "2025-05-12T00:00:00.000Z",
-        "timeSaved": 10391226.314285714
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 385497569.45753354,
+        "date": "2025-01-30T00:00:00.000Z",
+        "timeSavedLocal": 36819456.564417444,
+        "timeSavedRemote": 348678112.8931161
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 20,
-        "weekStart": "2025-05-19T00:00:00.000Z",
-        "timeSaved": 105217253.37333578
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 316970475.4219167,
+        "date": "2025-01-31T00:00:00.000Z",
+        "timeSavedLocal": 29478874.833838597,
+        "timeSavedRemote": 287491600.58807814
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 21,
-        "weekStart": "2025-05-26T00:00:00.000Z",
-        "timeSaved": 95175403.9898102
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 321215375.4843148,
+        "date": "2025-02-01T00:00:00.000Z",
+        "timeSavedLocal": 979291.8275862068,
+        "timeSavedRemote": 320236083.65672857
     },
     {
-        "workspaceId": "6c709086e412",
-        "year": 2025,
-        "week": 21,
-        "weekStart": "2025-05-19T00:00:00.000Z",
-        "timeSaved": 0
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 222476050.48713452,
+        "date": "2025-02-02T00:00:00.000Z",
+        "timeSavedLocal": 2148977.6549707605,
+        "timeSavedRemote": 220327072.83216375
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 909696592.435926,
+        "date": "2025-02-03T00:00:00.000Z",
+        "timeSavedLocal": 47673091.83871827,
+        "timeSavedRemote": 862023500.5972077
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1322158430.6296718,
+        "date": "2025-02-04T00:00:00.000Z",
+        "timeSavedLocal": 34926409.53999372,
+        "timeSavedRemote": 1287232021.089678
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 867031010.592282,
+        "date": "2025-02-05T00:00:00.000Z",
+        "timeSavedLocal": 41673436.38099364,
+        "timeSavedRemote": 825357574.2112885
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 981009003.1078827,
+        "date": "2025-02-06T00:00:00.000Z",
+        "timeSavedLocal": 45582334.07346542,
+        "timeSavedRemote": 935426669.0344173
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1303081596.0157897,
+        "date": "2025-02-07T00:00:00.000Z",
+        "timeSavedLocal": 47186912.34043403,
+        "timeSavedRemote": 1255894683.6753557
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 314186483.2650794,
+        "date": "2025-02-08T00:00:00.000Z",
+        "timeSavedLocal": 1105091.607142857,
+        "timeSavedRemote": 313081391.6579365
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 263357309.76666668,
+        "date": "2025-02-09T00:00:00.000Z",
+        "timeSavedLocal": 572159.9333333333,
+        "timeSavedRemote": 262785149.83333334
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 503066086.2928513,
+        "date": "2025-02-10T00:00:00.000Z",
+        "timeSavedLocal": 39920111.08268423,
+        "timeSavedRemote": 463145975.2101671
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1041854434.8716242,
+        "date": "2025-02-11T00:00:00.000Z",
+        "timeSavedLocal": 73678300.0084598,
+        "timeSavedRemote": 968176134.8631644
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 878414495.8655206,
+        "date": "2025-02-12T00:00:00.000Z",
+        "timeSavedLocal": 45155863.53403247,
+        "timeSavedRemote": 833258632.3314881
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 724320741.4878225,
+        "date": "2025-02-13T00:00:00.000Z",
+        "timeSavedLocal": 63251067.43126446,
+        "timeSavedRemote": 661069674.056558
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 715627032.5174694,
+        "date": "2025-02-14T00:00:00.000Z",
+        "timeSavedLocal": 56369228.328079216,
+        "timeSavedRemote": 659257804.1893902
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 240192912.5146974,
+        "date": "2025-02-15T00:00:00.000Z",
+        "timeSavedLocal": 12372019.214109933,
+        "timeSavedRemote": 227820893.30058748
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 36821386.186656505,
+        "date": "2025-02-16T00:00:00.000Z",
+        "timeSavedLocal": 22913518.984515004,
+        "timeSavedRemote": 13907867.2021415
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 787011219.7195166,
+        "date": "2025-02-17T00:00:00.000Z",
+        "timeSavedLocal": 67537521.09064904,
+        "timeSavedRemote": 719473698.6288676
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 780147508.04095,
+        "date": "2025-02-18T00:00:00.000Z",
+        "timeSavedLocal": 48287588.51203727,
+        "timeSavedRemote": 731859919.5289127
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1068667518.6309409,
+        "date": "2025-02-19T00:00:00.000Z",
+        "timeSavedLocal": 67673610.41774315,
+        "timeSavedRemote": 1000993908.2131977
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 733303005.3331697,
+        "date": "2025-02-20T00:00:00.000Z",
+        "timeSavedLocal": 36124221.06819932,
+        "timeSavedRemote": 697178784.2649704
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 272415980.701049,
+        "date": "2025-02-21T00:00:00.000Z",
+        "timeSavedLocal": 8121698.139138639,
+        "timeSavedRemote": 264294282.5619103
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 204310596.3508046,
+        "date": "2025-02-22T00:00:00.000Z",
+        "timeSavedLocal": 130176.38888888889,
+        "timeSavedRemote": 204180419.9619157
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 94781354.93670243,
+        "date": "2025-02-23T00:00:00.000Z",
+        "timeSavedLocal": 6607593.028119707,
+        "timeSavedRemote": 88173761.90858272
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 396186789.9756327,
+        "date": "2025-02-24T00:00:00.000Z",
+        "timeSavedLocal": 31779406.266416065,
+        "timeSavedRemote": 364407383.70921665
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 518846198.5766644,
+        "date": "2025-02-25T00:00:00.000Z",
+        "timeSavedLocal": 47705661.3375447,
+        "timeSavedRemote": 471140537.2391197
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 730311249.7267593,
+        "date": "2025-02-26T00:00:00.000Z",
+        "timeSavedLocal": 43919134.68661432,
+        "timeSavedRemote": 686392115.040145
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 519740383.83327144,
+        "date": "2025-02-27T00:00:00.000Z",
+        "timeSavedLocal": 33599635.590530075,
+        "timeSavedRemote": 486140748.24274135
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 786877837.1035869,
+        "date": "2025-02-28T00:00:00.000Z",
+        "timeSavedLocal": 63193448.4212566,
+        "timeSavedRemote": 723684388.6823303
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 231355420.92084214,
+        "date": "2025-03-01T00:00:00.000Z",
+        "timeSavedLocal": 5519058.651415284,
+        "timeSavedRemote": 225836362.26942685
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 218197898.0455707,
+        "date": "2025-03-02T00:00:00.000Z",
+        "timeSavedLocal": 289265.9585921325,
+        "timeSavedRemote": 217908632.08697855
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 437612836.5872091,
+        "date": "2025-03-03T00:00:00.000Z",
+        "timeSavedLocal": 42495043.13423488,
+        "timeSavedRemote": 395117793.4529742
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 638515689.145563,
+        "date": "2025-03-04T00:00:00.000Z",
+        "timeSavedLocal": 43945311.83690261,
+        "timeSavedRemote": 594570377.3086604
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 571649711.8607401,
+        "date": "2025-03-05T00:00:00.000Z",
+        "timeSavedLocal": 50837602.56349556,
+        "timeSavedRemote": 520812109.29724455
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 498698209.12394124,
+        "date": "2025-03-06T00:00:00.000Z",
+        "timeSavedLocal": 19923878.1878918,
+        "timeSavedRemote": 478774330.93604946
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 515935968.06542826,
+        "date": "2025-03-07T00:00:00.000Z",
+        "timeSavedLocal": 33627027.59631608,
+        "timeSavedRemote": 482308940.46911216
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 204149697.48680994,
+        "date": "2025-03-08T00:00:00.000Z",
+        "timeSavedLocal": 14130966.310227273,
+        "timeSavedRemote": 190018731.17658266
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 190845455.7771739,
+        "date": "2025-03-09T00:00:00.000Z",
+        "timeSavedLocal": 968764.0217391304,
+        "timeSavedRemote": 189876691.75543478
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 501241331.47058314,
+        "date": "2025-03-10T00:00:00.000Z",
+        "timeSavedLocal": 32993504.3581589,
+        "timeSavedRemote": 468247827.11242425
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 504245273.0123576,
+        "date": "2025-03-11T00:00:00.000Z",
+        "timeSavedLocal": 62476452.481291674,
+        "timeSavedRemote": 441768820.53106594
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 587031543.9365325,
+        "date": "2025-03-12T00:00:00.000Z",
+        "timeSavedLocal": 55730671.73894537,
+        "timeSavedRemote": 531300872.19758713
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 767159997.3587683,
+        "date": "2025-03-13T00:00:00.000Z",
+        "timeSavedLocal": 50038479.18941175,
+        "timeSavedRemote": 717121518.1693566
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 689395566.7968614,
+        "date": "2025-03-14T00:00:00.000Z",
+        "timeSavedLocal": 52081810.77876861,
+        "timeSavedRemote": 637313756.0180928
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 203596557.9321698,
+        "date": "2025-03-15T00:00:00.000Z",
+        "timeSavedLocal": 368564.99906323187,
+        "timeSavedRemote": 203227992.93310657
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 86603346.22115386,
+        "date": "2025-03-16T00:00:00.000Z",
+        "timeSavedLocal": 3372802.628205128,
+        "timeSavedRemote": 83230543.59294872
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 355387108.68246585,
+        "date": "2025-03-17T00:00:00.000Z",
+        "timeSavedLocal": 12008185.809509056,
+        "timeSavedRemote": 343378922.8729568
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 363024914.3818906,
+        "date": "2025-03-18T00:00:00.000Z",
+        "timeSavedLocal": 30899183.879508972,
+        "timeSavedRemote": 332125730.5023816
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 193690114.0376168,
+        "date": "2025-03-19T00:00:00.000Z",
+        "timeSavedLocal": 22588986.31484341,
+        "timeSavedRemote": 171101127.72277337
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 478858823.53034616,
+        "date": "2025-03-20T00:00:00.000Z",
+        "timeSavedLocal": 150027159.68426034,
+        "timeSavedRemote": 328831663.8460858
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 344647453.18315196,
+        "date": "2025-03-21T00:00:00.000Z",
+        "timeSavedLocal": 31756494.745694403,
+        "timeSavedRemote": 312890958.43745756
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 114871598.73620246,
+        "date": "2025-03-22T00:00:00.000Z",
+        "timeSavedLocal": 22553637.544903543,
+        "timeSavedRemote": 92317961.19129892
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 114148405.40703464,
+        "date": "2025-03-23T00:00:00.000Z",
+        "timeSavedLocal": 2483126.7715950715,
+        "timeSavedRemote": 111665278.63543956
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 463050156.6081753,
+        "date": "2025-03-24T00:00:00.000Z",
+        "timeSavedLocal": 13746471.949880468,
+        "timeSavedRemote": 449303684.6582948
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 313619624.3585745,
+        "date": "2025-03-25T00:00:00.000Z",
+        "timeSavedLocal": 11138279.291880075,
+        "timeSavedRemote": 302481345.06669444
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 422422957.76890445,
+        "date": "2025-03-26T00:00:00.000Z",
+        "timeSavedLocal": 17918716.76234797,
+        "timeSavedRemote": 404504241.00655645
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 548110701.7140417,
+        "date": "2025-03-27T00:00:00.000Z",
+        "timeSavedLocal": 39645672.59658029,
+        "timeSavedRemote": 508465029.1174614
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 373096807.1664218,
+        "date": "2025-03-28T00:00:00.000Z",
+        "timeSavedLocal": 27341289.82708834,
+        "timeSavedRemote": 345755517.3393334
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 104078170.37619048,
+        "date": "2025-03-29T00:00:00.000Z",
+        "timeSavedLocal": 248430.73333333334,
+        "timeSavedRemote": 103829739.64285715
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 104811724.41538462,
+        "date": "2025-03-30T00:00:00.000Z",
+        "timeSavedLocal": 0,
+        "timeSavedRemote": 104811724.41538462
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 619309059.091851,
+        "date": "2025-03-31T00:00:00.000Z",
+        "timeSavedLocal": 18044662.366099883,
+        "timeSavedRemote": 601264396.7257512
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 419686983.9324907,
+        "date": "2025-04-01T00:00:00.000Z",
+        "timeSavedLocal": 19179039.985777702,
+        "timeSavedRemote": 400507943.94671303
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 575779752.6178055,
+        "date": "2025-04-02T00:00:00.000Z",
+        "timeSavedLocal": 16487524.344205773,
+        "timeSavedRemote": 559292228.2735997
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 281925581.0261562,
+        "date": "2025-04-03T00:00:00.000Z",
+        "timeSavedLocal": 37550590.66497703,
+        "timeSavedRemote": 244374990.36117914
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 245665143.8480353,
+        "date": "2025-04-04T00:00:00.000Z",
+        "timeSavedLocal": 10945742.215447696,
+        "timeSavedRemote": 234719401.6325876
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 238682787.5710421,
+        "date": "2025-04-05T00:00:00.000Z",
+        "timeSavedLocal": 18660168.81133708,
+        "timeSavedRemote": 220022618.759705
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 138462334.196908,
+        "date": "2025-04-06T00:00:00.000Z",
+        "timeSavedLocal": 2354523.3137254897,
+        "timeSavedRemote": 136107810.8831825
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 303378207.7118206,
+        "date": "2025-04-07T00:00:00.000Z",
+        "timeSavedLocal": 22211623.246175177,
+        "timeSavedRemote": 281166584.46564543
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 441401440.06131446,
+        "date": "2025-04-08T00:00:00.000Z",
+        "timeSavedLocal": 15308104.482236968,
+        "timeSavedRemote": 426093335.5790775
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 351105490.591345,
+        "date": "2025-04-09T00:00:00.000Z",
+        "timeSavedLocal": 23051833.34319423,
+        "timeSavedRemote": 328053657.24815077
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 816544973.0520712,
+        "date": "2025-04-10T00:00:00.000Z",
+        "timeSavedLocal": 36751447.353005536,
+        "timeSavedRemote": 779793525.6990657
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 717225953.7742676,
+        "date": "2025-04-11T00:00:00.000Z",
+        "timeSavedLocal": 25720647.50385542,
+        "timeSavedRemote": 691505306.2704121
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 298290867.91108173,
+        "date": "2025-04-12T00:00:00.000Z",
+        "timeSavedLocal": 2852617.2680728775,
+        "timeSavedRemote": 295438250.6430088
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 139407960.72356516,
+        "date": "2025-04-13T00:00:00.000Z",
+        "timeSavedLocal": 8556800.211320633,
+        "timeSavedRemote": 130851160.51224454
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 309775805.8544186,
+        "date": "2025-04-14T00:00:00.000Z",
+        "timeSavedLocal": 41322499.31972164,
+        "timeSavedRemote": 268453306.53469694
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 782071274.5520524,
+        "date": "2025-04-15T00:00:00.000Z",
+        "timeSavedLocal": 73183280.35688475,
+        "timeSavedRemote": 708887994.1951677
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 817201708.9412699,
+        "date": "2025-04-16T00:00:00.000Z",
+        "timeSavedLocal": 32808786.65832125,
+        "timeSavedRemote": 784392922.2829486
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 865620571.6561936,
+        "date": "2025-04-17T00:00:00.000Z",
+        "timeSavedLocal": 43710869.83959178,
+        "timeSavedRemote": 821909701.8166019
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 17748818.200000003,
+        "date": "2025-04-18T00:00:00.000Z",
+        "timeSavedLocal": 325813.6,
+        "timeSavedRemote": 17423004.6
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 11972726.166666668,
+        "date": "2025-04-19T00:00:00.000Z",
+        "timeSavedLocal": 2629623.1428571427,
+        "timeSavedRemote": 9343103.023809524
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 23835044.08095238,
+        "date": "2025-04-20T00:00:00.000Z",
+        "timeSavedLocal": 8903098.666666666,
+        "timeSavedRemote": 14931945.414285714
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 32699048.55238095,
+        "date": "2025-04-21T00:00:00.000Z",
+        "timeSavedLocal": 11052255.378571428,
+        "timeSavedRemote": 21646793.17380952
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 472414159.7586627,
+        "date": "2025-04-22T00:00:00.000Z",
+        "timeSavedLocal": 31269631.317332353,
+        "timeSavedRemote": 441144528.4413304
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1027947826.5042673,
+        "date": "2025-04-23T00:00:00.000Z",
+        "timeSavedLocal": 28516237.714873098,
+        "timeSavedRemote": 999431588.7893943
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 937207380.8155754,
+        "date": "2025-04-24T00:00:00.000Z",
+        "timeSavedLocal": 23490953.300420504,
+        "timeSavedRemote": 913716427.5151548
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1249319415.848598,
+        "date": "2025-04-25T00:00:00.000Z",
+        "timeSavedLocal": 34250404.65884987,
+        "timeSavedRemote": 1215069011.189748
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 633176372.5999427,
+        "date": "2025-04-26T00:00:00.000Z",
+        "timeSavedLocal": 13789831.517544629,
+        "timeSavedRemote": 619386541.082398
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 725724,
+        "date": "2025-04-27T00:00:00.000Z",
+        "timeSavedLocal": 23900,
+        "timeSavedRemote": 701824
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 669099449.222963,
+        "date": "2025-04-28T00:00:00.000Z",
+        "timeSavedLocal": 35310819.12307091,
+        "timeSavedRemote": 633788630.099892
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1423714161.016567,
+        "date": "2025-04-29T00:00:00.000Z",
+        "timeSavedLocal": 26411448.038209323,
+        "timeSavedRemote": 1397302712.9783576
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1103198625.0556574,
+        "date": "2025-04-30T00:00:00.000Z",
+        "timeSavedLocal": 46380201.11506434,
+        "timeSavedRemote": 1056818423.940593
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1821718402.7495508,
+        "date": "2025-05-01T00:00:00.000Z",
+        "timeSavedLocal": 62771238.152494594,
+        "timeSavedRemote": 1758947164.5970562
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1522173681.931096,
+        "date": "2025-05-02T00:00:00.000Z",
+        "timeSavedLocal": 32553294.531116247,
+        "timeSavedRemote": 1489620387.3999798
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 456973668.89212453,
+        "date": "2025-05-03T00:00:00.000Z",
+        "timeSavedLocal": 5590950.333333334,
+        "timeSavedRemote": 451382718.5587912
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 62202175.05,
+        "date": "2025-05-04T00:00:00.000Z",
+        "timeSavedLocal": 141500,
+        "timeSavedRemote": 62060675.05
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 635740499.133701,
+        "date": "2025-05-05T00:00:00.000Z",
+        "timeSavedLocal": 8900422.166104151,
+        "timeSavedRemote": 626840076.9675968
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 639473478.0573252,
+        "date": "2025-05-06T00:00:00.000Z",
+        "timeSavedLocal": 33273166.22335691,
+        "timeSavedRemote": 606200311.8339683
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 822923323.3427957,
+        "date": "2025-05-07T00:00:00.000Z",
+        "timeSavedLocal": 48487649.3529173,
+        "timeSavedRemote": 774435673.9898784
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1122063373.7654986,
+        "date": "2025-05-08T00:00:00.000Z",
+        "timeSavedLocal": 25798099.558868866,
+        "timeSavedRemote": 1096265274.2066298
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1059579386.6228654,
+        "date": "2025-05-09T00:00:00.000Z",
+        "timeSavedLocal": 20917302.4026906,
+        "timeSavedRemote": 1038662084.2201748
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 85491633.3,
+        "date": "2025-05-10T00:00:00.000Z",
+        "timeSavedLocal": 1387590.2,
+        "timeSavedRemote": 84104043.1
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 3623246.666666667,
+        "date": "2025-05-11T00:00:00.000Z",
+        "timeSavedLocal": 0,
+        "timeSavedRemote": 3623246.666666667
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 1290916544.0943806,
+        "date": "2025-05-12T00:00:00.000Z",
+        "timeSavedLocal": 19461675.998584352,
+        "timeSavedRemote": 1271454868.0957963
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 971750727.5176555,
+        "date": "2025-05-13T00:00:00.000Z",
+        "timeSavedLocal": 51210343.50878289,
+        "timeSavedRemote": 920540384.0088726
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 770227976.859883,
+        "date": "2025-05-14T00:00:00.000Z",
+        "timeSavedLocal": 23657873.63663194,
+        "timeSavedRemote": 746570103.223251
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 544976308.6248026,
+        "date": "2025-05-15T00:00:00.000Z",
+        "timeSavedLocal": 34523675.53698003,
+        "timeSavedRemote": 510452633.0878225
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 831944646.4372691,
+        "date": "2025-05-16T00:00:00.000Z",
+        "timeSavedLocal": 45663012.133405216,
+        "timeSavedRemote": 786281634.3038639
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 146287663.3910867,
+        "date": "2025-05-17T00:00:00.000Z",
+        "timeSavedLocal": 19789445.02789988,
+        "timeSavedRemote": 126498218.36318682
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 734727.3529411764,
+        "date": "2025-05-18T00:00:00.000Z",
+        "timeSavedLocal": 106002,
+        "timeSavedRemote": 628725.3529411764
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 28285184.104344428,
+        "date": "2025-05-19T00:00:00.000Z",
+        "timeSavedLocal": 4796722.4151421515,
+        "timeSavedRemote": 23488461.689202275
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 190714086.19032955,
+        "date": "2025-05-20T00:00:00.000Z",
+        "timeSavedLocal": 18787071.48149481,
+        "timeSavedRemote": 171927014.70883474
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 797926726.3651104,
+        "date": "2025-05-21T00:00:00.000Z",
+        "timeSavedLocal": 30802748.46351089,
+        "timeSavedRemote": 767123977.9015995
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 409873976.9851106,
+        "date": "2025-05-22T00:00:00.000Z",
+        "timeSavedLocal": 35443491.908846274,
+        "timeSavedRemote": 374430485.0762643
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 658284190.962772,
+        "date": "2025-05-23T00:00:00.000Z",
+        "timeSavedLocal": 28815933.828274295,
+        "timeSavedRemote": 629468257.1344978
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 282740034.2636905,
+        "date": "2025-05-24T00:00:00.000Z",
+        "timeSavedLocal": 22375538.215476193,
+        "timeSavedRemote": 260364496.0482143
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 3590669.5,
+        "date": "2025-05-25T00:00:00.000Z",
+        "timeSavedLocal": 214045.5,
+        "timeSavedRemote": 3376624
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 657040390.8140662,
+        "date": "2025-05-26T00:00:00.000Z",
+        "timeSavedLocal": 27145709.8108769,
+        "timeSavedRemote": 629894681.0031893
+    },
+    {
+        "workspaceId": "58c4a7e2fc1d",
+        "timeSaved": 787025616.8806685,
+        "date": "2025-05-27T00:00:00.000Z",
+        "timeSavedLocal": 30625507.887208425,
+        "timeSavedRemote": 756400108.99346
     }
 ]

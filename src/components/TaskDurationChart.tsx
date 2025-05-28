@@ -289,21 +289,7 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
                 strokeDasharray="5 5"
                 label={{ value: "-1σ", position: "right" }}
               />
-              {/*<ReferenceLine */}
-              {/*  y={plusTwoStdDev} */}
-              {/*  stroke="#f97316" */}
-              {/*  strokeWidth={1}*/}
-              {/*  strokeOpacity={0.6}*/}
-              {/*  label={{ value: "+2σ", position: "right" }}*/}
-              {/*/>*/}
-              {/*<ReferenceLine */}
-              {/*  y={minusTwoStdDev} */}
-              {/*  stroke="#f97316" */}
-              {/*  strokeWidth={1}*/}
-              {/*  strokeOpacity={0.6}*/}
-              {/*  label={{ value: "-2σ", position: "right" }}*/}
-              {/*/>*/}
-              
+
               {uniqueTaskIds.map((taskId, index) => {
                 const color = getTaskColor(taskId, index);
                 const strokeWidth = taskId.includes('(CI)') ? 2 : 2;

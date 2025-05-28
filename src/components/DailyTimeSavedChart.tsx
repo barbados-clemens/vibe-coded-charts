@@ -4,42 +4,38 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 
-export type WeeklyTimeSavedDataItem = {
+export type DailyTimeSavedDataItem = {
   workspaceId: string;
-  year: number;
-  week: number;
-  weekStart: string;
+  date: string;
   timeSaved: number;
 };
 
-interface WeeklyTimeSavedChartProps {
-  data: WeeklyTimeSavedDataItem[];
+interface DailyTimeSavedChartProps {
+  data: DailyTimeSavedDataItem[];
 }
 
-export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
+export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
-    return new UTCDate(data[0]?.weekStart || new Date())
+    return new UTCDate(data[0]?.date || new Date())
   });
 
   // Filter data for current year
   const filteredData = data.filter(item => {
-    const itemDate = new UTCDate(item.weekStart);
+    const itemDate = new UTCDate(item.date);
     return isSameYear(itemDate, currentDate);
   });
 
   // Process data to create chart-friendly format with proper date formatting
   const chartData = filteredData
     .map(item => ({
-      weekStart: item.weekStart,
-      weekDisplay: format(new UTCDate(item.weekStart), 'MMM dd'),
-      monthDisplay: format(new UTCDate(item.weekStart), 'MMM'),
+      date: item.date,
+      dateDisplay: format(new UTCDate(item.date), 'MMM dd'),
+      monthDisplay: format(new UTCDate(item.date), 'MMM'),
       timeSavedHours: item.timeSaved / (1000 * 60 * 60), // Convert ms to hours
       timeSavedMs: item.timeSaved,
-      week: item.week,
-      year: item.year,
       workspaceId: item.workspaceId
     }))
-    .sort((a, b) => new Date(a.weekStart).getTime() - new Date(b.weekStart).getTime());
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   const handlePrevYear = () => {
     setCurrentDate(prev => addYears(prev, -1));
@@ -55,7 +51,7 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
       const data = payload[0].payload;
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
-          <p className="font-medium text-gray-900 mb-2">Week of {label}</p>
+          <p className="font-medium text-gray-900 mb-2">{label}</p>
           <p className="text-sm text-blue-600">
             Time Saved: {data.timeSavedHours.toFixed(1)} hours
           </p>
@@ -73,12 +69,12 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
   const totalTimeSavedHours = totalTimeSavedMs / (1000 * 60 * 60);
   const avgTimeSavedHours = filteredData.length > 0 ? totalTimeSavedHours / filteredData.length : 0;
   const maxTimeSavedHours = Math.max(...filteredData.map(item => item.timeSaved / (1000 * 60 * 60)), 0);
-  const weeksWithData = filteredData.filter(item => item.timeSaved > 0).length;
+  const daysWithData = filteredData.filter(item => item.timeSaved > 0).length;
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
-        title="Workspace Time Saved"
+        title="Daily Time Saved"
         displayValue={format(currentDate, 'yyyy')}
         onPrevious={handlePrevYear}
         onNext={handleNextYear}
@@ -93,15 +89,15 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
           </div>
           <div>
             <div className="text-2xl font-bold text-green-700">{avgTimeSavedHours.toFixed(1)}h</div>
-            <div className="text-sm text-gray-600">Avg per Week</div>
+            <div className="text-sm text-gray-600">Avg per Day</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-green-700">{maxTimeSavedHours.toFixed(1)}h</div>
-            <div className="text-sm text-gray-600">Peak Week</div>
+            <div className="text-sm text-gray-600">Peak Day</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-green-700">{weeksWithData}</div>
-            <div className="text-sm text-gray-600">Active Weeks</div>
+            <div className="text-2xl font-bold text-green-700">{daysWithData}</div>
+            <div className="text-sm text-gray-600">Active Days</div>
           </div>
         </div>
       </div>
@@ -113,7 +109,7 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
           <p>Total time saved this year is equivalent to:</p>
           <div className="mt-1 grid grid-cols-2 md:grid-cols-4 gap-2">
             <span>• {(totalTimeSavedHours / 24).toFixed(1)} days</span>
-            <span>• {(totalTimeSavedHours / (40)).toFixed(1)} work weeks</span>
+            <span>• {(totalTimeSavedHours / (8)).toFixed(1)} work days</span>
             <span>• {(totalTimeSavedMs / 1000).toFixed(0)} seconds</span>
             <span>• {(totalTimeSavedMs / (1000 * 60)).toFixed(0)} minutes</span>
           </div>
@@ -126,13 +122,13 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
             <LineChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis 
-                dataKey="weekDisplay" 
+                dataKey="dateDisplay" 
                 stroke="#6b7280"
-                tick={{ fill: '#6b7280', fontSize: 11 }}
+                tick={{ fill: '#6b7280', fontSize: 10 }}
                 interval="preserveStartEnd"
                 tickFormatter={(value, index) => {
-                  // Show only every 4th week to reduce clutter
-                  if (index % 4 === 0) return value;
+                  // Show only every 30th day to reduce clutter
+                  if (index % 30 === 0) return value;
                   return '';
                 }}
               />
@@ -171,11 +167,11 @@ export function WeeklyTimeSavedChart({ data }: WeeklyTimeSavedChartProps) {
             {totalTimeSavedHours > 1000 && (
               <p className="text-green-700">🎉 Excellent caching performance! Over 1,000 hours saved this year.</p>
             )}
-            {weeksWithData < filteredData.length && (
-              <p className="text-yellow-600">⚠️ Some weeks show no time savings - consider optimizing cache strategies.</p>
+            {daysWithData < filteredData.length && (
+              <p className="text-yellow-600">⚠️ Some days show no time savings - consider optimizing cache strategies.</p>
             )}
-            {avgTimeSavedHours > 20 && (
-              <p className="text-blue-600">📈 Consistently strong performance with {avgTimeSavedHours.toFixed(1)} hours saved per week on average.</p>
+            {avgTimeSavedHours > 5 && (
+              <p className="text-blue-600">📈 Consistently strong performance with {avgTimeSavedHours.toFixed(1)} hours saved per day on average.</p>
             )}
           </div>
         </div>
