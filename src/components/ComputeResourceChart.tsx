@@ -19,6 +19,8 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
     // Initialize with UTC date from first data point
     return new UTCDate(data[0].date)
   });
+  
+  const [viewMode, setViewMode] = useState<'per-workspace' | 'all-workspaces'>('per-workspace');
 
   // Get incremental data
   const incrementalData = calculateComputeIncrements(data);
@@ -35,28 +37,43 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
   // Get unique dates and sort them
   const uniqueDates = [...new Set(filteredData.map(item => item.date))].sort();
   
-  // Create formatted data for stacked bar chart
+  // Create formatted data based on view mode
   const formattedData = uniqueDates.map(date => {
     const dataPoint: any = {
       date: format(new UTCDate(date), 'MMM dd'),
     };
     
-    // Initialize all combinations to 0
-    workspaceIds.forEach(workspaceId => {
-      resourceClasses.forEach(resourceClass => {
-        const key = `${workspaceId}-${resourceClass}`;
-        dataPoint[key] = 0;
-      });
-    });
-    
-    // Add actual data
     const dayEntries = filteredData.filter(item => item.date === date);
-    dayEntries.forEach(entry => {
-      entry.compute.forEach(compute => {
-        const key = `${entry.workspaceId}-${compute.resourceClass}`;
-        dataPoint[key] = compute.credits;
+    
+    if (viewMode === 'per-workspace') {
+      // Initialize all workspace-resource combinations to 0
+      workspaceIds.forEach(workspaceId => {
+        resourceClasses.forEach(resourceClass => {
+          const key = `${workspaceId}-${resourceClass}`;
+          dataPoint[key] = 0;
+        });
       });
-    });
+      
+      // Add actual data for workspace-resource combinations
+      dayEntries.forEach(entry => {
+        entry.compute.forEach(compute => {
+          const key = `${entry.workspaceId}-${compute.resourceClass}`;
+          dataPoint[key] = compute.credits;
+        });
+      });
+    } else {
+      // All workspaces combined - group by resource class only
+      resourceClasses.forEach(resourceClass => {
+        dataPoint[resourceClass] = 0;
+      });
+      
+      // Sum credits across all workspaces for each resource class
+      dayEntries.forEach(entry => {
+        entry.compute.forEach(compute => {
+          dataPoint[compute.resourceClass] = (dataPoint[compute.resourceClass] || 0) + compute.credits;
+        });
+      });
+    }
     
     return dataPoint;
   });
@@ -76,28 +93,48 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
     setCurrentDate(prev => addMonths(prev, 1));
   };
 
-  // Create bars for each workspace-resource combination
+  // Create bars based on view mode
   const createBars = () => {
     const bars: any[] = [];
     
-    workspaceIds.forEach((workspaceId, workspaceIndex) => {
-      const colors = workspaceColors[workspaceId] || ['#6b7280', '#4b5563', '#374151', '#1f2937'];
+    if (viewMode === 'per-workspace') {
+      // Per workspace mode - existing logic
+      workspaceIds.forEach((workspaceId, workspaceIndex) => {
+        const colors = workspaceColors[workspaceId] || ['#6b7280', '#4b5563', '#374151', '#1f2937'];
+        
+        resourceClasses.forEach((resourceClass, resourceIndex) => {
+          const key = `${workspaceId}-${resourceClass}`;
+          const displayName = `${workspaceId.slice(-4)} - ${resourceClass.split('/')[1]}`;
+          
+          bars.push(
+            <Bar
+              key={key}
+              dataKey={key}
+              stackId={workspaceId}
+              name={displayName}
+              fill={colors[resourceIndex % colors.length]}
+            />
+          );
+        });
+      });
+    } else {
+      // All workspaces mode - stacked bars for resource classes
+      const resourceColors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
       
-      resourceClasses.forEach((resourceClass, resourceIndex) => {
-        const key = `${workspaceId}-${resourceClass}`;
-        const displayName = `${workspaceId.slice(-4)} - ${resourceClass.split('/')[1]}`;
+      resourceClasses.forEach((resourceClass, index) => {
+        const displayName = resourceClass.split('/')[1] || resourceClass;
         
         bars.push(
           <Bar
-            key={key}
-            dataKey={key}
-            stackId={workspaceId}
+            key={resourceClass}
+            dataKey={resourceClass}
+            stackId="resources"
             name={displayName}
-            fill={colors[resourceIndex % colors.length]}
+            fill={resourceColors[index % resourceColors.length]}
           />
         );
       });
-    });
+    }
     
     return bars;
   };
@@ -133,6 +170,41 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
         onNext={handleNextMonth}
       />
       
+      {/* View Mode Toggle */}
+      <div className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-medium text-gray-700">View:</span>
+          <div className="flex bg-gray-100 rounded-lg p-1">
+            <button
+              onClick={() => setViewMode('per-workspace')}
+              className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                viewMode === 'per-workspace'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Per Workspace
+            </button>
+            <button
+              onClick={() => setViewMode('all-workspaces')}
+              className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+                viewMode === 'all-workspaces'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              All Workspaces
+            </button>
+          </div>
+        </div>
+        <div className="text-xs text-gray-500">
+          {viewMode === 'per-workspace' 
+            ? 'Shows usage by workspace and resource type' 
+            : 'Shows combined usage across all workspaces by resource type'
+          }
+        </div>
+      </div>
+      
       {/* Resource Class Legend */}
       <div className="mb-4">
         <h3 className="text-sm font-medium text-gray-700 mb-2">Resource Classes:</h3>
@@ -164,7 +236,10 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
               wrapperStyle={{ paddingTop: '20px' }}
               formatter={(value: string) => {
                 const parts = value.split(' - ');
-                return `WS ${parts[0]} - ${parts[1]}`;
+                if (parts.length === 1) {
+                  return `${parts[0]}`;
+                }
+                return `${parts[0]} - ${parts[1]}`;
               }}
             />
             {createBars()}
