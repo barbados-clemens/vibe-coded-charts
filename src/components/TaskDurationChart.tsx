@@ -171,6 +171,14 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
   const meanLine = avgDuration;
   const plusOneStdDev = avgDuration + stdDev;
   const minusOneStdDev = Math.max(0, avgDuration - stdDev); // Don't go below 0
+  
+  // Calculate actual percentage of data within ±1 standard deviation
+  const dataWithinOneStdDev = allDurations.filter(duration => 
+    duration >= minusOneStdDev && duration <= plusOneStdDev
+  ).length;
+  const percentageWithinOneStdDev = allDurations.length > 0 
+    ? (dataWithinOneStdDev / allDurations.length) * 100 
+    : 0;
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
@@ -219,7 +227,7 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
             <span>±1σ ({minusOneStdDev.toFixed(1)}s - {plusOneStdDev.toFixed(1)}s)</span>
           </div>
           <div className="text-gray-600">
-            <span>68% of data within ±1σ</span>
+            <span>{percentageWithinOneStdDev.toFixed(1)}% of data within ±1σ</span>
           </div>
         </div>
       </div>
