@@ -12643,4 +12643,1733 @@ export const mockOrgContribData = [
         }
     }
 ]
-
+export const mockDailyTaskStats = [
+    {
+        "id": "6775d7adb18ea8585c9ae78b",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-01T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67787ac2399c39709840ce13",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-03T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 18,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 28796
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8888888888888888,
+            "cacheMiss": 0.1111111111111111
+        }
+    },
+    {
+        "id": "677c6f5947f33406d988156a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-06T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 3,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 29766.333333333332
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0,
+            "cacheMiss": 1
+        }
+    },
+    {
+        "id": "677dc0e147f33406d9e288d0",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-07T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 11,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 35386.666666666664
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.7272727272727273,
+            "cacheMiss": 0.2727272727272727
+        }
+    },
+    {
+        "id": "677f124f45140b1c3b283c5b",
+        "workspaceId": "6c709086e412",
+        "isCI": false,
+        "date": "2025-01-08T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 3,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 67164.66666666667
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0,
+            "cacheMiss": 1
+        }
+    },
+    {
+        "id": "677f124f45140b1c3b2841d5",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-08T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 27,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 23799.2
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8148148148148148,
+            "cacheMiss": 0.18518518518518517
+        }
+    },
+    {
+        "id": "678063e421b2b23a7f59ee44",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-09T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 11,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 13736
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.9090909090909091,
+            "cacheMiss": 0.09090909090909091
+        }
+    },
+    {
+        "id": "6781b56ec048f86f9f835ed1",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-10T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 5,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 45539
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8,
+            "cacheMiss": 0.2
+        }
+    },
+    {
+        "id": "678306dcc048f86f9ff0fbca",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-11T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6786fb6ee48c653f3848e209",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-14T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 7,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 62085
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8571428571428571,
+            "cacheMiss": 0.14285714285714285
+        }
+    },
+    {
+        "id": "67884d01e48c653f38bdd8f0",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-15T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "678aefdb3f9a70ca1655537f",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-17T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "679035fe3f9a70ca1637e7dd",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-21T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6791877165300c8b8659740c",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-22T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 3,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 24343
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.6666666666666666,
+            "cacheMiss": 0.3333333333333333
+        }
+    },
+    {
+        "id": "6792d8f365300c8b8686fd2a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-23T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67942a7f613d57cb196ce670",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-24T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "679ac1fd9dc3fb3c780d982a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-29T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "679c1377b5e09b28dc58ebcb",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-30T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 8,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "679d64d7b5e09b28dc600e68",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-01-31T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67a159a53cd7828134fc9d1a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-03T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67a3fd100a50afb45004d6df",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-05T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67a54f750a50afb450deada8",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-06T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67ad37e9a4e8cf1de6a326fa",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-12T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67ae88b9df590782c074b0ae",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-13T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 8,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 30776
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.75,
+            "cacheMiss": 0.25
+        }
+    },
+    {
+        "id": "67afda66df590782c0717ec9",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-14T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67b3cedfdf590782c0865ae7",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-17T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67b52054df590782c024417d",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-18T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67b7c2f15a55099ea05640d1",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-20T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 352,
+            "cacheMissMs": 58591
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.5,
+            "cacheMiss": 0.5
+        }
+    },
+    {
+        "id": "67be5a7ae9addda7b346b248",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-25T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 5,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 29520
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8,
+            "cacheMiss": 0.2
+        }
+    },
+    {
+        "id": "67bfabeee9addda7b31deb92",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-26T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67c24eb8e9addda7b3cb091a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-02-28T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 15,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 28300
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.9333333333333333,
+            "cacheMiss": 0.06666666666666667
+        }
+    },
+    {
+        "id": "67c6439462aa447796dcb32d",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-03T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67c7951862aa447796fe9e35",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-04T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67c8e68262aa4477961c7fb4",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-05T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 9,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 27120
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8888888888888888,
+            "cacheMiss": 0.1111111111111111
+        }
+    },
+    {
+        "id": "67ca37ed62aa44779606c499",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-06T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 23,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 34256
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.9565217391304348,
+            "cacheMiss": 0.043478260869565216
+        }
+    },
+    {
+        "id": "67cb896462aa4477961706a1",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-07T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 1,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 36989
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0,
+            "cacheMiss": 1
+        }
+    },
+    {
+        "id": "67cf7dd362aa447796ab7f7b",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-10T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67d0cf4862aa44779622023d",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-11T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67da0a0f325315b4da8fd0ba",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-18T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67dcad15b2149ff5ff5ad7db",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-20T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67e1f30ab2149ff5ffe3dcc3",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-24T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67e49603b2149ff5ff6bcb4a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-26T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67e5e79fb2149ff5ff635b20",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-27T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67e738f6b2149ff5fff5e002",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-28T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 14,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67e9dbcfd38a7f6ca5078380",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-30T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 1,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 36393
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0,
+            "cacheMiss": 1
+        }
+    },
+    {
+        "id": "67eb2d61d38a7f6ca5dc640e",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-03-31T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67ec7f05ce0ca679482ad2c8",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-01T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67edd06306fd3e0721f01994",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-02T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 15,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 43195
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.9333333333333333,
+            "cacheMiss": 0.06666666666666667
+        }
+    },
+    {
+        "id": "67ef21f906fd3e0721390a83",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-03T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 27,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 39949
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.9629629629629629,
+            "cacheMiss": 0.037037037037037035
+        }
+    },
+    {
+        "id": "67f0736506fd3e0721d4950b",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-04T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67f4681db887e81b72a2de21",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-07T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 18,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 30767.5
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8888888888888888,
+            "cacheMiss": 0.1111111111111111
+        }
+    },
+    {
+        "id": "67f70afa222ba1ea48cc9e4e",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-09T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67f85c87222ba1ea481b6a95",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-10T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67f9ade5222ba1ea48e571c9",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-11T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 8,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67fda274222ba1ea4847dc4c",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-14T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "67fef3f1c463708e488e1373",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-15T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "68004566c01ce736b082ab71",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-16T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 5,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 31226
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.8,
+            "cacheMiss": 0.2
+        }
+    },
+    {
+        "id": "68082e82c01ce736b01583d5",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-22T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6809807dc01ce736b0016114",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-23T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "680ad1e9c01ce736b078b35a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-24T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "680c230dc01ce736b0b93bcf",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-25T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6812bb08c01ce736b07ac66a",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-04-30T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "681aa3bf6d007bd3309e5957",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-06T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "681bf5526d007bd330a3a1de",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-07T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 1,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 22887
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0,
+            "cacheMiss": 1
+        }
+    },
+    {
+        "id": "681e98226d007bd330f701f2",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-09T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6823dde13e240068a0b1fd87",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-13T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 4,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "682bc70839fc4a9a5f1cd8ed",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-19T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "682e6a123e31ef79cd9ceed6",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-21T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 6,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "682fbbc5ec125aaf4ce64e53",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-22T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 9,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 29146
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.6666666666666666,
+            "cacheMiss": 0.3333333333333333
+        }
+    },
+    {
+        "id": "68310d23ec125aaf4c41289b",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-23T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 28,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "6835015bec125aaf4ce97143",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-26T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 2,
+        "statusCodeRatio": {
+            "zero": 1,
+            "nonZero": 0
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 0
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 1,
+            "cacheMiss": 0
+        }
+    },
+    {
+        "id": "683652e4ec125aaf4cf9c354",
+        "workspaceId": "6c709086e412",
+        "isCI": true,
+        "date": "2025-05-27T00:00:00.000Z",
+        "projectName": "medical-history-store",
+        "target": "test",
+        "targetGroupName": null,
+        "totalCount": 8,
+        "statusCodeRatio": {
+            "zero": 0.75,
+            "nonZero": 0.25
+        },
+        "averageDuration": {
+            "localCacheHitMs": 0,
+            "remoteCacheHitMs": 0,
+            "cacheMissMs": 33907.5
+        },
+        "cacheStatusRatio": {
+            "localCacheHit": 0,
+            "remoteCacheHit": 0.5,
+            "cacheMiss": 0.5
+        }
+    }
+]
