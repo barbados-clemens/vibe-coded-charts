@@ -1,0 +1,6705 @@
+[{
+  "_id": {
+    "$oid": "67748f04b18ea8585cb45b7b"
+  },
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2920
+    }
+  ],
+  "executionCredits": 2000,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-01-01T23:40:35.105Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6775e08eb18ea8585ca7f94e"
+  },
+  "date": {
+    "$date": "2025-01-02T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2920
+    }
+  ],
+  "executionCredits": 2500,
+  "runCount": 4,
+  "updatedAt": {
+    "$date": "2025-01-02T23:40:35.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6776cf975894a99a132c7051"
+  },
+  "date": {
+    "$date": "2025-01-02T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 420
+    }
+  ],
+  "executionCredits": 6000,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-01-02T23:40:35.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6777320a399c39709872667f"
+  },
+  "date": {
+    "$date": "2025-01-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 16400
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 440
+    }
+  ],
+  "executionCredits": 9000,
+  "runCount": 16,
+  "updatedAt": {
+    "$date": "2025-01-03T23:40:34.607Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67773211399c39709872886c"
+  },
+  "date": {
+    "$date": "2025-01-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 780
+    }
+  ],
+  "executionCredits": 13500,
+  "runCount": 10,
+  "updatedAt": {
+    "$date": "2025-01-03T23:40:34.607Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67788390399c397098537880"
+  },
+  "date": {
+    "$date": "2025-01-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 440
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 16400
+    }
+  ],
+  "executionCredits": 9000,
+  "runCount": 54,
+  "updatedAt": {
+    "$date": "2025-01-04T23:40:34.291Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67788395399c39709853909d"
+  },
+  "date": {
+    "$date": "2025-01-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 780
+    }
+  ],
+  "executionCredits": 13500,
+  "runCount": 23,
+  "updatedAt": {
+    "$date": "2025-01-04T23:40:34.291Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6779d50978d2271c3aa922e1"
+  },
+  "date": {
+    "$date": "2025-01-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 16400
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 440
+    }
+  ],
+  "executionCredits": 9000,
+  "runCount": 54,
+  "updatedAt": {
+    "$date": "2025-01-05T23:40:34.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6779d50778d2271c3aa91fff"
+  },
+  "date": {
+    "$date": "2025-01-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 780
+    }
+  ],
+  "executionCredits": 13500,
+  "runCount": 23,
+  "updatedAt": {
+    "$date": "2025-01-05T23:40:34.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677b268c78d2271c3af2330d"
+  },
+  "date": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 21580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 670
+    }
+  ],
+  "executionCredits": 14000,
+  "runCount": 54,
+  "updatedAt": {
+    "$date": "2025-01-06T23:40:35.509Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677b268b78d2271c3af2301b"
+  },
+  "date": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1070
+    }
+  ],
+  "executionCredits": 16000,
+  "runCount": 23,
+  "updatedAt": {
+    "$date": "2025-01-06T23:40:35.509Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677c781247f33406d9a02260"
+  },
+  "date": {
+    "$date": "2025-01-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1260
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 29340
+    }
+  ],
+  "executionCredits": 25000,
+  "runCount": 65,
+  "updatedAt": {
+    "$date": "2025-01-07T23:40:37.898Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677c781647f33406d9a032fe"
+  },
+  "date": {
+    "$date": "2025-01-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1550
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 19500,
+  "runCount": 28,
+  "updatedAt": {
+    "$date": "2025-01-07T23:40:37.898Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677dc999d05cf7200adbfd14"
+  },
+  "date": {
+    "$date": "2025-01-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 47320
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2000
+    }
+  ],
+  "executionCredits": 42500,
+  "runCount": 114,
+  "updatedAt": {
+    "$date": "2025-01-08T23:50:37.484Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677dc998d05cf7200adbf75a"
+  },
+  "date": {
+    "$date": "2025-01-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1730
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 20500,
+  "runCount": 36,
+  "updatedAt": {
+    "$date": "2025-01-08T23:50:37.484Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677f1d6c45140b1c3b435e15"
+  },
+  "date": {
+    "$date": "2025-01-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 52600
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2740
+    }
+  ],
+  "executionCredits": 50000,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-01-09T23:50:35.417Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677f1d6d45140b1c3b437c99"
+  },
+  "date": {
+    "$date": "2025-01-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2340
+    }
+  ],
+  "executionCredits": 24500,
+  "runCount": 52,
+  "updatedAt": {
+    "$date": "2025-01-09T23:50:35.417Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67806ef021b2b23a7f75bf4c"
+  },
+  "date": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2960
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 56960
+    }
+  ],
+  "executionCredits": 54000,
+  "runCount": 210,
+  "updatedAt": {
+    "$date": "2025-01-10T23:50:37.725Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67806ef321b2b23a7f75d199"
+  },
+  "date": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 29000,
+  "runCount": 79,
+  "updatedAt": {
+    "$date": "2025-01-10T23:50:37.725Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6781c070c048f86f9f9a18f3"
+  },
+  "date": {
+    "$date": "2025-01-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2960
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 59620
+    }
+  ],
+  "executionCredits": 55500,
+  "runCount": 218,
+  "updatedAt": {
+    "$date": "2025-01-11T23:50:35.407Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6781c069c048f86f9f9a05ad"
+  },
+  "date": {
+    "$date": "2025-01-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 29000,
+  "runCount": 90,
+  "updatedAt": {
+    "$date": "2025-01-11T23:50:35.407Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678311f6c048f86f9ffe009b"
+  },
+  "date": {
+    "$date": "2025-01-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 59620
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2960
+    }
+  ],
+  "executionCredits": 55500,
+  "runCount": 221,
+  "updatedAt": {
+    "$date": "2025-01-12T23:50:35.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678311f5c048f86f9ffdf6fc"
+  },
+  "date": {
+    "$date": "2025-01-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2800
+    }
+  ],
+  "executionCredits": 29000,
+  "runCount": 90,
+  "updatedAt": {
+    "$date": "2025-01-12T23:50:35.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67846378c048f86f9f814efb"
+  },
+  "date": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 65300
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3350
+    }
+  ],
+  "executionCredits": 62000,
+  "runCount": 221,
+  "updatedAt": {
+    "$date": "2025-01-13T23:50:36.414Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67846377c048f86f9f814726"
+  },
+  "date": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3110
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 31000,
+  "runCount": 90,
+  "updatedAt": {
+    "$date": "2025-01-13T23:50:36.414Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6785b4e9aa12eff0891a2e2e"
+  },
+  "date": {
+    "$date": "2025-01-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 89860
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3530
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 4440
+    }
+  ],
+  "executionCredits": 65500,
+  "runCount": 243,
+  "updatedAt": {
+    "$date": "2025-01-14T23:50:36.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6785b4e7aa12eff0891a2871"
+  },
+  "date": {
+    "$date": "2025-01-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 97,
+  "updatedAt": {
+    "$date": "2025-01-14T23:50:36.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6787066ee48c653f3870a005"
+  },
+  "date": {
+    "$date": "2025-01-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 9510
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 91740
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3530
+    }
+  ],
+  "executionCredits": 67000,
+  "runCount": 259,
+  "updatedAt": {
+    "$date": "2025-01-15T23:50:37.126Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67870676e48c653f3870d9e2"
+  },
+  "date": {
+    "$date": "2025-01-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-01-15T23:50:37.126Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678857f1e48c653f38e4b885"
+  },
+  "date": {
+    "$date": "2025-01-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 9510
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 91740
+    }
+  ],
+  "executionCredits": 68500,
+  "runCount": 266,
+  "updatedAt": {
+    "$date": "2025-01-16T23:50:36.908Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678857f4e48c653f38e4cbce"
+  },
+  "date": {
+    "$date": "2025-01-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-01-16T23:50:36.908Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6789a96b3f9a70ca16a5a5ed"
+  },
+  "date": {
+    "$date": "2025-01-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 5900
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 96420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 18510
+    }
+  ],
+  "executionCredits": 74500,
+  "runCount": 272,
+  "updatedAt": {
+    "$date": "2025-01-17T23:50:32.796Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6789a96a3f9a70ca16a59fd1"
+  },
+  "date": {
+    "$date": "2025-01-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 193,
+  "updatedAt": {
+    "$date": "2025-01-17T23:50:32.796Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678afaef3f9a70ca1672da4e"
+  },
+  "date": {
+    "$date": "2025-01-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 18510
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 96420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 5900
+    }
+  ],
+  "executionCredits": 74500,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-01-18T23:50:32.303Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678afaee3f9a70ca1672d6fa"
+  },
+  "date": {
+    "$date": "2025-01-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 193,
+  "updatedAt": {
+    "$date": "2025-01-18T23:50:32.303Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678c4c683f9a70ca16d9ec08"
+  },
+  "date": {
+    "$date": "2025-01-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 18510
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 96420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 5900
+    }
+  ],
+  "executionCredits": 74500,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-01-19T23:50:35.448Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678c4c663f9a70ca16d9e1c8"
+  },
+  "date": {
+    "$date": "2025-01-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 193,
+  "updatedAt": {
+    "$date": "2025-01-19T23:50:35.448Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d9df23f9a70ca165f6a20"
+  },
+  "date": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 5970
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 96420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 18510
+    }
+  ],
+  "executionCredits": 75000,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-01-20T23:50:37.513Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d9df33f9a70ca165f6d39"
+  },
+  "date": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3410
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 193,
+  "updatedAt": {
+    "$date": "2025-01-20T23:50:37.513Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678eef703f9a70ca16524d6e"
+  },
+  "date": {
+    "$date": "2025-01-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 6100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 100100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 22800
+    }
+  ],
+  "executionCredits": 78500,
+  "runCount": 294,
+  "updatedAt": {
+    "$date": "2025-01-21T23:50:32.257Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678eef723f9a70ca16525884"
+  },
+  "date": {
+    "$date": "2025-01-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 4180
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 40000,
+  "runCount": 193,
+  "updatedAt": {
+    "$date": "2025-01-21T23:50:32.257Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679040fc3f9a70ca166001ed"
+  },
+  "date": {
+    "$date": "2025-01-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24990
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 116700
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 6360
+    }
+  ],
+  "executionCredits": 81500,
+  "runCount": 311,
+  "updatedAt": {
+    "$date": "2025-01-22T23:50:33.054Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679040fd3f9a70ca16600abb"
+  },
+  "date": {
+    "$date": "2025-01-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 4740
+    }
+  ],
+  "executionCredits": 44000,
+  "runCount": 215,
+  "updatedAt": {
+    "$date": "2025-01-22T23:50:33.054Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6791926965300c8b867d1aaa"
+  },
+  "date": {
+    "$date": "2025-01-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 9160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 30000
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 119120
+    }
+  ],
+  "executionCredits": 88000,
+  "runCount": 324,
+  "updatedAt": {
+    "$date": "2025-01-23T23:50:36.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6791926c65300c8b867d28bd"
+  },
+  "date": {
+    "$date": "2025-01-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 6390
+    }
+  ],
+  "executionCredits": 55000,
+  "runCount": 223,
+  "updatedAt": {
+    "$date": "2025-01-23T23:50:36.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6792e3ee65300c8b86ae2e21"
+  },
+  "date": {
+    "$date": "2025-01-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 119340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11430
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 34800
+    }
+  ],
+  "executionCredits": 92000,
+  "runCount": 350,
+  "updatedAt": {
+    "$date": "2025-01-24T23:50:38.114Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6792e3e565300c8b86adfd0f"
+  },
+  "date": {
+    "$date": "2025-01-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7320
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 60500,
+  "runCount": 243,
+  "updatedAt": {
+    "$date": "2025-01-24T23:50:38.114Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6794357b613d57cb198ea2ba"
+  },
+  "date": {
+    "$date": "2025-01-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11430
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 123160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 34800
+    }
+  ],
+  "executionCredits": 92000,
+  "runCount": 366,
+  "updatedAt": {
+    "$date": "2025-01-25T23:50:30.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67943577613d57cb198e7fb7"
+  },
+  "date": {
+    "$date": "2025-01-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7320
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 60500,
+  "runCount": 257,
+  "updatedAt": {
+    "$date": "2025-01-25T23:50:30.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679586eb613d57cb192ebfc4"
+  },
+  "date": {
+    "$date": "2025-01-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 34800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 123160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11430
+    }
+  ],
+  "executionCredits": 92000,
+  "runCount": 367,
+  "updatedAt": {
+    "$date": "2025-01-26T23:50:29.903Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679586ea613d57cb192eb04e"
+  },
+  "date": {
+    "$date": "2025-01-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7320
+    }
+  ],
+  "executionCredits": 60500,
+  "runCount": 257,
+  "updatedAt": {
+    "$date": "2025-01-26T23:50:29.903Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6796d86d613d57cb19e2dd3c"
+  },
+  "date": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11430
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 34800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 123160
+    }
+  ],
+  "executionCredits": 92000,
+  "runCount": 367,
+  "updatedAt": {
+    "$date": "2025-01-27T23:50:29.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6796d86b613d57cb19e2cb38"
+  },
+  "date": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7550
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 62000,
+  "runCount": 257,
+  "updatedAt": {
+    "$date": "2025-01-27T23:50:29.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679829f09dc3fb3c78f1cddf"
+  },
+  "date": {
+    "$date": "2025-01-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 12760
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 34800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 123160
+    }
+  ],
+  "executionCredits": 95500,
+  "runCount": 371,
+  "updatedAt": {
+    "$date": "2025-01-28T23:50:36.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679829eb9dc3fb3c78f19725"
+  },
+  "date": {
+    "$date": "2025-01-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 8950
+    }
+  ],
+  "executionCredits": 74500,
+  "runCount": 262,
+  "updatedAt": {
+    "$date": "2025-01-28T23:50:36.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67997b729dc3fb3c7832af36"
+  },
+  "date": {
+    "$date": "2025-01-29T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 13190
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 39840
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 123160
+    }
+  ],
+  "executionCredits": 98000,
+  "runCount": 404,
+  "updatedAt": {
+    "$date": "2025-01-29T23:50:36.614Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67997b7f9dc3fb3c78332ab3"
+  },
+  "date": {
+    "$date": "2025-01-29T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 10180
+    }
+  ],
+  "executionCredits": 82500,
+  "runCount": 290,
+  "updatedAt": {
+    "$date": "2025-01-29T23:50:36.614Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679accfec6aca692fa367aba"
+  },
+  "date": {
+    "$date": "2025-01-30T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 43050
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 13370
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 127360
+    }
+  ],
+  "executionCredits": 101500,
+  "runCount": 454,
+  "updatedAt": {
+    "$date": "2025-01-30T23:50:32.918Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679accffc6aca692fa367eea"
+  },
+  "date": {
+    "$date": "2025-01-30T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 10690
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 84500,
+  "runCount": 321,
+  "updatedAt": {
+    "$date": "2025-01-30T23:50:32.918Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679c1e76b5e09b28dc92a38b"
+  },
+  "date": {
+    "$date": "2025-01-31T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 53370
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 13580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 300
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 128780
+    }
+  ],
+  "executionCredits": 106000,
+  "runCount": 476,
+  "updatedAt": {
+    "$date": "2025-01-31T23:50:31.811Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679c1e6cb5e09b28dc924049"
+  },
+  "date": {
+    "$date": "2025-01-31T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11730
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 500
+    }
+  ],
+  "executionCredits": 98500,
+  "runCount": 325,
+  "updatedAt": {
+    "$date": "2025-01-31T23:50:31.811Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679ec3c4b5e09b28dc018d71"
+  },
+  "date": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    }
+  ],
+  "executionCredits": 500,
+  "runCount": 2,
+  "updatedAt": {
+    "$date": "2025-02-02T23:00:34.720Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a007358887e09dabb0394a"
+  },
+  "date": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 240
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 8190
+    }
+  ],
+  "executionCredits": 1500,
+  "runCount": 3,
+  "updatedAt": {
+    "$date": "2025-02-03T23:00:32.575Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a0da1e3cd782813456ef3b"
+  },
+  "date": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 640
+    }
+  ],
+  "executionCredits": 4000,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-02-03T23:00:32.575Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a158b43cd7828134f2db13"
+  },
+  "date": {
+    "$date": "2025-02-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 615
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 8190
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    }
+  ],
+  "executionCredits": 2500,
+  "runCount": 19,
+  "updatedAt": {
+    "$date": "2025-02-04T23:22:06.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a158a93cd7828134f2958a"
+  },
+  "date": {
+    "$date": "2025-02-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1990
+    }
+  ],
+  "executionCredits": 13500,
+  "runCount": 9,
+  "updatedAt": {
+    "$date": "2025-02-04T23:22:06.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a2af3cf9ac3c9e692868c3"
+  },
+  "date": {
+    "$date": "2025-02-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 16410
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1380
+    }
+  ],
+  "executionCredits": 6000,
+  "runCount": 32,
+  "updatedAt": {
+    "$date": "2025-02-05T22:50:30.109Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a2af3bf9ac3c9e69285ef2"
+  },
+  "date": {
+    "$date": "2025-02-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 2500
+    }
+  ],
+  "executionCredits": 16500,
+  "runCount": 32,
+  "updatedAt": {
+    "$date": "2025-02-05T22:50:30.109Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a3fc200a50afb450fd7cce"
+  },
+  "date": {
+    "$date": "2025-02-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2025
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 53,
+  "updatedAt": {
+    "$date": "2025-02-06T23:31:22.411Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a3fc260a50afb450fdaa63"
+  },
+  "date": {
+    "$date": "2025-02-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3060
+    }
+  ],
+  "executionCredits": 20000,
+  "runCount": 38,
+  "updatedAt": {
+    "$date": "2025-02-06T23:31:22.411Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a553a20a50afb450f61bd7"
+  },
+  "date": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2025
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 86,
+  "updatedAt": {
+    "$date": "2025-02-07T23:00:03.511Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a5539c0a50afb450f5eba7"
+  },
+  "date": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3990
+    }
+  ],
+  "executionCredits": 25000,
+  "runCount": 45,
+  "updatedAt": {
+    "$date": "2025-02-07T23:00:03.511Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a6a0fb0a50afb45057bb4b"
+  },
+  "date": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2025
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 111,
+  "updatedAt": {
+    "$date": "2025-02-08T23:33:05.063Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a6a0f70a50afb450579565"
+  },
+  "date": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3990
+    }
+  ],
+  "executionCredits": 25000,
+  "runCount": 56,
+  "updatedAt": {
+    "$date": "2025-02-08T23:33:05.063Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a7f9310a50afb450125cfd"
+  },
+  "date": {
+    "$date": "2025-02-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2025
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 111,
+  "updatedAt": {
+    "$date": "2025-02-09T23:49:29.562Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a7f92a0a50afb45012340e"
+  },
+  "date": {
+    "$date": "2025-02-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 3990
+    }
+  ],
+  "executionCredits": 25000,
+  "runCount": 56,
+  "updatedAt": {
+    "$date": "2025-02-09T23:49:29.562Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a9532e0a50afb45005ff43"
+  },
+  "date": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2025
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 111,
+  "updatedAt": {
+    "$date": "2025-02-10T23:07:26.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a953350a50afb450062805"
+  },
+  "date": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 4440
+    }
+  ],
+  "executionCredits": 28500,
+  "runCount": 56,
+  "updatedAt": {
+    "$date": "2025-02-10T23:07:26.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa9643a4e8cf1de62ed109"
+  },
+  "date": {
+    "$date": "2025-02-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2565
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 24090
+    }
+  ],
+  "executionCredits": 11000,
+  "runCount": 129,
+  "updatedAt": {
+    "$date": "2025-02-11T23:43:39.301Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa964fa4e8cf1de62f2962"
+  },
+  "date": {
+    "$date": "2025-02-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 4890
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 63,
+  "updatedAt": {
+    "$date": "2025-02-11T23:43:39.301Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67abf154a4e8cf1de677f93c"
+  },
+  "date": {
+    "$date": "2025-02-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3315
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 28410
+    }
+  ],
+  "executionCredits": 13500,
+  "runCount": 153,
+  "updatedAt": {
+    "$date": "2025-02-12T22:52:34.212Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67abf160a4e8cf1de67851e8"
+  },
+  "date": {
+    "$date": "2025-02-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 5560
+    }
+  ],
+  "executionCredits": 36500,
+  "runCount": 72,
+  "updatedAt": {
+    "$date": "2025-02-12T22:52:34.212Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ad36f4a4e8cf1de69aeb41"
+  },
+  "date": {
+    "$date": "2025-02-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 41250
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4005
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 17500,
+  "runCount": 184,
+  "updatedAt": {
+    "$date": "2025-02-13T23:00:36.539Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ad36f6a4e8cf1de69b02d0"
+  },
+  "date": {
+    "$date": "2025-02-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7110
+    }
+  ],
+  "executionCredits": 46000,
+  "runCount": 79,
+  "updatedAt": {
+    "$date": "2025-02-13T23:00:36.539Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ae87b6df590782c07073c1"
+  },
+  "date": {
+    "$date": "2025-02-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 76830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 6255
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 22500,
+  "runCount": 230,
+  "updatedAt": {
+    "$date": "2025-02-14T23:00:40.503Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ae87acdf590782c07038d6"
+  },
+  "date": {
+    "$date": "2025-02-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7250
+    }
+  ],
+  "executionCredits": 47000,
+  "runCount": 102,
+  "updatedAt": {
+    "$date": "2025-02-14T23:00:40.503Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67afd93bdf590782c06c8412"
+  },
+  "date": {
+    "$date": "2025-02-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 76830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 6255
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 22500,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-02-15T23:00:33.413Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67afd948df590782c06cc758"
+  },
+  "date": {
+    "$date": "2025-02-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7250
+    }
+  ],
+  "executionCredits": 47000,
+  "runCount": 104,
+  "updatedAt": {
+    "$date": "2025-02-15T23:00:33.413Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b12ac2df590782c01e854c"
+  },
+  "date": {
+    "$date": "2025-02-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 76830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 6255
+    }
+  ],
+  "executionCredits": 22500,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-02-16T23:00:42.908Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b12ac9df590782c01eaa56"
+  },
+  "date": {
+    "$date": "2025-02-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7250
+    }
+  ],
+  "executionCredits": 47000,
+  "runCount": 104,
+  "updatedAt": {
+    "$date": "2025-02-16T23:00:42.908Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b27c46df590782c0ef26af"
+  },
+  "date": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79530
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 7845
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 26000,
+  "runCount": 291,
+  "updatedAt": {
+    "$date": "2025-02-17T23:00:34.212Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b27c4ddf590782c0ef4d63"
+  },
+  "date": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7420
+    }
+  ],
+  "executionCredits": 48000,
+  "runCount": 104,
+  "updatedAt": {
+    "$date": "2025-02-17T23:00:34.212Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3cdbedf590782c07f5b8d"
+  },
+  "date": {
+    "$date": "2025-02-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9630
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 84660
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 31500,
+  "runCount": 428,
+  "updatedAt": {
+    "$date": "2025-02-18T23:00:35.310Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3cdb6df590782c07f2558"
+  },
+  "date": {
+    "$date": "2025-02-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 7650
+    }
+  ],
+  "executionCredits": 49000,
+  "runCount": 106,
+  "updatedAt": {
+    "$date": "2025-02-18T23:00:35.310Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b51f39df590782c01bc7a4"
+  },
+  "date": {
+    "$date": "2025-02-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 84660
+    }
+  ],
+  "executionCredits": 32000,
+  "runCount": 463,
+  "updatedAt": {
+    "$date": "2025-02-19T23:00:36.921Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b51f41df590782c01c12e0"
+  },
+  "date": {
+    "$date": "2025-02-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 9310
+    }
+  ],
+  "executionCredits": 56500,
+  "runCount": 109,
+  "updatedAt": {
+    "$date": "2025-02-19T23:00:36.921Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b670c4df590782c0d6a2d5"
+  },
+  "date": {
+    "$date": "2025-02-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 91260
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 468,
+  "updatedAt": {
+    "$date": "2025-02-20T23:10:34.913Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b670b9df590782c0d6530a"
+  },
+  "date": {
+    "$date": "2025-02-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 9910
+    }
+  ],
+  "executionCredits": 59500,
+  "runCount": 124,
+  "updatedAt": {
+    "$date": "2025-02-20T23:10:34.913Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b7c4ec5a55099ea06270d3"
+  },
+  "date": {
+    "$date": "2025-02-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 91260
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 478,
+  "updatedAt": {
+    "$date": "2025-02-21T23:10:35.120Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b7c4ea5a55099ea06266fe"
+  },
+  "date": {
+    "$date": "2025-02-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11060
+    }
+  ],
+  "executionCredits": 64500,
+  "runCount": 130,
+  "updatedAt": {
+    "$date": "2025-02-21T23:10:35.120Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b916520856c9efbb9aeb52"
+  },
+  "date": {
+    "$date": "2025-02-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 91260
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 478,
+  "updatedAt": {
+    "$date": "2025-02-22T23:10:37.520Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b916470856c9efbb9a9b7a"
+  },
+  "date": {
+    "$date": "2025-02-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11060
+    }
+  ],
+  "executionCredits": 64500,
+  "runCount": 140,
+  "updatedAt": {
+    "$date": "2025-02-22T23:10:37.520Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ba67bd0856c9efbb781a69"
+  },
+  "date": {
+    "$date": "2025-02-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 91260
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 478,
+  "updatedAt": {
+    "$date": "2025-02-23T23:10:35.905Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ba67c70856c9efbb7858ea"
+  },
+  "date": {
+    "$date": "2025-02-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11060
+    }
+  ],
+  "executionCredits": 64500,
+  "runCount": 140,
+  "updatedAt": {
+    "$date": "2025-02-23T23:10:35.905Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bbb9464a5e5dbcb5d380ba"
+  },
+  "date": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 91260
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 33000,
+  "runCount": 478,
+  "updatedAt": {
+    "$date": "2025-02-24T23:10:36.566Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bbb9444a5e5dbcb5d3725a"
+  },
+  "date": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 11240
+    }
+  ],
+  "executionCredits": 65500,
+  "runCount": 140,
+  "updatedAt": {
+    "$date": "2025-02-24T23:10:36.566Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd0b2d4a5e5dbcb5d604d9"
+  },
+  "date": {
+    "$date": "2025-02-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9750
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 100500
+    }
+  ],
+  "executionCredits": 34500,
+  "runCount": 483,
+  "updatedAt": {
+    "$date": "2025-02-25T23:10:35.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd0b1b4a5e5dbcb5d549b5"
+  },
+  "date": {
+    "$date": "2025-02-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 12840
+    }
+  ],
+  "executionCredits": 74500,
+  "runCount": 142,
+  "updatedAt": {
+    "$date": "2025-02-25T23:10:35.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be5c87e9addda7b35401f1"
+  },
+  "date": {
+    "$date": "2025-02-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 10320
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 108420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    }
+  ],
+  "executionCredits": 36500,
+  "runCount": 513,
+  "updatedAt": {
+    "$date": "2025-02-26T23:10:36.851Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be5c8ce9addda7b35423f7"
+  },
+  "date": {
+    "$date": "2025-02-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 13940
+    }
+  ],
+  "executionCredits": 79500,
+  "runCount": 160,
+  "updatedAt": {
+    "$date": "2025-02-26T23:10:36.851Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bfae12e9addda7b32f394f"
+  },
+  "date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 3100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 15900
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 108420
+    }
+  ],
+  "executionCredits": 37000,
+  "runCount": 524,
+  "updatedAt": {
+    "$date": "2025-02-27T23:10:36.668Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bfae15e9addda7b32f4fce"
+  },
+  "date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 14510
+    }
+  ],
+  "executionCredits": 82500,
+  "runCount": 171,
+  "updatedAt": {
+    "$date": "2025-02-27T23:10:36.668Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c0ffa8e9addda7b3d32bc0"
+  },
+  "date": {
+    "$date": "2025-02-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 15900
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 108420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 6080
+    }
+  ],
+  "executionCredits": 39500,
+  "runCount": 529,
+  "updatedAt": {
+    "$date": "2025-02-28T23:10:36.951Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c0ffa3e9addda7b3d302aa"
+  },
+  "date": {
+    "$date": "2025-02-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 15220
+    }
+  ],
+  "executionCredits": 86000,
+  "runCount": 176,
+  "updatedAt": {
+    "$date": "2025-02-28T23:10:36.951Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4ff43e9addda7b3a2ad1d"
+  },
+  "date": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 900
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 10440
+    }
+  ],
+  "executionCredits": 1500,
+  "runCount": 1,
+  "updatedAt": {
+    "$date": "2025-03-03T23:00:37.982Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5a808feb59125b4fa7579"
+  },
+  "date": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1230
+    }
+  ],
+  "executionCredits": 3000,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-03-03T23:00:37.982Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c642b762aa447796d56ea1"
+  },
+  "date": {
+    "$date": "2025-03-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 20100
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1545
+    }
+  ],
+  "executionCredits": 4000,
+  "runCount": 15,
+  "updatedAt": {
+    "$date": "2025-03-04T23:00:35.498Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c642be62aa447796d5932e"
+  },
+  "date": {
+    "$date": "2025-03-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 3,
+  "updatedAt": {
+    "$date": "2025-03-04T23:00:35.498Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c7942c62aa447796f7c252"
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 27420
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3630
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 1880
+    }
+  ],
+  "executionCredits": 10500,
+  "runCount": 43,
+  "updatedAt": {
+    "$date": "2025-03-05T23:00:32.894Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c7943262aa447796f7e083"
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-05T23:00:32.894Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c8e5b562aa447796172d5e"
+  },
+  "date": {
+    "$date": "2025-03-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4230
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 22040
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 47010
+    }
+  ],
+  "executionCredits": 17500,
+  "runCount": 84,
+  "updatedAt": {
+    "$date": "2025-03-06T23:20:35.389Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c8e5b762aa447796174056"
+  },
+  "date": {
+    "$date": "2025-03-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-06T23:20:35.389Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca3beb62aa44779619f4ee"
+  },
+  "date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 23200
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 47010
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4230
+    }
+  ],
+  "executionCredits": 18000,
+  "runCount": 120,
+  "updatedAt": {
+    "$date": "2025-03-07T23:20:36.064Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca3be762aa44779619da80"
+  },
+  "date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-07T23:20:36.064Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb8d5e62aa44779628645e"
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 47010
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4230
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 23200
+    }
+  ],
+  "executionCredits": 18000,
+  "runCount": 124,
+  "updatedAt": {
+    "$date": "2025-03-08T23:20:37.251Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb8d6662aa447796288956"
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-08T23:20:37.251Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ccdee762aa447796d08f78"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 47010
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4230
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 23200
+    }
+  ],
+  "executionCredits": 18000,
+  "runCount": 124,
+  "updatedAt": {
+    "$date": "2025-03-09T23:20:37.258Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ccdee362aa447796d07d4f"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-09T23:20:37.258Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ce306962aa447796a96019"
+  },
+  "date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 23760
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4605
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    }
+  ],
+  "executionCredits": 20000,
+  "runCount": 124,
+  "updatedAt": {
+    "$date": "2025-03-10T23:20:33.996Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ce306262aa447796a944d7"
+  },
+  "date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-10T23:20:33.996Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cf81dc62aa447796b9f17f"
+  },
+  "date": {
+    "$date": "2025-03-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4605
+    }
+  ],
+  "executionCredits": 20500,
+  "runCount": 136,
+  "updatedAt": {
+    "$date": "2025-03-11T23:20:32.687Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cf81e262aa447796ba12b7"
+  },
+  "date": {
+    "$date": "2025-03-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-11T23:20:32.687Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d0d36862aa4477963728e3"
+  },
+  "date": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4605
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    }
+  ],
+  "executionCredits": 20500,
+  "runCount": 140,
+  "updatedAt": {
+    "$date": "2025-03-12T23:20:33.874Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d0d36662aa4477963718b4"
+  },
+  "date": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-12T23:20:33.874Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d224e0325315b4dade85f9"
+  },
+  "date": {
+    "$date": "2025-03-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4605
+    }
+  ],
+  "executionCredits": 20500,
+  "runCount": 148,
+  "updatedAt": {
+    "$date": "2025-03-13T23:20:33.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d224d9325315b4dade5fa4"
+  },
+  "date": {
+    "$date": "2025-03-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-13T23:20:33.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d37663325315b4dac1a02e"
+  },
+  "date": {
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4815
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 152,
+  "updatedAt": {
+    "$date": "2025-03-14T23:20:31.455Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d37666325315b4dac1b09e"
+  },
+  "date": {
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-14T23:20:31.455Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4c7d7325315b4da08d69f"
+  },
+  "date": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4815
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 154,
+  "updatedAt": {
+    "$date": "2025-03-15T23:20:37.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4c7df325315b4da08f690"
+  },
+  "date": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-15T23:20:37.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d61967325315b4da091bbc"
+  },
+  "date": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4815
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 154,
+  "updatedAt": {
+    "$date": "2025-03-16T23:20:35.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d61960325315b4da08fe86"
+  },
+  "date": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-16T23:20:35.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d76aeb325315b4da0ffe33"
+  },
+  "date": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 24600
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4815
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56280
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 155,
+  "updatedAt": {
+    "$date": "2025-03-17T23:20:36.852Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d76aef325315b4da101975"
+  },
+  "date": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-17T23:20:36.852Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d8bc64325315b4da7bbf93"
+  },
+  "date": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 4815
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 64710
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    }
+  ],
+  "executionCredits": 23000,
+  "runCount": 155,
+  "updatedAt": {
+    "$date": "2025-03-18T23:20:36.628Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d8bc5e325315b4da7b9ee7"
+  },
+  "date": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-18T23:20:36.628Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67da0df1325315b4daa40308"
+  },
+  "date": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5385
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 64710
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    }
+  ],
+  "executionCredits": 24500,
+  "runCount": 164,
+  "updatedAt": {
+    "$date": "2025-03-19T23:20:36.510Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67da0ded325315b4daa3e175"
+  },
+  "date": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-19T23:20:36.510Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67db5f71325315b4da9011c2"
+  },
+  "date": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5775
+    }
+  ],
+  "executionCredits": 27500,
+  "runCount": 173,
+  "updatedAt": {
+    "$date": "2025-03-20T23:20:35.612Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67db5f6f325315b4da8ffd25"
+  },
+  "date": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-20T23:20:35.612Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcb0e0b2149ff5ff6d6457"
+  },
+  "date": {
+    "$date": "2025-03-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5775
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    }
+  ],
+  "executionCredits": 27500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-03-21T23:20:35.045Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcb0efb2149ff5ff6de689"
+  },
+  "date": {
+    "$date": "2025-03-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-21T23:20:35.045Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de0263b2149ff5ff09f51d"
+  },
+  "date": {
+    "$date": "2025-03-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5775
+    }
+  ],
+  "executionCredits": 27500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-03-22T23:20:33.398Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de026eb2149ff5ff0a54cb"
+  },
+  "date": {
+    "$date": "2025-03-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-22T23:20:33.398Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df53ddb2149ff5ffe52015"
+  },
+  "date": {
+    "$date": "2025-03-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5775
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    }
+  ],
+  "executionCredits": 27500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-03-23T23:20:34.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df53e8b2149ff5ffe54c67"
+  },
+  "date": {
+    "$date": "2025-03-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-23T23:20:34.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e0a568b2149ff5ff2f7a9e"
+  },
+  "date": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 6225
+    }
+  ],
+  "executionCredits": 28500,
+  "runCount": 185,
+  "updatedAt": {
+    "$date": "2025-03-24T23:20:34.463Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e0a567b2149ff5ff2f7761"
+  },
+  "date": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-24T23:20:34.463Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e1f6e6b2149ff5fffa36b4"
+  },
+  "date": {
+    "$date": "2025-03-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 6225
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 25580
+    }
+  ],
+  "executionCredits": 28500,
+  "runCount": 194,
+  "updatedAt": {
+    "$date": "2025-03-25T23:20:32.654Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e1f6eab2149ff5fffa4c15"
+  },
+  "date": {
+    "$date": "2025-03-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-25T23:20:32.654Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e3486db2149ff5ff21506c"
+  },
+  "date": {
+    "$date": "2025-03-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 7230
+    }
+  ],
+  "executionCredits": 31500,
+  "runCount": 196,
+  "updatedAt": {
+    "$date": "2025-03-26T23:20:32.151Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e3486fb2149ff5ff216999"
+  },
+  "date": {
+    "$date": "2025-03-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-26T23:20:32.151Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e499dfb2149ff5ff837f60"
+  },
+  "date": {
+    "$date": "2025-03-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9225
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 85620
+    }
+  ],
+  "executionCredits": 35000,
+  "runCount": 216,
+  "updatedAt": {
+    "$date": "2025-03-27T23:20:34.980Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e499eab2149ff5ff83cb2d"
+  },
+  "date": {
+    "$date": "2025-03-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-27T23:20:34.980Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e5eb85b2149ff5ff76d64f"
+  },
+  "date": {
+    "$date": "2025-03-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 94950
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 16320
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    }
+  ],
+  "executionCredits": 41000,
+  "runCount": 244,
+  "updatedAt": {
+    "$date": "2025-03-28T23:20:33.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e5eb8ab2149ff5ff770cc0"
+  },
+  "date": {
+    "$date": "2025-03-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-28T23:20:33.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e73ce5b2149ff5ff0761a2"
+  },
+  "date": {
+    "$date": "2025-03-29T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 94950
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 16320
+    }
+  ],
+  "executionCredits": 41000,
+  "runCount": 269,
+  "updatedAt": {
+    "$date": "2025-03-29T23:20:34.621Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e73ce8b2149ff5ff076f7f"
+  },
+  "date": {
+    "$date": "2025-03-29T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-29T23:20:34.621Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e88e84d0c941ce23298ff5"
+  },
+  "date": {
+    "$date": "2025-03-30T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 17070
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 94950
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    }
+  ],
+  "executionCredits": 41500,
+  "runCount": 272,
+  "updatedAt": {
+    "$date": "2025-03-30T23:20:33.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e88e85d0c941ce23299226"
+  },
+  "date": {
+    "$date": "2025-03-30T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-30T23:20:33.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e9dfe1d38a7f6ca5134692"
+  },
+  "date": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19020
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 26060
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 94950
+    }
+  ],
+  "executionCredits": 46500,
+  "runCount": 274,
+  "updatedAt": {
+    "$date": "2025-03-31T23:20:35.829Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e9dfecd38a7f6ca5137b64"
+  },
+  "date": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "676083df2e50c663e648c9b9"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium",
+      "credits": 1650
+    }
+  ],
+  "executionCredits": 5500,
+  "runCount": 7,
+  "updatedAt": {
+    "$date": "2025-03-31T23:20:35.829Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67eb5b8ad38a7f6ca5711e37"
+  },
+  "date": {
+    "$date": "2025-04-01T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 8400
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 180
+    }
+  ],
+  "executionCredits": 3500,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-04-01T23:00:33.749Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ec7e2bce0ca6794826570b"
+  },
+  "date": {
+    "$date": "2025-04-02T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 25350
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2460
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 5820
+    }
+  ],
+  "executionCredits": 9500,
+  "runCount": 27,
+  "updatedAt": {
+    "$date": "2025-04-02T23:50:34.522Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67eddb6a06fd3e07211d9268"
+  },
+  "date": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5205
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 50760
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 19000,
+  "runCount": 68,
+  "updatedAt": {
+    "$date": "2025-04-03T23:50:34.508Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ef2ce606fd3e0721627dc6"
+  },
+  "date": {
+    "$date": "2025-04-04T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56550
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5550
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 137,
+  "updatedAt": {
+    "$date": "2025-04-04T23:50:36.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f07e6b06fd3e0721f24a82"
+  },
+  "date": {
+    "$date": "2025-04-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56550
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5550
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 146,
+  "updatedAt": {
+    "$date": "2025-04-05T23:50:32.961Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f1cfed06fd3e0721ad35aa"
+  },
+  "date": {
+    "$date": "2025-04-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5550
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 56550
+    }
+  ],
+  "executionCredits": 21000,
+  "runCount": 146,
+  "updatedAt": {
+    "$date": "2025-04-06T23:50:34.620Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f3216306fd3e0721deb719"
+  },
+  "date": {
+    "$date": "2025-04-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 67830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 7800
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 26000,
+  "runCount": 157,
+  "updatedAt": {
+    "$date": "2025-04-07T23:50:36.827Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f472feb887e81b72d466ef"
+  },
+  "date": {
+    "$date": "2025-04-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 8055
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 67830
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 26500,
+  "runCount": 263,
+  "updatedAt": {
+    "$date": "2025-04-08T23:50:42.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f5c47b222ba1ea48e6ff38"
+  },
+  "date": {
+    "$date": "2025-04-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 9870
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 73980
+    }
+  ],
+  "executionCredits": 31000,
+  "runCount": 272,
+  "updatedAt": {
+    "$date": "2025-04-09T23:50:33.790Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f715fd222ba1ea48f793b3"
+  },
+  "date": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 10185
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 79770
+    }
+  ],
+  "executionCredits": 32500,
+  "runCount": 292,
+  "updatedAt": {
+    "$date": "2025-04-10T23:50:37.090Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f86771222ba1ea484be140"
+  },
+  "date": {
+    "$date": "2025-04-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 95730
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 11340
+    }
+  ],
+  "executionCredits": 37500,
+  "runCount": 311,
+  "updatedAt": {
+    "$date": "2025-04-11T23:50:32.096Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f9b8e2222ba1ea480761d3"
+  },
+  "date": {
+    "$date": "2025-04-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 95730
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 11340
+    }
+  ],
+  "executionCredits": 37500,
+  "runCount": 335,
+  "updatedAt": {
+    "$date": "2025-04-12T23:50:31.091Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fb0a62222ba1ea48d9b6e1"
+  },
+  "date": {
+    "$date": "2025-04-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 11340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 95730
+    }
+  ],
+  "executionCredits": 37500,
+  "runCount": 335,
+  "updatedAt": {
+    "$date": "2025-04-13T23:50:31.550Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fc5bec222ba1ea48bc9038"
+  },
+  "date": {
+    "$date": "2025-04-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 105720
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 17805
+    }
+  ],
+  "executionCredits": 41500,
+  "runCount": 335,
+  "updatedAt": {
+    "$date": "2025-04-14T23:50:32.037Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fdad6b222ba1ea48773ecf"
+  },
+  "date": {
+    "$date": "2025-04-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 111000
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 18225
+    }
+  ],
+  "executionCredits": 43000,
+  "runCount": 355,
+  "updatedAt": {
+    "$date": "2025-04-15T23:50:32.805Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fefef3c463708e48ba3baf"
+  },
+  "date": {
+    "$date": "2025-04-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 364,
+  "updatedAt": {
+    "$date": "2025-04-16T23:50:32.722Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6800506fc01ce736b0a9e0ff"
+  },
+  "date": {
+    "$date": "2025-04-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-17T23:50:34.143Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6801a1f1c01ce736b0f23d05"
+  },
+  "date": {
+    "$date": "2025-04-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-18T23:50:31.865Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6802f371c01ce736b0899c24"
+  },
+  "date": {
+    "$date": "2025-04-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-19T23:50:35.013Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680444eac01ce736b054df5d"
+  },
+  "date": {
+    "$date": "2025-04-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-20T23:50:36.340Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68059671c01ce736b07eaec5"
+  },
+  "date": {
+    "$date": "2025-04-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 119190
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19035
+    }
+  ],
+  "executionCredits": 45000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-21T23:50:38.029Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6806e7fdc01ce736b0d022f2"
+  },
+  "date": {
+    "$date": "2025-04-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 123900
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19320
+    }
+  ],
+  "executionCredits": 46000,
+  "runCount": 374,
+  "updatedAt": {
+    "$date": "2025-04-22T23:50:37.433Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68083978c01ce736b04721a0"
+  },
+  "date": {
+    "$date": "2025-04-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 19530
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 128070
+    }
+  ],
+  "executionCredits": 47000,
+  "runCount": 386,
+  "updatedAt": {
+    "$date": "2025-04-23T23:50:48.068Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68098b0cc01ce736b02f19cd"
+  },
+  "date": {
+    "$date": "2025-04-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 132630
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 20220
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 49000,
+  "runCount": 391,
+  "updatedAt": {
+    "$date": "2025-04-24T23:50:49.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680adc8ac01ce736b09ea646"
+  },
+  "date": {
+    "$date": "2025-04-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 143160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21030
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 52500,
+  "runCount": 401,
+  "updatedAt": {
+    "$date": "2025-04-25T23:50:38.897Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680c2df8c01ce736b0da6051"
+  },
+  "date": {
+    "$date": "2025-04-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 143160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21030
+    }
+  ],
+  "executionCredits": 52500,
+  "runCount": 418,
+  "updatedAt": {
+    "$date": "2025-04-26T23:50:50.426Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680d7f97c01ce736b0b8a234"
+  },
+  "date": {
+    "$date": "2025-04-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21030
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 143160
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 52500,
+  "runCount": 418,
+  "updatedAt": {
+    "$date": "2025-04-27T23:50:51.456Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680ed118c01ce736b027184c"
+  },
+  "date": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21210
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 146220
+    }
+  ],
+  "executionCredits": 53500,
+  "runCount": 418,
+  "updatedAt": {
+    "$date": "2025-04-28T23:50:50.393Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68102299c01ce736b083042c"
+  },
+  "date": {
+    "$date": "2025-04-29T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21210
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 146220
+    }
+  ],
+  "executionCredits": 53500,
+  "runCount": 421,
+  "updatedAt": {
+    "$date": "2025-04-29T23:50:37.238Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681173fec01ce736b00f4d6d"
+  },
+  "date": {
+    "$date": "2025-04-30T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 21390
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 154950
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 8340
+    }
+  ],
+  "executionCredits": 55000,
+  "runCount": 421,
+  "updatedAt": {
+    "$date": "2025-04-30T23:50:55.162Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681940d06519ae24cb40d644"
+  },
+  "date": {
+    "$date": "2025-05-05T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 3300
+    }
+  ],
+  "executionCredits": 1000,
+  "runCount": 0,
+  "updatedAt": {
+    "$date": "2025-05-05T23:50:35.807Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68195ceb6519ae24cbbbf24a"
+  },
+  "date": {
+    "$date": "2025-05-06T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 151650
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 360
+    }
+  ],
+  "executionCredits": 10000,
+  "runCount": 4,
+  "updatedAt": {
+    "$date": "2025-05-06T23:50:51.770Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681aae716d007bd330c57200"
+  },
+  "date": {
+    "$date": "2025-05-07T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 160230
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 465
+    }
+  ],
+  "executionCredits": 12500,
+  "runCount": 41,
+  "updatedAt": {
+    "$date": "2025-05-07T23:50:49.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681c00096d007bd330cd9f18"
+  },
+  "date": {
+    "$date": "2025-05-08T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1095
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 160230
+    }
+  ],
+  "executionCredits": 14500,
+  "runCount": 48,
+  "updatedAt": {
+    "$date": "2025-05-08T23:50:49.527Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d518d6d007bd330d16194"
+  },
+  "date": {
+    "$date": "2025-05-09T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1485
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 169110
+    }
+  ],
+  "executionCredits": 17500,
+  "runCount": 55,
+  "updatedAt": {
+    "$date": "2025-05-09T23:50:51.586Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681ea3066d007bd330173840"
+  },
+  "date": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 169110
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1485
+    }
+  ],
+  "executionCredits": 17500,
+  "runCount": 65,
+  "updatedAt": {
+    "$date": "2025-05-10T23:50:47.712Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681ff47b6d007bd330c807a1"
+  },
+  "date": {
+    "$date": "2025-05-11T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 169110
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1485
+    }
+  ],
+  "executionCredits": 17500,
+  "runCount": 65,
+  "updatedAt": {
+    "$date": "2025-05-11T23:50:45.857Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682145fa6d007bd330e6d6fe"
+  },
+  "date": {
+    "$date": "2025-05-12T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 1935
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 169110
+    }
+  ],
+  "executionCredits": 19000,
+  "runCount": 65,
+  "updatedAt": {
+    "$date": "2025-05-12T23:50:38.566Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68229768f7aed26c82bebd77"
+  },
+  "date": {
+    "$date": "2025-05-13T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2355
+    }
+  ],
+  "executionCredits": 22000,
+  "runCount": 72,
+  "updatedAt": {
+    "$date": "2025-05-13T23:50:33.611Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6823e8ec1361d54f67511307"
+  },
+  "date": {
+    "$date": "2025-05-14T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2775
+    }
+  ],
+  "executionCredits": 23500,
+  "runCount": 85,
+  "updatedAt": {
+    "$date": "2025-05-14T22:50:33.886Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6825341d1361d54f6754ef35"
+  },
+  "date": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2775
+    }
+  ],
+  "executionCredits": 23500,
+  "runCount": 91,
+  "updatedAt": {
+    "$date": "2025-05-15T23:20:52.652Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682685807884cdf396369b4b"
+  },
+  "date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2775
+    }
+  ],
+  "executionCredits": 23500,
+  "runCount": 93,
+  "updatedAt": {
+    "$date": "2025-05-16T23:30:34.951Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827d8bea6fba58ac655744e"
+  },
+  "date": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2775
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    }
+  ],
+  "executionCredits": 23500,
+  "runCount": 99,
+  "updatedAt": {
+    "$date": "2025-05-17T23:30:38.083Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68292a37a6fba58ac61186be"
+  },
+  "date": {
+    "$date": "2025-05-18T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2775
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 180540
+    }
+  ],
+  "executionCredits": 23500,
+  "runCount": 99,
+  "updatedAt": {
+    "$date": "2025-05-18T23:30:50.765Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682a7bc3a6fba58ac6a653a8"
+  },
+  "date": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 182010
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 2910
+    }
+  ],
+  "executionCredits": 24500,
+  "runCount": 99,
+  "updatedAt": {
+    "$date": "2025-05-19T23:30:37.043Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682bcd4b39fc4a9a5f3a402a"
+  },
+  "date": {
+    "$date": "2025-05-20T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3345
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 182010
+    }
+  ],
+  "executionCredits": 26000,
+  "runCount": 104,
+  "updatedAt": {
+    "$date": "2025-05-20T23:30:37.638Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d1ed19d981fa3f43b8d4d"
+  },
+  "date": {
+    "$date": "2025-05-21T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3585
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 184950
+    }
+  ],
+  "executionCredits": 28000,
+  "runCount": 112,
+  "updatedAt": {
+    "$date": "2025-05-21T23:30:37.788Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e704e3e31ef79cdb9cbb3"
+  },
+  "date": {
+    "$date": "2025-05-22T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 199740
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3735
+    }
+  ],
+  "executionCredits": 32000,
+  "runCount": 129,
+  "updatedAt": {
+    "$date": "2025-05-22T23:30:50.346Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682fc1dcec125aaf4c00cc32"
+  },
+  "date": {
+    "$date": "2025-05-23T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 222990
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3855
+    }
+  ],
+  "executionCredits": 39500,
+  "runCount": 208,
+  "updatedAt": {
+    "$date": "2025-05-23T23:30:49.951Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831135fec125aaf4c5511f2"
+  },
+  "date": {
+    "$date": "2025-05-24T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3855
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 222990
+    }
+  ],
+  "executionCredits": 39500,
+  "runCount": 243,
+  "updatedAt": {
+    "$date": "2025-05-24T23:30:48.127Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683264ddec125aaf4c1923bf"
+  },
+  "date": {
+    "$date": "2025-05-25T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 224640
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3855
+    }
+  ],
+  "executionCredits": 40500,
+  "runCount": 243,
+  "updatedAt": {
+    "$date": "2025-05-25T23:30:42.770Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6833b651ec125aaf4cf3fc09"
+  },
+  "date": {
+    "$date": "2025-05-26T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 261690
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 3855
+    }
+  ],
+  "executionCredits": 44500,
+  "runCount": 244,
+  "updatedAt": {
+    "$date": "2025-05-26T23:30:34.561Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683507b7ec125aaf4c035926"
+  },
+  "date": {
+    "$date": "2025-05-27T00:00:00.000Z"
+  },
+  "organizationId": {
+    "$oid": "654395a95ea78df51cce3d93"
+  },
+  "workspaceId": {
+    "$oid": "6537f16cc1b60060bb7c6e61"
+  },
+  "compute": [
+    {
+      "resourceClass": "docker_linux_amd64/large",
+      "credits": 2360
+    },
+    {
+      "resourceClass": "docker_linux_amd64/large+",
+      "credits": 266250
+    },
+    {
+      "resourceClass": "docker_linux_amd64/medium+",
+      "credits": 5760
+    }
+  ],
+  "executionCredits": 49500,
+  "runCount": 253,
+  "updatedAt": {
+    "$date": "2025-05-27T19:30:34.035Z"
+  }
+}]

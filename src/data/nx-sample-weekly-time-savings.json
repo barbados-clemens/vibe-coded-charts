@@ -1,0 +1,546 @@
+[{
+  "timeSavedLocal": 219218260.16110104,
+  "timeSavedRemote": 2761600842.27939,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 1,
+  "weekStart": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "timeSaved": 2980819102.4404907
+},
+{
+  "timeSavedLocal": 5480489.513419913,
+  "timeSavedRemote": 198581478.14365706,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 1,
+  "weekStart": {
+    "$date": "2024-12-30T00:00:00.000Z"
+  },
+  "timeSaved": 204061967.65707698
+},
+{
+  "timeSavedLocal": 202593903.31252575,
+  "timeSavedRemote": 2919218700.677039,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 2,
+  "weekStart": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "timeSaved": 3121812603.989565
+},
+{
+  "timeSavedLocal": 1681495.4564548496,
+  "timeSavedRemote": 232236607.80888394,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 2,
+  "weekStart": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "timeSaved": 233918103.26533878
+},
+{
+  "timeSavedLocal": 293035769.0363053,
+  "timeSavedRemote": 2280421325.1874185,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 3,
+  "weekStart": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "timeSaved": 2573457094.223724
+},
+{
+  "timeSavedLocal": 6011821.257939261,
+  "timeSavedRemote": 217170585.30971792,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 3,
+  "weekStart": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "timeSaved": 223182406.56765717
+},
+{
+  "timeSavedLocal": 206881145.28401583,
+  "timeSavedRemote": 2129451944.960067,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 4,
+  "weekStart": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "timeSaved": 2336333090.244083
+},
+{
+  "timeSavedLocal": 1617178.0903361344,
+  "timeSavedRemote": 231536142.37480128,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 4,
+  "weekStart": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "timeSaved": 233153320.46513742
+},
+{
+  "timeSavedLocal": 2148977.6549707605,
+  "timeSavedRemote": 220327072.83216375,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 5,
+  "weekStart": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "timeSaved": 222476050.48713452
+},
+{
+  "timeSavedLocal": 218147275.78074795,
+  "timeSavedRemote": 5479015840.265883,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 5,
+  "weekStart": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "timeSaved": 5697163116.046632
+},
+{
+  "timeSavedLocal": 290746589.59863013,
+  "timeSavedRemote": 3812729113.9513555,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 6,
+  "weekStart": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "timeSaved": 4103475703.5499854
+},
+{
+  "timeSavedLocal": 572159.9333333333,
+  "timeSavedRemote": 262785149.83333334,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 6,
+  "weekStart": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "timeSaved": 263357309.76666668
+},
+{
+  "timeSavedLocal": 22913518.984515004,
+  "timeSavedRemote": 13907867.2021415,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 7,
+  "weekStart": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "timeSaved": 36821386.186656505
+},
+{
+  "timeSavedLocal": 227874815.6166563,
+  "timeSavedRemote": 3617981013.159775,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 7,
+  "weekStart": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "timeSaved": 3845855828.776431
+},
+{
+  "timeSavedLocal": 6607593.028119707,
+  "timeSavedRemote": 88173761.90858272,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 8,
+  "weekStart": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "timeSaved": 94781354.93670243
+},
+{
+  "timeSavedLocal": 225716344.95377705,
+  "timeSavedRemote": 2957601535.18298,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 8,
+  "weekStart": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "timeSaved": 3183317880.136757
+},
+{
+  "timeSavedLocal": 204959829.6290682,
+  "timeSavedRemote": 2661602282.6406236,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 9,
+  "weekStart": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "timeSaved": 2866562112.269692
+},
+{
+  "timeSavedLocal": 289265.9585921325,
+  "timeSavedRemote": 217908632.08697855,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 9,
+  "weekStart": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "timeSaved": 218197898.0455707
+},
+{
+  "timeSavedLocal": 253689483.54563954,
+  "timeSavedRemote": 2998980786.961633,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 10,
+  "weekStart": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "timeSaved": 3252670270.5072727
+},
+{
+  "timeSavedLocal": 968764.0217391304,
+  "timeSavedRemote": 189876691.75543478,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 10,
+  "weekStart": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "timeSaved": 190845455.7771739
+},
+{
+  "timeSavedLocal": 3372802.628205128,
+  "timeSavedRemote": 83230543.59294872,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 11,
+  "weekStart": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "timeSaved": 86603346.22115386
+},
+{
+  "timeSavedLocal": 269833647.9787197,
+  "timeSavedRemote": 1580646364.5729542,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 11,
+  "weekStart": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "timeSaved": 1850480012.551674
+},
+{
+  "timeSavedLocal": 2483126.7715950715,
+  "timeSavedRemote": 111665278.63543956,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 12,
+  "weekStart": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "timeSaved": 114148405.40703464
+},
+{
+  "timeSavedLocal": 110038861.16111048,
+  "timeSavedRemote": 2114339556.8311975,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 12,
+  "weekStart": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "timeSaved": 2224378417.992308
+},
+{
+  "timeSavedLocal": 0,
+  "timeSavedRemote": 104811724.41538462,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 13,
+  "weekStart": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "timeSaved": 104811724.41538462
+},
+{
+  "timeSavedLocal": 120867728.38784517,
+  "timeSavedRemote": 2260181579.699536,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 13,
+  "weekStart": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "timeSaved": 2381049308.087381
+},
+{
+  "timeSavedLocal": 125896273.1965402,
+  "timeSavedRemote": 2802050659.90536,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 14,
+  "weekStart": {
+    "$date": "2025-04-07T00:00:00.000Z"
+  },
+  "timeSaved": 2927946933.1019006
+},
+{
+  "timeSavedLocal": 2354523.3137254897,
+  "timeSavedRemote": 136107810.8831825,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 14,
+  "weekStart": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "timeSaved": 138462334.196908
+},
+{
+  "timeSavedLocal": 193980872.91737655,
+  "timeSavedRemote": 2610410032.4532247,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 15,
+  "weekStart": {
+    "$date": "2025-04-14T00:00:00.000Z"
+  },
+  "timeSaved": 2804390905.370601
+},
+{
+  "timeSavedLocal": 8556800.211320633,
+  "timeSavedRemote": 130851160.51224454,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 15,
+  "weekStart": {
+    "$date": "2025-04-07T00:00:00.000Z"
+  },
+  "timeSaved": 139407960.72356516
+},
+{
+  "timeSavedLocal": 8903098.666666666,
+  "timeSavedRemote": 14931945.414285714,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 16,
+  "weekStart": {
+    "$date": "2025-04-14T00:00:00.000Z"
+  },
+  "timeSaved": 23835044.08095238
+},
+{
+  "timeSavedLocal": 142369313.8875919,
+  "timeSavedRemote": 4210394890.1918354,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 16,
+  "weekStart": {
+    "$date": "2025-04-21T00:00:00.000Z"
+  },
+  "timeSaved": 4352764204.079428
+},
+{
+  "timeSavedLocal": 209017951.29328874,
+  "timeSavedRemote": 6787860037.57467,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 17,
+  "weekStart": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "timeSaved": 6996877988.867959
+},
+{
+  "timeSavedLocal": 23900,
+  "timeSavedRemote": 701824,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 17,
+  "weekStart": {
+    "$date": "2025-04-21T00:00:00.000Z"
+  },
+  "timeSaved": 725724
+},
+{
+  "timeSavedLocal": 141500,
+  "timeSavedRemote": 62060675.05,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 18,
+  "weekStart": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "timeSaved": 62202175.05
+},
+{
+  "timeSavedLocal": 138764229.90393785,
+  "timeSavedRemote": 4226507464.3182483,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 18,
+  "weekStart": {
+    "$date": "2025-05-05T00:00:00.000Z"
+  },
+  "timeSaved": 4365271694.222186
+},
+{
+  "timeSavedLocal": 0,
+  "timeSavedRemote": 3623246.666666667,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 19,
+  "weekStart": {
+    "$date": "2025-05-05T00:00:00.000Z"
+  },
+  "timeSaved": 3623246.666666667
+},
+{
+  "timeSavedLocal": 194306025.84228432,
+  "timeSavedRemote": 4361797841.082793,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 19,
+  "weekStart": {
+    "$date": "2025-05-12T00:00:00.000Z"
+  },
+  "timeSaved": 4556103866.925077
+},
+{
+  "timeSavedLocal": 141021506.31274462,
+  "timeSavedRemote": 2226802692.558613,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 20,
+  "weekStart": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "timeSaved": 2367824198.8713574
+},
+{
+  "timeSavedLocal": 106002,
+  "timeSavedRemote": 628725.3529411764,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 20,
+  "weekStart": {
+    "$date": "2025-05-12T00:00:00.000Z"
+  },
+  "timeSaved": 734727.3529411764
+},
+{
+  "timeSavedLocal": 57771217.69808532,
+  "timeSavedRemote": 1386294789.9966495,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 21,
+  "weekStart": {
+    "$date": "2025-05-26T00:00:00.000Z"
+  },
+  "timeSaved": 1444066007.6947348
+},
+{
+  "timeSavedLocal": 214045.5,
+  "timeSavedRemote": 3376624,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  },
+  "year": 2025,
+  "week": 21,
+  "weekStart": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "timeSaved": 3590669.5
+}]

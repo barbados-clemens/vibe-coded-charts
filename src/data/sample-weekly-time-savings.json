@@ -1,0 +1,379 @@
+[
+  {
+    "timeSavedLocal": 39949926.6803169,
+    "timeSavedRemote": 90712765.1,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 0,
+    "weekStart": {
+      "$date": "2024-12-30T00:00:00.000Z"
+    },
+    "timeSaved": 130662691.78031689
+  },
+  {
+    "timeSavedLocal": 93172760.1243877,
+    "timeSavedRemote": 210912883.01666668,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 1,
+    "weekStart": {
+      "$date": "2025-01-06T00:00:00.000Z"
+    },
+    "timeSaved": 304085643.1410544
+  },
+  {
+    "timeSavedLocal": 14555825.121428572,
+    "timeSavedRemote": 65592494.166666664,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 2,
+    "weekStart": {
+      "$date": "2025-01-13T00:00:00.000Z"
+    },
+    "timeSaved": 80148319.28809524
+  },
+  {
+    "timeSavedLocal": 11504423.220571095,
+    "timeSavedRemote": 110950513.16666667,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 3,
+    "weekStart": {
+      "$date": "2025-01-20T00:00:00.000Z"
+    },
+    "timeSaved": 122454936.38723777
+  },
+  {
+    "timeSavedLocal": 53028220.62456345,
+    "timeSavedRemote": 42203648.36666667,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 4,
+    "weekStart": {
+      "$date": "2025-01-27T00:00:00.000Z"
+    },
+    "timeSaved": 95231868.99123012
+  },
+  {
+    "timeSavedLocal": 54258220.13311864,
+    "timeSavedRemote": 1776218.5,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 5,
+    "weekStart": {
+      "$date": "2025-02-03T00:00:00.000Z"
+    },
+    "timeSaved": 56034438.63311864
+  },
+  {
+    "timeSavedLocal": 0,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 5,
+    "weekStart": {
+      "$date": "2025-01-27T00:00:00.000Z"
+    },
+    "timeSaved": 0
+  },
+  {
+    "timeSavedLocal": 146909569.17518008,
+    "timeSavedRemote": 41520390.166666664,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 6,
+    "weekStart": {
+      "$date": "2025-02-10T00:00:00.000Z"
+    },
+    "timeSaved": 188429959.34184673
+  },
+  {
+    "timeSavedLocal": 78959326.26266955,
+    "timeSavedRemote": 10391494.066666666,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 7,
+    "weekStart": {
+      "$date": "2025-02-17T00:00:00.000Z"
+    },
+    "timeSaved": 89350820.32933621
+  },
+  {
+    "timeSavedLocal": 0,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 7,
+    "weekStart": {
+      "$date": "2025-02-10T00:00:00.000Z"
+    },
+    "timeSaved": 0
+  },
+  {
+    "timeSavedLocal": 27476270.652005013,
+    "timeSavedRemote": 48964524.833333336,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 8,
+    "weekStart": {
+      "$date": "2025-02-24T00:00:00.000Z"
+    },
+    "timeSaved": 76440795.48533835
+  },
+  {
+    "timeSavedLocal": 36627.75,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 9,
+    "weekStart": {
+      "$date": "2025-02-24T00:00:00.000Z"
+    },
+    "timeSaved": 36627.75
+  },
+  {
+    "timeSavedLocal": 120033419.7049792,
+    "timeSavedRemote": 112352551.33333333,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 9,
+    "weekStart": {
+      "$date": "2025-03-03T00:00:00.000Z"
+    },
+    "timeSaved": 232385971.03831252
+  },
+  {
+    "timeSavedLocal": 70736479.2968933,
+    "timeSavedRemote": 13092111,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 10,
+    "weekStart": {
+      "$date": "2025-03-10T00:00:00.000Z"
+    },
+    "timeSaved": 83828590.2968933
+  },
+  {
+    "timeSavedLocal": 19624630.111111112,
+    "timeSavedRemote": 4840270.666666667,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 11,
+    "weekStart": {
+      "$date": "2025-03-17T00:00:00.000Z"
+    },
+    "timeSaved": 24464900.77777778
+  },
+  {
+    "timeSavedLocal": 0,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 11,
+    "weekStart": {
+      "$date": "2025-03-10T00:00:00.000Z"
+    },
+    "timeSaved": 0
+  },
+  {
+    "timeSavedLocal": 152407813.4962793,
+    "timeSavedRemote": 9367251.333333334,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 12,
+    "weekStart": {
+      "$date": "2025-03-24T00:00:00.000Z"
+    },
+    "timeSaved": 161775064.82961264
+  },
+  {
+    "timeSavedLocal": 0,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 13,
+    "weekStart": {
+      "$date": "2025-03-24T00:00:00.000Z"
+    },
+    "timeSaved": 0
+  },
+  {
+    "timeSavedLocal": 92012353.89083305,
+    "timeSavedRemote": 142039375.33333334,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 13,
+    "weekStart": {
+      "$date": "2025-03-31T00:00:00.000Z"
+    },
+    "timeSaved": 234051729.2241664
+  },
+  {
+    "timeSavedLocal": 4666936.596774193,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 14,
+    "weekStart": {
+      "$date": "2025-03-31T00:00:00.000Z"
+    },
+    "timeSaved": 4666936.596774193
+  },
+  {
+    "timeSavedLocal": 115449961.17521554,
+    "timeSavedRemote": 63722527.666666664,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 14,
+    "weekStart": {
+      "$date": "2025-04-07T00:00:00.000Z"
+    },
+    "timeSaved": 179172488.8418822
+  },
+  {
+    "timeSavedLocal": 25474105.08452381,
+    "timeSavedRemote": 14473179,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 15,
+    "weekStart": {
+      "$date": "2025-04-14T00:00:00.000Z"
+    },
+    "timeSaved": 39947284.08452381
+  },
+  {
+    "timeSavedLocal": 72711200.77777778,
+    "timeSavedRemote": 6848524,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 16,
+    "weekStart": {
+      "$date": "2025-04-21T00:00:00.000Z"
+    },
+    "timeSaved": 79559724.77777778
+  },
+  {
+    "timeSavedLocal": 1491147.5,
+    "timeSavedRemote": 2238850,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 17,
+    "weekStart": {
+      "$date": "2025-04-28T00:00:00.000Z"
+    },
+    "timeSaved": 3729997.5
+  },
+  {
+    "timeSavedLocal": 18664597.375,
+    "timeSavedRemote": 78473789.1,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 18,
+    "weekStart": {
+      "$date": "2025-05-05T00:00:00.000Z"
+    },
+    "timeSaved": 97138386.475
+  },
+  {
+    "timeSavedLocal": 5017190.314285714,
+    "timeSavedRemote": 5374036,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 19,
+    "weekStart": {
+      "$date": "2025-05-12T00:00:00.000Z"
+    },
+    "timeSaved": 10391226.314285714
+  },
+  {
+    "timeSavedLocal": 13092688.206669109,
+    "timeSavedRemote": 92124565.16666667,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 20,
+    "weekStart": {
+      "$date": "2025-05-19T00:00:00.000Z"
+    },
+    "timeSaved": 105217253.37333578
+  },
+  {
+    "timeSavedLocal": 29394046.789810188,
+    "timeSavedRemote": 65781357.2,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 21,
+    "weekStart": {
+      "$date": "2025-05-26T00:00:00.000Z"
+    },
+    "timeSaved": 95175403.9898102
+  },
+  {
+    "timeSavedLocal": 0,
+    "timeSavedRemote": 0,
+    "workspaceId": {
+      "$oid": "6537f16cc1b60060bb7c6e61"
+    },
+    "year": 2025,
+    "week": 21,
+    "weekStart": {
+      "$date": "2025-05-19T00:00:00.000Z"
+    },
+    "timeSaved": 0
+  }
+]
