@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { format, addMonths, isSameMonth } from 'date-fns';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 
@@ -46,7 +46,8 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
 
   // Process data to create chart-friendly format
   const processedData = filteredData.map(item => {
-    const taskId = `${item.projectName}:${item.target}`;
+    const baseTaskId = `${item.projectName}:${item.target}`;
+    const taskId = `${baseTaskId} (${item.isCI ? 'CI' : 'Local'})`;
     
     // Convert milliseconds to seconds and calculate weighted average duration
     const { averageDuration, cacheStatusRatio } = item;
@@ -63,6 +64,8 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
     return {
       date: format(new UTCDate(item.date), 'MMM dd'),
       taskId,
+      baseTaskId,
+      isCI: item.isCI,
       projectName: item.projectName,
       target: item.target,
       workspaceId: item.workspaceId,
@@ -76,7 +79,7 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
     };
   });
 
-  // Get unique task IDs and sort data by date
+  // Get unique task IDs (now includes CI/Local distinction) and sort data by date
   const uniqueTaskIds = [...new Set(processedData.map(item => item.taskId))];
   const uniqueDates = [...new Set(processedData.map(item => item.originalDate))].sort();
 
@@ -86,26 +89,36 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
       date: format(new UTCDate(date), 'MMM dd'),
     };
     
-    // Add data for each unique task ID
+    // Add data for each unique task ID (including CI/Local variants)
     uniqueTaskIds.forEach(taskId => {
       const taskEntry = processedData.find(item => 
         item.originalDate === date && item.taskId === taskId
       );
       dataPoint[taskId] = taskEntry?.averageDurationSec || null;
-      
-      // Also add cache-specific durations for detailed view
-      if (taskEntry) {
-        dataPoint[`${taskId}_local`] = taskEntry.localCacheHitSec;
-        dataPoint[`${taskId}_remote`] = taskEntry.remoteCacheHitSec;
-        dataPoint[`${taskId}_miss`] = taskEntry.cacheMissSec;
-      }
     });
     
     return dataPoint;
   });
 
-  // Generate colors for different task IDs
-  const taskColors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
+  // Generate colors for different task IDs with CI/Local distinction
+  const getTaskColor = (taskId: string, index: number) => {
+    const baseColors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
+    const baseColor = baseColors[index % baseColors.length];
+    
+    // Make CI tasks darker and Local tasks lighter
+    if (taskId.includes('(CI)')) {
+      return baseColor; // Use the base color for CI
+    } else {
+      // Make Local tasks lighter by converting to HSL and increasing lightness
+      const hex = baseColor.replace('#', '');
+      const r = parseInt(hex.substr(0, 2), 16);
+      const g = parseInt(hex.substr(2, 2), 16);
+      const b = parseInt(hex.substr(4, 2), 16);
+      
+      // Convert to HSL and make lighter
+      return `rgba(${r}, ${g}, ${b}, 0.6)`;
+    }
+  };
 
   const handlePrevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));
@@ -144,6 +157,20 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
   const maxDuration = Math.max(...processedData.map(item => item.averageDurationSec), 0);
   const totalExecutions = processedData.reduce((sum, item) => sum + item.totalCount, 0);
 
+  // Calculate standard deviation for reference lines
+  const calculateStandardDeviation = (values: number[], mean: number) => {
+    if (values.length === 0) return 0;
+    const variance = values.reduce((sum, value) => sum + Math.pow(value - mean, 2), 0) / values.length;
+    return Math.sqrt(variance);
+  };
+
+  const allDurations = processedData.map(item => item.averageDurationSec);
+  const stdDev = calculateStandardDeviation(allDurations, avgDuration);
+  
+  // Reference line values
+  const meanLine = avgDuration;
+  const plusOneStdDev = avgDuration + stdDev;
+  const minusOneStdDev = Math.max(0, avgDuration - stdDev); // Don't go below 0
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
@@ -155,7 +182,7 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
       
       {/* Summary Stats */}
       <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-gray-900">{totalTasks}</div>
             <div className="text-sm text-gray-500">Task Executions</div>
@@ -163,6 +190,10 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
           <div>
             <div className="text-2xl font-bold text-gray-900">{avgDuration.toFixed(1)}s</div>
             <div className="text-sm text-gray-500">Avg Duration</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-gray-900">{stdDev.toFixed(1)}s</div>
+            <div className="text-sm text-gray-500">Std Deviation</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-gray-900">{maxDuration.toFixed(1)}s</div>
@@ -175,19 +206,42 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
         </div>
       </div>
 
-      {/* Task Legend */}
-      <div className="mb-4 flex flex-wrap gap-4">
-        {uniqueTaskIds.map((taskId, index) => (
-          <div key={taskId} className="flex items-center gap-2">
-            <div 
-              className="w-3 h-3 rounded-full" 
-              style={{ backgroundColor: taskColors[index % taskColors.length] }}
-            />
-            <span className="text-sm text-gray-600">
-              {taskId}
-            </span>
+      {/* Reference Lines Legend */}
+      <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+        <h4 className="text-sm font-medium text-gray-800 mb-2">Statistical Reference Lines</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-0.5 bg-green-600"></div>
+            <span>Mean ({avgDuration.toFixed(1)}s)</span>
           </div>
-        ))}
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-0.5 bg-yellow-500 border-dashed border-t"></div>
+            <span>±1σ ({minusOneStdDev.toFixed(1)}s - {plusOneStdDev.toFixed(1)}s)</span>
+          </div>
+          <div className="text-gray-600">
+            <span>68% of data within ±1σ</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Task Legend */}
+      <div className="mb-4">
+        <div className="flex flex-wrap gap-4">
+          {uniqueTaskIds.map((taskId, index) => (
+            <div key={taskId} className="flex items-center gap-2">
+              <div 
+                className="w-3 h-3 rounded-full" 
+                style={{ backgroundColor: getTaskColor(taskId, index) }}
+              />
+              <span className={`text-sm ${taskId.includes('(CI)') ? 'font-medium text-gray-800' : 'text-gray-600'}`}>
+                {taskId}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-2 text-xs text-gray-500">
+          <span className="font-medium">CI tasks</span> are shown as solid lines, <span className="font-medium">Local tasks</span> are shown as dashed lines with lighter colors
+        </div>
       </div>
       
       {chartData.length > 0 ? (
@@ -207,18 +261,60 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend />
-              {uniqueTaskIds.map((taskId, index) => (
-                <Line 
-                  key={taskId}
-                  type="monotone" 
-                  dataKey={taskId} 
-                  stroke={taskColors[index % taskColors.length]} 
-                  strokeWidth={2}
-                  dot={{ fill: taskColors[index % taskColors.length], strokeWidth: 2 }}
-                  connectNulls={false}
-                  name={taskId}
-                />
-              ))}
+              
+              {/* Statistical Reference Lines */}
+              <ReferenceLine 
+                y={meanLine} 
+                stroke="#16a34a" 
+                strokeWidth={2}
+                label={{ value: "Mean", position: "right" }}
+              />
+              <ReferenceLine 
+                y={plusOneStdDev} 
+                stroke="#eab308" 
+                strokeDasharray="5 5"
+                label={{ value: "+1σ", position: "right" }}
+              />
+              <ReferenceLine 
+                y={minusOneStdDev} 
+                stroke="#eab308" 
+                strokeDasharray="5 5"
+                label={{ value: "-1σ", position: "right" }}
+              />
+              {/*<ReferenceLine */}
+              {/*  y={plusTwoStdDev} */}
+              {/*  stroke="#f97316" */}
+              {/*  strokeWidth={1}*/}
+              {/*  strokeOpacity={0.6}*/}
+              {/*  label={{ value: "+2σ", position: "right" }}*/}
+              {/*/>*/}
+              {/*<ReferenceLine */}
+              {/*  y={minusTwoStdDev} */}
+              {/*  stroke="#f97316" */}
+              {/*  strokeWidth={1}*/}
+              {/*  strokeOpacity={0.6}*/}
+              {/*  label={{ value: "-2σ", position: "right" }}*/}
+              {/*/>*/}
+              
+              {uniqueTaskIds.map((taskId, index) => {
+                const color = getTaskColor(taskId, index);
+                const strokeWidth = taskId.includes('(CI)') ? 2 : 2;
+                const strokeDasharray = taskId.includes('(CI)') ? undefined : "5 5";
+                
+                return (
+                  <Line 
+                    key={taskId}
+                    type="monotone" 
+                    dataKey={taskId} 
+                    stroke={color} 
+                    strokeWidth={strokeWidth}
+                    strokeDasharray={strokeDasharray}
+                    dot={{ fill: color, strokeWidth: 2 }}
+                    connectNulls={false}
+                    name={taskId}
+                  />
+                );
+              })}
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -235,25 +331,74 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
       {processedData.length > 0 && (
         <div className="mt-8 bg-gray-50 p-4 rounded-lg">
           <h3 className="text-sm font-medium text-gray-700 mb-3">Cache Performance Summary</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center">
-              <div className="text-lg font-semibold text-green-600">
-                {(processedData.reduce((sum, item) => sum + item.cacheStatusRatio.localCacheHit, 0) / processedData.length * 100).toFixed(1)}%
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* CI Tasks */}
+            {processedData.some(item => item.isCI) && (
+              <div>
+                <h4 className="text-sm font-medium text-gray-800 mb-2">CI Tasks</h4>
+                <div className="grid grid-cols-3 gap-4">
+                  {(() => {
+                    const ciData = processedData.filter(item => item.isCI);
+                    return (
+                      <>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-green-600">
+                            {ciData.length > 0 ? (ciData.reduce((sum, item) => sum + item.cacheStatusRatio.localCacheHit, 0) / ciData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Local Cache</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-blue-600">
+                            {ciData.length > 0 ? (ciData.reduce((sum, item) => sum + item.cacheStatusRatio.remoteCacheHit, 0) / ciData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Remote Cache</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-orange-600">
+                            {ciData.length > 0 ? (ciData.reduce((sum, item) => sum + item.cacheStatusRatio.cacheMiss, 0) / ciData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Cache Miss</div>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
               </div>
-              <div className="text-xs text-gray-500">Local Cache Hit Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-semibold text-blue-600">
-                {(processedData.reduce((sum, item) => sum + item.cacheStatusRatio.remoteCacheHit, 0) / processedData.length * 100).toFixed(1)}%
+            )}
+            
+            {/* Local Tasks */}
+            {processedData.some(item => !item.isCI) && (
+              <div>
+                <h4 className="text-sm font-medium text-gray-800 mb-2">Local Tasks</h4>
+                <div className="grid grid-cols-3 gap-4">
+                  {(() => {
+                    const localData = processedData.filter(item => !item.isCI);
+                    return (
+                      <>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-green-600">
+                            {localData.length > 0 ? (localData.reduce((sum, item) => sum + item.cacheStatusRatio.localCacheHit, 0) / localData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Local Cache</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-blue-600">
+                            {localData.length > 0 ? (localData.reduce((sum, item) => sum + item.cacheStatusRatio.remoteCacheHit, 0) / localData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Remote Cache</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-orange-600">
+                            {localData.length > 0 ? (localData.reduce((sum, item) => sum + item.cacheStatusRatio.cacheMiss, 0) / localData.length * 100).toFixed(1) : 0}%
+                          </div>
+                          <div className="text-xs text-gray-500">Cache Miss</div>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
               </div>
-              <div className="text-xs text-gray-500">Remote Cache Hit Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-semibold text-orange-600">
-                {(processedData.reduce((sum, item) => sum + item.cacheStatusRatio.cacheMiss, 0) / processedData.length * 100).toFixed(1)}%
-              </div>
-              <div className="text-xs text-gray-500">Cache Miss Rate</div>
-            </div>
+            )}
           </div>
         </div>
       )}
