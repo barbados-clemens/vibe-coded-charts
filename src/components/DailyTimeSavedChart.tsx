@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { format, addYears, isSameYear } from 'date-fns';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { format, addYears, isSameYear, getDay } from 'date-fns';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 
@@ -27,15 +27,44 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
 
   // Process data to create chart-friendly format with proper date formatting
   const chartData = filteredData
-    .map(item => ({
+    .map((item, index) => ({
       date: item.date,
       dateDisplay: format(new UTCDate(item.date), 'MMM dd'),
       monthDisplay: format(new UTCDate(item.date), 'MMM'),
       timeSavedHours: item.timeSaved / (1000 * 60 * 60), // Convert ms to hours
       timeSavedMs: item.timeSaved,
-      workspaceId: item.workspaceId
+      workspaceId: item.workspaceId,
+      dayOfWeek: getDay(new UTCDate(item.date)), // 0 = Sunday, 6 = Saturday
+      isWeekend: getDay(new UTCDate(item.date)) === 0 || getDay(new UTCDate(item.date)) === 6,
+      dataIndex: index
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  // Create weekend highlight areas
+  const weekendAreas = [];
+  let weekendStart = null;
+  
+  chartData.forEach((item, index) => {
+    if (item.isWeekend && weekendStart === null) {
+      // Start of weekend
+      weekendStart = index;
+    } else if (!item.isWeekend && weekendStart !== null) {
+      // End of weekend
+      weekendAreas.push({
+        x1: weekendStart,
+        x2: index - 1
+      });
+      weekendStart = null;
+    }
+  });
+  
+  // Handle case where data ends on a weekend
+  if (weekendStart !== null) {
+    weekendAreas.push({
+      x1: weekendStart,
+      x2: chartData.length - 1
+    });
+  }
 
   const handlePrevYear = () => {
     setCurrentDate(prev => addYears(prev, -1));
@@ -102,6 +131,25 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
         </div>
       </div>
 
+      {/* Chart Legend */}
+      <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+        <h4 className="text-sm font-medium text-gray-800 mb-2">Chart Legend</h4>
+        <div className="flex flex-wrap gap-4 text-xs">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-3 bg-white border border-gray-300"></div>
+            <span>Weekdays (Mon-Fri)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-3 bg-gray-300 bg-opacity-30"></div>
+            <span>Weekends (Sat-Sun)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-0.5 bg-green-600"></div>
+            <span>Time Saved Trend</span>
+          </div>
+        </div>
+      </div>
+
       {/* Time saved equivalents info */}
       <div className="mb-4 p-3 bg-blue-50 rounded-lg">
         <h4 className="text-sm font-medium text-gray-800 mb-2">Time Saved Context</h4>
@@ -121,6 +169,19 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+              
+              {/* Weekend highlighting */}
+              {weekendAreas.map((area, index) => (
+                <ReferenceArea
+                  key={`weekend-${index}`}
+                  x1={chartData[area.x1]?.dateDisplay}
+                  x2={chartData[area.x2]?.dateDisplay}
+                  fill="#f3f4f6"
+                  fillOpacity={0.3}
+                  stroke="none"
+                />
+              ))}
+              
               <XAxis 
                 dataKey="dateDisplay" 
                 stroke="#6b7280"
@@ -142,10 +203,10 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
                 type="monotone" 
                 dataKey="timeSavedHours" 
                 stroke="#10b981" 
-                strokeWidth={3}
-                dot={{ fill: '#10b981', strokeWidth: 2, r: 5 }}
-                activeDot={{ r: 7, stroke: '#10b981', strokeWidth: 2 }}
-                connectNulls={false}
+                strokeWidth={2}
+                dot={false}
+                activeDot={{ r: 5, stroke: '#10b981', strokeWidth: 2, fill: '#10b981' }}
+                connectNulls={true}
               />
             </LineChart>
           </ResponsiveContainer>
