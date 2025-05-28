@@ -173,7 +173,7 @@ export function RunCountChart({ data }: RunCountChartProps) {
                         }
                         
                         const workspaceLines = dayData.workspaceDetails
-                          .map(detail => `  Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} runs`)
+                          .map(detail => `Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} runs`)
                           .join('\n');
                         
                         return `${dateStr}:\nTotal: ${dayData.value} runs\n${workspaceLines}`;

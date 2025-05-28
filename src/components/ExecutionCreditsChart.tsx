@@ -177,7 +177,7 @@ export function ExecutionCreditsChart({ data }: ExecutionCreditsChartProps) {
                         }
                         
                         const workspaceLines = dayData.workspaceDetails
-                          .map(detail => `  Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} credits`)
+                          .map(detail => `Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} credits`)
                           .join('\n');
                         
                         return `${dateStr}:\nTotal: ${dayData.value} credits\n${workspaceLines}`;
