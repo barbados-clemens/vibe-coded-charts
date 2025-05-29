@@ -40,6 +40,8 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
   });
 
   const [showReferenceLines, setShowReferenceLines] = useState(true);
+  const [showLocalEnvironment, setShowLocalEnvironment] = useState(true);
+  const [showCIEnvironment, setShowCIEnvironment] = useState(true);
 
   // Filter data for current month
   const filteredData = data.filter(item => {
@@ -295,19 +297,46 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       </div>
 
       {/* Chart Toggles */}
-      <div className="mb-6 flex justify-end gap-6">
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={showReferenceLines}
-            onChange={() => setShowReferenceLines(!showReferenceLines)}
-            className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-          />
-          <span className="text-sm text-gray-700">Show Reference Lines</span>
-        </label>
+      <div className="mb-6 space-y-4">
+        {/* Environment Toggles */}
+        <div className="flex justify-center gap-8">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showLocalEnvironment}
+              onChange={() => setShowLocalEnvironment(!showLocalEnvironment)}
+              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+            />
+            <div className="w-4 h-0.5 bg-blue-600"></div>
+            <span className="text-sm text-gray-700 font-medium">Local Environment</span>
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showCIEnvironment}
+              onChange={() => setShowCIEnvironment(!showCIEnvironment)}
+              className="rounded border-gray-300 text-red-600 focus:ring-red-500"
+            />
+            <div className="w-4 h-0.5 bg-red-600"></div>
+            <span className="text-sm text-gray-700 font-medium">CI Environment</span>
+          </label>
+        </div>
+        
+        {/* Chart Display Toggles */}
+        <div className="flex justify-end gap-6">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showReferenceLines}
+              onChange={() => setShowReferenceLines(!showReferenceLines)}
+              className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+            />
+            <span className="text-sm text-gray-700">Show Reference Lines</span>
+          </label>
+        </div>
       </div>
       
-      {chartData.length > 0 ? (
+      {chartData.length > 0 && (showLocalEnvironment || showCIEnvironment) ? (
         <div className="h-[500px]">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -326,35 +355,39 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
               <Tooltip content={<CustomTooltip />} />
               <Legend />
 
-              {/* Duration area charts - always visible */}
-              <Area
-                yAxisId="duration"
-                type="monotone"
-                dataKey="localDuration"
-                stroke="#3b82f6"
-                fill="#3b82f6"
-                fillOpacity={0.2}
-                strokeWidth={2}
-                connectNulls={false}
-                name="Local Duration"
-              />
-              <Area
-                yAxisId="duration"
-                type="monotone"
-                dataKey="ciDuration"
-                stroke="#ef4444"
-                fill="#ef4444"
-                fillOpacity={0.2}
-                strokeWidth={2}
-                connectNulls={false}
-                name="CI Duration"
-              />
+              {/* Duration area charts - conditional based on environment toggles */}
+              {showLocalEnvironment && (
+                <Area
+                  yAxisId="duration"
+                  type="monotone"
+                  dataKey="localDuration"
+                  stroke="#3b82f6"
+                  fill="#3b82f6"
+                  fillOpacity={0.2}
+                  strokeWidth={2}
+                  connectNulls={false}
+                  name="Local Duration"
+                />
+              )}
+              {showCIEnvironment && (
+                <Area
+                  yAxisId="duration"
+                  type="monotone"
+                  dataKey="ciDuration"
+                  stroke="#ef4444"
+                  fill="#ef4444"
+                  fillOpacity={0.2}
+                  strokeWidth={2}
+                  connectNulls={false}
+                  name="CI Duration"
+                />
+              )}
 
-              {/* Reference lines - conditional based on toggle */}
+              {/* Reference lines - conditional based on toggle and environment visibility */}
               {showReferenceLines && (
                 <>
                   {/* Average reference lines */}
-                  {avgLocalDuration > 0 && (
+                  {showLocalEnvironment && avgLocalDuration > 0 && (
                     <ReferenceLine 
                       yAxisId="duration"
                       y={avgLocalDuration} 
@@ -364,7 +397,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                       label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "top" }}
                     />
                   )}
-                  {avgCiDuration > 0 && (
+                  {showCIEnvironment && avgCiDuration > 0 && (
                     <ReferenceLine 
                       yAxisId="duration"
                       y={avgCiDuration} 
@@ -376,7 +409,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                   )}
 
                   {/* Standard deviation reference lines */}
-                  {localStdDev > 0 && avgLocalDuration > 0 && (
+                  {showLocalEnvironment && localStdDev > 0 && avgLocalDuration > 0 && (
                     <>
                       <ReferenceLine 
                         yAxisId="duration"
@@ -398,7 +431,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                       />
                     </>
                   )}
-                  {ciStdDev > 0 && avgCiDuration > 0 && (
+                  {showCIEnvironment && ciStdDev > 0 && avgCiDuration > 0 && (
                     <>
                       <ReferenceLine 
                         yAxisId="duration"
@@ -428,14 +461,28 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       ) : (
         <div className="h-[400px] flex items-center justify-center text-gray-500">
           <div className="text-center">
-            <p className="text-lg mb-2">No task data for this period</p>
-            <p className="text-sm">Try navigating to a different time period</p>
+            {chartData.length === 0 ? (
+              <>
+                <p className="text-lg mb-2">No task data for this period</p>
+                <p className="text-sm">Try navigating to a different time period</p>
+              </>
+            ) : !showLocalEnvironment && !showCIEnvironment ? (
+              <>
+                <p className="text-lg mb-2">No environments selected</p>
+                <p className="text-sm">Enable Local Environment or CI Environment to view data</p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg mb-2">No valid duration data</p>
+                <p className="text-sm">Try a different time period or check data quality</p>
+              </>
+            )}
           </div>
         </div>
       )}
 
       {/* Task Invocations Chart */}
-      {chartData.length > 0 && (
+      {chartData.length > 0 && (showLocalEnvironment || showCIEnvironment) && (
         <div className="mt-8">
           <h3 className="text-lg font-medium text-gray-900 mb-4">Task Invocations</h3>
           <div className="h-[300px]">
@@ -455,18 +502,22 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                 <Tooltip content={<InvocationsTooltip />} />
                 <Legend />
                 
-                <Bar 
-                  dataKey="localInvocations" 
-                  fill="#3b82f6" 
-                  name="Local Invocations"
-                  stackId="invocations"
-                />
-                <Bar 
-                  dataKey="ciInvocations" 
-                  fill="#ef4444" 
-                  name="CI Invocations"
-                  stackId="invocations"
-                />
+                {showLocalEnvironment && (
+                  <Bar 
+                    dataKey="localInvocations" 
+                    fill="#3b82f6" 
+                    name="Local Invocations"
+                    stackId="invocations"
+                  />
+                )}
+                {showCIEnvironment && (
+                  <Bar 
+                    dataKey="ciInvocations" 
+                    fill="#ef4444" 
+                    name="CI Invocations"
+                    stackId="invocations"
+                  />
+                )}
               </BarChart>
             </ResponsiveContainer>
           </div>
