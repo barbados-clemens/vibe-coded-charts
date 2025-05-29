@@ -33,9 +33,23 @@ interface TaskDurationAnalysisChartProps {
   data: DailyTaskStatsDataItem[];
 }
 
+interface ChartLayers {
+  localDuration: boolean;
+  ciDuration: boolean;
+  invocations: boolean;
+  averageLines: boolean;
+}
+
 export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     return data.length > 0 ? new UTCDate(data[0].date) : new UTCDate();
+  });
+
+  const [visibleLayers, setVisibleLayers] = useState<ChartLayers>({
+    localDuration: true,
+    ciDuration: true,
+    invocations: true,
+    averageLines: false
   });
 
   // Filter data for current month
@@ -135,6 +149,13 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     setCurrentDate(prev => addMonths(prev, 1));
   };
 
+  const toggleLayer = (layer: keyof ChartLayers) => {
+    setVisibleLayers(prev => ({
+      ...prev,
+      [layer]: !prev[layer]
+    }));
+  };
+
   // Custom tooltip
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
@@ -230,27 +251,85 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
         </div>
       </div>
 
-      {/* Legend */}
-      <div className="mb-4 flex flex-wrap gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-0.5 bg-blue-600"></div>
-          <span className="text-sm">Local Duration</span>
+      {/* Chart Layer Controls */}
+      <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+        <h3 className="text-sm font-medium text-gray-700 mb-3">Chart Layers</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLayers.localDuration}
+              onChange={() => toggleLayer('localDuration')}
+              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+            />
+            <div className="w-4 h-0.5 bg-blue-600"></div>
+            <span className="text-sm">Local Duration</span>
+          </label>
+          
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLayers.ciDuration}
+              onChange={() => toggleLayer('ciDuration')}
+              className="rounded border-gray-300 text-red-600 focus:ring-red-500"
+            />
+            <div className="w-4 h-0.5 bg-red-600"></div>
+            <span className="text-sm">CI Duration</span>
+          </label>
+          
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLayers.invocations}
+              onChange={() => toggleLayer('invocations')}
+              className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+            />
+            <div className="w-3 h-3 bg-green-500 opacity-50"></div>
+            <span className="text-sm">Invocations</span>
+          </label>
+          
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLayers.averageLines}
+              onChange={() => toggleLayer('averageLines')}
+              className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+            />
+            <div className="w-4 h-0.5 bg-gray-400 border-dashed border-t"></div>
+            <span className="text-sm">Average Lines</span>
+          </label>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-0.5 bg-red-600"></div>
-          <span className="text-sm">CI Duration</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-green-500 opacity-50"></div>
-          <span className="text-sm">Total Invocations</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-0.5 bg-gray-400 border-dashed border-t"></div>
-          <span className="text-sm">Average Lines</span>
+        
+        {/* Quick presets */}
+        <div className="mt-4 flex gap-2">
+          <button
+            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocations: false, averageLines: false })}
+            className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
+          >
+            Duration Only
+          </button>
+          <button
+            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocations: true, averageLines: false })}
+            className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded hover:bg-green-200"
+          >
+            Invocations Only
+          </button>
+          <button
+            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocations: true, averageLines: true })}
+            className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
+          >
+            Show All
+          </button>
+          <button
+            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocations: false, averageLines: false })}
+            className="px-3 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200"
+          >
+            Hide All
+          </button>
         </div>
       </div>
       
-      {chartData.length > 0 ? (
+      {chartData.length > 0 && (visibleLayers.localDuration || visibleLayers.ciDuration || visibleLayers.invocations) ? (
         <div className="h-[600px]">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -266,68 +345,76 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                 tick={{ fill: '#6b7280' }}
                 label={{ value: 'Duration (seconds)', angle: -90, position: 'insideLeft' }}
               />
-              <YAxis 
-                yAxisId="invocations"
-                orientation="right"
-                stroke="#10b981"
-                tick={{ fill: '#10b981' }}
-                label={{ value: 'Invocations', angle: 90, position: 'insideRight' }}
-              />
+              {visibleLayers.invocations && (
+                <YAxis 
+                  yAxisId="invocations"
+                  orientation="right"
+                  stroke="#10b981"
+                  tick={{ fill: '#10b981' }}
+                  label={{ value: 'Invocations', angle: 90, position: 'insideRight' }}
+                />
+              )}
               <Tooltip content={<CustomTooltip />} />
               <Legend />
 
               {/* Invocation bars (background) */}
-              <Bar 
-                yAxisId="invocations"
-                dataKey="totalInvocations" 
-                fill="#10b981" 
-                fillOpacity={0.3}
-                name="Total Invocations"
-              />
+              {visibleLayers.invocations && (
+                <Bar 
+                  yAxisId="invocations"
+                  dataKey="totalInvocations" 
+                  fill="#10b981" 
+                  fillOpacity={0.3}
+                  name="Total Invocations"
+                />
+              )}
 
               {/* Duration area charts */}
-              <Area
-                yAxisId="duration"
-                type="monotone"
-                dataKey="localDuration"
-                stroke="#3b82f6"
-                fill="#3b82f6"
-                fillOpacity={0.2}
-                strokeWidth={2}
-                connectNulls={false}
-                name="Local Duration"
-              />
-              <Area
-                yAxisId="duration"
-                type="monotone"
-                dataKey="ciDuration"
-                stroke="#ef4444"
-                fill="#ef4444"
-                fillOpacity={0.2}
-                strokeWidth={2}
-                connectNulls={false}
-                name="CI Duration"
-              />
+              {visibleLayers.localDuration && (
+                <Area
+                  yAxisId="duration"
+                  type="monotone"
+                  dataKey="localDuration"
+                  stroke="#3b82f6"
+                  fill="#3b82f6"
+                  fillOpacity={0.2}
+                  strokeWidth={2}
+                  connectNulls={false}
+                  name="Local Duration"
+                />
+              )}
+              {visibleLayers.ciDuration && (
+                <Area
+                  yAxisId="duration"
+                  type="monotone"
+                  dataKey="ciDuration"
+                  stroke="#ef4444"
+                  fill="#ef4444"
+                  fillOpacity={0.2}
+                  strokeWidth={2}
+                  connectNulls={false}
+                  name="CI Duration"
+                />
+              )}
 
               {/* Average reference lines */}
-              {avgLocalDuration > 0 && (
+              {visibleLayers.averageLines && avgLocalDuration > 0 && visibleLayers.localDuration && (
                 <ReferenceLine 
                   yAxisId="duration"
                   y={avgLocalDuration} 
                   stroke="#3b82f6" 
                   strokeDasharray="5 5"
                   strokeWidth={1}
-                  label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "topLeft" }}
+                  label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "top" }}
                 />
               )}
-              {avgCiDuration > 0 && (
+              {visibleLayers.averageLines && avgCiDuration > 0 && visibleLayers.ciDuration && (
                 <ReferenceLine 
                   yAxisId="duration"
                   y={avgCiDuration} 
                   stroke="#ef4444" 
                   strokeDasharray="5 5"
                   strokeWidth={1}
-                  label={{ value: `Avg CI: ${avgCiDuration.toFixed(1)}s`, position: "topRight" }}
+                  label={{ value: `Avg CI: ${avgCiDuration.toFixed(1)}s`, position: "top" }}
                 />
               )}
             </ComposedChart>
@@ -336,8 +423,17 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       ) : (
         <div className="h-[400px] flex items-center justify-center text-gray-500">
           <div className="text-center">
-            <p className="text-lg mb-2">No task data for this period</p>
-            <p className="text-sm">Try navigating to a different time period</p>
+            {chartData.length === 0 ? (
+              <>
+                <p className="text-lg mb-2">No task data for this period</p>
+                <p className="text-sm">Try navigating to a different time period</p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg mb-2">No chart layers selected</p>
+                <p className="text-sm">Enable at least one layer from the controls above</p>
+              </>
+            )}
           </div>
         </div>
       )}
