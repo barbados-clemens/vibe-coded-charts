@@ -40,6 +40,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
   });
 
   const [showInvocationsChart, setShowInvocationsChart] = useState(true);
+  const [showReferenceLines, setShowReferenceLines] = useState(true);
 
   // Filter data for current month
   const filteredData = data.filter(item => {
@@ -294,8 +295,17 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
         </div>
       </div>
 
-      {/* Invocations Chart Toggle */}
-      <div className="mb-6 flex justify-end">
+      {/* Chart Toggles */}
+      <div className="mb-6 flex justify-end gap-6">
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={showReferenceLines}
+            onChange={() => setShowReferenceLines(!showReferenceLines)}
+            className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+          />
+          <span className="text-sm text-gray-700">Show Reference Lines</span>
+        </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
             type="checkbox"
@@ -350,71 +360,76 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                 name="CI Duration"
               />
 
-              {/* Average reference lines */}
-              {avgLocalDuration > 0 && (
-                <ReferenceLine 
-                  yAxisId="duration"
-                  y={avgLocalDuration} 
-                  stroke="#3b82f6" 
-                  strokeDasharray="8 4"
-                  strokeWidth={2}
-                  label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "top" }}
-                />
-              )}
-              {avgCiDuration > 0 && (
-                <ReferenceLine 
-                  yAxisId="duration"
-                  y={avgCiDuration} 
-                  stroke="#ef4444" 
-                  strokeDasharray="8 4"
-                  strokeWidth={2}
-                  label={{ value: `Avg CI: ${avgCiDuration.toFixed(1)}s`, position: "top" }}
-                />
-              )}
+              {/* Reference lines - conditional based on toggle */}
+              {showReferenceLines && (
+                <>
+                  {/* Average reference lines */}
+                  {avgLocalDuration > 0 && (
+                    <ReferenceLine 
+                      yAxisId="duration"
+                      y={avgLocalDuration} 
+                      stroke="#3b82f6" 
+                      strokeDasharray="8 4"
+                      strokeWidth={2}
+                      label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "top" }}
+                    />
+                  )}
+                  {avgCiDuration > 0 && (
+                    <ReferenceLine 
+                      yAxisId="duration"
+                      y={avgCiDuration} 
+                      stroke="#ef4444" 
+                      strokeDasharray="8 4"
+                      strokeWidth={2}
+                      label={{ value: `Avg CI: ${avgCiDuration.toFixed(1)}s`, position: "top" }}
+                    />
+                  )}
 
-              {/* Standard deviation reference lines */}
-              {localStdDev > 0 && avgLocalDuration > 0 && (
-                <>
-                  <ReferenceLine 
-                    yAxisId="duration"
-                    y={avgLocalDuration + localStdDev} 
-                    stroke="#3b82f6" 
-                    strokeDasharray="2 2"
-                    strokeWidth={1}
-                    strokeOpacity={0.6}
-                    label={{ value: `+1σ Local: ${(avgLocalDuration + localStdDev).toFixed(1)}s`, position: "top" }}
-                  />
-                  <ReferenceLine 
-                    yAxisId="duration"
-                    y={Math.max(0, avgLocalDuration - localStdDev)} 
-                    stroke="#3b82f6" 
-                    strokeDasharray="2 2"
-                    strokeWidth={1}
-                    strokeOpacity={0.6}
-                    label={{ value: `-1σ Local: ${Math.max(0, avgLocalDuration - localStdDev).toFixed(1)}s`, position: "bottom" }}
-                  />
-                </>
-              )}
-              {ciStdDev > 0 && avgCiDuration > 0 && (
-                <>
-                  <ReferenceLine 
-                    yAxisId="duration"
-                    y={avgCiDuration + ciStdDev} 
-                    stroke="#ef4444" 
-                    strokeDasharray="2 2"
-                    strokeWidth={1}
-                    strokeOpacity={0.6}
-                    label={{ value: `+1σ CI: ${(avgCiDuration + ciStdDev).toFixed(1)}s`, position: "top" }}
-                  />
-                  <ReferenceLine 
-                    yAxisId="duration"
-                    y={Math.max(0, avgCiDuration - ciStdDev)} 
-                    stroke="#ef4444" 
-                    strokeDasharray="2 2"
-                    strokeWidth={1}
-                    strokeOpacity={0.6}
-                    label={{ value: `-1σ CI: ${Math.max(0, avgCiDuration - ciStdDev).toFixed(1)}s`, position: "bottom" }}
-                  />
+                  {/* Standard deviation reference lines */}
+                  {localStdDev > 0 && avgLocalDuration > 0 && (
+                    <>
+                      <ReferenceLine 
+                        yAxisId="duration"
+                        y={avgLocalDuration + localStdDev} 
+                        stroke="#3b82f6" 
+                        strokeDasharray="2 2"
+                        strokeWidth={1}
+                        strokeOpacity={0.6}
+                        label={{ value: `+1σ Local: ${(avgLocalDuration + localStdDev).toFixed(1)}s`, position: "top" }}
+                      />
+                      <ReferenceLine 
+                        yAxisId="duration"
+                        y={Math.max(0, avgLocalDuration - localStdDev)} 
+                        stroke="#3b82f6" 
+                        strokeDasharray="2 2"
+                        strokeWidth={1}
+                        strokeOpacity={0.6}
+                        label={{ value: `-1σ Local: ${Math.max(0, avgLocalDuration - localStdDev).toFixed(1)}s`, position: "bottom" }}
+                      />
+                    </>
+                  )}
+                  {ciStdDev > 0 && avgCiDuration > 0 && (
+                    <>
+                      <ReferenceLine 
+                        yAxisId="duration"
+                        y={avgCiDuration + ciStdDev} 
+                        stroke="#ef4444" 
+                        strokeDasharray="2 2"
+                        strokeWidth={1}
+                        strokeOpacity={0.6}
+                        label={{ value: `+1σ CI: ${(avgCiDuration + ciStdDev).toFixed(1)}s`, position: "top" }}
+                      />
+                      <ReferenceLine 
+                        yAxisId="duration"
+                        y={Math.max(0, avgCiDuration - ciStdDev)} 
+                        stroke="#ef4444" 
+                        strokeDasharray="2 2"
+                        strokeWidth={1}
+                        strokeOpacity={0.6}
+                        label={{ value: `-1σ CI: ${Math.max(0, avgCiDuration - ciStdDev).toFixed(1)}s`, position: "bottom" }}
+                      />
+                    </>
+                  )}
                 </>
               )}
             </ComposedChart>
