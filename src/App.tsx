@@ -4,9 +4,9 @@ import {RunCountChart} from "./components/RunCountChart.tsx";
 import {ComputeResourceChart} from "./components/ComputeResourceChart.tsx";
 import {ContributorChart} from "./components/ContributorChart.tsx";
 import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
-import {TaskDurationChart} from "./components/TaskDurationChart.tsx";
 import {DailyTimeSavedChart} from "./components/DailyTimeSavedChart.tsx";
 import { mockWorkspaceUsageData, mockOrgContribData, mockDailyTaskStats, mockWorkspaceDailyTimeSavings } from './data/mockData';
+import {TaskDurationAnalysisChart} from "./components/TaskDurationAnalysisChart.tsx";
 
 function App() {
     return (
@@ -35,15 +35,13 @@ function App() {
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Monthly Summary</h1>
                 <MonthlySummaryChart data={mockWorkspaceUsageData} />
             </div>
-
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Task Duration Analysis</h1>
-                <TaskDurationChart data={mockDailyTaskStats} />
-            </div>
-
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Daily Time Saved</h1>
                 <DailyTimeSavedChart data={mockWorkspaceDailyTimeSavings} />
+            </div>
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Task Duration Analysis</h1>
+                <TaskDurationAnalysisChart data={mockDailyTaskStats} />
             </div>
         </div>
     );
