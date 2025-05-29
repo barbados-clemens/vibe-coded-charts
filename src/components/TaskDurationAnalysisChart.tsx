@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { format, addMonths, isSameMonth, eachDayOfInterval, startOfMonth, endOfMonth } from 'date-fns';
-import { ComposedChart, Area, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
+import { ComposedChart, Area, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine, BarChart } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 
@@ -36,8 +36,8 @@ interface TaskDurationAnalysisChartProps {
 interface ChartLayers {
   localDuration: boolean;
   ciDuration: boolean;
-  invocations: boolean;
   averageLines: boolean;
+  invocationsChart: boolean;
 }
 
 export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartProps) {
@@ -48,8 +48,8 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
   const [visibleLayers, setVisibleLayers] = useState<ChartLayers>({
     localDuration: true,
     ciDuration: true,
-    invocations: true,
-    averageLines: false
+    averageLines: false,
+    invocationsChart: true
   });
 
   // Filter data for current month
@@ -216,6 +216,48 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     return null;
   };
 
+  // Custom tooltip for invocations chart
+  const InvocationsTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      const data = payload[0]?.payload;
+      if (!data) return null;
+
+      return (
+        <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
+          <p className="font-medium text-gray-900 mb-2">{label}</p>
+          
+          <div className="space-y-1">
+            <p className="text-sm">
+              <span className="inline-block w-3 h-3 bg-blue-600 rounded mr-2"></span>
+              Local: <span className="font-medium">{data.localInvocations}</span>
+            </p>
+            <p className="text-sm">
+              <span className="inline-block w-3 h-3 bg-red-600 rounded mr-2"></span>
+              CI: <span className="font-medium">{data.ciInvocations}</span>
+            </p>
+            <p className="text-sm font-medium border-t pt-1 mt-2">
+              Total: {data.totalInvocations}
+            </p>
+          </div>
+
+          {/* Success rates if available */}
+          {(data.localSuccessRate !== null || data.ciSuccessRate !== null) && (
+            <div className="mt-3 pt-2 border-t">
+              <p className="text-xs font-medium text-gray-700 mb-1">Success Rate</p>
+              {data.localSuccessRate !== null && (
+                <p className="text-xs">Local: {data.localSuccessRate.toFixed(1)}%</p>
+              )}
+              {data.ciSuccessRate !== null && (
+                <p className="text-xs">CI: {data.ciSuccessRate.toFixed(1)}%</p>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
@@ -280,12 +322,12 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
-              checked={visibleLayers.invocations}
-              onChange={() => toggleLayer('invocations')}
+              checked={visibleLayers.invocationsChart}
+              onChange={() => toggleLayer('invocationsChart')}
               className="rounded border-gray-300 text-green-600 focus:ring-green-500"
             />
             <div className="w-3 h-3 bg-green-500 opacity-50"></div>
-            <span className="text-sm">Invocations</span>
+            <span className="text-sm">Invocations Chart</span>
           </label>
           
           <label className="flex items-center gap-2 cursor-pointer">
@@ -303,25 +345,25 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
         {/* Quick presets */}
         <div className="mt-4 flex gap-2">
           <button
-            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocations: false, averageLines: false })}
+            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocationsChart: false, averageLines: false })}
             className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
           >
             Duration Only
           </button>
           <button
-            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocations: true, averageLines: false })}
+            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocationsChart: true, averageLines: false })}
             className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded hover:bg-green-200"
           >
             Invocations Only
           </button>
           <button
-            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocations: true, averageLines: true })}
+            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocationsChart: true, averageLines: true })}
             className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
           >
             Show All
           </button>
           <button
-            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocations: false, averageLines: false })}
+            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocationsChart: false, averageLines: false })}
             className="px-3 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200"
           >
             Hide All
@@ -329,8 +371,8 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
         </div>
       </div>
       
-      {chartData.length > 0 && (visibleLayers.localDuration || visibleLayers.ciDuration || visibleLayers.invocations) ? (
-        <div className="h-[600px]">
+      {chartData.length > 0 && (visibleLayers.localDuration || visibleLayers.ciDuration) ? (
+        <div className="h-[500px]">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -345,28 +387,8 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                 tick={{ fill: '#6b7280' }}
                 label={{ value: 'Duration (seconds)', angle: -90, position: 'insideLeft' }}
               />
-              {visibleLayers.invocations && (
-                <YAxis 
-                  yAxisId="invocations"
-                  orientation="right"
-                  stroke="#10b981"
-                  tick={{ fill: '#10b981' }}
-                  label={{ value: 'Invocations', angle: 90, position: 'insideRight' }}
-                />
-              )}
               <Tooltip content={<CustomTooltip />} />
               <Legend />
-
-              {/* Invocation bars (background) */}
-              {visibleLayers.invocations && (
-                <Bar 
-                  yAxisId="invocations"
-                  dataKey="totalInvocations" 
-                  fill="#10b981" 
-                  fillOpacity={0.3}
-                  name="Total Invocations"
-                />
-              )}
 
               {/* Duration area charts */}
               {visibleLayers.localDuration && (
@@ -428,12 +450,56 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
                 <p className="text-lg mb-2">No task data for this period</p>
                 <p className="text-sm">Try navigating to a different time period</p>
               </>
+            ) : !visibleLayers.localDuration && !visibleLayers.ciDuration ? (
+              <>
+                <p className="text-lg mb-2">No duration chart layers selected</p>
+                <p className="text-sm">Enable Local Duration or CI Duration to view this chart</p>
+              </>
             ) : (
               <>
-                <p className="text-lg mb-2">No chart layers selected</p>
-                <p className="text-sm">Enable at least one layer from the controls above</p>
+                <p className="text-lg mb-2">No valid duration data</p>
+                <p className="text-sm">Try a different time period or check data quality</p>
               </>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Task Invocations Chart */}
+      {visibleLayers.invocationsChart && chartData.length > 0 && (
+        <div className="mt-8">
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Task Invocations</h3>
+          <div className="h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                <XAxis 
+                  dataKey="date" 
+                  stroke="#6b7280"
+                  tick={{ fill: '#6b7280' }}
+                />
+                <YAxis 
+                  stroke="#6b7280"
+                  tick={{ fill: '#6b7280' }}
+                  label={{ value: 'Invocations', angle: -90, position: 'insideLeft' }}
+                />
+                <Tooltip content={<InvocationsTooltip />} />
+                <Legend />
+                
+                <Bar 
+                  dataKey="localInvocations" 
+                  fill="#3b82f6" 
+                  name="Local Invocations"
+                  stackId="invocations"
+                />
+                <Bar 
+                  dataKey="ciInvocations" 
+                  fill="#ef4444" 
+                  name="CI Invocations"
+                  stackId="invocations"
+                />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       )}
