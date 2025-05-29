@@ -39,7 +39,6 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     return data.length > 0 ? new UTCDate(data[0].date) : new UTCDate();
   });
 
-  const [showInvocationsChart, setShowInvocationsChart] = useState(true);
   const [showReferenceLines, setShowReferenceLines] = useState(true);
 
   // Filter data for current month
@@ -306,15 +305,6 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
           />
           <span className="text-sm text-gray-700">Show Reference Lines</span>
         </label>
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={showInvocationsChart}
-            onChange={() => setShowInvocationsChart(!showInvocationsChart)}
-            className="rounded border-gray-300 text-green-600 focus:ring-green-500"
-          />
-          <span className="text-sm text-gray-700">Show Invocations Chart</span>
-        </label>
       </div>
       
       {chartData.length > 0 ? (
@@ -445,7 +435,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       )}
 
       {/* Task Invocations Chart */}
-      {showInvocationsChart && chartData.length > 0 && (
+      {chartData.length > 0 && (
         <div className="mt-8">
           <h3 className="text-lg font-medium text-gray-900 mb-4">Task Invocations</h3>
           <div className="h-[300px]">
