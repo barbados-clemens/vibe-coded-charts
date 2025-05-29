@@ -257,6 +257,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
         title="Task Duration Analysis"
+        subtitle={`${data[0].projectName}:${data[0].target}`}
         displayValue={format(currentDate, 'MMMM yyyy')}
         onPrevious={handlePrevMonth}
         onNext={handleNextMonth}

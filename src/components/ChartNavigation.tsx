@@ -3,15 +3,19 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 interface ChartNavigationProps {
   title: string;
+  subtitle?: string;
   displayValue: string;
   onPrevious: () => void;
   onNext: () => void;
 }
 
-export function ChartNavigation({ title, displayValue, onPrevious, onNext }: ChartNavigationProps) {
+export function ChartNavigation({ title, displayValue, subtitle, onPrevious, onNext }: ChartNavigationProps) {
   return (
     <div className="flex items-center justify-between mb-6">
-      <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+      <header>
+        <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+        {subtitle && <p className="text-sm text-gray-600">{subtitle}</p>}
+      </header>
       <div className="flex items-center gap-4">
         <button
           onClick={onPrevious}
