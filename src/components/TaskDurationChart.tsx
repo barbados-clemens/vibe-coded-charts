@@ -44,40 +44,60 @@ export function TaskDurationChart({ data }: TaskDurationChartProps) {
     return isSameMonth(itemDate, currentDate);
   });
 
-  // Process data to create chart-friendly format
-  const processedData = filteredData.map(item => {
-    const baseTaskId = `${item.projectName}:${item.target}`;
-    const taskId = `${baseTaskId} (${item.isCI ? 'CI' : 'Local'})`;
+  // Process data to create chart-friendly format - filter out entries with only 0ms cache hits
+  const processedData = filteredData
+    .filter(item => {
+      const { averageDuration, cacheStatusRatio } = item;
+      // Keep entries that have actual task execution time (non-zero cache miss or non-zero cache hits)
+      const hasValidDuration = 
+        (averageDuration.localCacheHitMs > 0 && cacheStatusRatio.localCacheHit > 0) ||
+        (averageDuration.remoteCacheHitMs > 0 && cacheStatusRatio.remoteCacheHit > 0) ||
+        (averageDuration.cacheMissMs > 0 && cacheStatusRatio.cacheMiss > 0);
+      return hasValidDuration;
+    })
+    .map(item => {
+      const baseTaskId = `${item.projectName}:${item.target}`;
+      const taskId = `${baseTaskId} (${item.isCI ? 'CI' : 'Local'})`;
+      
+      // Convert milliseconds to seconds and calculate weighted average duration
+      const { averageDuration, cacheStatusRatio } = item;
+      
+      // Calculate weighted average duration based on cache hit ratios
+      // Only consider cache hits that actually have duration > 0
+      const totalValidRatio = 
+        (averageDuration.localCacheHitMs > 0 ? cacheStatusRatio.localCacheHit : 0) +
+        (averageDuration.remoteCacheHitMs > 0 ? cacheStatusRatio.remoteCacheHit : 0) +
+        cacheStatusRatio.cacheMiss;
+      
+      // Calculate weighted average only using non-zero durations
+      const weightedAverageDurationMs = 
+        (averageDuration.localCacheHitMs > 0 ? (averageDuration.localCacheHitMs * cacheStatusRatio.localCacheHit) : 0) +
+        (averageDuration.remoteCacheHitMs > 0 ? (averageDuration.remoteCacheHitMs * cacheStatusRatio.remoteCacheHit) : 0) +
+        (averageDuration.cacheMissMs * cacheStatusRatio.cacheMiss);
+      
+      // Normalize by the valid ratio to get the true weighted average
+      const normalizedWeightedAverage = totalValidRatio > 0 ? weightedAverageDurationMs / totalValidRatio : 0;
+      
+      // Convert to seconds
+      const weightedAverageDurationSec = normalizedWeightedAverage / 1000;
     
-    // Convert milliseconds to seconds and calculate weighted average duration
-    const { averageDuration, cacheStatusRatio } = item;
-    
-    // Calculate weighted average duration based on cache hit ratios
-    const weightedAverageDurationMs = 
-      (averageDuration.localCacheHitMs * cacheStatusRatio.localCacheHit) +
-      (averageDuration.remoteCacheHitMs * cacheStatusRatio.remoteCacheHit) +
-      (averageDuration.cacheMissMs * cacheStatusRatio.cacheMiss);
-    
-    // Convert to seconds
-    const weightedAverageDurationSec = weightedAverageDurationMs / 1000;
-    
-    return {
-      date: format(new UTCDate(item.date), 'MMM dd'),
-      taskId,
-      baseTaskId,
-      isCI: item.isCI,
-      projectName: item.projectName,
-      target: item.target,
-      workspaceId: item.workspaceId,
-      totalCount: item.totalCount,
-      averageDurationSec: weightedAverageDurationSec,
-      localCacheHitSec: averageDuration.localCacheHitMs / 1000,
-      remoteCacheHitSec: averageDuration.remoteCacheHitMs / 1000,
-      cacheMissSec: averageDuration.cacheMissMs / 1000,
-      cacheStatusRatio: cacheStatusRatio,
-      originalDate: item.date
-    };
-  });
+      return {
+        date: format(new UTCDate(item.date), 'MMM dd'),
+        taskId,
+        baseTaskId,
+        isCI: item.isCI,
+        projectName: item.projectName,
+        target: item.target,
+        workspaceId: item.workspaceId,
+        totalCount: item.totalCount,
+        averageDurationSec: weightedAverageDurationSec,
+        localCacheHitSec: averageDuration.localCacheHitMs / 1000,
+        remoteCacheHitSec: averageDuration.remoteCacheHitMs / 1000,
+        cacheMissSec: averageDuration.cacheMissMs / 1000,
+        cacheStatusRatio: cacheStatusRatio,
+        originalDate: item.date
+      };
+    });
 
   // Get unique task IDs (now includes CI/Local distinction) and sort data by date
   const uniqueTaskIds = [...new Set(processedData.map(item => item.taskId))];
