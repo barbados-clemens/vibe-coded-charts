@@ -33,24 +33,13 @@ interface TaskDurationAnalysisChartProps {
   data: DailyTaskStatsDataItem[];
 }
 
-interface ChartLayers {
-  localDuration: boolean;
-  ciDuration: boolean;
-  averageLines: boolean;
-  invocationsChart: boolean;
-}
 
 export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     return data.length > 0 ? new UTCDate(data[0].date) : new UTCDate();
   });
 
-  const [visibleLayers, setVisibleLayers] = useState<ChartLayers>({
-    localDuration: true,
-    ciDuration: true,
-    averageLines: false,
-    invocationsChart: true
-  });
+  const [showInvocationsChart, setShowInvocationsChart] = useState(true);
 
   // Filter data for current month
   const filteredData = data.filter(item => {
@@ -133,6 +122,16 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     ? validCiDurations.reduce((sum, val) => sum + val, 0) / validCiDurations.length 
     : 0;
 
+  // Calculate standard deviations
+  const calculateStandardDeviation = (values: number[], mean: number) => {
+    if (values.length === 0) return 0;
+    const variance = values.reduce((sum, value) => sum + Math.pow(value - mean, 2), 0) / values.length;
+    return Math.sqrt(variance);
+  };
+
+  const localStdDev = calculateStandardDeviation(validLocalDurations, avgLocalDuration);
+  const ciStdDev = calculateStandardDeviation(validCiDurations, avgCiDuration);
+
   const maxDuration = Math.max(
     Math.max(...validLocalDurations, 0),
     Math.max(...validCiDurations, 0)
@@ -149,12 +148,6 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     setCurrentDate(prev => addMonths(prev, 1));
   };
 
-  const toggleLayer = (layer: keyof ChartLayers) => {
-    setVisibleLayers(prev => ({
-      ...prev,
-      [layer]: !prev[layer]
-    }));
-  };
 
   // Custom tooltip
   const CustomTooltip = ({ active, payload, label }: any) => {
@@ -269,14 +262,16 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       
       {/* Summary Stats */}
       <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-blue-600">{avgLocalDuration.toFixed(1)}s</div>
             <div className="text-sm text-gray-500">Avg Local Duration</div>
+            <div className="text-xs text-gray-400">±{localStdDev.toFixed(1)}s</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-red-600">{avgCiDuration.toFixed(1)}s</div>
             <div className="text-sm text-gray-500">Avg CI Duration</div>
+            <div className="text-xs text-gray-400">±{ciStdDev.toFixed(1)}s</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-gray-900">{totalLocalInvocations}</div>
@@ -290,88 +285,29 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
             <div className="text-2xl font-bold text-gray-900">{maxDuration.toFixed(1)}s</div>
             <div className="text-sm text-gray-500">Max Duration</div>
           </div>
+          <div>
+            <div className="text-2xl font-bold text-gray-900">
+              {avgCiDuration > avgLocalDuration ? '+' : ''}{((avgCiDuration - avgLocalDuration) / (avgLocalDuration || 1) * 100).toFixed(1)}%
+            </div>
+            <div className="text-sm text-gray-500">CI vs Local</div>
+          </div>
         </div>
       </div>
 
-      {/* Chart Layer Controls */}
-      <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-700 mb-3">Chart Layers</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={visibleLayers.localDuration}
-              onChange={() => toggleLayer('localDuration')}
-              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-            />
-            <div className="w-4 h-0.5 bg-blue-600"></div>
-            <span className="text-sm">Local Duration</span>
-          </label>
-          
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={visibleLayers.ciDuration}
-              onChange={() => toggleLayer('ciDuration')}
-              className="rounded border-gray-300 text-red-600 focus:ring-red-500"
-            />
-            <div className="w-4 h-0.5 bg-red-600"></div>
-            <span className="text-sm">CI Duration</span>
-          </label>
-          
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={visibleLayers.invocationsChart}
-              onChange={() => toggleLayer('invocationsChart')}
-              className="rounded border-gray-300 text-green-600 focus:ring-green-500"
-            />
-            <div className="w-3 h-3 bg-green-500 opacity-50"></div>
-            <span className="text-sm">Invocations Chart</span>
-          </label>
-          
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={visibleLayers.averageLines}
-              onChange={() => toggleLayer('averageLines')}
-              className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
-            />
-            <div className="w-4 h-0.5 bg-gray-400 border-dashed border-t"></div>
-            <span className="text-sm">Average Lines</span>
-          </label>
-        </div>
-        
-        {/* Quick presets */}
-        <div className="mt-4 flex gap-2">
-          <button
-            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocationsChart: false, averageLines: false })}
-            className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
-          >
-            Duration Only
-          </button>
-          <button
-            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocationsChart: true, averageLines: false })}
-            className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded hover:bg-green-200"
-          >
-            Invocations Only
-          </button>
-          <button
-            onClick={() => setVisibleLayers({ localDuration: true, ciDuration: true, invocationsChart: true, averageLines: true })}
-            className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
-          >
-            Show All
-          </button>
-          <button
-            onClick={() => setVisibleLayers({ localDuration: false, ciDuration: false, invocationsChart: false, averageLines: false })}
-            className="px-3 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200"
-          >
-            Hide All
-          </button>
-        </div>
+      {/* Invocations Chart Toggle */}
+      <div className="mb-6 flex justify-end">
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={showInvocationsChart}
+            onChange={() => setShowInvocationsChart(!showInvocationsChart)}
+            className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+          />
+          <span className="text-sm text-gray-700">Show Invocations Chart</span>
+        </label>
       </div>
       
-      {chartData.length > 0 && (visibleLayers.localDuration || visibleLayers.ciDuration) ? (
+      {chartData.length > 0 ? (
         <div className="h-[500px]">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -390,54 +326,96 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
               <Tooltip content={<CustomTooltip />} />
               <Legend />
 
-              {/* Duration area charts */}
-              {visibleLayers.localDuration && (
-                <Area
-                  yAxisId="duration"
-                  type="monotone"
-                  dataKey="localDuration"
-                  stroke="#3b82f6"
-                  fill="#3b82f6"
-                  fillOpacity={0.2}
-                  strokeWidth={2}
-                  connectNulls={false}
-                  name="Local Duration"
-                />
-              )}
-              {visibleLayers.ciDuration && (
-                <Area
-                  yAxisId="duration"
-                  type="monotone"
-                  dataKey="ciDuration"
-                  stroke="#ef4444"
-                  fill="#ef4444"
-                  fillOpacity={0.2}
-                  strokeWidth={2}
-                  connectNulls={false}
-                  name="CI Duration"
-                />
-              )}
+              {/* Duration area charts - always visible */}
+              <Area
+                yAxisId="duration"
+                type="monotone"
+                dataKey="localDuration"
+                stroke="#3b82f6"
+                fill="#3b82f6"
+                fillOpacity={0.2}
+                strokeWidth={2}
+                connectNulls={false}
+                name="Local Duration"
+              />
+              <Area
+                yAxisId="duration"
+                type="monotone"
+                dataKey="ciDuration"
+                stroke="#ef4444"
+                fill="#ef4444"
+                fillOpacity={0.2}
+                strokeWidth={2}
+                connectNulls={false}
+                name="CI Duration"
+              />
 
               {/* Average reference lines */}
-              {visibleLayers.averageLines && avgLocalDuration > 0 && visibleLayers.localDuration && (
+              {avgLocalDuration > 0 && (
                 <ReferenceLine 
                   yAxisId="duration"
                   y={avgLocalDuration} 
                   stroke="#3b82f6" 
-                  strokeDasharray="5 5"
-                  strokeWidth={1}
+                  strokeDasharray="8 4"
+                  strokeWidth={2}
                   label={{ value: `Avg Local: ${avgLocalDuration.toFixed(1)}s`, position: "top" }}
                 />
               )}
-              {visibleLayers.averageLines && avgCiDuration > 0 && visibleLayers.ciDuration && (
+              {avgCiDuration > 0 && (
                 <ReferenceLine 
                   yAxisId="duration"
                   y={avgCiDuration} 
                   stroke="#ef4444" 
-                  strokeDasharray="5 5"
-                  strokeWidth={1}
+                  strokeDasharray="8 4"
+                  strokeWidth={2}
                   label={{ value: `Avg CI: ${avgCiDuration.toFixed(1)}s`, position: "top" }}
                 />
+              )}
+
+              {/* Standard deviation reference lines */}
+              {localStdDev > 0 && avgLocalDuration > 0 && (
+                <>
+                  <ReferenceLine 
+                    yAxisId="duration"
+                    y={avgLocalDuration + localStdDev} 
+                    stroke="#3b82f6" 
+                    strokeDasharray="2 2"
+                    strokeWidth={1}
+                    strokeOpacity={0.6}
+                    label={{ value: `+1σ Local: ${(avgLocalDuration + localStdDev).toFixed(1)}s`, position: "top" }}
+                  />
+                  <ReferenceLine 
+                    yAxisId="duration"
+                    y={Math.max(0, avgLocalDuration - localStdDev)} 
+                    stroke="#3b82f6" 
+                    strokeDasharray="2 2"
+                    strokeWidth={1}
+                    strokeOpacity={0.6}
+                    label={{ value: `-1σ Local: ${Math.max(0, avgLocalDuration - localStdDev).toFixed(1)}s`, position: "bottom" }}
+                  />
+                </>
+              )}
+              {ciStdDev > 0 && avgCiDuration > 0 && (
+                <>
+                  <ReferenceLine 
+                    yAxisId="duration"
+                    y={avgCiDuration + ciStdDev} 
+                    stroke="#ef4444" 
+                    strokeDasharray="2 2"
+                    strokeWidth={1}
+                    strokeOpacity={0.6}
+                    label={{ value: `+1σ CI: ${(avgCiDuration + ciStdDev).toFixed(1)}s`, position: "top" }}
+                  />
+                  <ReferenceLine 
+                    yAxisId="duration"
+                    y={Math.max(0, avgCiDuration - ciStdDev)} 
+                    stroke="#ef4444" 
+                    strokeDasharray="2 2"
+                    strokeWidth={1}
+                    strokeOpacity={0.6}
+                    label={{ value: `-1σ CI: ${Math.max(0, avgCiDuration - ciStdDev).toFixed(1)}s`, position: "bottom" }}
+                  />
+                </>
               )}
             </ComposedChart>
           </ResponsiveContainer>
@@ -445,28 +423,14 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
       ) : (
         <div className="h-[400px] flex items-center justify-center text-gray-500">
           <div className="text-center">
-            {chartData.length === 0 ? (
-              <>
-                <p className="text-lg mb-2">No task data for this period</p>
-                <p className="text-sm">Try navigating to a different time period</p>
-              </>
-            ) : !visibleLayers.localDuration && !visibleLayers.ciDuration ? (
-              <>
-                <p className="text-lg mb-2">No duration chart layers selected</p>
-                <p className="text-sm">Enable Local Duration or CI Duration to view this chart</p>
-              </>
-            ) : (
-              <>
-                <p className="text-lg mb-2">No valid duration data</p>
-                <p className="text-sm">Try a different time period or check data quality</p>
-              </>
-            )}
+            <p className="text-lg mb-2">No task data for this period</p>
+            <p className="text-sm">Try navigating to a different time period</p>
           </div>
         </div>
       )}
 
       {/* Task Invocations Chart */}
-      {visibleLayers.invocationsChart && chartData.length > 0 && (
+      {showInvocationsChart && chartData.length > 0 && (
         <div className="mt-8">
           <h3 className="text-lg font-medium text-gray-900 mb-4">Task Invocations</h3>
           <div className="h-[300px]">
