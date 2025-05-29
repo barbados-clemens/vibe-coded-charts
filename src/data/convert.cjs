@@ -48,50 +48,50 @@ const crypto = require("node:crypto");
 //
 // console.log(JSON.stringify(u, null, 2));
 
-// const raw = require("./sample-task-stats.json");
-//
-// const ids = new Set();
-//
-// const u = raw.map((r) => {
-//     // TODO: sample query of pulling a specific task, this would be in some kind of way
-//
-//
-//   const h = crypto.createHash("sha256").update(r.workspaceId["$oid"]).digest();
-//
-//   const newId = h.toString("hex").slice(0, 12);
-//
-//   ids.add(newId);
-//     return {
-//         id: r._id["$oid"],
-//         workspaceId: newId,
-//         isCI: r.isCI,
-//         date: r.date["$date"],
-//         projectName: r.projectName,
-//         target: r.target,
-//         targetGroupName: r.targetGroupName,
-//         totalCount: r.totalCount,
-//         statusCodeRatio: r.statusCodeRatio,
-//         averageDuration: r.averageDuration,
-//         cacheStatusRatio: r.cacheStatusRatio
-//     };
-// });
-//
-// console.log(JSON.stringify(u, null, 2));
+const raw = require("./nx-sample-task-stats.json");
 
-const raw = require("./nx-sample-daily-time-savings.json");
+const ids = new Set();
 
 const u = raw.map((r) => {
+    // TODO: sample query of pulling a specific task, this would be in some kind of way
 
-    const h = crypto.createHash("sha256").update(r.workspaceId["$oid"]).digest();
 
-    const newId = h.toString("hex").slice(0, 12);
+  const h = crypto.createHash("sha256").update(r.workspaceId["$oid"]).digest();
 
+  const newId = h.toString("hex").slice(0, 12);
+
+  ids.add(newId);
     return {
+        id: r._id["$oid"],
         workspaceId: newId,
-        timeSaved: r.timeSaved,
+        isCI: r.isCI,
         date: r.date["$date"],
-        timeSavedLocal: r.timeSavedLocal,
-        timeSavedRemote: r.timeSavedRemote
-}});
+        projectName: r.projectName,
+        target: r.target,
+        targetGroupName: r.targetGroupName,
+        totalCount: r.totalCount,
+        statusCodeRatio: r.statusCodeRatio,
+        averageDuration: r.averageDuration,
+        cacheStatusRatio: r.cacheStatusRatio
+    };
+});
 
 console.log(JSON.stringify(u, null, 2));
+
+// const raw = require("./nx-sample-daily-time-savings.json");
+//
+// const u = raw.map((r) => {
+//
+//     const h = crypto.createHash("sha256").update(r.workspaceId["$oid"]).digest();
+//
+//     const newId = h.toString("hex").slice(0, 12);
+//
+//     return {
+//         workspaceId: newId,
+//         timeSaved: r.timeSaved,
+//         date: r.date["$date"],
+//         timeSavedLocal: r.timeSavedLocal,
+//         timeSavedRemote: r.timeSavedRemote
+// }});
+//
+// console.log(JSON.stringify(u, null, 2));

@@ -1,0 +1,8580 @@
+[{
+  "_id": {
+    "$oid": "677bef87d454b938721a5a6f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.333333333333332,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 77727.33333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8571428571428571,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.14285714285714285
+  },
+  "date": {
+    "$date": "2025-01-05T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9285714285714286,
+    "nonZero": 0.07142857142857142
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 42,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677bef87d454b938721a5bb1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10,
+    "remoteCacheHitMs": 1699.0384615384614,
+    "cacheMissMs": 196569.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.00625,
+    "remoteCacheHit": 0.65,
+    "cacheMiss": 0.34375
+  },
+  "date": {
+    "$date": "2025-01-05T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.94375,
+    "nonZero": 0.05625
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 160,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677c6ef3d454b938722c7c91"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.403508771929825,
+    "remoteCacheHitMs": 1427,
+    "cacheMissMs": 41487.4
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7037037037037037,
+    "remoteCacheHit": 0.012345679012345678,
+    "cacheMiss": 0.2839506172839506
+  },
+  "date": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9012345679012346,
+    "nonZero": 0.09876543209876543
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 81,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677c6ef3d454b938722c7c70"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 41.666666666666664,
+    "remoteCacheHitMs": 35579.933333333334,
+    "cacheMissMs": 170701.33333333334
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.25,
+    "remoteCacheHit": 0.625,
+    "cacheMiss": 0.125
+  },
+  "date": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 24,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677dc078b68684283b99a1e1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 72.27551020408163,
+    "remoteCacheHitMs": 1221.5714285714287,
+    "cacheMissMs": 102423.72727272728
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.765625,
+    "remoteCacheHit": 0.0546875,
+    "cacheMiss": 0.1796875
+  },
+  "date": {
+    "$date": "2025-01-07T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9921875,
+    "nonZero": 0.0078125
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 128,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677dc078b68684283b99a39b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 35.607142857142854,
+    "remoteCacheHitMs": 13565.606986899564,
+    "cacheMissMs": 215131.35593220338
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.08668730650154799,
+    "remoteCacheHit": 0.7089783281733746,
+    "cacheMiss": 0.2043343653250774
+  },
+  "date": {
+    "$date": "2025-01-07T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.978328173374613,
+    "nonZero": 0.021671826625386997
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 323,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677f11feb68684283b040761"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 59.30701754385965,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 127066.12
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8028169014084507,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.19718309859154928
+  },
+  "date": {
+    "$date": "2025-01-08T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9788732394366197,
+    "nonZero": 0.02112676056338028
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 142,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "677f11feb68684283b04068e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 70.73529411764706,
+    "remoteCacheHitMs": 17369.003773584907,
+    "cacheMissMs": 220220.50819672132
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.09264305177111716,
+    "remoteCacheHit": 0.7220708446866485,
+    "cacheMiss": 0.18528610354223432
+  },
+  "date": {
+    "$date": "2025-01-08T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9809264305177112,
+    "nonZero": 0.01907356948228883
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 367,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6780637cb68684283b5da551"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 160.2265625,
+    "remoteCacheHitMs": 1844,
+    "cacheMissMs": 89584.28571428571
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.757396449704142,
+    "remoteCacheHit": 0.011834319526627219,
+    "cacheMiss": 0.23076923076923078
+  },
+  "date": {
+    "$date": "2025-01-09T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9763313609467456,
+    "nonZero": 0.023668639053254437
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 169,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6780637cb68684283b5da626"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 38.608695652173914,
+    "remoteCacheHitMs": 15840.010638297872,
+    "cacheMissMs": 263703.6307692308
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.11586901763224182,
+    "remoteCacheHit": 0.7103274559193955,
+    "cacheMiss": 0.17380352644836272
+  },
+  "date": {
+    "$date": "2025-01-09T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9899244332493703,
+    "nonZero": 0.010075566750629723
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 397,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6781b4fab68684283baf6966"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.382113821138212,
+    "remoteCacheHitMs": 1668.7777777777778,
+    "cacheMissMs": 149581.57142857142
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8848920863309353,
+    "remoteCacheHit": 0.06474820143884892,
+    "cacheMiss": 0.050359712230215826
+  },
+  "date": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 139,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6781b4fab68684283baf67d1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 37,
+    "remoteCacheHitMs": 15132.91603053435,
+    "cacheMissMs": 270396
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.1027190332326284,
+    "remoteCacheHit": 0.7915407854984894,
+    "cacheMiss": 0.10574018126888217
+  },
+  "date": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9758308157099698,
+    "nonZero": 0.02416918429003021
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 331,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6783066bb68684283bd527e4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 233.72727272727272,
+    "remoteCacheHitMs": 1911.5,
+    "cacheMissMs": 178479.8
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5789473684210527,
+    "remoteCacheHit": 0.10526315789473684,
+    "cacheMiss": 0.3157894736842105
+  },
+  "date": {
+    "$date": "2025-01-11T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9473684210526315,
+    "nonZero": 0.05263157894736842
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 19,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6783066bb68684283bd5288d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 38.666666666666664,
+    "remoteCacheHitMs": 2738.1068702290077,
+    "cacheMissMs": 265867.5925925926
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01775147928994083,
+    "remoteCacheHit": 0.7751479289940828,
+    "cacheMiss": 0.20710059171597633
+  },
+  "date": {
+    "$date": "2025-01-11T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9526627218934911,
+    "nonZero": 0.047337278106508875
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 169,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678457eab68684283bf95218"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 12,
+    "remoteCacheHitMs": 2943.656,
+    "cacheMissMs": 269404.9130434783
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.00641025641025641,
+    "remoteCacheHit": 0.8012820512820513,
+    "cacheMiss": 0.19230769230769232
+  },
+  "date": {
+    "$date": "2025-01-12T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9551282051282052,
+    "nonZero": 0.04487179487179487
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 156,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6785a968b68684283b3772b1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.575757575757576,
+    "remoteCacheHitMs": 1391.5,
+    "cacheMissMs": 1953.3333333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.88,
+    "remoteCacheHit": 0.08,
+    "cacheMiss": 0.04
+  },
+  "date": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 75,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6785a968b68684283b37741f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 44.470588235294116,
+    "remoteCacheHitMs": 9706.025510204081,
+    "cacheMissMs": 268370
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.06938775510204082,
+    "remoteCacheHit": 0.8,
+    "cacheMiss": 0.1306122448979592
+  },
+  "date": {
+    "$date": "2025-01-13T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9755102040816327,
+    "nonZero": 0.024489795918367346
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 245,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6786fafcb68684283b867edf"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 16.015625,
+    "remoteCacheHitMs": 1950.2,
+    "cacheMissMs": 137960.42857142858
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7619047619047619,
+    "remoteCacheHit": 0.05952380952380952,
+    "cacheMiss": 0.17857142857142858
+  },
+  "date": {
+    "$date": "2025-01-14T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9047619047619048,
+    "nonZero": 0.09523809523809523
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 84,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6786fafcb68684283b867ffd"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 41.114285714285714,
+    "remoteCacheHitMs": 15979.818867924529,
+    "cacheMissMs": 258123.8064516129
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.10355029585798817,
+    "remoteCacheHit": 0.7840236686390533,
+    "cacheMiss": 0.11242603550295859
+  },
+  "date": {
+    "$date": "2025-01-14T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9792899408284024,
+    "nonZero": 0.020710059171597635
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 338,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67884c87b68684283bdd9d2a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.46987951807229,
+    "remoteCacheHitMs": 1499.4285714285713,
+    "cacheMissMs": 150391.24
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7217391304347827,
+    "remoteCacheHit": 0.06086956521739131,
+    "cacheMiss": 0.21739130434782608
+  },
+  "date": {
+    "$date": "2025-01-15T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 115,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67884c87b68684283bdd9cc4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11.962962962962964,
+    "remoteCacheHitMs": 16295.509554140128,
+    "cacheMissMs": 264701.27659574465
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.12826603325415678,
+    "remoteCacheHit": 0.7458432304038005,
+    "cacheMiss": 0.12589073634204276
+  },
+  "date": {
+    "$date": "2025-01-15T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9857482185273159,
+    "nonZero": 0.014251781472684086
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 421,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67899dfeb68684283b37861b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.920454545454545,
+    "remoteCacheHitMs": 1565.2,
+    "cacheMissMs": 120090.33333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8627450980392157,
+    "remoteCacheHit": 0.049019607843137254,
+    "cacheMiss": 0.08823529411764706
+  },
+  "date": {
+    "$date": "2025-01-16T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 102,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67899dfeb68684283b378652"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11.297872340425531,
+    "remoteCacheHitMs": 10461.053763440861,
+    "cacheMissMs": 259902.52777777778
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.12806539509536785,
+    "remoteCacheHit": 0.7602179836512262,
+    "cacheMiss": 0.11171662125340599
+  },
+  "date": {
+    "$date": "2025-01-16T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9863760217983651,
+    "nonZero": 0.013623978201634877
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 367,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678aef7ab68684283b7ae815"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 16.487179487179485,
+    "remoteCacheHitMs": 1198.75,
+    "cacheMissMs": 108721.34375
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.48148148148148145,
+    "remoteCacheHit": 0.04938271604938271,
+    "cacheMiss": 0.4691358024691358
+  },
+  "date": {
+    "$date": "2025-01-17T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9259259259259259,
+    "nonZero": 0.07407407407407407
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 81,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678aef7ab68684283b7ae7a4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13,
+    "remoteCacheHitMs": 11285.839378238343,
+    "cacheMissMs": 217073.75757575757
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.06920415224913495,
+    "remoteCacheHit": 0.6678200692041523,
+    "cacheMiss": 0.2629757785467128
+  },
+  "date": {
+    "$date": "2025-01-17T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9653979238754326,
+    "nonZero": 0.03460207612456748
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 289,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678c40f6b68684283ba08f4f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 14,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 215749.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.2,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.8
+  },
+  "date": {
+    "$date": "2025-01-18T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 5,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678c40f6b68684283ba08f3e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10,
+    "remoteCacheHitMs": 757.4296875,
+    "cacheMissMs": 263495.3333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006097560975609756,
+    "remoteCacheHit": 0.7804878048780488,
+    "cacheMiss": 0.21341463414634146
+  },
+  "date": {
+    "$date": "2025-01-18T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9512195121951219,
+    "nonZero": 0.04878048780487805
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 164,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d927ab68684283bc438b2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.411764705882353,
+    "remoteCacheHitMs": 20677.666666666668,
+    "cacheMissMs": 46949
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8095238095238095,
+    "remoteCacheHit": 0.14285714285714285,
+    "cacheMiss": 0.047619047619047616
+  },
+  "date": {
+    "$date": "2025-01-19T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 21,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d927ab68684283bc438ab"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 58,
+    "remoteCacheHitMs": 1597.1707317073171,
+    "cacheMissMs": 267470.6
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.019230769230769232,
+    "remoteCacheHit": 0.7884615384615384,
+    "cacheMiss": 0.19230769230769232
+  },
+  "date": {
+    "$date": "2025-01-19T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9358974358974359,
+    "nonZero": 0.0641025641025641
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 156,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678ee3f4b68684283bef531e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.352941176470589,
+    "remoteCacheHitMs": 2122,
+    "cacheMissMs": 114305
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6296296296296297,
+    "remoteCacheHit": 0.037037037037037035,
+    "cacheMiss": 0.3333333333333333
+  },
+  "date": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 27,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "678ee3f4b68684283bef5280"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.2,
+    "remoteCacheHitMs": 6856.387096774193,
+    "cacheMissMs": 264168.7931034483
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.05,
+    "remoteCacheHit": 0.775,
+    "cacheMiss": 0.175
+  },
+  "date": {
+    "$date": "2025-01-20T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.97,
+    "nonZero": 0.03
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 200,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67903574b68684283b2c1e59"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.130434782608695,
+    "remoteCacheHitMs": 2599.25,
+    "cacheMissMs": 172929.45454545456
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.696969696969697,
+    "remoteCacheHit": 0.12121212121212122,
+    "cacheMiss": 0.18181818181818182
+  },
+  "date": {
+    "$date": "2025-01-21T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9848484848484849,
+    "nonZero": 0.015151515151515152
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 66,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67903574b68684283b2c1cd9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 12.576923076923077,
+    "remoteCacheHitMs": 7437.7164179104475,
+    "cacheMissMs": 272772.57575757575
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.09737827715355805,
+    "remoteCacheHit": 0.7528089887640449,
+    "cacheMiss": 0.149812734082397
+  },
+  "date": {
+    "$date": "2025-01-21T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9737827715355806,
+    "nonZero": 0.026217228464419477
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 267,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679186f9b68684283b84f184"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 36.3859649122807,
+    "remoteCacheHitMs": 2098.5,
+    "cacheMissMs": 163759
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7916666666666666,
+    "remoteCacheHit": 0.08333333333333333,
+    "cacheMiss": 0.125
+  },
+  "date": {
+    "$date": "2025-01-22T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9930555555555556,
+    "nonZero": 0.006944444444444444
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 144,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679186f9b68684283b84f2db"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.137931034482758,
+    "remoteCacheHitMs": 12673.912162162162,
+    "cacheMissMs": 251938.19444444444
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.14427860696517414,
+    "remoteCacheHit": 0.736318407960199,
+    "cacheMiss": 0.11940298507462686
+  },
+  "date": {
+    "$date": "2025-01-22T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9701492537313433,
+    "nonZero": 0.029850746268656716
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 402,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6792d878b68684283bd71733"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 53.52040816326531,
+    "remoteCacheHitMs": 1852.5,
+    "cacheMissMs": 214454.66666666666
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8596491228070176,
+    "remoteCacheHit": 0.03508771929824561,
+    "cacheMiss": 0.10526315789473684
+  },
+  "date": {
+    "$date": "2025-01-23T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 114,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6792d878b68684283bd71656"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9.976190476190476,
+    "remoteCacheHitMs": 12843.924187725632,
+    "cacheMissMs": 256740.02777777778
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.11475409836065574,
+    "remoteCacheHit": 0.7568306010928961,
+    "cacheMiss": 0.1284153005464481
+  },
+  "date": {
+    "$date": "2025-01-23T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9699453551912568,
+    "nonZero": 0.030054644808743168
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 366,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679429f3ff7dc890ec1c64ae"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 16.291666666666668,
+    "remoteCacheHitMs": 1659.25,
+    "cacheMissMs": 187365.13333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7912087912087912,
+    "remoteCacheHit": 0.04395604395604396,
+    "cacheMiss": 0.16483516483516483
+  },
+  "date": {
+    "$date": "2025-01-24T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 91,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679429f3ff7dc890ec1c652c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.666666666666668,
+    "remoteCacheHitMs": 12576.902985074626,
+    "cacheMissMs": 262505.2
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.11666666666666667,
+    "remoteCacheHit": 0.7444444444444445,
+    "cacheMiss": 0.1388888888888889
+  },
+  "date": {
+    "$date": "2025-01-24T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9722222222222222,
+    "nonZero": 0.027777777777777776
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 360,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67957b71ff7dc890ec47266b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6,
+    "remoteCacheHitMs": 870.5,
+    "cacheMissMs": 144572.83333333334
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.2727272727272727,
+    "remoteCacheHit": 0.18181818181818182,
+    "cacheMiss": 0.5454545454545454
+  },
+  "date": {
+    "$date": "2025-01-25T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 11,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67957b71ff7dc890ec4725a9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 693.8306451612904,
+    "cacheMissMs": 272173.3548387097
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.779874213836478,
+    "cacheMiss": 0.22012578616352202
+  },
+  "date": {
+    "$date": "2025-01-25T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9748427672955975,
+    "nonZero": 0.025157232704402517
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 159,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6796ccf5553fde3a2f73856d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17.8,
+    "remoteCacheHitMs": 2570.5,
+    "cacheMissMs": 1280
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.625,
+    "remoteCacheHit": 0.25,
+    "cacheMiss": 0.125
+  },
+  "date": {
+    "$date": "2025-01-26T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 8,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6796ccf5553fde3a2f73843a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20,
+    "remoteCacheHitMs": 3241.4951456310678,
+    "cacheMissMs": 202795.70588235295
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0125,
+    "remoteCacheHit": 0.64375,
+    "cacheMiss": 0.34375
+  },
+  "date": {
+    "$date": "2025-01-26T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.975,
+    "nonZero": 0.025
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 160,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67981e72553fde3a2fd38cc9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.702702702702704,
+    "remoteCacheHitMs": 18627.41176470588,
+    "cacheMissMs": 144773.75
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6727272727272727,
+    "remoteCacheHit": 0.15454545454545454,
+    "cacheMiss": 0.17272727272727273
+  },
+  "date": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9363636363636364,
+    "nonZero": 0.06363636363636363
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 110,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67981e72553fde3a2fd38ec0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10.277777777777779,
+    "remoteCacheHitMs": 17007.59927797834,
+    "cacheMissMs": 208813.2372881356
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.13533834586466165,
+    "remoteCacheHit": 0.6942355889724311,
+    "cacheMiss": 0.17042606516290726
+  },
+  "date": {
+    "$date": "2025-01-27T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9774436090225563,
+    "nonZero": 0.022556390977443608
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 399,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67996fea553fde3a2f35a9fe"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 14.814814814814815,
+    "remoteCacheHitMs": 10395.8,
+    "cacheMissMs": 160173.97297297296
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6585365853658537,
+    "remoteCacheHit": 0.04065040650406504,
+    "cacheMiss": 0.3008130081300813
+  },
+  "date": {
+    "$date": "2025-01-28T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 123,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67996fea553fde3a2f35aa19"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17,
+    "remoteCacheHitMs": 13759.74558303887,
+    "cacheMissMs": 262028.77966101695
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.1225,
+    "remoteCacheHit": 0.7075,
+    "cacheMiss": 0.17
+  },
+  "date": {
+    "$date": "2025-01-28T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9775,
+    "nonZero": 0.0225
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 400,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679ac16c553fde3a2fa404bd"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 16.6046511627907,
+    "remoteCacheHitMs": 1619,
+    "cacheMissMs": 108741.84615384616
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7889908256880734,
+    "remoteCacheHit": 0.03669724770642202,
+    "cacheMiss": 0.1743119266055046
+  },
+  "date": {
+    "$date": "2025-01-29T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.944954128440367,
+    "nonZero": 0.05504587155963303
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 109,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679ac16c553fde3a2fa4036e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 30.754716981132077,
+    "remoteCacheHitMs": 12255.986013986014,
+    "cacheMissMs": 212087.34782608695
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.12771084337349398,
+    "remoteCacheHit": 0.689156626506024,
+    "cacheMiss": 0.18313253012048192
+  },
+  "date": {
+    "$date": "2025-01-29T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.983132530120482,
+    "nonZero": 0.016867469879518072
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 415,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679c12f8553fde3a2ff457fc"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.299065420560748,
+    "remoteCacheHitMs": 1309,
+    "cacheMissMs": 81988.61538461539
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8842975206611571,
+    "remoteCacheHit": 0.008264462809917356,
+    "cacheMiss": 0.10743801652892562
+  },
+  "date": {
+    "$date": "2025-01-30T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 121,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679c12f8553fde3a2ff456e3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.866666666666667,
+    "remoteCacheHitMs": 11419.136585365854,
+    "cacheMissMs": 219207.32786885247
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.09836065573770492,
+    "remoteCacheHit": 0.6721311475409836,
+    "cacheMiss": 0.22950819672131148
+  },
+  "date": {
+    "$date": "2025-01-30T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9704918032786886,
+    "nonZero": 0.029508196721311476
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 305,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679d646e2591cbf43dc8b559"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11.310344827586206,
+    "remoteCacheHitMs": 1286.625,
+    "cacheMissMs": 16524.2
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6041666666666666,
+    "remoteCacheHit": 0.08333333333333333,
+    "cacheMiss": 0.3125
+  },
+  "date": {
+    "$date": "2025-01-31T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8958333333333334,
+    "nonZero": 0.10416666666666667
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 96,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679d646e2591cbf43dc8b37d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.61904761904762,
+    "remoteCacheHitMs": 15201.76,
+    "cacheMissMs": 149745.75
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.12,
+    "remoteCacheHit": 0.8571428571428571,
+    "cacheMiss": 0.022857142857142857
+  },
+  "date": {
+    "$date": "2025-01-31T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 175,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679eb5e22591cbf43df9a0f4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 169177
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.16666666666666666,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.8333333333333334
+  },
+  "date": {
+    "$date": "2025-02-01T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 6,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "679eb5e22591cbf43df9a1ad"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 29.5,
+    "remoteCacheHitMs": 1672.8489208633093,
+    "cacheMissMs": 268354.4137931034
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.011299435028248588,
+    "remoteCacheHit": 0.7853107344632768,
+    "cacheMiss": 0.2033898305084746
+  },
+  "date": {
+    "$date": "2025-02-01T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.96045197740113,
+    "nonZero": 0.03954802259887006
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 177,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a007702591cbf43d217991"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 25,
+    "remoteCacheHitMs": 1657,
+    "cacheMissMs": 123603
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6923076923076923,
+    "remoteCacheHit": 0.07692307692307693,
+    "cacheMiss": 0.23076923076923078
+  },
+  "date": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9230769230769231,
+    "nonZero": 0.07692307692307693
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 13,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a007702591cbf43d217967"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 37,
+    "remoteCacheHitMs": 1723.3565891472867,
+    "cacheMissMs": 271909.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.00625,
+    "remoteCacheHit": 0.80625,
+    "cacheMiss": 0.1875
+  },
+  "date": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.925,
+    "nonZero": 0.075
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 160,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a158e12591cbf43d88870b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.66176470588235,
+    "remoteCacheHitMs": 1554,
+    "cacheMissMs": 138366.625
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8,
+    "remoteCacheHit": 0.10588235294117647,
+    "cacheMiss": 0.09411764705882353
+  },
+  "date": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 85,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a158e12591cbf43d88884a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.538461538461538,
+    "remoteCacheHitMs": 8568.277591973245,
+    "cacheMissMs": 255788.03225806452
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.037037037037037035,
+    "remoteCacheHit": 0.8518518518518519,
+    "cacheMiss": 0.1111111111111111
+  },
+  "date": {
+    "$date": "2025-02-03T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9772079772079773,
+    "nonZero": 0.022792022792022793
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 351,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a2aa732591cbf43df69d7a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17.927835051546392,
+    "remoteCacheHitMs": 2207.25,
+    "cacheMissMs": 104228.19512195123
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6598639455782312,
+    "remoteCacheHit": 0.027210884353741496,
+    "cacheMiss": 0.3129251700680272
+  },
+  "date": {
+    "$date": "2025-02-04T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9659863945578231,
+    "nonZero": 0.034013605442176874
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 147,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a2aa732591cbf43df69b63"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8,
+    "remoteCacheHitMs": 10425.206989247312,
+    "cacheMissMs": 252430.41176470587
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01834862385321101,
+    "remoteCacheHit": 0.8532110091743119,
+    "cacheMiss": 0.12844036697247707
+  },
+  "date": {
+    "$date": "2025-02-04T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9885321100917431,
+    "nonZero": 0.011467889908256881
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 436,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a3fbfc2591cbf43d5f134a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.821428571428571,
+    "remoteCacheHitMs": 2421.5,
+    "cacheMissMs": 76534.8904109589
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.4772727272727273,
+    "remoteCacheHit": 0.07954545454545454,
+    "cacheMiss": 0.4431818181818182
+  },
+  "date": {
+    "$date": "2025-02-05T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9715909090909091,
+    "nonZero": 0.028409090909090908
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 176,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a3fbfc2591cbf43d5f1427"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8.9375,
+    "remoteCacheHitMs": 10674.942693409743,
+    "cacheMissMs": 245463.0652173913
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.037914691943127965,
+    "remoteCacheHit": 0.8270142180094787,
+    "cacheMiss": 0.13507109004739337
+  },
+  "date": {
+    "$date": "2025-02-05T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9739336492890995,
+    "nonZero": 0.026066350710900472
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 422,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a54d622591cbf43db9a76d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 22.795081967213115,
+    "remoteCacheHitMs": 1821.888888888889,
+    "cacheMissMs": 174205.38095238095
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8026315789473685,
+    "remoteCacheHit": 0.05921052631578947,
+    "cacheMiss": 0.13815789473684212
+  },
+  "date": {
+    "$date": "2025-02-06T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 152,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a54d622591cbf43db9a748"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8.75,
+    "remoteCacheHitMs": 8215.514469453376,
+    "cacheMissMs": 250063.6170212766
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01078167115902965,
+    "remoteCacheHit": 0.8382749326145552,
+    "cacheMiss": 0.1509433962264151
+  },
+  "date": {
+    "$date": "2025-02-06T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9757412398921833,
+    "nonZero": 0.02425876010781671
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 371,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a69eea2591cbf43d23fb44"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.897727272727273,
+    "remoteCacheHitMs": 4857.083333333333,
+    "cacheMissMs": 135398.125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8148148148148148,
+    "remoteCacheHit": 0.1111111111111111,
+    "cacheMiss": 0.07407407407407407
+  },
+  "date": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 108,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a69eea2591cbf43d23fb02"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.166666666666667,
+    "remoteCacheHitMs": 7211.052173913044,
+    "cacheMissMs": 252003.59259259258
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.030379746835443037,
+    "remoteCacheHit": 0.8734177215189873,
+    "cacheMiss": 0.09620253164556962
+  },
+  "date": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9721518987341772,
+    "nonZero": 0.027848101265822784
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 395,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a7f0692591cbf43d4ddc90"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 22,
+    "remoteCacheHitMs": 941,
+    "cacheMissMs": 214850.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.13333333333333333,
+    "remoteCacheHit": 0.13333333333333333,
+    "cacheMiss": 0.7333333333333333
+  },
+  "date": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8,
+    "nonZero": 0.2
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 15,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a7f0692591cbf43d4ddd64"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 1374.0625,
+    "cacheMissMs": 257733.17142857143
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.7783783783783784,
+    "cacheMiss": 0.22162162162162163
+  },
+  "date": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9675675675675676,
+    "nonZero": 0.032432432432432434
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 185,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a941f22591cbf43d8d602c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 75562
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7142857142857143,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.2857142857142857
+  },
+  "date": {
+    "$date": "2025-02-09T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 7,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a941f22591cbf43d8d5f62"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 3442.5886524822695,
+    "cacheMissMs": 269126.8333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8197674418604651,
+    "cacheMiss": 0.18023255813953487
+  },
+  "date": {
+    "$date": "2025-02-09T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9593023255813954,
+    "nonZero": 0.040697674418604654
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 172,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa936eb03279481d99a874"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.614285714285714,
+    "remoteCacheHitMs": 1632.8181818181818,
+    "cacheMissMs": 122791.65
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.693069306930693,
+    "remoteCacheHit": 0.10891089108910891,
+    "cacheMiss": 0.19801980198019803
+  },
+  "date": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 101,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa936eb03279481d99a9a6"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8.666666666666666,
+    "remoteCacheHitMs": 16034.633986928104,
+    "cacheMissMs": 242947.45238095237
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.06912442396313365,
+    "remoteCacheHit": 0.7050691244239631,
+    "cacheMiss": 0.22580645161290322
+  },
+  "date": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.967741935483871,
+    "nonZero": 0.03225806451612903
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 217,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67abe4f99d226963108e924c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 28.28985507246377,
+    "remoteCacheHitMs": 4577.5625,
+    "cacheMissMs": 175338.46
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6509433962264151,
+    "remoteCacheHit": 0.07547169811320754,
+    "cacheMiss": 0.27358490566037735
+  },
+  "date": {
+    "$date": "2025-02-11T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9622641509433962,
+    "nonZero": 0.03773584905660377
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 212,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67abe4f99d226963108e91c7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.142857142857142,
+    "remoteCacheHitMs": 10397.829842931937,
+    "cacheMissMs": 256099.9189189189
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.014893617021276596,
+    "remoteCacheHit": 0.8127659574468085,
+    "cacheMiss": 0.1723404255319149
+  },
+  "date": {
+    "$date": "2025-02-11T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9851063829787234,
+    "nonZero": 0.014893617021276596
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 470,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ad36729d22696310e5abaf"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.22429906542056,
+    "remoteCacheHitMs": 12242.933333333332,
+    "cacheMissMs": 196518.45945945947
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6484848484848484,
+    "remoteCacheHit": 0.09090909090909091,
+    "cacheMiss": 0.2606060606060606
+  },
+  "date": {
+    "$date": "2025-02-12T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9636363636363636,
+    "nonZero": 0.03636363636363636
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 165,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ad36729d22696310e5acbb"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.555555555555555,
+    "remoteCacheHitMs": 10026.424920127796,
+    "cacheMissMs": 263560.51515151514
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.022670025188916875,
+    "remoteCacheHit": 0.7884130982367759,
+    "cacheMiss": 0.1889168765743073
+  },
+  "date": {
+    "$date": "2025-02-12T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9773299748110831,
+    "nonZero": 0.022670025188916875
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 397,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ae87f19d226963103ce05e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 24.710743801652892,
+    "remoteCacheHitMs": 1673.875,
+    "cacheMissMs": 184561.77777777778
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8231292517006803,
+    "remoteCacheHit": 0.05442176870748299,
+    "cacheMiss": 0.12244897959183673
+  },
+  "date": {
+    "$date": "2025-02-13T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 147,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ae87f19d226963103ce028"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10.88888888888889,
+    "remoteCacheHitMs": 10446.619672131148,
+    "cacheMissMs": 249331
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.04825737265415549,
+    "remoteCacheHit": 0.8176943699731903,
+    "cacheMiss": 0.13404825737265416
+  },
+  "date": {
+    "$date": "2025-02-13T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.967828418230563,
+    "nonZero": 0.032171581769437
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 373,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67afd9769d22696310871de8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.246753246753247,
+    "remoteCacheHitMs": 1717.2727272727273,
+    "cacheMissMs": 193139.64285714287
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7549019607843137,
+    "remoteCacheHit": 0.10784313725490197,
+    "cacheMiss": 0.13725490196078433
+  },
+  "date": {
+    "$date": "2025-02-14T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 102,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67afd9769d22696310871dab"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 5.9,
+    "remoteCacheHitMs": 8964.956375838927,
+    "cacheMissMs": 255195.02564102566
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0547945205479452,
+    "remoteCacheHit": 0.8164383561643835,
+    "cacheMiss": 0.12876712328767123
+  },
+  "date": {
+    "$date": "2025-02-14T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9780821917808219,
+    "nonZero": 0.021917808219178082
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 365,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b12aed9d22696310b1f6e3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.53846153846154,
+    "remoteCacheHitMs": 1633.75,
+    "cacheMissMs": 245780
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5416666666666666,
+    "remoteCacheHit": 0.16666666666666666,
+    "cacheMiss": 0.2916666666666667
+  },
+  "date": {
+    "$date": "2025-02-15T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9583333333333334,
+    "nonZero": 0.041666666666666664
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 24,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b12aed9d22696310b1f654"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 4.75,
+    "remoteCacheHitMs": 11719.17857142857,
+    "cacheMissMs": 258975.52
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.042105263157894736,
+    "remoteCacheHit": 0.5894736842105263,
+    "cacheMiss": 0.3684210526315789
+  },
+  "date": {
+    "$date": "2025-02-15T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8947368421052632,
+    "nonZero": 0.10526315789473684
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 95,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b27c6c9d22696310df0ad3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 25.366666666666667,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 82036.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.9375,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.0625
+  },
+  "date": {
+    "$date": "2025-02-16T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 32,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b27c6c9d22696310df0b68"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 4.666666666666667,
+    "remoteCacheHitMs": 18542.585365853658,
+    "cacheMissMs": 264324.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.07792207792207792,
+    "remoteCacheHit": 0.5324675324675324,
+    "cacheMiss": 0.38961038961038963
+  },
+  "date": {
+    "$date": "2025-02-16T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.922077922077922,
+    "nonZero": 0.07792207792207792
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 77,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3cdf49d226963103767aa"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 27.114035087719298,
+    "remoteCacheHitMs": 12151.42857142857,
+    "cacheMissMs": 217201.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8571428571428571,
+    "remoteCacheHit": 0.05263157894736842,
+    "cacheMiss": 0.09022556390977443
+  },
+  "date": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 133,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3cdf49d22696310376789"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.555555555555555,
+    "remoteCacheHitMs": 8182.475161987041,
+    "cacheMissMs": 263283.3783783784
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.034220532319391636,
+    "remoteCacheHit": 0.8802281368821293,
+    "cacheMiss": 0.08555133079847908
+  },
+  "date": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9847908745247148,
+    "nonZero": 0.015209125475285171
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 526,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b51f6e9d2269631095bc42"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.322222222222223,
+    "remoteCacheHitMs": 7567,
+    "cacheMissMs": 131508.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7142857142857143,
+    "remoteCacheHit": 0.07142857142857142,
+    "cacheMiss": 0.21428571428571427
+  },
+  "date": {
+    "$date": "2025-02-18T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9761904761904762,
+    "nonZero": 0.023809523809523808
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 126,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b51f6e9d2269631095bce5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.266666666666667,
+    "remoteCacheHitMs": 13381.313915857605,
+    "cacheMissMs": 248352.4375
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.03978779840848806,
+    "remoteCacheHit": 0.8196286472148541,
+    "cacheMiss": 0.14058355437665782
+  },
+  "date": {
+    "$date": "2025-02-18T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.986737400530504,
+    "nonZero": 0.013262599469496022
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 377,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b670ee4f03b99e2683576d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.64367816091954,
+    "remoteCacheHitMs": 6936.222222222223,
+    "cacheMissMs": 196653.27586206896
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8207547169811321,
+    "remoteCacheHit": 0.04245283018867924,
+    "cacheMiss": 0.13679245283018868
+  },
+  "date": {
+    "$date": "2025-02-19T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 212,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b670ee4f03b99e26835706"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.3,
+    "remoteCacheHitMs": 6805.23347107438,
+    "cacheMissMs": 255539.16
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01718213058419244,
+    "remoteCacheHit": 0.8316151202749141,
+    "cacheMiss": 0.15120274914089346
+  },
+  "date": {
+    "$date": "2025-02-19T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9776632302405498,
+    "nonZero": 0.022336769759450172
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 582,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b7c26e4f03b99e26cd1e2e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 192.4126984126984,
+    "remoteCacheHitMs": 9637.615384615385,
+    "cacheMissMs": 165667.64705882352
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6774193548387096,
+    "remoteCacheHit": 0.13978494623655913,
+    "cacheMiss": 0.1827956989247312
+  },
+  "date": {
+    "$date": "2025-02-20T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 93,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b7c26e4f03b99e26cd1f11"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7,
+    "remoteCacheHitMs": 6129.307888040713,
+    "cacheMissMs": 256757.03333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.02092050209205021,
+    "remoteCacheHit": 0.8221757322175732,
+    "cacheMiss": 0.15690376569037656
+  },
+  "date": {
+    "$date": "2025-02-20T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9686192468619247,
+    "nonZero": 0.03138075313807531
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 478,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b913f74f03b99e26202d18"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 28,
+    "remoteCacheHitMs": 2006.5,
+    "cacheMissMs": 117428.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7073170731707317,
+    "remoteCacheHit": 0.04878048780487805,
+    "cacheMiss": 0.24390243902439024
+  },
+  "date": {
+    "$date": "2025-02-21T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 41,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b913f74f03b99e26202d36"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.5,
+    "remoteCacheHitMs": 2924.203821656051,
+    "cacheMissMs": 250689.2
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.012195121951219513,
+    "remoteCacheHit": 0.9573170731707317,
+    "cacheMiss": 0.03048780487804878
+  },
+  "date": {
+    "$date": "2025-02-21T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 164,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ba65824f03b99e26464434"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10,
+    "remoteCacheHitMs": 3318,
+    "cacheMissMs": 104582.88888888889
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.07692307692307693,
+    "remoteCacheHit": 0.07692307692307693,
+    "cacheMiss": 0.8461538461538461
+  },
+  "date": {
+    "$date": "2025-02-22T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8461538461538461,
+    "nonZero": 0.15384615384615385
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 13,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ba65824f03b99e26464462"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 745.511811023622,
+    "cacheMissMs": 255088.7931034483
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.7791411042944786,
+    "cacheMiss": 0.22085889570552147
+  },
+  "date": {
+    "$date": "2025-02-22T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9570552147239264,
+    "nonZero": 0.04294478527607362
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 163,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bbb6fff2c6b7cf5b3d2faf"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.636363636363637,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.9166666666666666,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.08333333333333333
+  },
+  "date": {
+    "$date": "2025-02-23T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9166666666666666,
+    "nonZero": 0.08333333333333333
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 12,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bbb6fff2c6b7cf5b3d3083"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 4,
+    "remoteCacheHitMs": 13430.578947368422,
+    "cacheMissMs": 269027.9
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0392156862745098,
+    "remoteCacheHit": 0.37254901960784315,
+    "cacheMiss": 0.5882352941176471
+  },
+  "date": {
+    "$date": "2025-02-23T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.803921568627451,
+    "nonZero": 0.19607843137254902
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 51,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd0877cef48ce55ec6a469"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.988888888888887,
+    "remoteCacheHitMs": 1432.6666666666667,
+    "cacheMissMs": 27957.32
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.72,
+    "remoteCacheHit": 0.048,
+    "cacheMiss": 0.232
+  },
+  "date": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.968,
+    "nonZero": 0.032
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 125,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd0877cef48ce55ec6a45d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 5.166666666666667,
+    "remoteCacheHitMs": 8423.726495726496,
+    "cacheMissMs": 268137.88
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.022058823529411766,
+    "remoteCacheHit": 0.8602941176470589,
+    "cacheMiss": 0.11764705882352941
+  },
+  "date": {
+    "$date": "2025-02-24T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9742647058823529,
+    "nonZero": 0.025735294117647058
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 272,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be59fe097aeb1e0cfce309"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.46551724137931,
+    "remoteCacheHitMs": 2211.5714285714284,
+    "cacheMissMs": 145480.6923076923
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7341772151898734,
+    "remoteCacheHit": 0.08860759493670886,
+    "cacheMiss": 0.17721518987341772
+  },
+  "date": {
+    "$date": "2025-02-25T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9746835443037974,
+    "nonZero": 0.02531645569620253
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 79,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be59fe097aeb1e0cfce1f3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.111111111111111,
+    "remoteCacheHitMs": 11501.066666666668,
+    "cacheMissMs": 259541.94736842104
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.048,
+    "remoteCacheHit": 0.84,
+    "cacheMiss": 0.112
+  },
+  "date": {
+    "$date": "2025-02-25T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9893333333333333,
+    "nonZero": 0.010666666666666666
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 375,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bfab747dd2a9dd33fd7a06"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 42.38947368421053,
+    "remoteCacheHitMs": 1557,
+    "cacheMissMs": 31471.095238095237
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.536723163841808,
+    "remoteCacheHit": 0.03389830508474576,
+    "cacheMiss": 0.4293785310734463
+  },
+  "date": {
+    "$date": "2025-02-26T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9265536723163842,
+    "nonZero": 0.07344632768361582
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 177,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bfab747dd2a9dd33fd79f2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.3076923076923075,
+    "remoteCacheHitMs": 10280.682593856654,
+    "cacheMissMs": 257506.45714285714
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.03768115942028986,
+    "remoteCacheHit": 0.8492753623188406,
+    "cacheMiss": 0.11304347826086956
+  },
+  "date": {
+    "$date": "2025-02-26T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9884057971014493,
+    "nonZero": 0.011594202898550725
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 345,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c0fcfd7dd2a9dd336dccef"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.956043956043956,
+    "remoteCacheHitMs": 1562.75,
+    "cacheMissMs": 59345.12195121951
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6594202898550725,
+    "remoteCacheHit": 0.028985507246376812,
+    "cacheMiss": 0.3115942028985507
+  },
+  "date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9855072463768116,
+    "nonZero": 0.014492753623188406
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 138,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c0fcfd7dd2a9dd336dcc18"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.647058823529412,
+    "remoteCacheHitMs": 11156.106666666667,
+    "cacheMissMs": 227888.73333333334
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.05120481927710843,
+    "remoteCacheHit": 0.9036144578313253,
+    "cacheMiss": 0.045180722891566265
+  },
+  "date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 332,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24e7b7dd2a9dd33063809"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 24.962264150943398,
+    "remoteCacheHitMs": 1717.142857142857,
+    "cacheMissMs": 168602.55172413794
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6838709677419355,
+    "remoteCacheHit": 0.09032258064516129,
+    "cacheMiss": 0.22580645161290322
+  },
+  "date": {
+    "$date": "2025-02-28T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9612903225806452,
+    "nonZero": 0.03870967741935484
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 155,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24e7b7dd2a9dd33063883"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8.538461538461538,
+    "remoteCacheHitMs": 11159.120204603581,
+    "cacheMissMs": 237793.07246376813
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.05327868852459016,
+    "remoteCacheHit": 0.8012295081967213,
+    "cacheMiss": 0.14549180327868852
+  },
+  "date": {
+    "$date": "2025-02-28T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9959016393442623,
+    "nonZero": 0.004098360655737705
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 488,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c39ff77dd2a9dd33298fcd"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 59,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 182064
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.08333333333333333,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.9166666666666666
+  },
+  "date": {
+    "$date": "2025-03-01T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.5833333333333334,
+    "nonZero": 0.4166666666666667
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 12,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c39ff77dd2a9dd33298fb7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 5,
+    "remoteCacheHitMs": 639.0882352941177,
+    "cacheMissMs": 288674.6111111111
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.012121212121212121,
+    "remoteCacheHit": 0.6181818181818182,
+    "cacheMiss": 0.3696969696969697
+  },
+  "date": {
+    "$date": "2025-03-01T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9575757575757575,
+    "nonZero": 0.04242424242424243
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 165,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4f1767dd2a9dd334accf6"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.25,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 15743.608695652174
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.09523809523809523,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.9047619047619048
+  },
+  "date": {
+    "$date": "2025-03-02T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.6428571428571429,
+    "nonZero": 0.35714285714285715
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 42,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4f1767dd2a9dd334accf3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 1785.578125,
+    "cacheMissMs": 191043.21739130435
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6956521739130435,
+    "cacheMiss": 0.30434782608695654
+  },
+  "date": {
+    "$date": "2025-03-02T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9456521739130435,
+    "nonZero": 0.05434782608695652
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 184,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6431a7dd2a9dd33a62b01"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.766233766233768,
+    "remoteCacheHitMs": 1666.75,
+    "cacheMissMs": 135097.8
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.31048387096774194,
+    "remoteCacheHit": 0.03225806451612903,
+    "cacheMiss": 0.657258064516129
+  },
+  "date": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.4435483870967742,
+    "nonZero": 0.5564516129032258
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 248,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6431a7dd2a9dd33a62e5d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9.875,
+    "remoteCacheHitMs": 8467.909547738693,
+    "cacheMissMs": 208553.45588235295
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.028368794326241134,
+    "remoteCacheHit": 0.7056737588652482,
+    "cacheMiss": 0.26595744680851063
+  },
+  "date": {
+    "$date": "2025-03-03T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.975177304964539,
+    "nonZero": 0.024822695035460994
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 282,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c794757dd2a9dd33fc56d1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 28.414414414414413,
+    "remoteCacheHitMs": 5250.7,
+    "cacheMissMs": 32883.22388059701
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5606060606060606,
+    "remoteCacheHit": 0.050505050505050504,
+    "cacheMiss": 0.3888888888888889
+  },
+  "date": {
+    "$date": "2025-03-04T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9494949494949495,
+    "nonZero": 0.050505050505050504
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 198,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c794757dd2a9dd33fc58bc"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 5.5,
+    "remoteCacheHitMs": 10115.777429467085,
+    "cacheMissMs": 264439.9655172414
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01662049861495845,
+    "remoteCacheHit": 0.8836565096952909,
+    "cacheMiss": 0.0997229916897507
+  },
+  "date": {
+    "$date": "2025-03-04T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9806094182825484,
+    "nonZero": 0.019390581717451522
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 361,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c8e5f67dd2a9dd3371608a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.5,
+    "remoteCacheHitMs": 8637.75,
+    "cacheMissMs": 180934.2093023256
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5692307692307692,
+    "remoteCacheHit": 0.06153846153846154,
+    "cacheMiss": 0.36923076923076925
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9615384615384616,
+    "nonZero": 0.038461538461538464
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 130,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c8e5f67dd2a9dd33715fac"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.5,
+    "remoteCacheHitMs": 9674.910071942446,
+    "cacheMissMs": 248703.48611111112
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.011111111111111112,
+    "remoteCacheHit": 0.7722222222222223,
+    "cacheMiss": 0.21666666666666667
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9833333333333333,
+    "nonZero": 0.016666666666666666
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 360,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca37747dd2a9dd33bfb37b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.452380952380953,
+    "remoteCacheHitMs": 1942.6666666666667,
+    "cacheMissMs": 119063.91208791209
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.2857142857142857,
+    "remoteCacheHit": 0.061224489795918366,
+    "cacheMiss": 0.6530612244897959
+  },
+  "date": {
+    "$date": "2025-03-06T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9659863945578231,
+    "nonZero": 0.034013605442176874
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 147,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca37747dd2a9dd33bfb482"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 5.142857142857143,
+    "remoteCacheHitMs": 4792.689655172414,
+    "cacheMissMs": 245000.5421686747
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.018229166666666668,
+    "remoteCacheHit": 0.7552083333333334,
+    "cacheMiss": 0.2265625
+  },
+  "date": {
+    "$date": "2025-03-06T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9895833333333334,
+    "nonZero": 0.010416666666666666
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 384,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb88f84467d9fed7747f8a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23,
+    "remoteCacheHitMs": 1693,
+    "cacheMissMs": 78802.33333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5632183908045977,
+    "remoteCacheHit": 0.005747126436781609,
+    "cacheMiss": 0.43103448275862066
+  },
+  "date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9482758620689655,
+    "nonZero": 0.05172413793103448
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 174,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb88f84467d9fed7747da4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 2169.169381107492,
+    "cacheMissMs": 250363.81914893616
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.748780487804878,
+    "cacheMiss": 0.25121951219512195
+  },
+  "date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9780487804878049,
+    "nonZero": 0.02195121951219512
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 410,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ccda7743b91b94ee7423c9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.666666666666667,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 174173.6
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8076923076923077,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.19230769230769232
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 26,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ccda7743b91b94ee74242b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 659.656862745098,
+    "cacheMissMs": 220255.14285714287
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6296296296296297,
+    "cacheMiss": 0.37037037037037035
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9753086419753086,
+    "nonZero": 0.024691358024691357
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 162,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ce2c0e43b91b94ee9e89c9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 1,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 3,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ce2c0e43b91b94ee9e89a6"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 1999.6530612244899,
+    "cacheMissMs": 226870.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6405228758169934,
+    "cacheMiss": 0.35947712418300654
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.954248366013072,
+    "nonZero": 0.0457516339869281
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 153,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cf7d7f43b91b94eee3c3b7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.821052631578947,
+    "remoteCacheHitMs": 1902,
+    "cacheMissMs": 13394.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.811965811965812,
+    "remoteCacheHit": 0.02564102564102564,
+    "cacheMiss": 0.1623931623931624
+  },
+  "date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.905982905982906,
+    "nonZero": 0.09401709401709402
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 117,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cf7d7f43b91b94eee3c361"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9.4,
+    "remoteCacheHitMs": 6707.444444444444,
+    "cacheMissMs": 244400.7931034483
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.02857142857142857,
+    "remoteCacheHit": 0.7714285714285715,
+    "cacheMiss": 0.2
+  },
+  "date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9657142857142857,
+    "nonZero": 0.03428571428571429
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 175,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d0cefb43b91b94ee2c467b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.073170731707318,
+    "remoteCacheHitMs": 1708,
+    "cacheMissMs": 128218.11111111111
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8282828282828283,
+    "remoteCacheHit": 0.0707070707070707,
+    "cacheMiss": 0.10101010101010101
+  },
+  "date": {
+    "$date": "2025-03-11T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.98989898989899,
+    "nonZero": 0.010101010101010102
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 99,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d0cefb43b91b94ee2c4805"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.833333333333332,
+    "remoteCacheHitMs": 7073.882629107981,
+    "cacheMissMs": 249390.66666666666
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.023346303501945526,
+    "remoteCacheHit": 0.8287937743190662,
+    "cacheMiss": 0.14785992217898833
+  },
+  "date": {
+    "$date": "2025-03-11T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.980544747081712,
+    "nonZero": 0.019455252918287938
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 257,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d2207f43b91b94ee7a68f5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.671641791044777,
+    "remoteCacheHitMs": 1234.7058823529412,
+    "cacheMissMs": 92836.70731707317
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5193798449612403,
+    "remoteCacheHit": 0.06589147286821706,
+    "cacheMiss": 0.41472868217054265
+  },
+  "date": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.7441860465116279,
+    "nonZero": 0.2558139534883721
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 258,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d2207f43b91b94ee7a688d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9,
+    "remoteCacheHitMs": 9203.930131004367,
+    "cacheMissMs": 277350.4696969697
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.003289473684210526,
+    "remoteCacheHit": 0.7532894736842105,
+    "cacheMiss": 0.24342105263157895
+  },
+  "date": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9736842105263158,
+    "nonZero": 0.02631578947368421
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 304,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d371fb612abfebc96ff2d1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.571428571428573,
+    "remoteCacheHitMs": 7188.777777777777,
+    "cacheMissMs": 77186.73913043478
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5238095238095238,
+    "remoteCacheHit": 0.061224489795918366,
+    "cacheMiss": 0.41496598639455784
+  },
+  "date": {
+    "$date": "2025-03-13T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8979591836734694,
+    "nonZero": 0.10204081632653061
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 147,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d371fb612abfebc96ff315"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10,
+    "remoteCacheHitMs": 9855.518151815182,
+    "cacheMissMs": 256063.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.002840909090909091,
+    "remoteCacheHit": 0.8607954545454546,
+    "cacheMiss": 0.13636363636363635
+  },
+  "date": {
+    "$date": "2025-03-13T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9772727272727273,
+    "nonZero": 0.022727272727272728
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 352,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4c38b612abfebc9cc4b7e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17.972727272727273,
+    "remoteCacheHitMs": 9176.375,
+    "cacheMissMs": 141740.13888888888
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7006369426751592,
+    "remoteCacheHit": 0.050955414012738856,
+    "cacheMiss": 0.2484076433121019
+  },
+  "date": {
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9808917197452229,
+    "nonZero": 0.01910828025477707
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 157,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4c38b612abfebc9cc4a77"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11,
+    "remoteCacheHitMs": 9358.169811320755,
+    "cacheMissMs": 252861.2931034483
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.010362694300518135,
+    "remoteCacheHit": 0.8238341968911918,
+    "cacheMiss": 0.16580310880829016
+  },
+  "date": {
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9844559585492227,
+    "nonZero": 0.015544041450777202
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 386,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d61509612abfebc9f1687a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.833333333333332,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 56268.793650793654
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.07792207792207792,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.922077922077922
+  },
+  "date": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8961038961038961,
+    "nonZero": 0.1038961038961039
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 77,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d61509612abfebc9f1684d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 652.4433962264151,
+    "cacheMissMs": 295283.7346938776
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6385542168674698,
+    "cacheMiss": 0.3614457831325301
+  },
+  "date": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9337349397590361,
+    "nonZero": 0.06626506024096386
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 166,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d7666d612abfebc9162122"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 29.61111111111111,
+    "remoteCacheHitMs": 2434,
+    "cacheMissMs": 8714.692307692309
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.3050847457627119,
+    "remoteCacheHit": 0.01694915254237288,
+    "cacheMiss": 0.6779661016949152
+  },
+  "date": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9830508474576272,
+    "nonZero": 0.01694915254237288
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 59,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d7666d612abfebc91620b5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 3014.644859813084,
+    "cacheMissMs": 304519.4583333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.816793893129771,
+    "cacheMiss": 0.183206106870229
+  },
+  "date": {
+    "$date": "2025-03-16T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 131,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d8b800612abfebc954d994"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 27.0625,
+    "remoteCacheHitMs": 794.3333333333334,
+    "cacheMissMs": 98364.94117647059
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.3950617283950617,
+    "remoteCacheHit": 0.037037037037037035,
+    "cacheMiss": 0.5679012345679012
+  },
+  "date": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8518518518518519,
+    "nonZero": 0.14814814814814814
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 81,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d8b800612abfebc954daf3"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9,
+    "remoteCacheHitMs": 5704.023255813953,
+    "cacheMissMs": 290391.46376811597
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006825938566552901,
+    "remoteCacheHit": 0.7337883959044369,
+    "cacheMiss": 0.2593856655290102
+  },
+  "date": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9761092150170648,
+    "nonZero": 0.023890784982935155
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 293,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67da097d0baeac2260a696b0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.105263157894736,
+    "remoteCacheHitMs": 1203.3333333333333,
+    "cacheMissMs": 105235.60714285714
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.49673202614379086,
+    "remoteCacheHit": 0.0196078431372549,
+    "cacheMiss": 0.48366013071895425
+  },
+  "date": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8823529411764706,
+    "nonZero": 0.11764705882352941
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 153,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67da097d0baeac2260a695a7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.5,
+    "remoteCacheHitMs": 6113.981651376147,
+    "cacheMissMs": 291183.35294117645
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006666666666666667,
+    "remoteCacheHit": 0.7266666666666667,
+    "cacheMiss": 0.26666666666666666
+  },
+  "date": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.96,
+    "nonZero": 0.04
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 300,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67db5b0c0baeac2260f53470"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 30.835616438356166,
+    "remoteCacheHitMs": 2079.1428571428573,
+    "cacheMissMs": 78233.58974358975
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.41714285714285715,
+    "remoteCacheHit": 0.04,
+    "cacheMiss": 0.5428571428571428
+  },
+  "date": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9028571428571428,
+    "nonZero": 0.09714285714285714
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 175,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67db5b0c0baeac2260f531ad"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9.4,
+    "remoteCacheHitMs": 8581.714285714286,
+    "cacheMissMs": 243259.46341463414
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.05102040816326531,
+    "remoteCacheHit": 0.8095238095238095,
+    "cacheMiss": 0.13945578231292516
+  },
+  "date": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 294,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcac73e588aef713f72f6d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 22,
+    "remoteCacheHitMs": 5992.529411764706,
+    "cacheMissMs": 69946.0125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5194805194805194,
+    "remoteCacheHit": 0.0735930735930736,
+    "cacheMiss": 0.4069264069264069
+  },
+  "date": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9393939393939394,
+    "nonZero": 0.06060606060606061
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 231,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcac73e588aef713f73090"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 6.666666666666667,
+    "remoteCacheHitMs": 7948.636363636364,
+    "cacheMissMs": 262522.75
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.026706231454005934,
+    "remoteCacheHit": 0.7833827893175074,
+    "cacheMiss": 0.18991097922848665
+  },
+  "date": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9762611275964391,
+    "nonZero": 0.02373887240356083
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 337,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ddfdf8e588aef71350d441"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 44.44954128440367,
+    "remoteCacheHitMs": 8362.111111111111,
+    "cacheMissMs": 101786.77551020408
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6264367816091954,
+    "remoteCacheHit": 0.05172413793103448,
+    "cacheMiss": 0.3218390804597701
+  },
+  "date": {
+    "$date": "2025-03-21T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9597701149425287,
+    "nonZero": 0.040229885057471264
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 174,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ddfdf8e588aef71350d53e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.090909090909091,
+    "remoteCacheHitMs": 8402.123552123552,
+    "cacheMissMs": 261999.75471698114
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.03333333333333333,
+    "remoteCacheHit": 0.7848484848484848,
+    "cacheMiss": 0.18181818181818182
+  },
+  "date": {
+    "$date": "2025-03-21T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9787878787878788,
+    "nonZero": 0.021212121212121213
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 330,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df4f61e588aef71379e46e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 129.50877192982455,
+    "remoteCacheHitMs": 2409.5,
+    "cacheMissMs": 163620.95454545456
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6477272727272727,
+    "remoteCacheHit": 0.022727272727272728,
+    "cacheMiss": 0.32954545454545453
+  },
+  "date": {
+    "$date": "2025-03-22T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9204545454545454,
+    "nonZero": 0.07954545454545454
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 88,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67df4f61e588aef71379e35d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 4635.2266666666665,
+    "cacheMissMs": 258252.57777777777
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.746268656716418,
+    "cacheMiss": 0.2537313432835821
+  },
+  "date": {
+    "$date": "2025-03-22T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9701492537313433,
+    "nonZero": 0.029850746268656716
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 201,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e0a111e588aef713b2df47"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 110.26530612244898,
+    "remoteCacheHitMs": 1527,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.9607843137254902,
+    "remoteCacheHit": 0.0196078431372549,
+    "cacheMiss": 0.0196078431372549
+  },
+  "date": {
+    "$date": "2025-03-23T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9803921568627451,
+    "nonZero": 0.0196078431372549
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 51,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e0a111e588aef713b2dde7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 21066.617283950618,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 1,
+    "cacheMiss": 0
+  },
+  "date": {
+    "$date": "2025-03-23T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 81,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e1f269e588aef713f8522a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 27.78125,
+    "remoteCacheHitMs": 1798.75,
+    "cacheMissMs": 21736.08
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6324110671936759,
+    "remoteCacheHit": 0.015810276679841896,
+    "cacheMiss": 0.35177865612648224
+  },
+  "date": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9446640316205533,
+    "nonZero": 0.05533596837944664
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 253,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e1f269e588aef713f85213"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11,
+    "remoteCacheHitMs": 10339.547038327526,
+    "cacheMissMs": 278045.25
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006172839506172839,
+    "remoteCacheHit": 0.8858024691358025,
+    "cacheMiss": 0.10802469135802469
+  },
+  "date": {
+    "$date": "2025-03-24T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9660493827160493,
+    "nonZero": 0.033950617283950615
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 324,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e34403e588aef713323d27"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 25.24074074074074,
+    "remoteCacheHitMs": 1552.6666666666667,
+    "cacheMissMs": 40409.09090909091
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.416988416988417,
+    "remoteCacheHit": 0.03474903474903475,
+    "cacheMiss": 0.5482625482625483
+  },
+  "date": {
+    "$date": "2025-03-25T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8764478764478765,
+    "nonZero": 0.12355212355212356
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 259,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e34403e588aef713323e8d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 7142.552845528456,
+    "cacheMissMs": 269823.1395348837
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8338983050847457,
+    "cacheMiss": 0.16610169491525423
+  },
+  "date": {
+    "$date": "2025-03-25T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9796610169491525,
+    "nonZero": 0.020338983050847456
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 295,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e49585e588aef71385077a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 24.59259259259259,
+    "remoteCacheHitMs": 6379.916666666667,
+    "cacheMissMs": 76065.88095238095
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6994818652849741,
+    "remoteCacheHit": 0.06217616580310881,
+    "cacheMiss": 0.23834196891191708
+  },
+  "date": {
+    "$date": "2025-03-26T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9792746113989638,
+    "nonZero": 0.02072538860103627
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 193,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e49585e588aef71385056c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 9915.069400630915,
+    "cacheMissMs": 271046.4285714286
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.883008356545961,
+    "cacheMiss": 0.116991643454039
+  },
+  "date": {
+    "$date": "2025-03-26T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9805013927576601,
+    "nonZero": 0.019498607242339833
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 359,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e5e709e588aef713e5d4b7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 25.203007518796994,
+    "remoteCacheHitMs": 14865.875,
+    "cacheMissMs": 188508.5849056604
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6551724137931034,
+    "remoteCacheHit": 0.03940886699507389,
+    "cacheMiss": 0.3054187192118227
+  },
+  "date": {
+    "$date": "2025-03-27T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9507389162561576,
+    "nonZero": 0.04926108374384237
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 203,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e5e709e588aef713e5d4c8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 13182.916870415647,
+    "cacheMissMs": 282157
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.839835728952772,
+    "cacheMiss": 0.1601642710472279
+  },
+  "date": {
+    "$date": "2025-03-27T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9835728952772074,
+    "nonZero": 0.01642710472279261
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 487,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e738892ee457d82147f9d5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 472.3863636363636,
+    "remoteCacheHitMs": 2868.5,
+    "cacheMissMs": 198792.1739130435
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6330935251798561,
+    "remoteCacheHit": 0.014388489208633094,
+    "cacheMiss": 0.35251798561151076
+  },
+  "date": {
+    "$date": "2025-03-28T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8129496402877698,
+    "nonZero": 0.18705035971223022
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 139,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e738892ee457d82147fa51"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 8324.875432525952,
+    "cacheMissMs": 275280.28
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8475073313782991,
+    "cacheMiss": 0.15249266862170088
+  },
+  "date": {
+    "$date": "2025-03-28T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9941348973607038,
+    "nonZero": 0.005865102639296188
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 341,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e889ee2ee457d8216e5b08"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 221490.75
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0,
+    "cacheMiss": 1
+  },
+  "date": {
+    "$date": "2025-03-29T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.18181818181818182,
+    "nonZero": 0.8181818181818182
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 22,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e889ee2ee457d8216e5acf"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 745.4609929078014,
+    "cacheMissMs": 294102.14285714284
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8197674418604651,
+    "cacheMiss": 0.18023255813953487
+  },
+  "date": {
+    "$date": "2025-03-29T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9825581395348837,
+    "nonZero": 0.01744186046511628
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 172,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e9db942ee457d821931fd0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 195528.6
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0,
+    "cacheMiss": 1
+  },
+  "date": {
+    "$date": "2025-03-30T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 5,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e9db942ee457d821931f76"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 741.7655172413793,
+    "cacheMissMs": 290340.3103448276
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8238636363636364,
+    "cacheMiss": 0.17613636363636365
+  },
+  "date": {
+    "$date": "2025-03-30T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9886363636363636,
+    "nonZero": 0.011363636363636364
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 176,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67eb2d022ee457d821cee174"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.47826086956522,
+    "remoteCacheHitMs": 1421,
+    "cacheMissMs": 127899.26666666666
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8363636363636363,
+    "remoteCacheHit": 0.02727272727272727,
+    "cacheMiss": 0.13636363636363635
+  },
+  "date": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 110,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67eb2d022ee457d821cee2af"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7,
+    "remoteCacheHitMs": 4935.235849056604,
+    "cacheMissMs": 286712.2162162162
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0056022408963585435,
+    "remoteCacheHit": 0.8907563025210085,
+    "cacheMiss": 0.10364145658263306
+  },
+  "date": {
+    "$date": "2025-03-31T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 357,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ec7e6d2ee457d8211cc0ff"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.78688524590164,
+    "remoteCacheHitMs": 2684,
+    "cacheMissMs": 161635.37837837837
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5922330097087378,
+    "remoteCacheHit": 0.009708737864077669,
+    "cacheMiss": 0.39805825242718446
+  },
+  "date": {
+    "$date": "2025-04-01T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9611650485436893,
+    "nonZero": 0.038834951456310676
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 103,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ec7e6d2ee457d8211cbff8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 12.5,
+    "remoteCacheHitMs": 8912.57928802589,
+    "cacheMissMs": 287456.1698113208
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.005479452054794521,
+    "remoteCacheHit": 0.8465753424657534,
+    "cacheMiss": 0.14794520547945206
+  },
+  "date": {
+    "$date": "2025-04-01T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9972602739726028,
+    "nonZero": 0.0027397260273972603
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 365,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67edcffb2ee457d8217586dc"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.573333333333334,
+    "remoteCacheHitMs": 2633,
+    "cacheMissMs": 127355.33333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5813953488372093,
+    "remoteCacheHit": 0.03875968992248062,
+    "cacheMiss": 0.3798449612403101
+  },
+  "date": {
+    "$date": "2025-04-02T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9457364341085271,
+    "nonZero": 0.05426356589147287
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 129,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67edcffb2ee457d82175873a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 13500.061764705883,
+    "cacheMissMs": 298629.3243243243
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8133971291866029,
+    "cacheMiss": 0.18660287081339713
+  },
+  "date": {
+    "$date": "2025-04-02T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9904306220095693,
+    "nonZero": 0.009569377990430622
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 418,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ef21999dc6b88fc970899e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.490909090909092,
+    "remoteCacheHitMs": 2011,
+    "cacheMissMs": 174977.60869565216
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.632183908045977,
+    "remoteCacheHit": 0.10344827586206896,
+    "cacheMiss": 0.26436781609195403
+  },
+  "date": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 87,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ef21999dc6b88fc9708a5e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 12,
+    "remoteCacheHitMs": 7530.966386554622,
+    "cacheMissMs": 283839.625
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.003424657534246575,
+    "remoteCacheHit": 0.815068493150685,
+    "cacheMiss": 0.1815068493150685
+  },
+  "date": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9828767123287672,
+    "nonZero": 0.017123287671232876
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 292,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f073179dc6b88fc9a5c107"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.294117647058822,
+    "remoteCacheHitMs": 1782.5,
+    "cacheMissMs": 204683.3076923077
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6938775510204082,
+    "remoteCacheHit": 0.04081632653061224,
+    "cacheMiss": 0.2653061224489796
+  },
+  "date": {
+    "$date": "2025-04-04T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 49,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f073179dc6b88fc9a5c098"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8,
+    "remoteCacheHitMs": 4714.28,
+    "cacheMissMs": 272417.1538461539
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.004,
+    "remoteCacheHit": 0.8,
+    "cacheMiss": 0.196
+  },
+  "date": {
+    "$date": "2025-04-04T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.96,
+    "nonZero": 0.04
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 250,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f1c4929dc6b88fc9d38dc7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.596153846153847,
+    "remoteCacheHitMs": 1663,
+    "cacheMissMs": 194313.2857142857
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6190476190476191,
+    "remoteCacheHit": 0.011904761904761904,
+    "cacheMiss": 0.36904761904761907
+  },
+  "date": {
+    "$date": "2025-04-05T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9642857142857143,
+    "nonZero": 0.03571428571428571
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 84,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f1c4929dc6b88fc9d38d59"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 2756.0494505494507,
+    "cacheMissMs": 264641.5306122449
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.2778625954198473,
+    "cacheMiss": 0.7221374045801526
+  },
+  "date": {
+    "$date": "2025-04-05T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.3526717557251908,
+    "nonZero": 0.6473282442748092
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 655,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f316149dc6b88fc9f72e7b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 24.181818181818183,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 207218.0588235294
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.3548387096774194,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.6451612903225806
+  },
+  "date": {
+    "$date": "2025-04-06T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9032258064516129,
+    "nonZero": 0.0967741935483871
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 31,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f316149dc6b88fc9f72eb9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 793.0714285714286,
+    "cacheMissMs": 271044.18604651163
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.77,
+    "cacheMiss": 0.23
+  },
+  "date": {
+    "$date": "2025-04-06T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.985,
+    "nonZero": 0.015
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 200,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f4676c9dc6b88fc933f6fe"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.16883116883117,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 193433.6875
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8020833333333334,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.19791666666666666
+  },
+  "date": {
+    "$date": "2025-04-07T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.96875,
+    "nonZero": 0.03125
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 96,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f4676c9dc6b88fc933f77f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 9.5,
+    "remoteCacheHitMs": 6462.0625,
+    "cacheMissMs": 284999.0731707317
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006993006993006993,
+    "remoteCacheHit": 0.8391608391608392,
+    "cacheMiss": 0.15384615384615385
+  },
+  "date": {
+    "$date": "2025-04-07T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9895104895104895,
+    "nonZero": 0.01048951048951049
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 286,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f5b8f33c88b17ad952a80f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.77027027027027,
+    "remoteCacheHitMs": 1078.4,
+    "cacheMissMs": 105561.12
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.4900662251655629,
+    "remoteCacheHit": 0.033112582781456956,
+    "cacheMiss": 0.4768211920529801
+  },
+  "date": {
+    "$date": "2025-04-08T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8543046357615894,
+    "nonZero": 0.1456953642384106
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 151,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f5b8f33c88b17ad952a5ff"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 12.4,
+    "remoteCacheHitMs": 9995.454277286135,
+    "cacheMissMs": 259371.0588235294
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0125,
+    "remoteCacheHit": 0.8475,
+    "cacheMiss": 0.14
+  },
+  "date": {
+    "$date": "2025-04-08T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9875,
+    "nonZero": 0.0125
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 400,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f70a713c88b17ad9b130ea"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.79591836734694,
+    "remoteCacheHitMs": 1335,
+    "cacheMissMs": 92673.36144578313
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.43946188340807174,
+    "remoteCacheHit": 0.053811659192825115,
+    "cacheMiss": 0.5067264573991032
+  },
+  "date": {
+    "$date": "2025-04-09T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8654708520179372,
+    "nonZero": 0.13452914798206278
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 223,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f70a713c88b17ad9b13119"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 44.266666666666666,
+    "remoteCacheHitMs": 8522.723926380368,
+    "cacheMissMs": 266916.17647058825
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.034722222222222224,
+    "remoteCacheHit": 0.7546296296296297,
+    "cacheMiss": 0.21064814814814814
+  },
+  "date": {
+    "$date": "2025-04-09T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9861111111111112,
+    "nonZero": 0.013888888888888888
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 432,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f85c083c88b17ad92d7023"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.7,
+    "remoteCacheHitMs": 1476.3157894736842,
+    "cacheMissMs": 100758.52307692308
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5533596837944664,
+    "remoteCacheHit": 0.07509881422924901,
+    "cacheMiss": 0.3715415019762846
+  },
+  "date": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8853754940711462,
+    "nonZero": 0.11462450592885376
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 253,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f85c083c88b17ad92d7043"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15,
+    "remoteCacheHitMs": 10233.006211180124,
+    "cacheMissMs": 322007.99122807017
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.04956896551724138,
+    "remoteCacheHit": 0.6939655172413793,
+    "cacheMiss": 0.25646551724137934
+  },
+  "date": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9892241379310345,
+    "nonZero": 0.010775862068965518
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 464,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f9ad757a303781b6c42b26"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 19.5,
+    "remoteCacheHitMs": 6644.35,
+    "cacheMissMs": 148339.54166666666
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.47761194029850745,
+    "remoteCacheHit": 0.14925373134328357,
+    "cacheMiss": 0.373134328358209
+  },
+  "date": {
+    "$date": "2025-04-11T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9850746268656716,
+    "nonZero": 0.014925373134328358
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 134,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f9ad757a303781b6c42b10"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.571428571428573,
+    "remoteCacheHitMs": 8818.541176470588,
+    "cacheMissMs": 302584.1346153846
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.04183266932270916,
+    "remoteCacheHit": 0.6772908366533864,
+    "cacheMiss": 0.28087649402390436
+  },
+  "date": {
+    "$date": "2025-04-11T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9262948207171314,
+    "nonZero": 0.07370517928286853
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 502,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fafef07a303781b6f2f30f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 102,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 160255.0625
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.13636363636363635,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.8636363636363636
+  },
+  "date": {
+    "$date": "2025-04-12T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8636363636363636,
+    "nonZero": 0.13636363636363635
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 22,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fafef07a303781b6f2f328"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10.666666666666666,
+    "remoteCacheHitMs": 1439.5364238410596,
+    "cacheMissMs": 326624.6212121212
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.009868421052631578,
+    "remoteCacheHit": 0.4967105263157895,
+    "cacheMiss": 0.4934210526315789
+  },
+  "date": {
+    "$date": "2025-04-12T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.7236842105263158,
+    "nonZero": 0.27631578947368424
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 304,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fc507c7a303781b61e70aa"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.575757575757574,
+    "remoteCacheHitMs": 834,
+    "cacheMissMs": 153842.8125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.66,
+    "remoteCacheHit": 0.02,
+    "cacheMiss": 0.32
+  },
+  "date": {
+    "$date": "2025-04-13T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 50,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fc507c7a303781b61e706d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15,
+    "remoteCacheHitMs": 6949.352564102564,
+    "cacheMissMs": 329984.2419354839
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.00411522633744856,
+    "remoteCacheHit": 0.6419753086419753,
+    "cacheMiss": 0.35390946502057613
+  },
+  "date": {
+    "$date": "2025-04-13T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9012345679012346,
+    "nonZero": 0.09876543209876543
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 243,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fda1f87a303781b6616314"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.68217054263566,
+    "remoteCacheHitMs": 8987.5625,
+    "cacheMissMs": 107805.24444444444
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6615384615384615,
+    "remoteCacheHit": 0.08205128205128205,
+    "cacheMiss": 0.2564102564102564
+  },
+  "date": {
+    "$date": "2025-04-14T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9743589743589743,
+    "nonZero": 0.02564102564102564
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 195,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fda1f87a303781b6616460"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 8.25,
+    "remoteCacheHitMs": 11275.83173076923,
+    "cacheMissMs": 332327.8783783784
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.013422818791946308,
+    "remoteCacheHit": 0.697986577181208,
+    "cacheMiss": 0.28859060402684567
+  },
+  "date": {
+    "$date": "2025-04-14T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.959731543624161,
+    "nonZero": 0.040268456375838924
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 298,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fef3897a303781b6bf2632"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 23.43801652892562,
+    "remoteCacheHitMs": 1999.4736842105262,
+    "cacheMissMs": 178025.60606060605
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6836158192090396,
+    "remoteCacheHit": 0.10734463276836158,
+    "cacheMiss": 0.20903954802259886
+  },
+  "date": {
+    "$date": "2025-04-15T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9774011299435028,
+    "nonZero": 0.022598870056497175
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 177,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fef3897a303781b6bf273c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.142857142857143,
+    "remoteCacheHitMs": 9441.136363636364,
+    "cacheMissMs": 351034.0508474576
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.03888888888888889,
+    "remoteCacheHit": 0.7333333333333333,
+    "cacheMiss": 0.22777777777777777
+  },
+  "date": {
+    "$date": "2025-04-15T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8814814814814815,
+    "nonZero": 0.11851851851851852
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 540,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680044fd7a303781b6184b26"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 39.73394495412844,
+    "remoteCacheHitMs": 23153.666666666668,
+    "cacheMissMs": 194106.05263157896
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6055555555555555,
+    "remoteCacheHit": 0.08333333333333333,
+    "cacheMiss": 0.3111111111111111
+  },
+  "date": {
+    "$date": "2025-04-16T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9,
+    "nonZero": 0.1
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 180,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680044fd7a303781b6184bf5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 24.75,
+    "remoteCacheHitMs": 9098.574074074075,
+    "cacheMissMs": 375264.48333333334
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0076045627376425855,
+    "remoteCacheHit": 0.7186311787072244,
+    "cacheMiss": 0.2737642585551331
+  },
+  "date": {
+    "$date": "2025-04-16T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8403041825095057,
+    "nonZero": 0.1596958174904943
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 526,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680196817a303781b68cc49c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 39.888888888888886,
+    "remoteCacheHitMs": 21472.333333333332,
+    "cacheMissMs": 229239.5576923077
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5892857142857143,
+    "remoteCacheHit": 0.08928571428571429,
+    "cacheMiss": 0.32142857142857145
+  },
+  "date": {
+    "$date": "2025-04-17T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9880952380952381,
+    "nonZero": 0.011904761904761904
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 168,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680196817a303781b68cc27d"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 7.625,
+    "remoteCacheHitMs": 9205.45,
+    "cacheMissMs": 385423.81481481483
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.014492753623188406,
+    "remoteCacheHit": 0.7246376811594203,
+    "cacheMiss": 0.2608695652173913
+  },
+  "date": {
+    "$date": "2025-04-17T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8858695652173914,
+    "nonZero": 0.11413043478260869
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 552,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6802e8077a303781b6c2bbbb"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10,
+    "remoteCacheHitMs": 838,
+    "cacheMissMs": 275068.6
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.14285714285714285,
+    "remoteCacheHit": 0.14285714285714285,
+    "cacheMiss": 0.7142857142857143
+  },
+  "date": {
+    "$date": "2025-04-18T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 7,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6802e8077a303781b6c2ba45"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 45.6,
+    "cacheMissMs": 334598
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6666666666666666,
+    "cacheMiss": 0.3333333333333333
+  },
+  "date": {
+    "$date": "2025-04-18T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9,
+    "nonZero": 0.1
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 30,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6804397e7a303781b6f97812"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 33.666666666666664,
+    "remoteCacheHitMs": 2492,
+    "cacheMissMs": 188930.42857142858
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.41379310344827586,
+    "remoteCacheHit": 0.06896551724137931,
+    "cacheMiss": 0.5172413793103449
+  },
+  "date": {
+    "$date": "2025-04-19T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9655172413793104,
+    "nonZero": 0.034482758620689655
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 29,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6804397e7a303781b6f977e5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 99.14285714285714,
+    "cacheMissMs": 400914.3333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.6176470588235294,
+    "cacheMiss": 0.38235294117647056
+  },
+  "date": {
+    "$date": "2025-04-19T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9705882352941176,
+    "nonZero": 0.029411764705882353
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 34,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68058af77a303781b62fd2b4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 13.5,
+    "remoteCacheHitMs": 1470,
+    "cacheMissMs": 298029.3333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6666666666666666,
+    "remoteCacheHit": 0.047619047619047616,
+    "cacheMiss": 0.2857142857142857
+  },
+  "date": {
+    "$date": "2025-04-20T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 21,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68058af77a303781b62fd20b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 26.20689655172414,
+    "cacheMissMs": 329154.14285714284
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8055555555555556,
+    "cacheMiss": 0.19444444444444445
+  },
+  "date": {
+    "$date": "2025-04-20T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 36,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6806dc6dc4c775219ec3c9a5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 14.761904761904763,
+    "remoteCacheHitMs": 3154,
+    "cacheMissMs": 263065.2
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7777777777777778,
+    "remoteCacheHit": 0.037037037037037035,
+    "cacheMiss": 0.18518518518518517
+  },
+  "date": {
+    "$date": "2025-04-21T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 27,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6806dc6dc4c775219ec3ca27"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 28.135135135135137,
+    "cacheMissMs": 420345.3333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8604651162790697,
+    "cacheMiss": 0.13953488372093023
+  },
+  "date": {
+    "$date": "2025-04-21T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 43,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68082decc4c775219e2cdb68"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 20.655913978494624,
+    "remoteCacheHitMs": 15204.181818181818,
+    "cacheMissMs": 203050.525
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6078431372549019,
+    "remoteCacheHit": 0.0718954248366013,
+    "cacheMiss": 0.3202614379084967
+  },
+  "date": {
+    "$date": "2025-04-22T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9411764705882353,
+    "nonZero": 0.058823529411764705
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 153,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68082decc4c775219e2cd8db"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10.6,
+    "remoteCacheHitMs": 11458.055084745763,
+    "cacheMissMs": 330603.4090909091
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.017543859649122806,
+    "remoteCacheHit": 0.8280701754385965,
+    "cacheMiss": 0.1543859649122807
+  },
+  "date": {
+    "$date": "2025-04-22T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 285,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68097f71c4c775219ed15a32"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.78181818181818,
+    "remoteCacheHitMs": 8370.272727272728,
+    "cacheMissMs": 117107.97619047618
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5851063829787234,
+    "remoteCacheHit": 0.11702127659574468,
+    "cacheMiss": 0.2978723404255319
+  },
+  "date": {
+    "$date": "2025-04-23T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.925531914893617,
+    "nonZero": 0.07446808510638298
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 188,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68097f71c4c775219ed15974"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 58.7,
+    "remoteCacheHitMs": 14690.335282651073,
+    "cacheMissMs": 344158.51851851854
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.016611295681063124,
+    "remoteCacheHit": 0.8521594684385382,
+    "cacheMiss": 0.13122923588039867
+  },
+  "date": {
+    "$date": "2025-04-23T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9584717607973422,
+    "nonZero": 0.04152823920265781
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 602,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680ad115c4c775219e630fe2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 45.18421052631579,
+    "remoteCacheHitMs": 25600.75,
+    "cacheMissMs": 135284.05128205128
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5891472868217055,
+    "remoteCacheHit": 0.031007751937984496,
+    "cacheMiss": 0.3798449612403101
+  },
+  "date": {
+    "$date": "2025-04-24T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9224806201550387,
+    "nonZero": 0.07751937984496124
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 129,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680ad115c4c775219e630ed7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11.333333333333334,
+    "remoteCacheHitMs": 16613.85714285714,
+    "cacheMissMs": 316727.6666666667
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006696428571428571,
+    "remoteCacheHit": 0.90625,
+    "cacheMiss": 0.08705357142857142
+  },
+  "date": {
+    "$date": "2025-04-24T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9732142857142857,
+    "nonZero": 0.026785714285714284
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 448,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680c2279c4c775219e1c2db0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 77.00990099009901,
+    "remoteCacheHitMs": 11825,
+    "cacheMissMs": 123129.03225806452
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5024875621890548,
+    "remoteCacheHit": 0.07960199004975124,
+    "cacheMiss": 0.417910447761194
+  },
+  "date": {
+    "$date": "2025-04-25T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8905472636815921,
+    "nonZero": 0.10945273631840796
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 201,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680c2279c4c775219e1c2ef2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 10.333333333333334,
+    "remoteCacheHitMs": 23759.27311827957,
+    "cacheMissMs": 303544.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.016981132075471698,
+    "remoteCacheHit": 0.8773584905660378,
+    "cacheMiss": 0.10566037735849057
+  },
+  "date": {
+    "$date": "2025-04-25T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 530,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680d73fcc4c775219e69c8a9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 31.5,
+    "remoteCacheHitMs": 1532.3333333333333,
+    "cacheMissMs": 159153.72727272726
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5714285714285714,
+    "remoteCacheHit": 0.07142857142857142,
+    "cacheMiss": 0.35714285714285715
+  },
+  "date": {
+    "$date": "2025-04-26T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9047619047619048,
+    "nonZero": 0.09523809523809523
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 42,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680d73fcc4c775219e69c816"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 15.666666666666666,
+    "remoteCacheHitMs": 15306.828767123288,
+    "cacheMissMs": 285352.4
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.018867924528301886,
+    "remoteCacheHit": 0.9182389937106918,
+    "cacheMiss": 0.06289308176100629
+  },
+  "date": {
+    "$date": "2025-04-26T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 159,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680ec577c4c775219e9044ea"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 18.692307692307693,
+    "remoteCacheHitMs": 2257.5,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8666666666666667,
+    "remoteCacheHit": 0.13333333333333333,
+    "cacheMiss": 0
+  },
+  "date": {
+    "$date": "2025-04-27T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 15,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "680ec577c4c775219e904575"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 1,
+    "cacheMiss": 0
+  },
+  "date": {
+    "$date": "2025-04-27T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 14,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68101703c4c775219ef869d2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 25.17142857142857,
+    "remoteCacheHitMs": 5174.95,
+    "cacheMissMs": 181596.4
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6774193548387096,
+    "remoteCacheHit": 0.12903225806451613,
+    "cacheMiss": 0.1935483870967742
+  },
+  "date": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.967741935483871,
+    "nonZero": 0.03225806451612903
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 155,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68101703c4c775219ef868e4"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11.6,
+    "remoteCacheHitMs": 17984.22131147541,
+    "cacheMissMs": 344996.7272727273
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01845018450184502,
+    "remoteCacheHit": 0.9003690036900369,
+    "cacheMiss": 0.08118081180811808
+  },
+  "date": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 271,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68116872c4c775219eab50c1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.73394495412844,
+    "remoteCacheHitMs": 2317.6666666666665,
+    "cacheMissMs": 54757.48717948718
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.4308300395256917,
+    "remoteCacheHit": 0.03557312252964427,
+    "cacheMiss": 0.5335968379446641
+  },
+  "date": {
+    "$date": "2025-04-29T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9288537549407114,
+    "nonZero": 0.07114624505928854
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 253,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68116872c4c775219eab5256"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 28.727272727272727,
+    "remoteCacheHitMs": 17475.399071925753,
+    "cacheMissMs": 307153.3076923077
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.023504273504273504,
+    "remoteCacheHit": 0.9209401709401709,
+    "cacheMiss": 0.05555555555555555
+  },
+  "date": {
+    "$date": "2025-04-29T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 468,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6812b9f1c4c775219e4659ca"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 33.125,
+    "remoteCacheHitMs": 1476.4761904761904,
+    "cacheMissMs": 67030.61988304094
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.2829581993569132,
+    "remoteCacheHit": 0.06752411575562701,
+    "cacheMiss": 0.6495176848874598
+  },
+  "date": {
+    "$date": "2025-04-30T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9003215434083601,
+    "nonZero": 0.09967845659163987
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 311,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6812b9f1c4c775219e46582c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 53.4054054054054,
+    "remoteCacheHitMs": 18931.790087463556,
+    "cacheMissMs": 303754.64864864864
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.08008658008658008,
+    "remoteCacheHit": 0.7424242424242424,
+    "cacheMiss": 0.1774891774891775
+  },
+  "date": {
+    "$date": "2025-04-30T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9826839826839827,
+    "nonZero": 0.017316017316017316
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 462,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68140b6cc4c775219eee6d14"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 27.756944444444443,
+    "remoteCacheHitMs": 7551.846153846154,
+    "cacheMissMs": 123684
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.46601941747572817,
+    "remoteCacheHit": 0.042071197411003236,
+    "cacheMiss": 0.4919093851132686
+  },
+  "date": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.7961165048543689,
+    "nonZero": 0.20388349514563106
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 309,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68140b6bc4c775219eee6b01"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 82.58823529411765,
+    "remoteCacheHitMs": 18658.611650485436,
+    "cacheMissMs": 306741.1818181818
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.028764805414551606,
+    "remoteCacheHit": 0.871404399323181,
+    "cacheMiss": 0.09983079526226735
+  },
+  "date": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9932318104906938,
+    "nonZero": 0.00676818950930626
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 591,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68155d00c4c775219ebea5ff"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17.38679245283019,
+    "remoteCacheHitMs": 14098.857142857143,
+    "cacheMissMs": 178318.4805194805
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.53,
+    "remoteCacheHit": 0.035,
+    "cacheMiss": 0.435
+  },
+  "date": {
+    "$date": "2025-05-02T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.95,
+    "nonZero": 0.05
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 200,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68155d00c4c775219ebea73a"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 55.666666666666664,
+    "remoteCacheHitMs": 18276.23293768546,
+    "cacheMissMs": 322557.03658536583
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.003926701570680628,
+    "remoteCacheHit": 0.8821989528795812,
+    "cacheMiss": 0.11387434554973822
+  },
+  "date": {
+    "$date": "2025-05-02T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.993455497382199,
+    "nonZero": 0.006544502617801047
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 764,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6816ae68c4c775219ef67044"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 39.375,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 328844.4166666667
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5714285714285714,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.42857142857142855
+  },
+  "date": {
+    "$date": "2025-05-03T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 28,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6816ae68c4c775219ef66f75"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 8332.506976744186,
+    "cacheMissMs": 352983.72222222225
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.9188034188034188,
+    "cacheMiss": 0.0811965811965812
+  },
+  "date": {
+    "$date": "2025-05-03T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9957264957264957,
+    "nonZero": 0.004273504273504274
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 234,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6817ffe5c4c775219e19cdac"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 1115.9236641221373,
+    "cacheMissMs": 228958.8
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.9632352941176471,
+    "cacheMiss": 0.03676470588235294
+  },
+  "date": {
+    "$date": "2025-05-04T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 136,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68195180848d51aa4e3a1ef0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.54054054054054,
+    "remoteCacheHitMs": 1752.2,
+    "cacheMissMs": 97410.70731707317
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.34579439252336447,
+    "remoteCacheHit": 0.09345794392523364,
+    "cacheMiss": 0.5607476635514018
+  },
+  "date": {
+    "$date": "2025-05-05T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.822429906542056,
+    "nonZero": 0.17757009345794392
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 107,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68195180848d51aa4e3a1f54"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 81,
+    "remoteCacheHitMs": 12101.58934169279,
+    "cacheMissMs": 262870.1515151515
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.002824858757062147,
+    "remoteCacheHit": 0.9011299435028248,
+    "cacheMiss": 0.096045197740113
+  },
+  "date": {
+    "$date": "2025-05-05T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9971751412429378,
+    "nonZero": 0.002824858757062147
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 354,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681aa2f2848d51aa4e9f9383"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 72.48965517241379,
+    "remoteCacheHitMs": 1845.3333333333333,
+    "cacheMissMs": 102593.42647058824
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5311355311355311,
+    "remoteCacheHit": 0.02197802197802198,
+    "cacheMiss": 0.4468864468864469
+  },
+  "date": {
+    "$date": "2025-05-06T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8021978021978022,
+    "nonZero": 0.1978021978021978
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 273,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681aa2f2848d51aa4e9f93d0"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 66.125,
+    "remoteCacheHitMs": 9452.903100775195,
+    "cacheMissMs": 310305.64864864864
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.021505376344086023,
+    "remoteCacheHit": 0.6935483870967742,
+    "cacheMiss": 0.2849462365591398
+  },
+  "date": {
+    "$date": "2025-05-06T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8145161290322581,
+    "nonZero": 0.18548387096774194
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 372,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681bf47970885f8f83317837"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 31.68702290076336,
+    "remoteCacheHitMs": 15271.727272727272,
+    "cacheMissMs": 179114.0909090909
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6064814814814815,
+    "remoteCacheHit": 0.05092592592592592,
+    "cacheMiss": 0.3425925925925926
+  },
+  "date": {
+    "$date": "2025-05-07T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9629629629629629,
+    "nonZero": 0.037037037037037035
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 216,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681bf47970885f8f83317971"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 78,
+    "remoteCacheHitMs": 17360.8345323741,
+    "cacheMissMs": 336534.6
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0110803324099723,
+    "remoteCacheHit": 0.7700831024930748,
+    "cacheMiss": 0.2188365650969529
+  },
+  "date": {
+    "$date": "2025-05-07T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9335180055401662,
+    "nonZero": 0.0664819944598338
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 361,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d45f5a1aaacc22fed04c8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 46.732142857142854,
+    "remoteCacheHitMs": 1610.2307692307693,
+    "cacheMissMs": 154026.70454545456
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.4827586206896552,
+    "remoteCacheHit": 0.11206896551724138,
+    "cacheMiss": 0.4051724137931034
+  },
+  "date": {
+    "$date": "2025-05-08T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9741379310344828,
+    "nonZero": 0.02586206896551724
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 116,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d45f5a1aaacc22fed06d1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 74,
+    "remoteCacheHitMs": 7652.838779956427,
+    "cacheMissMs": 346217.1489361702
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.006587615283267457,
+    "remoteCacheHit": 0.6047430830039525,
+    "cacheMiss": 0.38866930171277997
+  },
+  "date": {
+    "$date": "2025-05-08T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.6732542819499341,
+    "nonZero": 0.32674571805006586
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 759,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681e9780a1aaacc22f51f6e8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 94.70491803278688,
+    "remoteCacheHitMs": 1133.3,
+    "cacheMissMs": 170509.09523809524
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.48031496062992124,
+    "remoteCacheHit": 0.07874015748031496,
+    "cacheMiss": 0.4409448818897638
+  },
+  "date": {
+    "$date": "2025-05-09T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.889763779527559,
+    "nonZero": 0.11023622047244094
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 127,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681e9780a1aaacc22f51f44c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 53.09090909090909,
+    "remoteCacheHitMs": 7024.04158004158,
+    "cacheMissMs": 312246.39130434784
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01950354609929078,
+    "remoteCacheHit": 0.8528368794326241,
+    "cacheMiss": 0.1276595744680851
+  },
+  "date": {
+    "$date": "2025-05-09T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9539007092198581,
+    "nonZero": 0.04609929078014184
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 564,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681fe8ffa1aaacc22f7e041c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 11,
+    "remoteCacheHitMs": 3061,
+    "cacheMissMs": 177605
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.04,
+    "remoteCacheHit": 0.04,
+    "cacheMiss": 0.92
+  },
+  "date": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 25,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "681fe8ffa1aaacc22f7e048c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 61,
+    "remoteCacheHitMs": 101.42105263157895,
+    "cacheMissMs": 345092.8
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.04878048780487805,
+    "remoteCacheHit": 0.4634146341463415,
+    "cacheMiss": 0.4878048780487805
+  },
+  "date": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 41,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68213a8ea1aaacc22fa0b421"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 354774.6666666667
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0,
+    "cacheMiss": 1
+  },
+  "date": {
+    "$date": "2025-05-11T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.75,
+    "nonZero": 0.25
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 4,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68213a8ea1aaacc22fa0b424"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 362324.6666666667
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.625,
+    "cacheMiss": 0.375
+  },
+  "date": {
+    "$date": "2025-05-11T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8125,
+    "nonZero": 0.1875
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 16,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68228c03a1efed7ad2982c1f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 81.83636363636364,
+    "remoteCacheHitMs": 9882.157894736842,
+    "cacheMissMs": 105499.83333333333
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.4489795918367347,
+    "remoteCacheHit": 0.07755102040816327,
+    "cacheMiss": 0.47346938775510206
+  },
+  "date": {
+    "$date": "2025-05-12T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8448979591836735,
+    "nonZero": 0.15510204081632653
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 245,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68228c03a1efed7ad2982ecd"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 54.5,
+    "remoteCacheHitMs": 6196.531694695989,
+    "cacheMissMs": 334518.125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0024183796856106408,
+    "remoteCacheHit": 0.9347037484885127,
+    "cacheMiss": 0.06287787182587666
+  },
+  "date": {
+    "$date": "2025-05-12T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9854897218863361,
+    "nonZero": 0.014510278113663845
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 827,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6823dd7ea1efed7ad2236d2b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 36.32972972972973,
+    "remoteCacheHitMs": 1780.375,
+    "cacheMissMs": 188187.125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6401384083044983,
+    "remoteCacheHit": 0.02768166089965398,
+    "cacheMiss": 0.33217993079584773
+  },
+  "date": {
+    "$date": "2025-05-13T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9446366782006921,
+    "nonZero": 0.05536332179930796
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 289,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6823dd7ea1efed7ad223702b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 94.88235294117646,
+    "remoteCacheHitMs": 10012.429906542056,
+    "cacheMissMs": 339418.61971830984
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.027156549520766772,
+    "remoteCacheHit": 0.854632587859425,
+    "cacheMiss": 0.1182108626198083
+  },
+  "date": {
+    "$date": "2025-05-13T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9952076677316294,
+    "nonZero": 0.004792332268370607
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 626,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68252efed684fdfd3be5f9e2"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 33.97014925373134,
+    "remoteCacheHitMs": 3421.222222222222,
+    "cacheMissMs": 214870.45238095237
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5153846153846153,
+    "remoteCacheHit": 0.06923076923076923,
+    "cacheMiss": 0.4153846153846154
+  },
+  "date": {
+    "$date": "2025-05-14T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9076923076923077,
+    "nonZero": 0.09230769230769231
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 130,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68252efed684fdfd3be5fa93"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 96.8,
+    "remoteCacheHitMs": 12766.35046728972,
+    "cacheMissMs": 353186.3125
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01037344398340249,
+    "remoteCacheHit": 0.8879668049792531,
+    "cacheMiss": 0.1016597510373444
+  },
+  "date": {
+    "$date": "2025-05-14T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9979253112033195,
+    "nonZero": 0.002074688796680498
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 482,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6826808ad684fdfd3b574e40"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 38.51428571428571,
+    "remoteCacheHitMs": 1838.8,
+    "cacheMissMs": 160114.54545454544
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6481481481481481,
+    "remoteCacheHit": 0.030864197530864196,
+    "cacheMiss": 0.32098765432098764
+  },
+  "date": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8827160493827161,
+    "nonZero": 0.11728395061728394
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 162,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6826808ad684fdfd3b574d61"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 65,
+    "remoteCacheHitMs": 20765.878048780487,
+    "cacheMissMs": 345622.3461538461
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0205761316872428,
+    "remoteCacheHit": 0.8436213991769548,
+    "cacheMiss": 0.13580246913580246
+  },
+  "date": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9711934156378601,
+    "nonZero": 0.02880658436213992
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 243,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827d213d684fdfd3bc21e11"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 143.23275862068965,
+    "remoteCacheHitMs": 8917.285714285714,
+    "cacheMissMs": 225055.09523809524
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7483870967741936,
+    "remoteCacheHit": 0.09032258064516129,
+    "cacheMiss": 0.16129032258064516
+  },
+  "date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9612903225806452,
+    "nonZero": 0.03870967741935484
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 155,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827d213d684fdfd3bc21acc"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 69,
+    "remoteCacheHitMs": 18578.015584415585,
+    "cacheMissMs": 357757.1
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0024630541871921183,
+    "remoteCacheHit": 0.9482758620689655,
+    "cacheMiss": 0.04926108374384237
+  },
+  "date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 406,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68292394d684fdfd3b004a94"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 16.46875,
+    "remoteCacheHitMs": 4170.111111111111,
+    "cacheMissMs": 322292.1111111111
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.64,
+    "remoteCacheHit": 0.18,
+    "cacheMiss": 0.18
+  },
+  "date": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 50,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68292394d684fdfd3b004ae5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 90.33333333333333,
+    "remoteCacheHitMs": 15310.146341463415,
+    "cacheMissMs": 395991.0714285714
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.016483516483516484,
+    "remoteCacheHit": 0.22527472527472528,
+    "cacheMiss": 0.7582417582417582
+  },
+  "date": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.31868131868131866,
+    "nonZero": 0.6813186813186813
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 182,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682a750bd684fdfd3b262e8f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 30,
+    "remoteCacheHitMs": 2104,
+    "cacheMissMs": 105960
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.14285714285714285,
+    "remoteCacheHit": 0.14285714285714285,
+    "cacheMiss": 0.7142857142857143
+  },
+  "date": {
+    "$date": "2025-05-18T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.42857142857142855,
+    "nonZero": 0.5714285714285714
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 7,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682a750bd684fdfd3b262e12"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.09467455621301775,
+    "cacheMiss": 0.9053254437869822
+  },
+  "date": {
+    "$date": "2025-05-18T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.09467455621301775,
+    "nonZero": 0.9053254437869822
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 169,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682bc67a0b31df629a0533b8"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 26.14864864864865,
+    "remoteCacheHitMs": 2249.3333333333335,
+    "cacheMissMs": 44282.066666666666
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6548672566371682,
+    "remoteCacheHit": 0.07964601769911504,
+    "cacheMiss": 0.26548672566371684
+  },
+  "date": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8672566371681416,
+    "nonZero": 0.13274336283185842
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 113,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682bc67a0b31df629a05327f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 26893.91304347826,
+    "cacheMissMs": 168457.5
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.14838709677419354,
+    "cacheMiss": 0.8516129032258064
+  },
+  "date": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.16129032258064516,
+    "nonZero": 0.8387096774193549
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 155,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d18000b31df629a469cb5"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 33.774193548387096,
+    "remoteCacheHitMs": 5011.2,
+    "cacheMissMs": 264964.2727272727
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6739130434782609,
+    "remoteCacheHit": 0.05434782608695652,
+    "cacheMiss": 0.2717391304347826
+  },
+  "date": {
+    "$date": "2025-05-20T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.967391304347826,
+    "nonZero": 0.03260869565217391
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 92,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d18000b31df629a469b63"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 9863.494382022473,
+    "cacheMissMs": 378934.2
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.4635416666666667,
+    "cacheMiss": 0.5364583333333334
+  },
+  "date": {
+    "$date": "2025-05-20T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.59375,
+    "nonZero": 0.40625
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 192,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e69762ea7f42cdb8ede15"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 36.74193548387097,
+    "remoteCacheHitMs": 2123.5454545454545,
+    "cacheMissMs": 265173.4117647059
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6642857142857143,
+    "remoteCacheHit": 0.07857142857142857,
+    "cacheMiss": 0.2571428571428571
+  },
+  "date": {
+    "$date": "2025-05-21T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.8642857142857143,
+    "nonZero": 0.1357142857142857
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 140,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e69762ea7f42cdb8edff9"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 87.5,
+    "remoteCacheHitMs": 7652.12084592145,
+    "cacheMissMs": 385487.875
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0056022408963585435,
+    "remoteCacheHit": 0.927170868347339,
+    "cacheMiss": 0.06722689075630252
+  },
+  "date": {
+    "$date": "2025-05-21T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 357,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682fbaec2ea7f42cdbeff735"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 51.318627450980394,
+    "remoteCacheHitMs": 1869,
+    "cacheMissMs": 151775.72222222222
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8571428571428571,
+    "remoteCacheHit": 0.06722689075630252,
+    "cacheMiss": 0.07563025210084033
+  },
+  "date": {
+    "$date": "2025-05-22T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 238,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "682fbaec2ea7f42cdbeff6fb"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 72,
+    "remoteCacheHitMs": 14326.952898550724,
+    "cacheMissMs": 361932
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0034965034965034965,
+    "remoteCacheHit": 0.965034965034965,
+    "cacheMiss": 0.03146853146853147
+  },
+  "date": {
+    "$date": "2025-05-22T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 286,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68310c6f2ea7f42cdb4c53c7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 46.43065693430657,
+    "remoteCacheHitMs": 2533,
+    "cacheMissMs": 99540.95454545454
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6989795918367347,
+    "remoteCacheHit": 0.025510204081632654,
+    "cacheMiss": 0.2755102040816326
+  },
+  "date": {
+    "$date": "2025-05-23T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9489795918367347,
+    "nonZero": 0.05102040816326531
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 196,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68310c702ea7f42cdb4c558f"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 61.2,
+    "remoteCacheHitMs": 9443.809392265193,
+    "cacheMissMs": 341829.6923076923
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.01272264631043257,
+    "remoteCacheHit": 0.9211195928753181,
+    "cacheMiss": 0.06615776081424936
+  },
+  "date": {
+    "$date": "2025-05-23T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 393,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68325e002ea7f42cdb7e027b"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 49.9010989010989,
+    "remoteCacheHitMs": 2100,
+    "cacheMissMs": 226288.33333333334
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7982456140350878,
+    "remoteCacheHit": 0.02631578947368421,
+    "cacheMiss": 0.17543859649122806
+  },
+  "date": {
+    "$date": "2025-05-24T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.956140350877193,
+    "nonZero": 0.043859649122807015
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 114,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68325e002ea7f42cdb7e0219"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 44,
+    "remoteCacheHitMs": 13158.764705882353,
+    "cacheMissMs": 368771.4375
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.028985507246376812,
+    "remoteCacheHit": 0.7391304347826086,
+    "cacheMiss": 0.2318840579710145
+  },
+  "date": {
+    "$date": "2025-05-24T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 69,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6833af7c2ea7f42cdba0ecd7"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 17.5,
+    "remoteCacheHitMs": 0,
+    "cacheMissMs": 80629
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.5,
+    "remoteCacheHit": 0,
+    "cacheMiss": 0.5
+  },
+  "date": {
+    "$date": "2025-05-25T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 4,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6833af7c2ea7f42cdba0ee73"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 51.92,
+    "cacheMissMs": 0
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 1,
+    "cacheMiss": 0
+  },
+  "date": {
+    "$date": "2025-05-25T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 25,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "683500ecf9de6f4ea7d98ef1"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 37.853658536585364,
+    "remoteCacheHitMs": 954,
+    "cacheMissMs": 241524.85714285713
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.6456692913385826,
+    "remoteCacheHit": 0.007874015748031496,
+    "cacheMiss": 0.3464566929133858
+  },
+  "date": {
+    "$date": "2025-05-26T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9291338582677166,
+    "nonZero": 0.07086614173228346
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 127,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "683500ecf9de6f4ea7d98f18"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 0,
+    "remoteCacheHitMs": 22308.784090909092,
+    "cacheMissMs": 382039.57575757575
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0,
+    "remoteCacheHit": 0.8421052631578947,
+    "cacheMiss": 0.15789473684210525
+  },
+  "date": {
+    "$date": "2025-05-26T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 209,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68365277a03770ccb1ae9e6c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 21.944,
+    "remoteCacheHitMs": 878,
+    "cacheMissMs": 168930.4347826087
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.8278145695364238,
+    "remoteCacheHit": 0.006622516556291391,
+    "cacheMiss": 0.16556291390728478
+  },
+  "date": {
+    "$date": "2025-05-27T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9867549668874173,
+    "nonZero": 0.013245033112582781
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 151,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "68365277a03770ccb1ae9f0c"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 91,
+    "remoteCacheHitMs": 9181.55806451613,
+    "cacheMissMs": 392436.652173913
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.0029585798816568047,
+    "remoteCacheHit": 0.9171597633136095,
+    "cacheMiss": 0.07988165680473373
+  },
+  "date": {
+    "$date": "2025-05-27T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9881656804733728,
+    "nonZero": 0.011834319526627219
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 338,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6837a4009c03251dd1f3d504"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 32.25,
+    "remoteCacheHitMs": 1694,
+    "cacheMissMs": 155492.13636363635
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.7559055118110236,
+    "remoteCacheHit": 0.015748031496062992,
+    "cacheMiss": 0.2283464566929134
+  },
+  "date": {
+    "$date": "2025-05-28T00:00:00.000Z"
+  },
+  "isCI": false,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 0.9448818897637795,
+    "nonZero": 0.05511811023622047
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 127,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+},
+{
+  "_id": {
+    "$oid": "6837a4009c03251dd1f3d38e"
+  },
+  "averageDuration": {
+    "localCacheHitMs": 85,
+    "remoteCacheHitMs": 9570.971111111112,
+    "cacheMissMs": 361018
+  },
+  "cacheStatusRatio": {
+    "localCacheHit": 0.004228329809725159,
+    "remoteCacheHit": 0.9513742071881607,
+    "cacheMiss": 0.04439746300211417
+  },
+  "date": {
+    "$date": "2025-05-28T00:00:00.000Z"
+  },
+  "isCI": true,
+  "projectName": "nx",
+  "statusCodeRatio": {
+    "zero": 1,
+    "nonZero": 0
+  },
+  "target": "build-native",
+  "targetGroupName": null,
+  "totalCount": 473,
+  "workspaceId": {
+    "$oid": "62d013ea0852fe0a2df74438"
+  }
+}]
