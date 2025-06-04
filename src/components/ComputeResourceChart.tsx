@@ -1,112 +1,98 @@
-import React, { useState } from 'react';
-import { format, addMonths, isSameMonth } from 'date-fns';
+import React, { useState, useMemo } from 'react';
+import { format, addMonths } from 'date-fns';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 import {
   DataItem,
+  IncrementalDataItem,
+  TooltipProps,
   calculateComputeIncrements,
   getUniqueWorkspaceIds,
-  getUniqueResourceClasses
+  getUniqueResourceClasses,
+  filterByDateRange,
+  createComputeBarChartData,
+  calculateComputeSummary,
+  getWorkspaceColorShades,
+  RESOURCE_COLORS
 } from '../utils/chartUtils';
 
 interface ComputeResourceChartProps {
   data: DataItem[];
+  // Optional pre-processed data for server-side rendering
+  incrementalData?: IncrementalDataItem[];
 }
 
-export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
-  const [currentDate, setCurrentDate] = useState(() => {
-    // Initialize with UTC date from first data point
-    return new UTCDate(data[0].date)
-  });
-  
+// Custom tooltip component
+const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
+  if (active && payload && payload.length) {
+    const totalCredits = payload.reduce((sum: number, entry) => sum + entry.value, 0);
+    
+    return (
+      <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
+        <p className="font-medium text-gray-900 mb-2">{label}</p>
+        <p className="text-sm text-gray-600 mb-2">Total: {totalCredits} credits</p>
+        {payload
+          .filter((entry) => entry.value > 0)
+          .map((entry, index: number) => (
+            <p key={index} className="text-sm" style={{ color: entry.color }}>
+              {entry.name}: {entry.value} credits
+            </p>
+          ))}
+      </div>
+    );
+  }
+  return null;
+};
+
+export function ComputeResourceChart({ 
+  data, 
+  incrementalData: providedIncrementalData 
+}: ComputeResourceChartProps) {
+  // Initialize state
+  const [currentDate, setCurrentDate] = useState(() => new UTCDate(data[0]?.date || new Date()));
   const [viewMode, setViewMode] = useState<'per-workspace' | 'all-workspaces'>('per-workspace');
 
-  // Get incremental data
-  const incrementalData = calculateComputeIncrements(data);
+  // Use provided incremental data or calculate it
+  const incrementalData = useMemo(
+    () => providedIncrementalData || calculateComputeIncrements(data),
+    [data, providedIncrementalData]
+  );
 
-  const filteredData = incrementalData.filter(item => {
-    const itemDate = new UTCDate(item.date);
-    return isSameMonth(itemDate, currentDate)
-  });
+  // Filter data for current month
+  const monthlyData = useMemo(() => {
+    const startOfMonth = new UTCDate(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), 1);
+    const endOfMonth = new UTCDate(currentDate.getUTCFullYear(), currentDate.getUTCMonth() + 1, 0);
+    return filterByDateRange(startOfMonth, endOfMonth)(incrementalData);
+  }, [incrementalData, currentDate]);
 
-  // Get unique workspace IDs and resource classes
-  const workspaceIds = getUniqueWorkspaceIds(filteredData);
-  const resourceClasses = getUniqueResourceClasses(filteredData);
+  // Get unique identifiers
+  const workspaceIds = useMemo(() => getUniqueWorkspaceIds(monthlyData), [monthlyData]);
+  const resourceClasses = useMemo(() => getUniqueResourceClasses(monthlyData), [monthlyData]);
   
-  // Get unique dates and sort them
-  const uniqueDates = [...new Set(filteredData.map(item => item.date))].sort();
-  
-  // Create formatted data based on view mode
-  const formattedData = uniqueDates.map(date => {
-    const dataPoint: any = {
-      date: format(new UTCDate(date), 'MMM dd'),
-    };
-    
-    const dayEntries = filteredData.filter(item => item.date === date);
-    
-    if (viewMode === 'per-workspace') {
-      // Initialize all workspace-resource combinations to 0
-      workspaceIds.forEach(workspaceId => {
-        resourceClasses.forEach(resourceClass => {
-          const key = `${workspaceId}-${resourceClass}`;
-          dataPoint[key] = 0;
-        });
-      });
-      
-      // Add actual data for workspace-resource combinations
-      dayEntries.forEach(entry => {
-        entry.compute.forEach(compute => {
-          const key = `${entry.workspaceId}-${compute.resourceClass}`;
-          dataPoint[key] = compute.credits;
-        });
-      });
-    } else {
-      // All workspaces combined - group by resource class only
-      resourceClasses.forEach(resourceClass => {
-        dataPoint[resourceClass] = 0;
-      });
-      
-      // Sum credits across all workspaces for each resource class
-      dayEntries.forEach(entry => {
-        entry.compute.forEach(compute => {
-          dataPoint[compute.resourceClass] = (dataPoint[compute.resourceClass] || 0) + compute.credits;
-        });
-      });
-    }
-    
-    return dataPoint;
-  });
+  // Create chart data
+  const barChartData = useMemo(
+    () => createComputeBarChartData(viewMode, workspaceIds, resourceClasses)(monthlyData),
+    [monthlyData, viewMode, workspaceIds, resourceClasses]
+  );
 
-  // Define colors for workspace-resource combinations
-  const workspaceColors = {
-    [workspaceIds[0] || 'default']: ['#3b82f6', '#1d4ed8', '#1e3a8a', '#172554'], // Blue shades
-    [workspaceIds[1] || 'default']: ['#ef4444', '#dc2626', '#b91c1c', '#991b1b'], // Red shades
-    [workspaceIds[2] || 'default']: ['#10b981', '#059669', '#047857', '#065f46'], // Green shades
-  };
-
-  const handlePrevMonth = () => {
-    setCurrentDate(prev => addMonths(prev, -1));
-  };
-
-  const handleNextMonth = () => {
-    setCurrentDate(prev => addMonths(prev, 1));
-  };
+  // Calculate summary statistics
+  const summaryStats = useMemo(
+    () => calculateComputeSummary(monthlyData),
+    [monthlyData]
+  );
 
   // Create bars based on view mode
-  const createBars = () => {
-    const bars: any[] = [];
-    
+  const bars = useMemo(() => {
     if (viewMode === 'per-workspace') {
-      // Per workspace mode - existing logic
-      workspaceIds.forEach((workspaceId, workspaceIndex) => {
-        const colors = workspaceColors[workspaceId] || ['#6b7280', '#4b5563', '#374151', '#1f2937'];
+      return workspaceIds.flatMap((workspaceId) => {
+        const colors = getWorkspaceColorShades(workspaceId, workspaceIds);
         
-        resourceClasses.forEach((resourceClass, resourceIndex) => {
+        return resourceClasses.map((resourceClass, resourceIndex) => {
           const key = `${workspaceId}-${resourceClass}`;
           const displayName = `${workspaceId.slice(-4)} - ${resourceClass.split('/')[1]}`;
           
-          bars.push(
+          return (
             <Bar
               key={key}
               dataKey={key}
@@ -118,48 +104,24 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
         });
       });
     } else {
-      // All workspaces mode - stacked bars for resource classes
-      const resourceColors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4'];
-      
-      resourceClasses.forEach((resourceClass, index) => {
+      return resourceClasses.map((resourceClass, index) => {
         const displayName = resourceClass.split('/')[1] || resourceClass;
         
-        bars.push(
+        return (
           <Bar
             key={resourceClass}
             dataKey={resourceClass}
             stackId="resources"
             name={displayName}
-            fill={resourceColors[index % resourceColors.length]}
+            fill={RESOURCE_COLORS[index % RESOURCE_COLORS.length]}
           />
         );
       });
     }
-    
-    return bars;
-  };
+  }, [viewMode, workspaceIds, resourceClasses]);
 
-  // Custom tooltip to show better formatted data
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (active && payload && payload.length) {
-      const totalCredits = payload.reduce((sum: number, entry: any) => sum + entry.value, 0);
-      
-      return (
-        <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
-          <p className="font-medium text-gray-900 mb-2">{label}</p>
-          <p className="text-sm text-gray-600 mb-2">Total: {totalCredits} credits</p>
-          {payload
-            .filter((entry: any) => entry.value > 0)
-            .map((entry: any, index: number) => (
-              <p key={index} className="text-sm" style={{ color: entry.color }}>
-                {entry.name}: {entry.value} credits
-              </p>
-            ))}
-        </div>
-      );
-    }
-    return null;
-  };
+  const handlePrevMonth = () => setCurrentDate(prev => addMonths(prev, -1));
+  const handleNextMonth = () => setCurrentDate(prev => addMonths(prev, 1));
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
@@ -219,7 +181,7 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
       
       <div className="h-[500px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={formattedData}>
+          <BarChart data={barChartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis 
               dataKey="date" 
@@ -242,7 +204,7 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
                 return `${parts[0]} - ${parts[1]}`;
               }}
             />
-            {createBars()}
+            {bars}
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -252,11 +214,7 @@ export function ComputeResourceChart({ data }: ComputeResourceChartProps) {
         <h3 className="text-sm font-medium text-gray-700 mb-3">Monthly Summary</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {workspaceIds.map(workspaceId => {
-            const workspaceTotal = filteredData
-              .filter(item => item.workspaceId === workspaceId)
-              .reduce((sum, item) => 
-                sum + item.compute.reduce((computeSum, compute) => computeSum + compute.credits, 0), 0
-              );
+            const workspaceTotal = summaryStats[workspaceId] || 0;
             
             return (
               <div key={workspaceId} className="text-center">

@@ -1,66 +1,94 @@
-import React, { useState } from 'react';
-import { format, addMonths, isSameMonth } from 'date-fns';
+import React, { useState, useMemo } from 'react';
+import { format, addMonths } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 import {
   DataItem,
-  calculateDailyIncrements,
+  IncrementalDataItem,
+  HeatmapDayData,
+  calculateIncrements,
   createHeatmapData,
   createLineChartData,
   getColorIntensity,
   getUniqueWorkspaceIds,
-  WORKSPACE_COLORS,
+  filterByDateRange,
+  getWorkspaceColor,
   HEATMAP_COLORS
 } from '../utils/chartUtils';
 
 interface RunCountChartProps {
   data: DataItem[];
+  // Optional pre-processed data for server-side rendering
+  incrementalData?: IncrementalDataItem[];
+  heatmapData?: Record<number, ReturnType<typeof createHeatmapData>>;
 }
 
-export function RunCountChart({ data }: RunCountChartProps) {
-  const [currentDate, setCurrentDate] = useState(() => {
-    // Initialize with UTC date from first data point
-    return new UTCDate(data[0].date)
-  });
+// Helper function to format heatmap tooltip
+const formatHeatmapTooltip = (dayData: HeatmapDayData, metric: string): string => {
+  const dateStr = format(dayData.date, 'MMM dd, yyyy');
+  if (dayData.workspaceDetails.length === 0) {
+    return `${dateStr}: No ${metric}`;
+  }
   
-  const [currentYear, setCurrentYear] = useState(() => {
-    return new UTCDate(data[0].date).getUTCFullYear()
-  });
+  const workspaceLines = dayData.workspaceDetails
+    .map(detail => `Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} ${metric}`)
+    .join('\n');
+  
+  return `${dateStr}:\nTotal: ${dayData.value} ${metric}\n${workspaceLines}`;
+};
 
-  // Get incremental data
-  const incrementalData = calculateDailyIncrements(data, 'runCount');
+export function RunCountChart({ 
+  data, 
+  incrementalData: providedIncrementalData,
+  heatmapData: providedHeatmapData 
+}: RunCountChartProps) {
+  // Initialize state
+  const [currentDate, setCurrentDate] = useState(() => new UTCDate(data[0]?.date || new Date()));
+  const [currentYear, setCurrentYear] = useState(() => new UTCDate(data[0]?.date || new Date()).getUTCFullYear());
 
-  const filteredData = incrementalData.filter(item => {
-    const itemDate = new UTCDate(item.date);
-    return isSameMonth(itemDate, currentDate)
-  });
+  // Use provided incremental data or calculate it
+  const incrementalData = useMemo(
+    () => providedIncrementalData || calculateIncrements('runCount')(data),
+    [data, providedIncrementalData]
+  );
 
-  // Get unique workspace IDs and formatted data
-  const workspaceIds = getUniqueWorkspaceIds(filteredData);
-  const formattedData = createLineChartData(filteredData, 'runCount');
+  // Filter data for current month
+  const monthlyData = useMemo(() => {
+    const startOfMonth = new UTCDate(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), 1);
+    const endOfMonth = new UTCDate(currentDate.getUTCFullYear(), currentDate.getUTCMonth() + 1, 0);
+    return filterByDateRange(startOfMonth, endOfMonth)(incrementalData);
+  }, [incrementalData, currentDate]);
 
-  const handlePrevMonth = () => {
-    setCurrentDate(prev => addMonths(prev, -1));
-  };
+  // Get workspace IDs and prepare chart data
+  const workspaceIds = useMemo(() => getUniqueWorkspaceIds(monthlyData), [monthlyData]);
+  const lineChartData = useMemo(
+    () => createLineChartData('runCount', workspaceIds)(monthlyData),
+    [monthlyData, workspaceIds]
+  );
 
-  const handleNextMonth = () => {
-    setCurrentDate(prev => addMonths(prev, 1));
-  };
-
-  // Heatmap data processing
-  const weeksArray = createHeatmapData(incrementalData, currentYear, 'runCount');
+  // Use provided heatmap data or calculate it
+  const heatmapWeeks = useMemo(
+    () => providedHeatmapData?.[currentYear] || createHeatmapData(incrementalData, currentYear, 'runCount'),
+    [incrementalData, currentYear, providedHeatmapData]
+  );
   
   // Calculate max run count for color intensity
-  const maxRunCount = Math.max(...weeksArray.flat().filter(Boolean).map(day => day!.value), 1);
+  const maxRunCount = useMemo(
+    () => Math.max(
+      ...heatmapWeeks
+        .flat()
+        .filter((day): day is HeatmapDayData => day !== null)
+        .map(day => day.value),
+      1
+    ),
+    [heatmapWeeks]
+  );
 
-  const handlePrevYear = () => {
-    setCurrentYear(prev => prev - 1);
-  };
-
-  const handleNextYear = () => {
-    setCurrentYear(prev => prev + 1);
-  };
+  const handlePrevMonth = () => setCurrentDate(prev => addMonths(prev, -1));
+  const handleNextMonth = () => setCurrentDate(prev => addMonths(prev, 1));
+  const handlePrevYear = () => setCurrentYear(prev => prev - 1);
+  const handleNextYear = () => setCurrentYear(prev => prev + 1);
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
@@ -73,11 +101,11 @@ export function RunCountChart({ data }: RunCountChartProps) {
       
       {/* Legend */}
       <div className="mb-4 flex flex-wrap gap-4">
-        {workspaceIds.map((workspaceId, index) => (
+        {workspaceIds.map(workspaceId => (
           <div key={workspaceId} className="flex items-center gap-2">
             <div 
               className="w-3 h-3 rounded-full" 
-              style={{ backgroundColor: WORKSPACE_COLORS[index % WORKSPACE_COLORS.length] }}
+              style={{ backgroundColor: getWorkspaceColor(workspaceId, workspaceIds) }}
             />
             <span className="text-sm text-gray-600">
               Workspace {workspaceId.slice(-4)}
@@ -88,7 +116,7 @@ export function RunCountChart({ data }: RunCountChartProps) {
       
       <div className="h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={formattedData}>
+          <LineChart data={lineChartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis 
               dataKey="date" 
@@ -106,16 +134,19 @@ export function RunCountChart({ data }: RunCountChartProps) {
                 borderRadius: '0.375rem'
               }}
             />
-            {workspaceIds.map((workspaceId, index) => (
-              <Line 
-                key={workspaceId}
-                type="monotone" 
-                dataKey={workspaceId} 
-                stroke={WORKSPACE_COLORS[index % WORKSPACE_COLORS.length]} 
-                strokeWidth={2}
-                dot={{ fill: WORKSPACE_COLORS[index % WORKSPACE_COLORS.length], strokeWidth: 2 }}
-              />
-            ))}
+            {workspaceIds.map(workspaceId => {
+              const color = getWorkspaceColor(workspaceId, workspaceIds);
+              return (
+                <Line 
+                  key={workspaceId}
+                  type="monotone" 
+                  dataKey={workspaceId} 
+                  stroke={color} 
+                  strokeWidth={2}
+                  dot={{ fill: color, strokeWidth: 2 }}
+                />
+              );
+            })}
           </LineChart>
         </ResponsiveContainer>
       </div>
@@ -134,9 +165,9 @@ export function RunCountChart({ data }: RunCountChartProps) {
           <div className="inline-block">
             {/* Month labels */}
             <div className="flex mb-2 ml-8">
-              {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map((month, index) => (
+              {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map(month => (
                 <div key={month} className="text-xs text-gray-500 w-16 text-left">
-                  {index % 1 === 0 ? month : ''}
+                  {month}
                 </div>
               ))}
             </div>
@@ -156,34 +187,21 @@ export function RunCountChart({ data }: RunCountChartProps) {
 
               {/* Heatmap squares */}
               <div className="flex gap-1">
-                {weeksArray.map((week, weekIndex) => (
+                {heatmapWeeks.map((week, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-1">
                     {week.map((dayData, dayIndex) => {
                       if (!dayData) {
                         return <div key={dayIndex} className="w-3 h-3" />;
                       }
                       
-                      const intensity = getColorIntensity(dayData.value, maxRunCount);
-
-                      // Create detailed tooltip text
-                      const createTooltip = () => {
-                        const dateStr = format(dayData.date, 'MMM dd, yyyy');
-                        if (dayData.workspaceDetails.length === 0) {
-                          return `${dateStr}: No runs`;
-                        }
-                        
-                        const workspaceLines = dayData.workspaceDetails
-                          .map(detail => `Workspace ${detail.workspaceId.slice(-4)}: ${detail.value} runs`)
-                          .join('\n');
-                        
-                        return `${dateStr}:\nTotal: ${dayData.value} runs\n${workspaceLines}`;
-                      };
+                      const intensity = getColorIntensity(maxRunCount)(dayData.value);
+                      const tooltipText = formatHeatmapTooltip(dayData, 'runs');
                       
                       return (
                         <div
                           key={dayIndex}
                           className={`w-3 h-3 rounded-sm ${HEATMAP_COLORS.blue[intensity]} hover:ring-2 hover:ring-gray-400 cursor-pointer`}
-                          title={createTooltip()}
+                          title={tooltipText}
                         />
                       );
                     })}

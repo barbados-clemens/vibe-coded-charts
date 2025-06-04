@@ -29,17 +29,39 @@ This is a React/TypeScript visualization dashboard displaying analytics data thr
 - **Shared Utilities**: Common chart logic (data transformation, color schemes) centralized in chartUtils.ts
 - **No Routing/State Management**: Simple prop passing without Redux or React Router
 
-### Chart Types
-- **ExecutionCreditsChart**: Heatmap showing daily credit usage across workspaces
-- **RunCountChart**: Heatmap for daily run counts
-- **ComputeResourceChart**: Bar chart for compute resource usage by class
-- **ContributorChart**: Top contributors by run count
-- **MonthlySummaryChart**: Summary statistics for selected month
-- **DailyTimeSavedChart**: Line chart showing time savings over time
-- **TaskDurationAnalysisChart**: Analysis of task execution durations
+### Chart Components (Refactored for Server-Side Processing)
+All chart components now support optional pre-processed data for server-side rendering and use functional data processing utilities:
+
+- **ExecutionCreditsChart**: Heatmap + line chart showing daily credit usage across workspaces
+- **RunCountChart**: Heatmap + line chart for daily run counts  
+- **ComputeResourceChart**: Stacked bar chart for compute resource usage by class and workspace
+- **ContributorChart**: Bar chart showing top contributors by pipeline executions
+- **MonthlySummaryChart**: Pie charts showing execution vs compute usage breakdowns
+- **DailyTimeSavedChart**: Line chart with rolling averages for time savings analysis
+- **TaskDurationAnalysisChart**: Analysis of task execution durations and cache performance
+
+### Functional Data Processing Architecture
+The `src/utils/chartUtils.ts` file contains pure, composable utility functions for data transformations:
+
+- **Incremental Calculations**: `calculateIncrements()`, `calculateComputeIncrements()`
+- **Data Filtering**: `filterByDateRange()`, `filterByWorkspace()`
+- **Aggregations**: `sumBy()`, `averageBy()`, `groupBy()`, `sortBy()`
+- **Chart Transformations**: `createLineChartData()`, `createHeatmapData()`, `createComputeBarChartData()`
+- **Functional Utilities**: `pipe()`, `curry()`, `memoize()` for composition and performance
+- **Statistics**: `calculateWeightedAvgDuration()`, `calculateOverallCacheRate()`
+
+### Server-Side Friendly Design
+Components accept optional pre-processed data props, allowing expensive calculations to be performed server-side:
+```typescript
+<ExecutionCreditsChart 
+  data={rawData}
+  incrementalData={preProcessedIncrements}  // Optional server-side processing
+  heatmapData={preCalculatedHeatmaps}      // Optional server-side processing
+/>
+```
 
 ### Tech Stack
-- **React 18.3** with TypeScript 5.5
+- **React 18.3** with TypeScript 5.5 (strict typing, no `any` types)
 - **Vite** for build tooling
 - **Recharts** for data visualization
 - **Tailwind CSS** for styling

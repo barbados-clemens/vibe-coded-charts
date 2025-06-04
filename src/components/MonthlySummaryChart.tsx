@@ -5,7 +5,7 @@ import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 import {
   DataItem,
-  calculateDailyIncrements,
+  calculateIncrements,
   calculateComputeIncrements,
   getUniqueWorkspaceIds,
   getUniqueResourceClasses,
@@ -22,7 +22,7 @@ export function MonthlySummaryChart({ data }: MonthlySummaryChartProps) {
   });
 
   // Get incremental data for both execution credits and compute resources
-  const incrementalExecutionData = calculateDailyIncrements(data, 'executionCredits');
+  const incrementalExecutionData = calculateIncrements('executionCredits')(data);
   const incrementalComputeData = calculateComputeIncrements(data);
 
   // Filter data for current month
