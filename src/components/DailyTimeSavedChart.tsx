@@ -91,7 +91,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   };
 
   // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: any[]; label?: string }) => {
+  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string; dataKey: string }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (

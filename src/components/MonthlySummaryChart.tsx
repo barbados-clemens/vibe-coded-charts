@@ -83,7 +83,7 @@ export function MonthlySummaryChart({ data }: MonthlySummaryChartProps) {
   };
 
   // Custom tooltips
-  const ExecutionTooltip = ({ active, payload }: any) => {
+  const ExecutionTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string }> }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -98,7 +98,7 @@ export function MonthlySummaryChart({ data }: MonthlySummaryChartProps) {
     return null;
   };
 
-  const ComputeTooltip = ({ active, payload }: any) => {
+  const ComputeTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string }> }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -173,7 +173,7 @@ export function MonthlySummaryChart({ data }: MonthlySummaryChartProps) {
                   <Legend
                     verticalAlign="bottom"
                     height={36}
-                    formatter={(value, entry: any) => (
+                    formatter={(value, entry: { color: string }) => (
                       <span style={{ color: entry.color }}>{value}</span>
                     )}
                   />
@@ -211,7 +211,7 @@ export function MonthlySummaryChart({ data }: MonthlySummaryChartProps) {
                   <Legend
                     verticalAlign="bottom"
                     height={36}
-                    formatter={(value, entry: any) => (
+                    formatter={(value, entry: { color: string }) => (
                       <span style={{ color: entry.color }}>{value}</span>
                     )}
                   />

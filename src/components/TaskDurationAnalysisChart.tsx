@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { format, addMonths, isSameMonth, eachDayOfInterval, startOfMonth, endOfMonth } from 'date-fns';
-import { ComposedChart, Area, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine, BarChart } from 'recharts';
+import { ComposedChart, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine, BarChart } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 
@@ -152,7 +152,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
 
 
   // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0]?.payload;
       if (!data) return null;
@@ -212,7 +212,7 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
   };
 
   // Custom tooltip for invocations chart
-  const InvocationsTooltip = ({ active, payload, label }: any) => {
+  const InvocationsTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0]?.payload;
       if (!data) return null;
