@@ -19,11 +19,42 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     return new UTCDate(data[0]?.date || new Date())
   });
 
+  // Early return if no data
+  if (!data || data.length === 0) {
+    return (
+      <div className="w-full bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-lg font-semibold mb-4">Daily Time Saved</h3>
+        <div className="text-center py-12 text-gray-500">
+          <p>No time saved data available</p>
+          <p className="text-sm mt-2">Run tasks with caching enabled to see time savings</p>
+        </div>
+      </div>
+    );
+  }
+
   // Filter data for current year
   const filteredData = data.filter(item => {
     const itemDate = new UTCDate(item.date);
     return isSameYear(itemDate, currentDate);
   });
+
+  // Check if filtered data is empty
+  if (filteredData.length === 0) {
+    return (
+      <div className="w-full bg-white p-6 rounded-lg shadow-lg">
+        <ChartNavigation
+          title="Daily Time Saved"
+          displayValue={format(currentDate, 'yyyy')}
+          onPrevious={() => setCurrentDate(prev => addYears(prev, -1))}
+          onNext={() => setCurrentDate(prev => addYears(prev, 1))}
+        />
+        <div className="text-center py-12 text-gray-500">
+          <p>No time saved data available for {format(currentDate, 'yyyy')}</p>
+          <p className="text-sm mt-2">Try a different year or run more tasks with caching enabled</p>
+        </div>
+      </div>
+    );
+  }
 
   // Process data to create chart-friendly format with proper date formatting
   const sortedData = filteredData
@@ -94,17 +125,23 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ value: number; color: string; name: string; dataKey: string }>; label?: string }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
+      
+      // Safety checks to prevent undefined errors
+      const timeSavedHours = data?.timeSavedHours || 0;
+      const rollingAverage = data?.rollingAverage || 0;
+      const timeSavedMs = data?.timeSavedMs || 0;
+      
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
-          <p className="font-medium text-gray-900 mb-2">{label}</p>
+          <p className="font-medium text-gray-900 mb-2">{label || 'N/A'}</p>
           <p className="text-sm text-green-600">
-            Daily: {data.timeSavedHours.toFixed(1)} hours
+            Daily: {timeSavedHours.toFixed(1)} hours
           </p>
           <p className="text-sm text-blue-600">
-            7-Day Avg: {data.rollingAverage.toFixed(1)} hours
+            7-Day Avg: {rollingAverage.toFixed(1)} hours
           </p>
           <p className="text-xs text-gray-500">
-            ({data.timeSavedMs.toLocaleString()} ms)
+            ({timeSavedMs.toLocaleString()} ms)
           </p>
         </div>
       );
