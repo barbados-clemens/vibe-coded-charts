@@ -7,10 +7,16 @@ import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
 import {DailyTimeSavedChart} from "./components/DailyTimeSavedChart.tsx";
 import { mockWorkspaceUsageData, mockOrgContribData, mockDailyTaskStats, mockWorkspaceDailyTimeSavings } from './data/mockData';
 import {TaskDurationAnalysisChart} from "./components/TaskDurationAnalysisChart.tsx";
+import {MongoDataDashboard} from "./components/MongoDataDashboard.tsx";
 
 function App() {
     return (
         <div className="min-h-screen bg-gray-100 p-8 flex flex-col gap-10 mx-auto">
+            {/* MongoDB Data Dashboard */}
+            <div className="max-w-6xl">
+                <MongoDataDashboard />
+            </div>
+
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Execution Credits Analysis</h1>
                 <ExecutionCreditsChart data={mockWorkspaceUsageData} />

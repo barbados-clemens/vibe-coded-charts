@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# MongoDB dumps (optional - comment out if you want to commit dumps)
+src/data/dumps/
+src/data/generated/
+.env
