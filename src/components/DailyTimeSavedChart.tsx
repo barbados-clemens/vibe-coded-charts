@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { format, addYears, isSameYear, getDay } from 'date-fns';
+import { format, addYears, addMonths, isSameYear, isSameMonth, getDay } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
@@ -18,6 +18,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     return new UTCDate(data[0]?.date || new Date())
   });
+  const [viewMode, setViewMode] = useState<'annual' | 'monthly'>('annual');
 
   // Early return if no data
   if (!data || data.length === 0) {
@@ -32,10 +33,14 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     );
   }
 
-  // Filter data for current year
+  // Filter data based on view mode
   const filteredData = data.filter(item => {
     const itemDate = new UTCDate(item.date);
-    return isSameYear(itemDate, currentDate);
+    if (viewMode === 'annual') {
+      return isSameYear(itemDate, currentDate);
+    } else {
+      return isSameMonth(itemDate, currentDate) && isSameYear(itemDate, currentDate);
+    }
   });
 
   // Check if filtered data is empty
@@ -44,9 +49,9 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       <div className="w-full bg-white p-6 rounded-lg shadow-lg">
         <ChartNavigation
           title="Daily Time Saved"
-          displayValue={format(currentDate, 'yyyy')}
-          onPrevious={() => setCurrentDate(prev => addYears(prev, -1))}
-          onNext={() => setCurrentDate(prev => addYears(prev, 1))}
+          displayValue={viewMode === 'annual' ? format(currentDate, 'yyyy') : format(currentDate, 'MMMM yyyy')}
+          onPrevious={() => setCurrentDate(prev => viewMode === 'annual' ? addYears(prev, -1) : addMonths(prev, -1))}
+          onNext={() => setCurrentDate(prev => viewMode === 'annual' ? addYears(prev, 1) : addMonths(prev, 1))}
         />
         <div className="text-center py-12 text-gray-500">
           <p>No time saved data available for {format(currentDate, 'yyyy')}</p>
@@ -113,12 +118,20 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     });
   }
 
-  const handlePrevYear = () => {
-    setCurrentDate(prev => addYears(prev, -1));
+  const handlePrevious = () => {
+    if (viewMode === 'annual') {
+      setCurrentDate(prev => addYears(prev, -1));
+    } else {
+      setCurrentDate(prev => addMonths(prev, -1));
+    }
   };
 
-  const handleNextYear = () => {
-    setCurrentDate(prev => addYears(prev, 1));
+  const handleNext = () => {
+    if (viewMode === 'annual') {
+      setCurrentDate(prev => addYears(prev, 1));
+    } else {
+      setCurrentDate(prev => addMonths(prev, 1));
+    }
   };
 
   // Custom tooltip
@@ -149,6 +162,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     return null;
   };
 
+
   // Calculate summary statistics
   const totalTimeSavedMs = filteredData.reduce((sum, item) => sum + item.timeSaved, 0);
   const totalTimeSavedHours = totalTimeSavedMs / (1000 * 60 * 60);
@@ -160,10 +174,34 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
         title="Daily Time Saved"
-        displayValue={format(currentDate, 'yyyy')}
-        onPrevious={handlePrevYear}
-        onNext={handleNextYear}
+        displayValue={viewMode === 'annual' ? format(currentDate, 'yyyy') : format(currentDate, 'MMMM yyyy')}
+        onPrevious={handlePrevious}
+        onNext={handleNext}
       />
+      
+      {/* View Mode Toggle */}
+      <div className="mb-4 flex justify-center gap-2">
+        <button
+          onClick={() => setViewMode('annual')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            viewMode === 'annual' 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          Annual View
+        </button>
+        <button
+          onClick={() => setViewMode('monthly')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            viewMode === 'monthly' 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          Monthly View
+        </button>
+      </div>
       
       {/* Summary Stats */}
       <div className="mb-6 p-4 bg-green-50 rounded-lg">
@@ -214,7 +252,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       <div className="mb-4 p-3 bg-blue-50 rounded-lg">
         <h4 className="text-sm font-medium text-gray-800 mb-2">Time Saved Context</h4>
         <div className="text-xs text-gray-600">
-          <p>Total time saved this year is equivalent to:</p>
+          <p>Total time saved this {viewMode === 'annual' ? 'year' : 'month'} is equivalent to:</p>
           <div className="mt-1 grid grid-cols-2 md:grid-cols-4 gap-2">
             <span>• {(totalTimeSavedHours / 24).toFixed(1)} days</span>
             <span>• {(totalTimeSavedHours / (8)).toFixed(1)} work days</span>
@@ -248,9 +286,14 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
                 tick={{ fill: '#6b7280', fontSize: 10 }}
                 interval="preserveStartEnd"
                 tickFormatter={(value, index) => {
-                  // Show only every 30th day to reduce clutter
-                  if (index % 30 === 0) return value;
-                  return '';
+                  // For annual view, show every 30th day; for monthly view, show more days
+                  if (viewMode === 'annual') {
+                    if (index % 30 === 0) return value;
+                    return '';
+                  } else {
+                    if (index % 3 === 0) return value;
+                    return '';
+                  }
                 }}
               />
               <YAxis 
@@ -297,8 +340,11 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
         <div className="mt-6 bg-gray-50 p-4 rounded-lg">
           <h3 className="text-sm font-medium text-gray-700 mb-3">Performance Insights</h3>
           <div className="text-sm text-gray-600 space-y-1">
-            {totalTimeSavedHours > 1000 && (
+            {totalTimeSavedHours > 1000 && viewMode === 'annual' && (
               <p className="text-green-700">🎉 Excellent caching performance! Over 1,000 hours saved this year.</p>
+            )}
+            {totalTimeSavedHours > 100 && viewMode === 'monthly' && (
+              <p className="text-green-700">🎉 Great month! Over 100 hours saved through caching.</p>
             )}
             {daysWithData < filteredData.length && (
               <p className="text-yellow-600">⚠️ Some days show no time savings - consider optimizing cache strategies.</p>
