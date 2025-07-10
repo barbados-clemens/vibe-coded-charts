@@ -43,10 +43,42 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
   const [showLocalEnvironment, setShowLocalEnvironment] = useState(true);
   const [showCIEnvironment, setShowCIEnvironment] = useState(true);
 
-  // Filter data for current month
+  // Get unique projects from the data
+  const uniqueProjects = Array.from(new Set(data.map(item => item.projectName))).sort();
+  const [selectedProject, setSelectedProject] = useState(uniqueProjects[0] || '');
+
+  // Get unique tasks for the selected project
+  const tasksForProject = Array.from(
+    new Set(
+      data
+        .filter(item => item.projectName === selectedProject)
+        .map(item => item.target)
+    )
+  ).sort();
+  const [selectedTask, setSelectedTask] = useState(tasksForProject[0] || '');
+
+  // Update selected task when project changes
+  React.useEffect(() => {
+    const newTasksForProject = Array.from(
+      new Set(
+        data
+          .filter(item => item.projectName === selectedProject)
+          .map(item => item.target)
+      )
+    ).sort();
+    
+    // If current task doesn't exist in new project, select the first task
+    if (!newTasksForProject.includes(selectedTask)) {
+      setSelectedTask(newTasksForProject[0] || '');
+    }
+  }, [selectedProject, data, selectedTask]);
+
+  // Filter data for current month, selected project and selected task
   const filteredData = data.filter(item => {
     const itemDate = new UTCDate(item.date);
-    return isSameMonth(itemDate, currentDate);
+    return isSameMonth(itemDate, currentDate) && 
+           item.projectName === selectedProject &&
+           item.target === selectedTask;
   });
 
   // Get all days in the current month to handle missing days
@@ -257,11 +289,50 @@ export function TaskDurationAnalysisChart({ data }: TaskDurationAnalysisChartPro
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
         title="Task Duration Analysis"
-        subtitle={`${data[0].projectName}:${data[0].target}`}
+        subtitle={`${selectedProject}:${selectedTask}`}
         displayValue={format(currentDate, 'MMMM yyyy')}
         onPrevious={handlePrevMonth}
         onNext={handleNextMonth}
       />
+      
+      {/* Project and Task Selectors */}
+      <div className="mt-4 mb-6 space-y-4">
+        <div className="flex items-center gap-4">
+          <label htmlFor="project-select" className="text-sm font-medium text-gray-700 min-w-[100px]">
+            Select Project:
+          </label>
+          <select
+            id="project-select"
+            value={selectedProject}
+            onChange={(e) => setSelectedProject(e.target.value)}
+            className="block w-full max-w-xs rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          >
+            {uniqueProjects.map((project) => (
+              <option key={project} value={project}>
+                {project}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="flex items-center gap-4">
+          <label htmlFor="task-select" className="text-sm font-medium text-gray-700 min-w-[100px]">
+            Select Task:
+          </label>
+          <select
+            id="task-select"
+            value={selectedTask}
+            onChange={(e) => setSelectedTask(e.target.value)}
+            className="block w-full max-w-xs rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          >
+            {tasksForProject.map((task) => (
+              <option key={task} value={task}>
+                {task}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
       
       {/* Summary Stats */}
       <div className="mb-6 p-4 bg-gray-50 rounded-lg">
