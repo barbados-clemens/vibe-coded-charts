@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, Cell, ComposedChart } from 'recharts';
+import React, { useState, useMemo, useCallback } from 'react';
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, Cell, ComposedChart, ReferenceArea } from 'recharts';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { addMonths, subMonths, format, startOfMonth, endOfMonth, isWithinInterval, parseISO, startOfMinute, addMinutes } from 'date-fns';
 import { UTCDate } from '@date-fns/utc';
-import ChartNavigation from './ChartNavigation';
+import { ChartNavigation } from './ChartNavigation';
 
 interface Task {
   taskId: string;
@@ -34,6 +34,12 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
   const [currentDate, setCurrentDate] = useState(new Date());
   const [viewMode, setViewMode] = useState<'daily' | 'weekly' | 'monthly'>('daily');
   const [selectedTarget, setSelectedTarget] = useState<string>('');
+  
+  // Zoom state
+  const [refAreaLeft, setRefAreaLeft] = useState<string | null>(null);
+  const [refAreaRight, setRefAreaRight] = useState<string | null>(null);
+  const [isZooming, setIsZooming] = useState(false);
+  const [zoomDomain, setZoomDomain] = useState<{ left: string | null; right: string | null }>({ left: null, right: null });
 
   // Extract unique target names from all runs
   const uniqueTargets = useMemo(() => {
@@ -122,26 +128,108 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
     return intervals;
   }, [filteredData, selectedTarget]);
 
+  // Filter chart data based on zoom domain
+  const displayData = useMemo(() => {
+    if (!zoomDomain.left || !zoomDomain.right) return chartData;
+    
+    const leftIndex = chartData.findIndex(item => item.shortTime === zoomDomain.left);
+    const rightIndex = chartData.findIndex(item => item.shortTime === zoomDomain.right);
+    
+    if (leftIndex === -1 || rightIndex === -1) return chartData;
+    
+    return chartData.slice(Math.min(leftIndex, rightIndex), Math.max(leftIndex, rightIndex) + 1);
+  }, [chartData, zoomDomain]);
+
   // Calculate summary statistics
   const stats = useMemo(() => {
-    if (chartData.length === 0) return { totalRuns: 0, totalFailures: 0, overallFailureRate: 0 };
+    const dataToAnalyze = displayData.length > 0 ? displayData : chartData;
+    if (dataToAnalyze.length === 0) return { totalRuns: 0, totalFailures: 0, overallFailureRate: 0 };
     
-    const totalRuns = chartData.reduce((sum, item) => sum + item.total, 0);
-    const totalFailures = chartData.reduce((sum, item) => sum + item.failed, 0);
+    const totalRuns = dataToAnalyze.reduce((sum, item) => sum + item.total, 0);
+    const totalFailures = dataToAnalyze.reduce((sum, item) => sum + item.failed, 0);
     const overallFailureRate = totalRuns > 0 ? (totalFailures / totalRuns) * 100 : 0;
 
     return { totalRuns, totalFailures, overallFailureRate };
-  }, [chartData]);
+  }, [chartData, displayData]);
 
   const handlePrevious = () => {
     setCurrentDate(prev => subMonths(prev, 1));
+    // Reset zoom when changing months
+    setZoomDomain({ left: null, right: null });
   };
 
   const handleNext = () => {
     if (currentDate < new Date()) {
       setCurrentDate(prev => addMonths(prev, 1));
+      // Reset zoom when changing months
+      setZoomDomain({ left: null, right: null });
     }
   };
+
+  // Custom zoom navigation
+  const handleZoomNavigation = useCallback((direction: 'prev' | 'next') => {
+    if (!zoomDomain.left || !zoomDomain.right || displayData.length === 0) return;
+    
+    const currentLeftIndex = chartData.findIndex(item => item.shortTime === zoomDomain.left);
+    const currentRightIndex = chartData.findIndex(item => item.shortTime === zoomDomain.right);
+    
+    if (currentLeftIndex === -1 || currentRightIndex === -1) return;
+    
+    const windowSize = Math.abs(currentRightIndex - currentLeftIndex) + 1;
+    const minIndex = Math.min(currentLeftIndex, currentRightIndex);
+    const maxIndex = Math.max(currentLeftIndex, currentRightIndex);
+    
+    if (direction === 'prev') {
+      // Move backward by window size
+      const newMinIndex = Math.max(0, minIndex - windowSize);
+      const newMaxIndex = newMinIndex + windowSize - 1;
+      
+      if (newMaxIndex < chartData.length) {
+        setZoomDomain({
+          left: chartData[newMinIndex].shortTime,
+          right: chartData[Math.min(newMaxIndex, chartData.length - 1)].shortTime
+        });
+      }
+    } else {
+      // Move forward by window size
+      const newMinIndex = Math.min(chartData.length - windowSize, maxIndex + 1);
+      const newMaxIndex = newMinIndex + windowSize - 1;
+      
+      if (newMinIndex >= 0 && newMinIndex < chartData.length) {
+        setZoomDomain({
+          left: chartData[newMinIndex].shortTime,
+          right: chartData[Math.min(newMaxIndex, chartData.length - 1)].shortTime
+        });
+      }
+    }
+  }, [chartData, zoomDomain, displayData.length]);
+
+  // Zoom handlers
+  const handleMouseDown = useCallback((e: any) => {
+    if (e && e.activeLabel) {
+      setRefAreaLeft(e.activeLabel);
+      setIsZooming(true);
+    }
+  }, []);
+
+  const handleMouseMove = useCallback((e: any) => {
+    if (isZooming && e && e.activeLabel) {
+      setRefAreaRight(e.activeLabel);
+    }
+  }, [isZooming]);
+
+  const handleMouseUp = useCallback(() => {
+    if (refAreaLeft && refAreaRight && refAreaLeft !== refAreaRight) {
+      setZoomDomain({ left: refAreaLeft, right: refAreaRight });
+    }
+    setRefAreaLeft(null);
+    setRefAreaRight(null);
+    setIsZooming(false);
+  }, [refAreaLeft, refAreaRight]);
+
+  const handleZoomOut = useCallback(() => {
+    setZoomDomain({ left: null, right: null });
+  }, []);
 
   // Custom tooltip
   const CustomTooltip = ({ active, payload, label }: any) => {
@@ -177,14 +265,6 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
             ))}
           </select>
         </div>
-        <ChartNavigation
-          currentDate={currentDate}
-          viewMode={viewMode}
-          onViewModeChange={setViewMode}
-          onPrevious={handlePrevious}
-          onNext={handleNext}
-          dateFormat="MMMM yyyy"
-        />
       </div>
 
       {/* Summary Statistics */}
@@ -203,8 +283,42 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
         </div>
       </div>
 
-      <div className="text-sm text-gray-600 mb-4">
-        Showing 5-minute intervals with task execution data
+      <div className="flex justify-between items-center mb-4">
+        <div className="text-sm text-gray-600">
+          {zoomDomain.left && zoomDomain.right && displayData.length > 0 ? (
+            <span>
+              Showing {displayData[0].time} - {displayData[displayData.length - 1].time}
+            </span>
+          ) : (
+            "Showing 5-minute intervals with task execution data"
+          )}
+        </div>
+        {zoomDomain.left && zoomDomain.right && (
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => handleZoomNavigation('prev')}
+              disabled={chartData.findIndex(item => item.shortTime === zoomDomain.left) === 0}
+              className="p-1 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Previous time window"
+            >
+              <ChevronLeftIcon className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => handleZoomNavigation('next')}
+              disabled={chartData.findIndex(item => item.shortTime === zoomDomain.right) >= chartData.length - 1}
+              className="p-1 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Next time window"
+            >
+              <ChevronRightIcon className="h-4 w-4" />
+            </button>
+            <button
+              onClick={handleZoomOut}
+              className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            >
+              Reset Zoom
+            </button>
+          </div>
+        )}
       </div>
 
       {chartData.length === 0 ? (
@@ -215,8 +329,12 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
         <div className="h-96">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
-              data={chartData}
+              data={displayData}
               margin={{ top: 20, right: 30, left: 20, bottom: 80 }}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis 
@@ -253,6 +371,18 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
               
               {/* Reference line at 10% failure rate */}
               <ReferenceLine yAxisId="right" y={10} stroke="#fbbf24" strokeDasharray="5 5" label="10% threshold" />
+              
+              {/* Reference area for zoom selection */}
+              {refAreaLeft && refAreaRight && (
+                <ReferenceArea
+                  yAxisId="left"
+                  x1={refAreaLeft}
+                  x2={refAreaRight}
+                  strokeOpacity={0.3}
+                  fill="#8884d8"
+                  fillOpacity={0.3}
+                />
+              )}
             </ComposedChart>
           </ResponsiveContainer>
         </div>
@@ -265,7 +395,14 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
           <div className="text-xs text-gray-600 space-y-1">
             <p>• Data shown in 5-minute intervals for high resolution analysis</p>
             <p>• Total intervals with data: {chartData.length}</p>
-            <p>• Time range: {chartData[0].time} to {chartData[chartData.length - 1].time}</p>
+            {!zoomDomain.left ? (
+              <p>• Full time range: {chartData[0].time} to {chartData[chartData.length - 1].time}</p>
+            ) : (
+              <>
+                <p>• Original range: {chartData[0].time} to {chartData[chartData.length - 1].time}</p>
+                <p className="text-blue-600">• Zoomed view: {displayData.length} intervals ({displayData[0]?.time} - {displayData[displayData.length - 1]?.time})</p>
+              </>
+            )}
             {stats.overallFailureRate > 10 && (
               <p className="text-red-600 font-medium">⚠️ Failure rate above 10% threshold - investigation recommended</p>
             )}
