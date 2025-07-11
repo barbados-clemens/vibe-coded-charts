@@ -173,6 +173,17 @@ export const calculateIncrements = (field: 'executionCredits' | 'runCount') => (
   return Object.values(grouped).flatMap(monthData => {
     const sorted = sortBy<DataItem>(item => new Date(item.date).getTime())(monthData);
     
+    // Skip months that don't start from the 1st of the month
+    if (sorted.length > 0) {
+      const firstDate = new UTCDate(sorted[0].date);
+      const firstDayOfMonth = firstDate.getUTCDate();
+      
+      // If the first data point is not from the 1st of the month, skip this entire month
+      if (firstDayOfMonth !== 1) {
+        return [];
+      }
+    }
+    
     return sorted.map((item, index) => ({
       ...item,
       [field]: index === 0 
@@ -191,6 +202,17 @@ export const calculateComputeIncrements = (data: DataItem[]): IncrementalDataIte
 
   return Object.values(grouped).flatMap(monthData => {
     const sorted = sortBy<DataItem>(item => new Date(item.date).getTime())(monthData);
+    
+    // Skip months that don't start from the 1st of the month
+    if (sorted.length > 0) {
+      const firstDate = new UTCDate(sorted[0].date);
+      const firstDayOfMonth = firstDate.getUTCDate();
+      
+      // If the first data point is not from the 1st of the month, skip this entire month
+      if (firstDayOfMonth !== 1) {
+        return [];
+      }
+    }
     
     return sorted.map((item, index) => {
       if (index === 0) return item;
