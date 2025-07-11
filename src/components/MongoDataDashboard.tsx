@@ -2,7 +2,6 @@ import React from 'react';
 // Import JSON files directly
 import workspaceCreditUsageData from '../data/dumps/workspace-credit-usage.json';
 import taskStatisticsData from '../data/dumps/task-statistics.json';
-import workspaceRunCountsData from '../data/dumps/workspace-run-counts.json';
 
 // Example component using raw MongoDB data
 export function MongoDataDashboard() {
@@ -67,7 +66,6 @@ export function MongoDataDashboard() {
           <div className="space-y-2 text-sm">
             <p>Workspace Credit Usage: <span className="font-mono">{workspaceCreditUsageData.length} records</span></p>
             <p>Task Statistics: <span className="font-mono">{taskStatisticsData.length} records</span></p>
-            <p>Workspace Run Counts: <span className="font-mono">{workspaceRunCountsData.length} records</span></p>
           </div>
         </div>
 
@@ -165,8 +163,7 @@ export function MongoDataDashboard() {
             <pre className="bg-white p-3 rounded text-xs overflow-x-auto">
 {`// Import raw MongoDB JSON dumps directly
 import workspaceCreditUsageData from '../data/dumps/workspace-credit-usage.json';
-import taskStatisticsData from '../data/dumps/task-statistics.json';
-import workspaceRunCountsData from '../data/dumps/workspace-run-counts.json';`}
+import taskStatisticsData from '../data/dumps/task-statistics.json';`}
             </pre>
           </div>
           
@@ -191,7 +188,6 @@ const recentData = workspaceCreditUsageData.filter(item =>
             <div className="bg-white p-3 rounded text-xs overflow-x-auto">
               <p><strong>workspace-credit-usage.json:</strong> {workspaceCreditUsageData.length > 0 ? Object.keys(workspaceCreditUsageData[0]).join(', ') : 'No data'}</p>
               <p><strong>task-statistics.json:</strong> {taskStatisticsData.length > 0 ? Object.keys(taskStatisticsData[0]).join(', ') : 'No data'}</p>
-              <p><strong>workspace-run-counts.json:</strong> {workspaceRunCountsData.length > 0 ? Object.keys(workspaceRunCountsData[0]).join(', ') : 'No data'}</p>
             </div>
           </div>
         </div>

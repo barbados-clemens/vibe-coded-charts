@@ -43,8 +43,34 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     }
   });
 
-  // Check if filtered data is empty
-  if (filteredData.length === 0) {
+  // Group data by day and sum time saved
+  const groupedData = filteredData.reduce((acc, item) => {
+    // Extract just the date part (YYYY-MM-DD) to group by day
+    const dateKey = item.date.split('T')[0];
+    
+    if (!acc[dateKey]) {
+      acc[dateKey] = {
+        date: dateKey + 'T00:00:00.000Z',
+        timeSaved: 0,
+        workspaceIds: new Set()
+      };
+    }
+    
+    acc[dateKey].timeSaved += item.timeSaved;
+    acc[dateKey].workspaceIds.add(item.workspaceId);
+    
+    return acc;
+  }, {} as Record<string, { date: string; timeSaved: number; workspaceIds: Set<string> }>);
+
+  // Convert grouped data back to array format
+  const aggregatedData = Object.values(groupedData).map(item => ({
+    date: item.date,
+    timeSaved: item.timeSaved,
+    workspaceId: Array.from(item.workspaceIds).join(', ')
+  }));
+
+  // Check if aggregated data is empty
+  if (aggregatedData.length === 0) {
     return (
       <div className="w-full bg-white p-6 rounded-lg shadow-lg">
         <ChartNavigation
@@ -62,7 +88,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   }
 
   // Process data to create chart-friendly format with proper date formatting
-  const sortedData = filteredData
+  const sortedData = aggregatedData
     .map((item, index) => ({
       date: item.date,
       dateDisplay: format(new UTCDate(item.date), 'MMM dd'),
@@ -164,11 +190,11 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
 
 
   // Calculate summary statistics
-  const totalTimeSavedMs = filteredData.reduce((sum, item) => sum + item.timeSaved, 0);
+  const totalTimeSavedMs = aggregatedData.reduce((sum, item) => sum + item.timeSaved, 0);
   const totalTimeSavedHours = totalTimeSavedMs / (1000 * 60 * 60);
-  const avgTimeSavedHours = filteredData.length > 0 ? totalTimeSavedHours / filteredData.length : 0;
-  const maxTimeSavedHours = Math.max(...filteredData.map(item => item.timeSaved / (1000 * 60 * 60)), 0);
-  const daysWithData = filteredData.filter(item => item.timeSaved > 0).length;
+  const avgTimeSavedHours = aggregatedData.length > 0 ? totalTimeSavedHours / aggregatedData.length : 0;
+  const maxTimeSavedHours = Math.max(...aggregatedData.map(item => item.timeSaved / (1000 * 60 * 60)), 0);
+  const daysWithData = aggregatedData.filter(item => item.timeSaved > 0).length;
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
@@ -336,7 +362,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       )}
 
       {/* Performance insights */}
-      {filteredData.length > 0 && (
+      {aggregatedData.length > 0 && (
         <div className="mt-6 bg-gray-50 p-4 rounded-lg">
           <h3 className="text-sm font-medium text-gray-700 mb-3">Performance Insights</h3>
           <div className="text-sm text-gray-600 space-y-1">
@@ -346,7 +372,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
             {totalTimeSavedHours > 100 && viewMode === 'monthly' && (
               <p className="text-green-700">🎉 Great month! Over 100 hours saved through caching.</p>
             )}
-            {daysWithData < filteredData.length && (
+            {daysWithData < aggregatedData.length && (
               <p className="text-yellow-600">⚠️ Some days show no time savings - consider optimizing cache strategies.</p>
             )}
             {avgTimeSavedHours > 5 && (
