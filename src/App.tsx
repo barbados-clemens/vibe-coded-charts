@@ -8,6 +8,7 @@ import {DailyTimeSavedChart} from "./components/DailyTimeSavedChart.tsx";
 import {TaskDurationAnalysisChart} from "./components/TaskDurationAnalysisChart.tsx";
 import {TargetFailureAnalysisChart} from "./components/TargetFailureAnalysisChart.tsx";
 import {CIPipelineExecutionsChart} from "./components/CIPipelineExecutionsChart.tsx";
+import {TimeToGreenChart} from "./components/TimeToGreenChart.tsx";
 import {MongoDataDashboard} from "./components/MongoDataDashboard.tsx";
 
 // Import MongoDB JSON data
@@ -118,6 +119,11 @@ function App() {
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">CI Pipeline Executions</h1>
                 <CIPipelineExecutionsChart data={ciPipelineExecutionsData} />
+            </div>
+            
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">Time to Green Analysis</h1>
+                <TimeToGreenChart data={ciPipelineExecutionsData} />
             </div>
         </div>
     );
