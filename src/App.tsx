@@ -47,7 +47,9 @@ function App() {
         return {
             date: task.date,
             workspaceId: task.workspaceId,
-            timeSaved: Math.round(localTimeSaved + remoteTimeSaved) // Component expects 'timeSaved', not 'timeSavedMs'
+            timeSaved: Math.round(localTimeSaved + remoteTimeSaved), // Component expects 'timeSaved', not 'timeSavedMs'
+            totalCount: task.totalCount,
+            cacheStatusRatio: task.cacheStatusRatio
         };
     }).filter(item => item.timeSaved > 0);
 

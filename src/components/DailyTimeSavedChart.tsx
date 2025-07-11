@@ -8,6 +8,12 @@ export type DailyTimeSavedDataItem = {
   workspaceId: string;
   date: string;
   timeSaved: number;
+  totalCount?: number;
+  cacheStatusRatio?: {
+    localCacheHit?: number;
+    remoteCacheHit?: number;
+    cacheMiss?: number;
+  };
 };
 
 interface DailyTimeSavedChartProps {
@@ -52,21 +58,52 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       acc[dateKey] = {
         date: dateKey + 'T00:00:00.000Z',
         timeSaved: 0,
-        workspaceIds: new Set()
+        workspaceIds: new Set(),
+        totalTasks: 0,
+        totalLocalCacheHits: 0,
+        totalRemoteCacheHits: 0,
+        totalCacheMisses: 0
       };
     }
     
     acc[dateKey].timeSaved += item.timeSaved;
     acc[dateKey].workspaceIds.add(item.workspaceId);
     
+    // Aggregate cache statistics
+    if (item.totalCount && item.cacheStatusRatio) {
+      const totalCount = item.totalCount;
+      const localHits = Math.round((item.cacheStatusRatio.localCacheHit || 0) * totalCount);
+      const remoteHits = Math.round((item.cacheStatusRatio.remoteCacheHit || 0) * totalCount);
+      const misses = Math.round((item.cacheStatusRatio.cacheMiss || 0) * totalCount);
+      
+      acc[dateKey].totalTasks += totalCount;
+      acc[dateKey].totalLocalCacheHits += localHits;
+      acc[dateKey].totalRemoteCacheHits += remoteHits;
+      acc[dateKey].totalCacheMisses += misses;
+    }
+    
     return acc;
-  }, {} as Record<string, { date: string; timeSaved: number; workspaceIds: Set<string> }>);
+  }, {} as Record<string, { 
+    date: string; 
+    timeSaved: number; 
+    workspaceIds: Set<string>;
+    totalTasks: number;
+    totalLocalCacheHits: number;
+    totalRemoteCacheHits: number;
+    totalCacheMisses: number;
+  }>);
 
   // Convert grouped data back to array format
   const aggregatedData = Object.values(groupedData).map(item => ({
     date: item.date,
     timeSaved: item.timeSaved,
-    workspaceId: Array.from(item.workspaceIds).join(', ')
+    workspaceId: Array.from(item.workspaceIds).join(', '),
+    totalTasks: item.totalTasks,
+    totalCacheHits: item.totalLocalCacheHits + item.totalRemoteCacheHits,
+    localCacheHits: item.totalLocalCacheHits,
+    remoteCacheHits: item.totalRemoteCacheHits,
+    cacheMisses: item.totalCacheMisses,
+    cacheHitRate: item.totalTasks > 0 ? ((item.totalLocalCacheHits + item.totalRemoteCacheHits) / item.totalTasks) * 100 : 0
   }));
 
   // Check if aggregated data is empty
@@ -98,7 +135,12 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       workspaceId: item.workspaceId,
       dayOfWeek: getDay(new UTCDate(item.date)), // 0 = Sunday, 6 = Saturday
       isWeekend: getDay(new UTCDate(item.date)) === 0 || getDay(new UTCDate(item.date)) === 6,
-      dataIndex: index
+      dataIndex: index,
+      totalTasks: item.totalTasks,
+      cacheHitRate: item.cacheHitRate,
+      localCacheHits: item.localCacheHits,
+      remoteCacheHits: item.remoteCacheHits,
+      cacheMisses: item.cacheMisses
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
@@ -169,6 +211,11 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       const timeSavedHours = data?.timeSavedHours || 0;
       const rollingAverage = data?.rollingAverage || 0;
       const timeSavedMs = data?.timeSavedMs || 0;
+      const cacheHitRate = data?.cacheHitRate || 0;
+      const totalTasks = data?.totalTasks || 0;
+      const localCacheHits = data?.localCacheHits || 0;
+      const remoteCacheHits = data?.remoteCacheHits || 0;
+      const cacheMisses = data?.cacheMisses || 0;
       
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
@@ -182,6 +229,20 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
           <p className="text-xs text-gray-500">
             ({timeSavedMs.toLocaleString()} ms)
           </p>
+          {totalTasks > 0 && (
+            <>
+              <hr className="my-2 border-gray-200" />
+              <p className="text-sm font-medium text-purple-600">
+                Cache Hit Rate: {cacheHitRate.toFixed(1)}%
+              </p>
+              <div className="text-xs text-gray-600 mt-1">
+                <p>Total Tasks: {totalTasks.toLocaleString()}</p>
+                <p>Local Cache Hits: {localCacheHits.toLocaleString()}</p>
+                <p>Remote Cache Hits: {remoteCacheHits.toLocaleString()}</p>
+                <p>Cache Misses: {cacheMisses.toLocaleString()}</p>
+              </div>
+            </>
+          )}
         </div>
       );
     }
