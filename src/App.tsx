@@ -76,34 +76,34 @@ function App() {
     return (
         <div className="min-h-screen bg-gray-100 p-8 flex flex-col gap-10 mx-auto">
             {/* MongoDB Data Dashboard */}
-            <div className="max-w-6xl">
-                <MongoDataDashboard />
-            </div>
+            {/*<div className="max-w-6xl">*/}
+            {/*    <MongoDataDashboard />*/}
+            {/*</div>*/}
 
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Execution Credits Analysis</h1>
-                <ExecutionCreditsChart data={transformedWorkspaceData} />
-            </div>
+            {/*<div className="max-w-6xl">*/}
+            {/*    <h1 className="text-3xl font-bold text-gray-900 mb-8">Execution Credits Analysis</h1>*/}
+            {/*    <ExecutionCreditsChart data={transformedWorkspaceData} />*/}
+            {/*</div>*/}
 
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Run Count Analysis</h1>
                 <RunCountChart data={transformedWorkspaceData} />
             </div>
 
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Compute Resource Analysis</h1>
-                <ComputeResourceChart data={transformedWorkspaceData} />
-            </div>
+            {/*<div className="max-w-6xl">*/}
+            {/*    <h1 className="text-3xl font-bold text-gray-900 mb-8">Compute Resource Analysis</h1>*/}
+            {/*    <ComputeResourceChart data={transformedWorkspaceData} />*/}
+            {/*</div>*/}
 
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Contributor Analysis</h1>
-                <ContributorChart data={transformedContributorData} />
-            </div>
+            {/*<div className="max-w-6xl">*/}
+            {/*    <h1 className="text-3xl font-bold text-gray-900 mb-8">Contributor Analysis</h1>*/}
+            {/*    <ContributorChart data={transformedContributorData} />*/}
+            {/*</div>*/}
 
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Monthly Summary</h1>
-                <MonthlySummaryChart data={transformedWorkspaceData} />
-            </div>
+            {/*<div className="max-w-6xl">*/}
+            {/*    <h1 className="text-3xl font-bold text-gray-900 mb-8">Monthly Summary</h1>*/}
+            {/*    <MonthlySummaryChart data={transformedWorkspaceData} />*/}
+            {/*</div>*/}
             
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">Daily Time Saved</h1>
