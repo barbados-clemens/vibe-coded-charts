@@ -82,6 +82,15 @@ const DUMP_CONFIGS: DumpConfig[] = [
       createdAt: 1
     },
     sort: { startTime: -1 }
+  },
+  {
+    collection: 'ciPipelineExecutions',
+    outputFile: 'ci-pipeline-executions.json',
+    dateField: 'createdAt',
+    projection: {
+      _id: 0
+    },
+    sort: { createdAt: -1 }
   }
 ];
 
