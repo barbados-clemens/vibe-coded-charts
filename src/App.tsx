@@ -7,6 +7,7 @@ import {MonthlySummaryChart} from "./components/MonthlySummaryChart.tsx";
 import {DailyTimeSavedChart} from "./components/DailyTimeSavedChart.tsx";
 import {TaskDurationAnalysisChart} from "./components/TaskDurationAnalysisChart.tsx";
 import {TargetFailureAnalysisChart} from "./components/TargetFailureAnalysisChart.tsx";
+import HighResolutionTargetFailureChart from "./components/HighResolutionTargetFailureChart.tsx";
 import {CIPipelineExecutionsChart} from "./components/CIPipelineExecutionsChart.tsx";
 import {TimeToGreenChart} from "./components/TimeToGreenChart.tsx";
 import {MongoDataDashboard} from "./components/MongoDataDashboard.tsx";
@@ -16,6 +17,7 @@ import workspaceCreditUsageData from './data/dumps/workspace-credit-usage.json';
 import taskStatisticsData from './data/dumps/task-statistics.json';
 import organizationContributorsData from './data/dumps/organization-contributors.json';
 import ciPipelineExecutionsData from './data/dumps/ci-pipeline-executions.json';
+import runsData from './data/dumps/runs.json';
 
 function App() {
     // Transform MongoDB data to component format
@@ -116,6 +118,11 @@ function App() {
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8">CI Target Failure Analysis</h1>
                 <TargetFailureAnalysisChart data={taskStatisticsData} />
+            </div>
+            
+            <div className="max-w-6xl">
+                <h1 className="text-3xl font-bold text-gray-900 mb-8">High Resolution Target Failure Analysis</h1>
+                <HighResolutionTargetFailureChart data={runsData} />
             </div>
             
             <div className="max-w-6xl">
