@@ -26,6 +26,8 @@ interface Run {
   createdAt: string | { $date: string };
 }
 
+type MinRunsThreshold = 'none' | '1' | '3' | '5' | '10' | '20';
+
 interface HighResolutionTargetFailureChartProps {
   data: Run[];
 }
@@ -34,6 +36,7 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
   const [currentDate, setCurrentDate] = useState(new Date());
   const [viewMode, setViewMode] = useState<'daily' | 'weekly' | 'monthly'>('daily');
   const [selectedTarget, setSelectedTarget] = useState<string>('');
+  const [minRunsThreshold, setMinRunsThreshold] = useState<MinRunsThreshold>('none');
   
   // Zoom state
   const [refAreaLeft, setRefAreaLeft] = useState<string | null>(null);
@@ -79,8 +82,28 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
     });
   }, [data, currentDate, viewMode]);
 
+  // Apply minimum runs filtering to chart data intervals
+  const applyMinRunsFilter = useCallback((chartData: any[], threshold: MinRunsThreshold): { filteredData: any[], originalIntervals: number, filteredIntervals: number } => {
+    if (threshold === 'none') {
+      return {
+        filteredData: chartData,
+        originalIntervals: chartData.length,
+        filteredIntervals: 0
+      };
+    }
+    
+    const minRuns = parseInt(threshold);
+    const filteredData = chartData.filter(interval => interval.total >= minRuns);
+    
+    return {
+      filteredData,
+      originalIntervals: chartData.length,
+      filteredIntervals: chartData.length - filteredData.length
+    };
+  }, []);
+
   // Process data into 5-minute intervals
-  const chartData = useMemo(() => {
+  const rawChartData = useMemo(() => {
     if (!selectedTarget || filteredData.length === 0) return [];
 
     // Create a map to store 5-minute interval data
@@ -127,6 +150,11 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
 
     return intervals;
   }, [filteredData, selectedTarget]);
+
+  // Apply minimum runs filter
+  const { filteredData: chartData, originalIntervals, filteredIntervals } = useMemo(() => {
+    return applyMinRunsFilter(rawChartData, minRunsThreshold);
+  }, [rawChartData, minRunsThreshold, applyMinRunsFilter]);
 
   // Filter chart data based on zoom domain
   const displayData = useMemo(() => {
@@ -264,6 +292,18 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
               <option key={target} value={target}>{target}</option>
             ))}
           </select>
+          <select
+            value={minRunsThreshold}
+            onChange={(e) => setMinRunsThreshold(e.target.value as MinRunsThreshold)}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="none">No minimum filter</option>
+            <option value="1">Min 1 run per interval</option>
+            <option value="3">Min 3 runs per interval</option>
+            <option value="5">Min 5 runs per interval</option>
+            <option value="10">Min 10 runs per interval</option>
+            <option value="20">Min 20 runs per interval</option>
+          </select>
         </div>
       </div>
 
@@ -288,9 +328,21 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
           {zoomDomain.left && zoomDomain.right && displayData.length > 0 ? (
             <span>
               Showing {displayData[0].time} - {displayData[displayData.length - 1].time}
+              {filteredIntervals > 0 && (
+                <span className="text-orange-600 ml-2">
+                  ({filteredIntervals} intervals filtered out)
+                </span>
+              )}
             </span>
           ) : (
-            "Showing 5-minute intervals with task execution data"
+            <span>
+              Showing 5-minute intervals with task execution data
+              {filteredIntervals > 0 && (
+                <span className="text-orange-600 ml-2">
+                  ({filteredIntervals} intervals filtered out)
+                </span>
+              )}
+            </span>
           )}
         </div>
         {zoomDomain.left && zoomDomain.right && (
@@ -402,6 +454,9 @@ const HighResolutionTargetFailureChart: React.FC<HighResolutionTargetFailureChar
                 <p>• Original range: {chartData[0].time} to {chartData[chartData.length - 1].time}</p>
                 <p className="text-blue-600">• Zoomed view: {displayData.length} intervals ({displayData[0]?.time} - {displayData[displayData.length - 1]?.time})</p>
               </>
+            )}
+            {minRunsThreshold !== 'none' && (
+              <p className="text-orange-600">• Min runs filter: {minRunsThreshold} runs per interval ({filteredIntervals} intervals removed from {originalIntervals} total)</p>
             )}
             {stats.overallFailureRate > 10 && (
               <p className="text-red-600 font-medium">⚠️ Failure rate above 10% threshold - investigation recommended</p>
