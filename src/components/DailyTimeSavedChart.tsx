@@ -25,6 +25,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     return new UTCDate(data[0]?.date || new Date())
   });
   const [viewMode, setViewMode] = useState<'annual' | 'monthly'>('annual');
+  const [chartType, setChartType] = useState<'timeSaved' | 'cacheHitRate'>('timeSaved');
 
   // Early return if no data
   if (!data || data.length === 0) {
@@ -174,7 +175,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-  // Calculate rolling average (7-day window)
+  // Calculate rolling averages (7-day window) for both time saved and cache hit rate
   const rollingWindow = 7;
   const chartData = sortedData.map((item, index) => {
     // Calculate rolling average for current position
@@ -182,11 +183,18 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     const windowEnd = Math.min(sortedData.length - 1, index + Math.floor(rollingWindow / 2));
     
     const windowData = sortedData.slice(windowStart, windowEnd + 1);
-    const rollingAverage = windowData.reduce((sum, d) => sum + d.timeSavedHours, 0) / windowData.length;
+    const rollingAverageTimeSaved = windowData.reduce((sum, d) => sum + d.timeSavedHours, 0) / windowData.length;
+    
+    // Calculate rolling average for cache hit rate (only include days with actual data)
+    const validCacheData = windowData.filter(d => d.totalTasks > 0);
+    const rollingAverageCacheHitRate = validCacheData.length > 0 
+      ? validCacheData.reduce((sum, d) => sum + d.cacheHitRate, 0) / validCacheData.length
+      : 0;
     
     return {
       ...item,
-      rollingAverage: rollingAverage
+      rollingAverage: rollingAverageTimeSaved,
+      rollingAverageCacheHitRate: rollingAverageCacheHitRate
     };
   });
 
@@ -240,6 +248,7 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       // Safety checks to prevent undefined errors
       const timeSavedHours = data?.timeSavedHours || 0;
       const rollingAverage = data?.rollingAverage || 0;
+      const rollingAverageCacheHitRate = data?.rollingAverageCacheHitRate || 0;
       const timeSavedMs = data?.timeSavedMs || 0;
       const cacheHitRate = data?.cacheHitRate || 0;
       const totalTasks = data?.totalTasks || 0;
@@ -250,21 +259,43 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-900 mb-2">{label || 'N/A'}</p>
-          <p className="text-sm text-green-600">
-            Daily: {timeSavedHours.toFixed(1)} hours
-          </p>
-          <p className="text-sm text-blue-600">
-            7-Day Avg: {rollingAverage.toFixed(1)} hours
-          </p>
-          <p className="text-xs text-gray-500">
-            ({timeSavedMs.toLocaleString()} ms)
-          </p>
+          
+          {chartType === 'timeSaved' ? (
+            <>
+              <p className="text-sm text-green-600">
+                Daily: {timeSavedHours.toFixed(1)} hours
+              </p>
+              <p className="text-sm text-blue-600">
+                7-Day Avg: {rollingAverage.toFixed(1)} hours
+              </p>
+              <p className="text-xs text-gray-500">
+                ({timeSavedMs.toLocaleString()} ms)
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-purple-600">
+                Daily: {cacheHitRate.toFixed(1)}%
+              </p>
+              <p className="text-sm text-blue-600">
+                7-Day Avg: {rollingAverageCacheHitRate.toFixed(1)}%
+              </p>
+            </>
+          )}
+          
           {totalTasks > 0 && (
             <>
               <hr className="my-2 border-gray-200" />
-              <p className="text-sm font-medium text-purple-600">
-                Cache Hit Rate: {cacheHitRate.toFixed(1)}%
-              </p>
+              {chartType === 'timeSaved' && (
+                <p className="text-sm font-medium text-purple-600">
+                  Cache Hit Rate: {cacheHitRate.toFixed(1)}%
+                </p>
+              )}
+              {chartType === 'cacheHitRate' && (
+                <p className="text-sm font-medium text-green-600">
+                  Time Saved: {timeSavedHours.toFixed(1)} hours
+                </p>
+              )}
               <div className="text-xs text-gray-600 mt-1">
                 <p>Total Tasks: {totalTasks.toLocaleString()}</p>
                 <p>Local Cache Hits: {localCacheHits.toLocaleString()}</p>
@@ -286,6 +317,19 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
   const avgTimeSavedHours = aggregatedData.length > 0 ? totalTimeSavedHours / aggregatedData.length : 0;
   const maxTimeSavedHours = Math.max(...aggregatedData.map(item => item.timeSaved / (1000 * 60 * 60)), 0);
   const daysWithData = aggregatedData.filter(item => item.timeSaved > 0).length;
+  
+  // Calculate cache hit rate summary statistics
+  const daysWithCacheData = aggregatedData.filter(item => item.totalTasks > 0);
+  const avgCacheHitRate = daysWithCacheData.length > 0 
+    ? daysWithCacheData.reduce((sum, item) => sum + item.cacheHitRate, 0) / daysWithCacheData.length 
+    : 0;
+  const maxCacheHitRate = daysWithCacheData.length > 0 
+    ? Math.max(...daysWithCacheData.map(item => item.cacheHitRate), 0)
+    : 0;
+  const minCacheHitRate = daysWithCacheData.length > 0 
+    ? Math.min(...daysWithCacheData.map(item => item.cacheHitRate), 100)
+    : 0;
+  const totalTasks = aggregatedData.reduce((sum, item) => sum + item.totalTasks, 0);
 
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
@@ -320,25 +364,74 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
         </button>
       </div>
       
+      {/* Chart Type Toggle */}
+      <div className="mb-4 flex justify-center gap-2">
+        <button
+          onClick={() => setChartType('timeSaved')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            chartType === 'timeSaved' 
+              ? 'bg-green-600 text-white' 
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          Time Saved
+        </button>
+        <button
+          onClick={() => setChartType('cacheHitRate')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            chartType === 'cacheHitRate' 
+              ? 'bg-purple-600 text-white' 
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          Cache Hit Rate
+        </button>
+      </div>
+      
       {/* Summary Stats */}
-      <div className="mb-6 p-4 bg-green-50 rounded-lg">
+      <div className={`mb-6 p-4 rounded-lg ${
+        chartType === 'timeSaved' ? 'bg-green-50' : 'bg-purple-50'
+      }`}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div>
-            <div className="text-2xl font-bold text-green-700">{totalTimeSavedHours.toFixed(1)}h</div>
-            <div className="text-sm text-gray-600">Total Saved</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-green-700">{avgTimeSavedHours.toFixed(1)}h</div>
-            <div className="text-sm text-gray-600">Avg per Day</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-green-700">{maxTimeSavedHours.toFixed(1)}h</div>
-            <div className="text-sm text-gray-600">Peak Day</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-green-700">{daysWithData}</div>
-            <div className="text-sm text-gray-600">Active Days</div>
-          </div>
+          {chartType === 'timeSaved' ? (
+            <>
+              <div>
+                <div className="text-2xl font-bold text-green-700">{totalTimeSavedHours.toFixed(1)}h</div>
+                <div className="text-sm text-gray-600">Total Saved</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-700">{avgTimeSavedHours.toFixed(1)}h</div>
+                <div className="text-sm text-gray-600">Avg per Day</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-700">{maxTimeSavedHours.toFixed(1)}h</div>
+                <div className="text-sm text-gray-600">Peak Day</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-700">{daysWithData}</div>
+                <div className="text-sm text-gray-600">Active Days</div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <div className="text-2xl font-bold text-purple-700">{avgCacheHitRate.toFixed(1)}%</div>
+                <div className="text-sm text-gray-600">Avg Hit Rate</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-700">{maxCacheHitRate.toFixed(1)}%</div>
+                <div className="text-sm text-gray-600">Peak Rate</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-700">{minCacheHitRate.toFixed(1)}%</div>
+                <div className="text-sm text-gray-600">Lowest Rate</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-700">{totalTasks.toLocaleString()}</div>
+                <div className="text-sm text-gray-600">Total Tasks</div>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -355,8 +448,10 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
             <span>Weekends (Sat-Sun)</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-4 h-0.5 bg-green-600"></div>
-            <span>Daily Time Saved</span>
+            <div className={`w-4 h-0.5 ${
+              chartType === 'timeSaved' ? 'bg-green-600' : 'bg-purple-600'
+            }`}></div>
+            <span>Daily {chartType === 'timeSaved' ? 'Time Saved' : 'Cache Hit Rate'}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-0.5 bg-blue-600 border-dashed border-t"></div>
@@ -416,22 +511,31 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
               <YAxis 
                 stroke="#6b7280"
                 tick={{ fill: '#6b7280', fontSize: 12 }}
-                label={{ value: 'Time Saved (hours)', angle: -90, position: 'insideLeft' }}
+                label={{ 
+                  value: chartType === 'timeSaved' ? 'Time Saved (hours)' : 'Cache Hit Rate (%)', 
+                  angle: -90, 
+                  position: 'insideLeft' 
+                }}
               />
               <Tooltip content={<CustomTooltip />} />
               <Line 
                 type="monotone" 
-                dataKey="timeSavedHours" 
-                stroke="#10b981" 
+                dataKey={chartType === 'timeSaved' ? 'timeSavedHours' : 'cacheHitRate'}
+                stroke={chartType === 'timeSaved' ? '#10b981' : '#9333ea'}
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 5, stroke: '#10b981', strokeWidth: 2, fill: '#10b981' }}
+                activeDot={{ 
+                  r: 5, 
+                  stroke: chartType === 'timeSaved' ? '#10b981' : '#9333ea', 
+                  strokeWidth: 2, 
+                  fill: chartType === 'timeSaved' ? '#10b981' : '#9333ea' 
+                }}
                 connectNulls={true}
-                name="Daily Time Saved"
+                name={chartType === 'timeSaved' ? 'Daily Time Saved' : 'Daily Cache Hit Rate'}
               />
               <Line 
                 type="monotone" 
-                dataKey="rollingAverage" 
+                dataKey={chartType === 'timeSaved' ? 'rollingAverage' : 'rollingAverageCacheHitRate'}
                 stroke="#3b82f6" 
                 strokeWidth={2}
                 strokeDasharray="5 5"
