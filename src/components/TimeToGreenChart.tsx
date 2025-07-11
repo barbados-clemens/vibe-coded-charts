@@ -61,7 +61,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
   };
 
   // Calculate TTG data for the current month
-  const ttgData = useMemo(() => {
+  const { ttgData, originalCount, filteredCount } = useMemo(() => {
     // Filter data for current month and exclude main/master branches
     const monthStart = startOfMonth(currentDate);
     const monthEnd = endOfMonth(currentDate);
@@ -132,8 +132,15 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       }
     }
 
-    // Apply outlier filtering
-    return filterOutliers(ttgResults, outlierThreshold);
+    const originalCount = ttgResults.length;
+    const filteredResults = filterOutliers(ttgResults, outlierThreshold);
+    const filteredCount = filteredResults.length;
+
+    return { 
+      ttgData: filteredResults, 
+      originalCount, 
+      filteredCount 
+    };
   }, [data, currentDate, outlierThreshold]);
 
   // Group TTG results by week and calculate aggregated metrics
@@ -268,7 +275,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
           <p className="font-medium text-gray-900 mb-2">{data.fullWeek}</p>
           
           <div className="space-y-1 text-sm">
-            <p className="font-medium">PRs Analyzed: {data.totalPRs}</p>
+            <p className="font-medium">CIPEs Analyzed: {data.totalPRs}</p>
             {data.totalPRs > 0 && (
               <>
                 <p className="text-blue-600">Avg TTG: {data.avgTTGMinutes} min</p>
@@ -313,7 +320,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
           </select>
           {outlierThreshold !== 'none' && (
             <span className="text-xs text-blue-600 italic">
-              Filtering outliers - stats recalculated
+              {originalCount - filteredCount} CIPEs filtered out ({filteredCount} of {originalCount} remaining)
             </span>
           )}
         </div>
@@ -325,7 +332,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
           <div>
             <div className="text-2xl font-bold text-gray-900">{summaryStats.totalPRs}</div>
             <div className="text-sm text-gray-600">
-              {outlierThreshold === 'none' ? 'Total PRs' : 'PRs (filtered)'}
+              {outlierThreshold === 'none' ? 'Total CIPEs' : 'CIPEs (filtered)'}
             </div>
           </div>
           <div>
@@ -398,9 +405,9 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
             </div>
           </div>
 
-          {/* PR Count Bar Chart */}
+          {/* CIPE Count Bar Chart */}
           <div>
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Weekly PR Count</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">Weekly CIPE Count</h3>
             <div className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={weeklyData}>
@@ -413,14 +420,14 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
                   <YAxis 
                     stroke="#6b7280"
                     tick={{ fill: '#6b7280' }}
-                    label={{ value: 'PR Count', angle: -90, position: 'insideLeft' }}
+                    label={{ value: 'CIPE Count', angle: -90, position: 'insideLeft' }}
                   />
                   <Tooltip content={<CustomTooltip />} />
                   
                   <Bar 
                     dataKey="totalPRs" 
                     fill="#3b82f6" 
-                    name="PR Count"
+                    name="CIPE Count"
                   />
                 </BarChart>
               </ResponsiveContainer>
@@ -430,7 +437,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       ) : (
         <div className="h-[400px] flex items-center justify-center text-gray-500">
           <div className="text-center">
-            <p className="text-lg mb-2">No PR data for this period</p>
+            <p className="text-lg mb-2">No CIPE data for this period</p>
             <p className="text-sm">Try navigating to a different time period</p>
           </div>
         </div>
