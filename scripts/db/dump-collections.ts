@@ -68,7 +68,11 @@ const DUMP_CONFIGS: DumpConfig[] = [
   {
     collection: 'runs',
     outputFile: 'runs.json',
-    dateField: 'startTime',
+    dateField: 'createdAt',
+    query: {
+      inner: { $ne: true },
+      branch: { $exists: true, $ne: null, $ne: '' }
+    },
     projection: {
       _id: 0,
       workspaceId: 1,
@@ -81,7 +85,7 @@ const DUMP_CONFIGS: DumpConfig[] = [
       sha: 1,
       createdAt: 1
     },
-    sort: { startTime: -1 }
+    sort: { createdAt: -1 }
   },
   {
     collection: 'ciPipelineExecutions',
@@ -97,8 +101,17 @@ const DUMP_CONFIGS: DumpConfig[] = [
 async function dumpCollection(config: DumpConfig, dateCutoff: Date): Promise<void> {
   const { db } = await connectToDatabase();
   
-  console.log(`\n📊 Dumping collection: ${config.collection}`);
-  console.log(`   Using date cutoff: ${dateCutoff.toISOString()} (${config.dateField})`);
+  // Special handling for runs collection - always use 3 days
+  let effectiveDateCutoff = dateCutoff;
+  if (config.collection === 'runs') {
+    effectiveDateCutoff = getDateCutoff(3);
+    console.log(`\n📊 Dumping collection: ${config.collection}`);
+    console.log(`   ⚠️  Runs collection always uses 3-day limit`);
+    console.log(`   Using date cutoff: ${effectiveDateCutoff.toISOString()} (${config.dateField})`);
+  } else {
+    console.log(`\n📊 Dumping collection: ${config.collection}`);
+    console.log(`   Using date cutoff: ${effectiveDateCutoff.toISOString()} (${config.dateField})`);
+  }
   
   try {
     const collection = db.collection(config.collection);
@@ -106,7 +119,7 @@ async function dumpCollection(config: DumpConfig, dateCutoff: Date): Promise<voi
     // Build query with date cutoff
     const query = {
       ...config.query,
-      [config.dateField]: { $gte: dateCutoff }
+      [config.dateField]: { $gte: effectiveDateCutoff }
     };
     
     let cursor = collection.find(query);
@@ -121,7 +134,7 @@ async function dumpCollection(config: DumpConfig, dateCutoff: Date): Promise<voi
     
     const documents = await cursor.toArray();
     
-    console.log(`  ✅ Found ${documents.length} documents since ${dateCutoff.toLocaleDateString()}`);
+    console.log(`  ✅ Found ${documents.length} documents since ${effectiveDateCutoff.toLocaleDateString()}`);
     
     // Ensure output directory exists
     const outputDir = path.join(process.cwd(), 'src', 'data', 'dumps');
