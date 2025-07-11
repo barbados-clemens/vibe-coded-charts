@@ -19,10 +19,46 @@ interface TimeToGreenChartProps {
   data: CIPipelineExecution[];
 }
 
+type OutlierThreshold = 'none' | 'p95' | 'p99' | 'p99.9' | '3std';
+
 export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
   const [currentDate, setCurrentDate] = useState(() => {
     return new UTCDate(data[0]?.createdAt || new Date())
   });
+  
+  const [outlierThreshold, setOutlierThreshold] = useState<OutlierThreshold>('none');
+
+  // Function to filter outliers from TTG results
+  const filterOutliers = (ttgResults: TTGResult[], threshold: OutlierThreshold): TTGResult[] => {
+    if (threshold === 'none' || ttgResults.length === 0) {
+      return ttgResults;
+    }
+
+    const ttgMinutes = ttgResults.map(r => r.ttgMinutes).sort((a, b) => a - b);
+    let upperLimit: number;
+
+    switch (threshold) {
+      case 'p95':
+        upperLimit = ttgMinutes[Math.floor(ttgMinutes.length * 0.95)];
+        break;
+      case 'p99':
+        upperLimit = ttgMinutes[Math.floor(ttgMinutes.length * 0.99)];
+        break;
+      case 'p99.9':
+        upperLimit = ttgMinutes[Math.floor(ttgMinutes.length * 0.999)];
+        break;
+      case '3std':
+        const mean = ttgMinutes.reduce((sum, val) => sum + val, 0) / ttgMinutes.length;
+        const variance = ttgMinutes.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / ttgMinutes.length;
+        const stdDev = Math.sqrt(variance);
+        upperLimit = mean + (3 * stdDev);
+        break;
+      default:
+        return ttgResults;
+    }
+
+    return ttgResults.filter(result => result.ttgMinutes <= upperLimit);
+  };
 
   // Calculate TTG data for the current month
   const ttgData = useMemo(() => {
@@ -96,8 +132,9 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       }
     }
 
-    return ttgResults;
-  }, [data, currentDate]);
+    // Apply outlier filtering
+    return filterOutliers(ttgResults, outlierThreshold);
+  }, [data, currentDate, outlierThreshold]);
 
   // Group TTG results by week and calculate aggregated metrics
   const weeklyData = useMemo(() => {
@@ -257,12 +294,39 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
         onNext={handleNextMonth}
       />
       
+      {/* Outlier Threshold Selector */}
+      <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+        <div className="flex items-center space-x-4">
+          <label className="text-sm font-medium text-gray-700">
+            Outlier Threshold:
+          </label>
+          <select
+            value={outlierThreshold}
+            onChange={(e) => setOutlierThreshold(e.target.value as OutlierThreshold)}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="none">None (include all data)</option>
+            <option value="p95">P95 (remove top 5%)</option>
+            <option value="p99">P99 (remove top 1%)</option>
+            <option value="p99.9">P99.9 (remove top 0.1%)</option>
+            <option value="3std">3 Standard Deviations</option>
+          </select>
+          {outlierThreshold !== 'none' && (
+            <span className="text-xs text-blue-600 italic">
+              Filtering outliers - stats recalculated
+            </span>
+          )}
+        </div>
+      </div>
+      
       {/* Summary Stats */}
       <div className="mb-6 p-4 bg-gray-50 rounded-lg">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-gray-900">{summaryStats.totalPRs}</div>
-            <div className="text-sm text-gray-600">Total PRs</div>
+            <div className="text-sm text-gray-600">
+              {outlierThreshold === 'none' ? 'Total PRs' : 'PRs (filtered)'}
+            </div>
           </div>
           <div>
             <div className="text-2xl font-bold text-blue-600">{summaryStats.avgTTGMinutes}</div>
@@ -375,7 +439,14 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       {/* Performance Insights */}
       {summaryStats.totalPRs > 0 && (
         <div className="mt-6 bg-gray-50 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-gray-700 mb-3">Time to Green Insights</h3>
+          <h3 className="text-sm font-medium text-gray-700 mb-3">
+            Time to Green Insights
+            {outlierThreshold !== 'none' && (
+              <span className="ml-2 text-xs text-blue-600 font-normal">
+                (outliers filtered: {outlierThreshold})
+              </span>
+            )}
+          </h3>
           <div className="text-sm text-gray-600 space-y-1">
             {summaryStats.avgTTGMinutes <= 60 && (
               <p className="text-green-700">🚀 Excellent! Average TTG under 1 hour</p>
