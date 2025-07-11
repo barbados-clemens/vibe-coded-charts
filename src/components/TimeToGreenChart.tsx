@@ -4,6 +4,7 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, BarC
 import { UTCDate } from "@date-fns/utc";
 import { ChartNavigation } from './ChartNavigation';
 import { CIPipelineExecution } from './CIPipelineExecutionsChart';
+import { calculateCIPEMetrics, MinimalCIPE } from '../utils/pipelineMetrics';
 
 interface TTGResult {
   branch: string;
@@ -126,14 +127,25 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       const weekStart = weekTTGs[0].weekStart; // Use the actual week start from data
       const weekEnd = endOfWeek(weekStart, { weekStartsOn: 1 });
       
-      // Calculate statistics for this week
-      const ttgMinutes = weekTTGs.map(r => r.ttgMinutes).sort((a, b) => a - b);
+      // Calculate statistics for this week using the pipeline metrics utility
+      const ttgMinutes = weekTTGs.map(r => r.ttgMinutes);
       const cipesUntilGreen = weekTTGs.map(r => r.cipesUntilGreen);
 
+      // Convert TTG results to MinimalCIPE format for the utility
+      const minimalCipes: MinimalCIPE[] = weekTTGs.map(ttg => ({
+        createdAt: ttg.firstCipeStartTime.toISOString(),
+        completedAt: ttg.firstSuccessfulCipeEndTime.toISOString(),
+        status: 'SUCCEEDED' // All TTG results are successful by definition
+      }));
+
+      // Calculate metrics using the utility
+      const weekMetrics = calculateCIPEMetrics(minimalCipes);
+      const stats = weekMetrics.overall;
+
+      // Convert from milliseconds to minutes for display
       const avgTTGMinutes = ttgMinutes.reduce((sum, val) => sum + val, 0) / ttgMinutes.length;
-      const medianTTGMinutes = ttgMinutes[Math.floor(ttgMinutes.length * 0.5)];
-      const p75TTGMinutes = ttgMinutes[Math.floor(ttgMinutes.length * 0.75)];
-      const p95TTGMinutes = ttgMinutes[Math.floor(ttgMinutes.length * 0.95)];
+      const medianTTGMinutes = Math.round(stats.median / 1000 / 60);
+      const p95TTGMinutes = Math.round(stats.p95 / 1000 / 60);
       const avgCipesUntilGreen = cipesUntilGreen.reduce((sum, val) => sum + val, 0) / cipesUntilGreen.length;
 
       const result = {
@@ -143,7 +155,6 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
         medianTTGMinutes,
         totalPRs: weekTTGs.length,
         avgCipesUntilGreen: Math.round(avgCipesUntilGreen * 10) / 10,
-        p75TTGMinutes,
         p95TTGMinutes,
         weekStartDate: weekStart, // Add this for sorting
       };
@@ -162,12 +173,9 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
 
   // Calculate summary statistics
   const summaryStats = useMemo(() => {
-    const allTTGs = ttgData.map(r => r.ttgMinutes).sort((a, b) => a - b);
-    const allCipes = ttgData.map(r => r.cipesUntilGreen);
-    
     console.log('TTG Summary - Total PRs:', ttgData.length);
     
-    if (allTTGs.length === 0) {
+    if (ttgData.length === 0) {
       return {
         totalPRs: 0,
         avgTTGMinutes: 0,
@@ -177,11 +185,26 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
       };
     }
 
+    // Convert all TTG results to MinimalCIPE format for the utility
+    const allMinimalCipes: MinimalCIPE[] = ttgData.map(ttg => ({
+      createdAt: ttg.firstCipeStartTime.toISOString(),
+      completedAt: ttg.firstSuccessfulCipeEndTime.toISOString(),
+      status: 'SUCCEEDED'
+    }));
+
+    // Calculate overall metrics using the utility
+    const overallMetrics = calculateCIPEMetrics(allMinimalCipes);
+    const overallStats = overallMetrics.overall;
+
+    // Calculate manual averages for comparison
+    const allTTGs = ttgData.map(r => r.ttgMinutes);
+    const allCipes = ttgData.map(r => r.cipesUntilGreen);
+
     const stats = {
       totalPRs: ttgData.length,
       avgTTGMinutes: Math.round(allTTGs.reduce((sum, val) => sum + val, 0) / allTTGs.length),
-      medianTTGMinutes: allTTGs[Math.floor(allTTGs.length * 0.5)],
-      p95TTGMinutes: allTTGs[Math.floor(allTTGs.length * 0.95)],
+      medianTTGMinutes: Math.round(overallStats.median / 1000 / 60),
+      p95TTGMinutes: Math.round(overallStats.p95 / 1000 / 60),
       avgCipesUntilGreen: Math.round((allCipes.reduce((sum, val) => sum + val, 0) / allCipes.length) * 10) / 10
     };
     
@@ -213,8 +236,7 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
               <>
                 <p className="text-blue-600">Avg TTG: {data.avgTTGMinutes} min</p>
                 <p className="text-green-600">Median TTG: {data.medianTTGMinutes} min</p>
-                <p className="text-purple-600">P75 TTG: {data.p75TTGMinutes} min</p>
-                <p className="text-orange-600">P95 TTG: {data.p95TTGMinutes} min</p>
+                <p className="text-purple-600">P95 TTG: {data.p95TTGMinutes} min</p>
                 <p className="text-gray-600">Avg CIPEs to Green: {data.avgCipesUntilGreen}</p>
               </>
             )}
