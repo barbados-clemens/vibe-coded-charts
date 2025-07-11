@@ -60,26 +60,27 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
         timeSaved: 0,
         workspaceIds: new Set(),
         totalTasks: 0,
-        totalLocalCacheHits: 0,
-        totalRemoteCacheHits: 0,
-        totalCacheMisses: 0
+        weightedLocalCacheHitRatio: 0,
+        weightedRemoteCacheHitRatio: 0,
+        weightedCacheMissRatio: 0
       };
     }
     
     acc[dateKey].timeSaved += item.timeSaved;
     acc[dateKey].workspaceIds.add(item.workspaceId);
     
-    // Aggregate cache statistics
+    // Aggregate cache statistics using weighted averages to preserve accuracy
     if (item.totalCount && item.cacheStatusRatio) {
       const totalCount = item.totalCount;
-      const localHits = Math.round((item.cacheStatusRatio.localCacheHit || 0) * totalCount);
-      const remoteHits = Math.round((item.cacheStatusRatio.remoteCacheHit || 0) * totalCount);
-      const misses = Math.round((item.cacheStatusRatio.cacheMiss || 0) * totalCount);
+      const localRatio = item.cacheStatusRatio.localCacheHit || 0;
+      const remoteRatio = item.cacheStatusRatio.remoteCacheHit || 0;
+      const missRatio = item.cacheStatusRatio.cacheMiss || 0;
       
+      // Accumulate weighted ratios (weight = totalCount)
       acc[dateKey].totalTasks += totalCount;
-      acc[dateKey].totalLocalCacheHits += localHits;
-      acc[dateKey].totalRemoteCacheHits += remoteHits;
-      acc[dateKey].totalCacheMisses += misses;
+      acc[dateKey].weightedLocalCacheHitRatio += localRatio * totalCount;
+      acc[dateKey].weightedRemoteCacheHitRatio += remoteRatio * totalCount;
+      acc[dateKey].weightedCacheMissRatio += missRatio * totalCount;
     }
     
     return acc;
@@ -88,23 +89,52 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     timeSaved: number; 
     workspaceIds: Set<string>;
     totalTasks: number;
-    totalLocalCacheHits: number;
-    totalRemoteCacheHits: number;
-    totalCacheMisses: number;
+    weightedLocalCacheHitRatio: number;
+    weightedRemoteCacheHitRatio: number;
+    weightedCacheMissRatio: number;
   }>);
 
   // Convert grouped data back to array format
-  const aggregatedData = Object.values(groupedData).map(item => ({
-    date: item.date,
-    timeSaved: item.timeSaved,
-    workspaceId: Array.from(item.workspaceIds).join(', '),
-    totalTasks: item.totalTasks,
-    totalCacheHits: item.totalLocalCacheHits + item.totalRemoteCacheHits,
-    localCacheHits: item.totalLocalCacheHits,
-    remoteCacheHits: item.totalRemoteCacheHits,
-    cacheMisses: item.totalCacheMisses,
-    cacheHitRate: item.totalTasks > 0 ? ((item.totalLocalCacheHits + item.totalRemoteCacheHits) / item.totalTasks) * 100 : 0
-  }));
+  const aggregatedData = Object.values(groupedData).map(item => {
+    if (item.totalTasks === 0) {
+      return {
+        date: item.date,
+        timeSaved: item.timeSaved,
+        workspaceId: Array.from(item.workspaceIds).join(', '),
+        totalTasks: 0,
+        totalCacheHits: 0,
+        localCacheHits: 0,
+        remoteCacheHits: 0,
+        cacheMisses: 0,
+        cacheHitRate: 0
+      };
+    }
+
+    // Calculate the weighted average ratios
+    const localRatio = item.weightedLocalCacheHitRatio / item.totalTasks;
+    const remoteRatio = item.weightedRemoteCacheHitRatio / item.totalTasks;
+    const missRatio = item.weightedCacheMissRatio / item.totalTasks;
+    
+    // Calculate individual counts for display (these will be consistent)
+    const localCacheHits = Math.round(localRatio * item.totalTasks);
+    const remoteCacheHits = Math.round(remoteRatio * item.totalTasks);
+    const cacheMisses = Math.round(missRatio * item.totalTasks);
+    
+    // Calculate cache hit rate directly from the accurate ratios
+    const cacheHitRate = (localRatio + remoteRatio) * 100;
+    
+    return {
+      date: item.date,
+      timeSaved: item.timeSaved,
+      workspaceId: Array.from(item.workspaceIds).join(', '),
+      totalTasks: item.totalTasks,
+      totalCacheHits: localCacheHits + remoteCacheHits,
+      localCacheHits: localCacheHits,
+      remoteCacheHits: remoteCacheHits,
+      cacheMisses: cacheMisses,
+      cacheHitRate: cacheHitRate
+    };
+  });
 
   // Check if aggregated data is empty
   if (aggregatedData.length === 0) {
