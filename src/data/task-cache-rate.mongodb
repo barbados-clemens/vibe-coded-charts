@@ -1,0 +1,72 @@
+db.getCollection("analytics.dailyTaskStatistics").aggregate([
+  {
+    $match: {
+      workspaceId: ObjectId("6537f16cc1b60060bb7c6e61"),
+      date: {
+        $gte: ISODate("2025-01-01"),
+        $lt: ISODate("2025-03-01") // Extended range - adjust as needed
+      }
+    }
+  },
+  {
+    $group: {
+      _id: {
+        workspaceId: "$workspaceId",
+        date: "$date"
+      },
+      totalTasks: { $sum: "$totalCount" },
+      localCacheHits: {
+        $sum: {
+          $multiply: ["$totalCount", "$cacheStatusRatio.localCacheHit"]
+        }
+      },
+      remoteCacheHits: {
+        $sum: {
+          $multiply: ["$totalCount", "$cacheStatusRatio.remoteCacheHit"]
+        }
+      }
+    }
+  },
+  {
+    $project: {
+      workspaceId: "$_id.workspaceId",
+      date: "$_id.date",
+      totalTasks: 1,
+      localCacheHits: 1,
+      remoteCacheHits: 1,
+      totalCacheHits: { $add: ["$localCacheHits", "$remoteCacheHits"] },
+      cacheHitRate: {
+        $cond: {
+          if: { $gt: ["$totalTasks", 0] },
+          then: {
+            $divide: [
+              { $add: ["$localCacheHits", "$remoteCacheHits"] },
+              "$totalTasks"
+            ]
+          },
+          else: 0
+        }
+      },
+      localCacheHitRate: {
+        $cond: {
+          if: { $gt: ["$totalTasks", 0] },
+          then: { $divide: ["$localCacheHits", "$totalTasks"] },
+          else: 0
+        }
+      },
+      remoteCacheHitRate: {
+        $cond: {
+          if: { $gt: ["$totalTasks", 0] },
+          then: { $divide: ["$remoteCacheHits", "$totalTasks"] },
+          else: 0
+        }
+      },
+      _id: 0
+    }
+  },
+  {
+    $sort: {
+      date: 1
+    }
+  }
+])
