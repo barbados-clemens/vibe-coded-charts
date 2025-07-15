@@ -116,23 +116,23 @@ export function DailyTimeSavedChart({ data }: DailyTimeSavedChartProps) {
     const remoteRatio = item.weightedRemoteCacheHitRatio / item.totalTasks;
     const missRatio = item.weightedCacheMissRatio / item.totalTasks;
     
-    // Calculate individual counts for display (these will be consistent)
-    const localCacheHits = Math.round(localRatio * item.totalTasks);
-    const remoteCacheHits = Math.round(remoteRatio * item.totalTasks);
-    const cacheMisses = Math.round(missRatio * item.totalTasks);
+    // Calculate individual counts for display (matching MongoDB logic)
+    const localCacheHits = localRatio * item.totalTasks;
+    const remoteCacheHits = remoteRatio * item.totalTasks;
+    const cacheMisses = missRatio * item.totalTasks;
     
-    // Calculate cache hit rate directly from the accurate ratios
-    const cacheHitRate = (localRatio + remoteRatio) * 100;
+    // Calculate cache hit rate matching MongoDB logic: (localHits + remoteHits) / totalTasks * 100
+    const cacheHitRate = ((localCacheHits + remoteCacheHits) / item.totalTasks) * 100;
     
     return {
       date: item.date,
       timeSaved: item.timeSaved,
       workspaceId: Array.from(item.workspaceIds).join(', '),
       totalTasks: item.totalTasks,
-      totalCacheHits: localCacheHits + remoteCacheHits,
-      localCacheHits: localCacheHits,
-      remoteCacheHits: remoteCacheHits,
-      cacheMisses: cacheMisses,
+      totalCacheHits: Math.round(localCacheHits + remoteCacheHits),
+      localCacheHits: Math.round(localCacheHits),
+      remoteCacheHits: Math.round(remoteCacheHits),
+      cacheMisses: Math.round(cacheMisses),
       cacheHitRate: cacheHitRate
     };
   });
