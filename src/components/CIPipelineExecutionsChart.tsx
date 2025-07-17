@@ -5,8 +5,10 @@ import {
   isSameDay,
   startOfDay,
   endOfDay,
-  addMinutes,
-  startOfMinute,
+  addMonths,
+  startOfMonth,
+  endOfMonth,
+  eachDayOfInterval,
 } from "date-fns";
 import {
   LineChart,
@@ -49,50 +51,48 @@ interface CIPipelineExecutionsChartProps {
 export function CIPipelineExecutionsChart({
   data,
 }: CIPipelineExecutionsChartProps) {
-  const [currentDate, setCurrentDate] = useState(() => {
+  const [currentMonth, setCurrentMonth] = useState(() => {
     return new UTCDate(data[0]?.createdAt || new Date());
   });
 
-  // Filter out IN_PROGRESS and get data for current day
+  // Filter out IN_PROGRESS and get data for current month
   const filteredData = useMemo(() => {
+    const monthStart = startOfMonth(currentMonth);
+    const monthEnd = endOfMonth(currentMonth);
     return data.filter((item) => {
       const itemDate = new UTCDate(item.createdAt);
       return (
         item.status !== "IN_PROGRESS" &&
-        isSameDay(itemDate, currentDate) &&
+        itemDate >= monthStart &&
+        itemDate <= monthEnd &&
         item?.vcsContext !== null
       );
     });
-  }, [data, currentDate]);
+  }, [data, currentMonth]);
 
-  // Get all 5-minute intervals in the current day
-  const dayStart = startOfDay(currentDate);
-  const dayEnd = endOfDay(currentDate);
-  const all5MinIntervalsInDay = useMemo(() => {
-    const intervals = [];
-    let current = dayStart;
-    while (current <= dayEnd) {
-      intervals.push(current);
-      current = addMinutes(current, 5);
-    }
-    return intervals;
-  }, [dayStart, dayEnd]);
+  // Get all days in the current month
+  const monthStart = startOfMonth(currentMonth);
+  const monthEnd = endOfMonth(currentMonth);
+  const allDaysInMonth = useMemo(() => {
+    return eachDayOfInterval({ start: monthStart, end: monthEnd });
+  }, [monthStart, monthEnd]);
 
-  // Create chart data with 5-minute interval aggregation
+  // Create chart data with daily aggregation
   const chartData = useMemo(() => {
-    return all5MinIntervalsInDay.map((intervalStart) => {
-      const intervalEnd = addMinutes(intervalStart, 30);
+    return allDaysInMonth.map((day) => {
+      const dayStart = startOfDay(day);
+      const dayEnd = endOfDay(day);
 
-      // Get all CIPEs for this 5-minute interval
-      const intervalData = filteredData.filter((item) => {
+      // Get all CIPEs for this day
+      const dayData = filteredData.filter((item) => {
         const itemDate = new UTCDate(item.createdAt);
-        return itemDate >= intervalStart && itemDate < intervalEnd;
+        return itemDate >= dayStart && itemDate <= dayEnd;
       });
 
-      if (intervalData.length === 0) {
+      if (dayData.length === 0) {
         return {
-          date: format(intervalStart, "HH:mm"),
-          fullDate: intervalStart.toISOString(),
+          date: format(day, "MMM dd"),
+          fullDate: day.toISOString(),
           totalCount: 0,
           successCount: 0,
           failedCount: 0,
@@ -104,7 +104,7 @@ export function CIPipelineExecutionsChart({
       }
 
       // Count by status
-      const statusCounts = intervalData.reduce(
+      const statusCounts = dayData.reduce(
         (acc, item) => {
           switch (item.status) {
             case "SUCCEEDED":
@@ -138,7 +138,7 @@ export function CIPipelineExecutionsChart({
         },
       );
 
-      const totalCount = intervalData.length;
+      const totalCount = dayData.length;
       const successRate =
         totalCount > 0 ? (statusCounts.successCount / totalCount) * 100 : 0;
       const avgDuration =
@@ -157,8 +157,8 @@ export function CIPipelineExecutionsChart({
         totalCount > 0 ? (statusCounts.timeoutCount / totalCount) * 100 : 0;
 
       return {
-        date: format(intervalStart, "HH:mm"),
-        fullDate: intervalStart.toISOString(),
+        date: format(day, "MMM dd"),
+        fullDate: day.toISOString(),
         totalCount,
         ...statusCounts,
         successRate,
@@ -170,7 +170,7 @@ export function CIPipelineExecutionsChart({
         timeoutPercentage,
       };
     });
-  }, [all5MinIntervalsInDay, filteredData]);
+  }, [allDaysInMonth, filteredData]);
 
   // Calculate summary statistics
   const summaryStats = useMemo(() => {
@@ -181,9 +181,9 @@ export function CIPipelineExecutionsChart({
         acc.failedCount += day.failedCount;
         acc.cancelledCount += day.cancelledCount;
         acc.timeoutCount += day.timeoutCount;
-        acc.intervalsWithData += day.totalCount > 0 ? 1 : 0;
-        acc.maxIntervalPipelines = Math.max(
-          acc.maxIntervalPipelines,
+        acc.daysWithData += day.totalCount > 0 ? 1 : 0;
+        acc.maxDayPipelines = Math.max(
+          acc.maxDayPipelines,
           day.totalCount,
         );
         return acc;
@@ -194,8 +194,8 @@ export function CIPipelineExecutionsChart({
         failedCount: 0,
         cancelledCount: 0,
         timeoutCount: 0,
-        intervalsWithData: 0,
-        maxIntervalPipelines: 0,
+        daysWithData: 0,
+        maxDayPipelines: 0,
       },
     );
 
@@ -205,19 +205,19 @@ export function CIPipelineExecutionsChart({
         stats.totalPipelines > 0
           ? (stats.successCount / stats.totalPipelines) * 100
           : 0,
-      avgIntervalPipelines:
-        stats.intervalsWithData > 0
-          ? stats.totalPipelines / stats.intervalsWithData
+      avgDayPipelines:
+        stats.daysWithData > 0
+          ? stats.totalPipelines / stats.daysWithData
           : 0,
     };
   }, [chartData]);
 
-  const handlePrevDay = () => {
-    setCurrentDate((prev) => addDays(prev, -1));
+  const handlePrevMonth = () => {
+    setCurrentMonth((prev) => addMonths(prev, -1));
   };
 
-  const handleNextDay = () => {
-    setCurrentDate((prev) => addDays(prev, 1));
+  const handleNextMonth = () => {
+    setCurrentMonth((prev) => addMonths(prev, 1));
   };
 
   // Custom tooltip
@@ -271,11 +271,11 @@ export function CIPipelineExecutionsChart({
   return (
     <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       <ChartNavigation
-        title="CI Pipeline Executions (5-min intervals)"
+        title="CI Pipeline Executions (Daily)"
         subtitle={`Workspace: ${data[0]?.workspaceId.slice(-8) || "All"}`}
-        displayValue={format(currentDate, "EEEE, MMMM d, yyyy")}
-        onPrevious={handlePrevDay}
-        onNext={handleNextDay}
+        displayValue={format(currentMonth, "MMMM yyyy")}
+        onPrevious={handlePrevMonth}
+        onNext={handleNextMonth}
       />
 
       {/* Summary Stats */}
@@ -307,15 +307,15 @@ export function CIPipelineExecutionsChart({
           </div>
           <div>
             <div className="text-2xl font-bold text-blue-600">
-              {summaryStats.avgIntervalPipelines.toFixed(1)}
+              {summaryStats.avgDayPipelines.toFixed(1)}
             </div>
-            <div className="text-sm text-gray-600">Avg per Interval</div>
+            <div className="text-sm text-gray-600">Avg per Day</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-purple-600">
-              {summaryStats.maxIntervalPipelines}
+              {summaryStats.maxDayPipelines}
             </div>
-            <div className="text-sm text-gray-600">Peak per Interval</div>
+            <div className="text-sm text-gray-600">Peak per Day</div>
           </div>
         </div>
       </div>
@@ -359,7 +359,7 @@ export function CIPipelineExecutionsChart({
                     dataKey="date"
                     stroke="#6b7280"
                     tick={{ fill: "#6b7280", fontSize: 10 }}
-                    interval={11}
+                    interval={2}
                     angle={-45}
                     textAnchor="end"
                     height={60}
@@ -425,7 +425,7 @@ export function CIPipelineExecutionsChart({
           {/* Pipeline Count Chart */}
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-4">
-              Pipeline Execution Count (5-min intervals)
+              Pipeline Execution Count (Daily)
             </h3>
             <div className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -435,7 +435,7 @@ export function CIPipelineExecutionsChart({
                     dataKey="date"
                     stroke="#6b7280"
                     tick={{ fill: "#6b7280", fontSize: 10 }}
-                    interval={11}
+                    interval={2}
                     angle={-45}
                     textAnchor="end"
                     height={60}
@@ -498,7 +498,7 @@ export function CIPipelineExecutionsChart({
       {chartData.length > 0 && summaryStats.totalPipelines > 0 && (
         <div className="mt-6 bg-gray-50 p-4 rounded-lg">
           <h3 className="text-sm font-medium text-gray-700 mb-3">
-            Daily Pipeline Performance Insights
+            Monthly Pipeline Performance Insights
           </h3>
           <div className="text-sm text-gray-600 space-y-1">
             {summaryStats.overallSuccessRate >= 95 && (
@@ -530,20 +530,19 @@ export function CIPipelineExecutionsChart({
                 ⏱️ High timeout rate detected - Check pipeline duration limits
               </p>
             )}
-            {summaryStats.maxIntervalPipelines > 5 && (
+            {summaryStats.maxDayPipelines > 100 && (
               <p className="text-purple-600">
-                📊 High concurrency detected:{" "}
-                {summaryStats.maxIntervalPipelines} pipelines in a 5-minute
-                window
+                📊 High daily volume detected:{" "}
+                {summaryStats.maxDayPipelines} pipelines in a single day
               </p>
             )}
-            {summaryStats.intervalsWithData > 0 && (
+            {summaryStats.daysWithData > 0 && (
               <p className="text-gray-700">
-                📈 Pipeline activity in {summaryStats.intervalsWithData} of{" "}
-                {all5MinIntervalsInDay.length} intervals (
+                📈 Pipeline activity in {summaryStats.daysWithData} of{" "}
+                {allDaysInMonth.length} days (
                 {(
-                  (summaryStats.intervalsWithData /
-                    all5MinIntervalsInDay.length) *
+                  (summaryStats.daysWithData /
+                    allDaysInMonth.length) *
                   100
                 ).toFixed(0)}
                 % coverage)
