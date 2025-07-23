@@ -10,6 +10,7 @@ import {
   endOfWeek,
   getWeek,
   getYear,
+  intervalToDuration,
 } from "date-fns";
 import {
   XAxis,
@@ -97,17 +98,33 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
     const monthStart = startOfMonth(currentDate);
     const monthEnd = endOfMonth(currentDate);
 
+    let longCount = 0;
     const filteredData = data.filter((item) => {
       const itemDate = new UTCDate(item.createdAt);
+      const duration = intervalToDuration({
+        start: itemDate,
+        end: new UTCDate(item.completedAt),
+      });
+
+      if (duration.hours > 2) {
+        console.log(item.branch, duration);
+        longCount++;
+      }
       return (
+        itemDate.getUTCMonth() === 6 &&
+        itemDate.getUTCDate() > 7 &&
+        itemDate.getUTCDate() < 21 &&
         isSameMonth(itemDate, currentDate) &&
         item.status !== "IN_PROGRESS" &&
         !["main", "master"].includes(item.branch.toLowerCase()) &&
         !isNaN(Number(item.branch)) &&
         item.branch !== "" &&
-        item?.vcsContext !== null
+        item?.vcsContext !== null &&
+        (!duration.hours || duration.hours < 2)
       );
     });
+
+    console.log(longCount);
 
     // Group by branch
     const branchGroups = new Map<string, CIPipelineExecution[]>();
@@ -575,4 +592,3 @@ export function TimeToGreenChart({ data }: TimeToGreenChartProps) {
     </div>
   );
 }
-
